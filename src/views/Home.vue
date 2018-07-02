@@ -1,18 +1,35 @@
 <template>
   <div class="home">
-    <img src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Carousel
+      :slides="content.slides">
+      <img
+        slot-scope="{slide}"
+        :src="slide.desktop"
+        alt="">
+    </Carousel>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue';
+import Carousel from '@/containers/Carousel.vue';
+import home from '@/content/home';
 
 export default {
-  name: 'home',
+  name: 'Home',
   components: {
-    HelloWorld,
+    Carousel,
+    home,
+  },
+  data() {
+    return {
+      content: {
+        slides: [],
+      },
+    };
+  },
+  mounted() {
+    this.content = home;
   },
 };
 </script>
