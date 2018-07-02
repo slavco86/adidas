@@ -1,0 +1,59 @@
+<template>
+  <swiper
+    ref="carousel"
+    :options="options"
+    :global-options="globalOptions">
+
+    <swiper-slide
+      v-for="(slide, key) in slides"
+      :key="key">
+      <slot :slide="slide"/>
+    </swiper-slide>
+
+    <div
+      v-if="options.pagination || globalOptions.pagination"
+      slot="pagination"
+      class="swiper-pagination"/>
+
+    <div
+      v-if="options.navigation || globalOptions.navigation"
+      slot="button-prev"
+      class="swiper-button-prev"/>
+
+    <div
+      v-if="options.navigation || globalOptions.navigation"
+      slot="button-next"
+      class="swiper-button-next"/>
+  </swiper>
+</template>
+
+<script>
+import { swiper, swiperSlide } from 'vue-awesome-swiper';
+import 'swiper/dist/css/swiper.min.css';
+
+export default {
+  name: 'Carousel',
+  components: { swiper, swiperSlide },
+  inheritAttrs: false,
+
+  props: {
+    options: {
+      default() {
+        return {};
+      },
+      type: Object,
+      required: false,
+    },
+    slides: {
+      type: Array,
+      required: true,
+    },
+  },
+
+  data() {
+    return {
+      globalOptions: {},
+    };
+  },
+};
+</script>
