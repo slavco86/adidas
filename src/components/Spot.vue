@@ -6,7 +6,7 @@
       <source
         v-if="responsiveImg"
         :srcset="image.mobile"
-        media="(max-width: 975px)">
+        media="(max-width: 765px)">
       <img
         :src="image.desktop"
         alt="">
@@ -35,10 +35,11 @@ export default {
 
   computed: {
     responsiveImg() {
-      if (this.image && Object.prototype.hasOwnProperty.call(this.image, 'mobile') && Object.prototype.hasOwnProperty.call(this.image, 'desktop')) {
+      if (this.image
+      && Object.prototype.hasOwnProperty.call(this.image, 'mobile')
+      && Object.prototype.hasOwnProperty.call(this.image, 'desktop')) {
         return true;
       }
-
       return false;
     },
   },
