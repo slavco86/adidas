@@ -10,20 +10,24 @@
   },
   "dependencies": {
     "vue": "^2.5.16",
-    "vue-router": "^3.0.1"
+    "vue-awesome-swiper": "3.1.3",
+    "vue-router": "^3.0.1",
+    "webpack-bundle-analyzer": "2.13.1"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.0.0-beta.15",
-    "@vue/cli-plugin-eslint": "^3.0.0-beta.15",
-    "@vue/cli-plugin-unit-jest": "^3.0.0-beta.15",
-    "@vue/cli-service": "^3.0.0-beta.15",
-    "@vue/eslint-config-airbnb": "^3.0.0-rc.3",
+    "@vue/cli-plugin-babel": "3.0.0-rc.3",
+    "@vue/cli-plugin-eslint": "3.0.0-rc.3",
+    "@vue/cli-plugin-unit-jest": "3.0.0-rc.3",
+    "@vue/cli-service": "3.0.0-rc.3",
+    "@vue/eslint-config-airbnb": "3.0.0-rc.3",
     "@vue/test-utils": "^1.0.0-beta.16",
     "babel-core": "7.0.0-bridge.0",
     "babel-jest": "^23.0.1",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.0.1",
-    "vue-template-compiler": "^2.5.16"
+    "vue-template-compiler": "^2.5.16",
+    "stylelint": "9.2.1",
+    "stylelint-config-standard": "18.2.0"
   },
   "eslintConfig": {
     "root": true,
@@ -32,6 +36,8 @@
     },
     "extends": [
       "plugin:vue/essential",
+      "plugin:vue/recommended",
+      "plugin:vue/strongly-recommended",
       "@vue/airbnb"
     ],
     "rules": {},
@@ -42,6 +48,14 @@
   "postcss": {
     "plugins": {
       "autoprefixer": {}
+    }
+  },
+  "stylelint": {
+    "extends": "stylelint-config-standard",
+    "rules": {
+      "no-empty-source": null,
+      "property-no-vendor-prefix": true,
+      "value-no-vendor-prefix": true
     }
   },
   "browserslist": [
