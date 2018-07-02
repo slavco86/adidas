@@ -13,6 +13,7 @@
         <img
           :src="slide.desktop"
           alt="">
+        <span class="franchise-name">{{ slide.franchise }}</span>
         <Countdown
           v-if="!slide.expired"
           :date="slide.launch"
@@ -73,6 +74,11 @@ export default {
     display: flex;
     margin: 0 auto;
     justify-content: center;
+  }
+
+  .franchise-name {
+    position: absolute;
+    left: 0;
   }
 </style>
 
