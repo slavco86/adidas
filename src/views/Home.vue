@@ -1,17 +1,24 @@
 <template>
   <div class="home">
-    <nav>
+    <nav class="nav">
       <button
+        class="nav-button"
         @click="tab = 'men'">MEN</button>
       <button
+        class="nav-button"
         @click="tab = 'women'">WOMEN</button>
     </nav>
     <Carousel
-      :slides="activeTab">
+      :slides="activeTab"
+      :options="swiperOptions"
+      class="main-carousel">
       <div
         slot-scope="{slide}">
         <Spot v-bind="slide">
-          <span class="franchise-name">{{ slide.franchise }}</span>
+          <span
+            data-swiper-parallax="-900"
+            data-swiper-parallax-duration="600"
+            class="franchise-name">{{ slide.franchise }}</span>
         </Spot>
         <Countdown
           v-if="!slide.expired"
@@ -39,6 +46,12 @@ export default {
   },
   data() {
     return {
+      swiperOptions: {
+        parallax: true,
+        centeredSlides: true,
+        slidesPerView: 1.2,
+        spaceBetween: 15,
+      },
       tab: 'men',
       content: {
         men: {
@@ -71,6 +84,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  .nav {
+    padding: 2rem 0;
+    text-align: right;
+  }
+
+  .nav-button {
+    background: none;
+    font-size: 0.9rem;
+    margin: 0 1rem;
+  }
+
   .countdown {
     display: flex;
     margin: 0 auto;
@@ -79,13 +103,12 @@ export default {
 
   .franchise-name {
     position: absolute;
-    left: 0;
-    text-decoration: none;
+    transition-timing-function: ease-in-out;
   }
 
   .spot {
     position: relative;
-    text-decoration: none;
+    display: block;
   }
 </style>
 
