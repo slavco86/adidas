@@ -45,3 +45,12 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+  .spot img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+</style>
+
