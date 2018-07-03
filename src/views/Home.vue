@@ -3,7 +3,8 @@
     <nav class="nav">
       <img
         class="logo"
-        src="../assets/adidas-logo.svg">
+        src="../assets/adidas-logo.svg"
+        @click="disableCarousel">
       <button
         class="nav-button"
         @click="tab = 'men'">MEN</button>
@@ -14,6 +15,9 @@
     <Carousel
       :slides="activeTab"
       :options="swiperOptions"
+      :responsive="true"
+      :breakpoint="breakpoint"
+      :class="{'main-carousel--flex': breakpoint === 0}"
       class="main-carousel">
       <div
         slot-scope="{slide}">
@@ -55,6 +59,7 @@ export default {
         slidesPerView: 1.2,
         spaceBetween: 15,
       },
+      breakpoint: window.innerWidth + 1,
       tab: 'men',
       content: {
         men: {
@@ -70,6 +75,10 @@ export default {
     activeTab() {
       return (this.tab === 'men') ? this.content.men.slides : this.content.women.slides;
     },
+    ref() {
+      return this.$refs;
+    },
+
   },
   mounted() {
     this.content = home.home;
@@ -81,6 +90,9 @@ export default {
   methods: {
     setExpired(slides) {
       slides.map(slide => this.$set(slide, 'expired', false));
+    },
+    disableCarousel() {
+      this.breakpoint = 0;
     },
   },
 };
@@ -97,7 +109,7 @@ export default {
     width: 50px;
     position: absolute;
     left: 10%;
-    top: 20%;
+    top: 25%;
   }
 
   .main-carousel /deep/ .swiper-slide {
@@ -110,6 +122,19 @@ export default {
     margin-top: 2rem;
   }
 
+  .main-carousel--flex {
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.5rem;
+
+    /deep/ .slide {
+      flex-basis: calc(50% - 1rem);
+      margin: 0.5rem;
+      transition: transform 0.5s;
+    }
+  }
+
   .nav-button {
     background: none;
     font-size: 0.9rem;
@@ -120,6 +145,7 @@ export default {
     display: flex;
     margin: 0 auto;
     justify-content: center;
+    position: absolute;
   }
 
   .franchise-name {

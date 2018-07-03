@@ -42,46 +42,6 @@ export default {
           path: 'men',
           launch: 'July 30, 2018',
         },
-        {
-          franchise: 'EQT',
-          image: {
-            desktop: 'http://via.placeholder.com/350x350',
-            mobile: 'http://via.placeholder.com/350x350',
-            url: '#',
-          },
-          path: 'men',
-          launch: 'June 3, 201',
-        },
-        {
-          franchise: 'Falcon',
-          image: {
-            desktop: 'http://via.placeholder.com/350x350',
-            mobile: 'http://via.placeholder.com/350x350',
-            url: '#',
-          },
-          path: 'men',
-          launch: 'July 15, 2018',
-        },
-        {
-          franchise: 'Deerupt',
-          image: {
-            desktop: 'http://via.placeholder.com/350x350',
-            mobile: 'http://via.placeholder.com/350x350',
-            url: '#',
-          },
-          path: 'men',
-          launch: 'July 30, 2018',
-        },
-        {
-          franchise: 'POD',
-          image: {
-            desktop: 'http://via.placeholder.com/350x350',
-            mobile: 'http://via.placeholder.com/350x350',
-            url: '#',
-          },
-          path: 'men',
-          launch: 'July 30, 2018',
-        },
       ],
     },
     women: {
