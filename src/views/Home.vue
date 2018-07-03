@@ -1,6 +1,9 @@
 <template>
   <div class="home">
     <nav class="nav">
+      <img
+        class="logo"
+        src="../assets/adidas-logo.svg">
       <button
         class="nav-button"
         @click="tab = 'men'">MEN</button>
@@ -85,8 +88,26 @@ export default {
 
 <style lang="scss" scoped>
   .nav {
-    padding: 2rem 0;
+    padding: 3rem 0;
     text-align: right;
+    position: relative;
+  }
+
+  .logo {
+    width: 50px;
+    position: absolute;
+    left: 10%;
+    top: 20%;
+  }
+
+  .main-carousel /deep/ .swiper-slide {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    transition: margin-top 0.2s ease-in-out;
+  }
+
+  .main-carousel /deep/ .swiper-slide-active {
+    margin-top: 2rem;
   }
 
   .nav-button {
@@ -103,7 +124,7 @@ export default {
 
   .franchise-name {
     position: absolute;
-    transition-timing-function: ease-in-out;
+    transition-timing-function: ease-out;
   }
 
   .spot {
