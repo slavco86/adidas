@@ -10,10 +10,9 @@
       :slides="activeTab">
       <div
         slot-scope="{slide}">
-        <img
-          :src="slide.desktop"
-          alt="">
-        <span class="franchise-name">{{ slide.franchise }}</span>
+        <Spot v-bind="slide">
+          <span class="franchise-name">{{ slide.franchise }}</span>
+        </Spot>
         <Countdown
           v-if="!slide.expired"
           :date="slide.launch"
@@ -27,12 +26,14 @@
 // @ is an alias to /src
 import Carousel from '@/containers/Carousel.vue';
 import Countdown from '@/components/Countdown.vue';
+import Spot from '@/components/Spot.vue';
 import home from '@/content/home';
 
 export default {
   name: 'Home',
   components: {
     Carousel,
+    Spot,
     Countdown,
     home,
   },
@@ -79,6 +80,12 @@ export default {
   .franchise-name {
     position: absolute;
     left: 0;
+    text-decoration: none;
+  }
+
+  .spot {
+    position: relative;
+    text-decoration: none;
   }
 </style>
 
