@@ -33,9 +33,7 @@
     <p class="social__text">Get Social</p>
     <h2 class="social__title">#Creator</h2>
 
-    <Grid
-      v-inview:on="test"
-      :class="{'grid--animate': activateAnimation}"/>
+    <Grid :class="{'grid--animate': activateAnimation}"/>
 
     <a
       href="#"
@@ -46,7 +44,10 @@
 </template>
 
 <script>
+import inView from 'in-view';
 import Grid from '@/components/Grid.vue';
+
+inView.threshold(0.25);
 
 export default {
   name: 'Social',
@@ -59,10 +60,11 @@ export default {
     };
   },
 
-  methods: {
-    test(el) {
-      console.log(el);
-    }
+  mounted() {
+    inView('.grid')
+      .on('enter', () => {
+        this.activateAnimation = true;
+      });
   },
 };
 </script>
