@@ -55,7 +55,7 @@ export default {
       max-width: 635px;
       min-width: 150px;
       padding: 0.5rem;
-      transition: transform 0.7s;
+      transition: transform 0.7s ease-in;
 
       &:first-child {
         transform: translate3d(-600px, -600px, 0);
