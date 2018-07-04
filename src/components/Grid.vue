@@ -1,27 +1,42 @@
 <template>
-  <div class="grid" :class="{ 'grid__product--animate' : activateAnimation }">
+  <div
+    class="grid">
 
-    <a href="#"
+    <a
+      href="#"
       class="grid__product">
 
-      <img src="http://via.placeholder.com/350x350"
+      <img
+        src="http://via.placeholder.com/350x350"
         alt="">
+      <span class="grid__product__text">@socialhandle</span>
     </a>
 
-    <a href="#"
+    <a
+      href="#"
       class="grid__product">
-      <img src="http://via.placeholder.com/350x350"
+      <img
+        src="http://via.placeholder.com/350x350"
         alt="">
+      <span class="grid__product__text">@socialhandle</span>
     </a>
 
-    <a href="#" class="grid__product">
-      <img src="http://via.placeholder.com/350x350"
+    <a
+      href="#"
+      class="grid__product">
+      <img
+        src="http://via.placeholder.com/350x350"
         alt="">
+      <span class="grid__product__text">@socialhandle</span>
     </a>
 
-    <a href="#" class="grid__product">
-      <img src="http://via.placeholder.com/350x350"
+    <a
+      href="#"
+      class="grid__product">
+      <img
+        src="http://via.placeholder.com/350x350"
         alt="">
+      <span class="grid__product__text">@socialhandle</span>
     </a>
   </div>
 </template>
@@ -32,13 +47,7 @@ export default {
   props: {
 
   },
-
-  data() {
-    return {
-      activateAnimation: false
-    }
-  }
-}
+};
 </script>
 
 <style lang="scss" scoped>
@@ -73,10 +82,12 @@ export default {
         transform: translate3d(600px, 600px, 0);
       }
 
-      &--animate {
-        .grid__product {
-          transform: translate3d(0, 0, 0);
-        }
+      &__text {
+        color: #ccc;
+        display: block;
+        margin: 0.75rem 0;
+        text-align: left;
+        font-size: 1rem;
       }
 
       img {
@@ -85,6 +96,10 @@ export default {
         width: 100%;
       }
     }
+  }
+
+  .grid--animate .grid__product {
+    transform: translate3d(0, 0, 0);
   }
 </style>
 
