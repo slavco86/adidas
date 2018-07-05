@@ -62,7 +62,7 @@ export default {
       flex: 0 0 50%;
       height: auto;
       max-width: 635px;
-      min-width: 150px;
+      // min-width: 150px;
       padding: 0.5rem;
       transition: transform 0.7s ease-in-out;
 

@@ -87,7 +87,7 @@ export default {
     flex-direction: column;
     padding: 1rem;
     transform: translate3d(0, 150px, 20px);
-    transition: transform 0.5s cubic-bezier(0.6, -0.28, 0, -0.07);
+    transition: transform 0.5s cubic-bezier(0, 0.72, 0.96, 0.6);
 
     &--animate {
       transform: translate3d(0, 0, 0);
