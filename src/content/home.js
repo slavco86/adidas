@@ -40,7 +40,7 @@ export default {
             url: '#',
           },
           path: 'men',
-          launch: 'July 30, 2018',
+          launch: 'July 31, 2018',
         },
       ],
     },
