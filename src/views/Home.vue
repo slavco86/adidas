@@ -18,7 +18,6 @@
       :options="swiperOptions"
       :responsive="true"
       :switch-el="switchEl"
-      :class="{'main-carousel--flex': !switchEl}"
       class="main-carousel">
       <div
         slot-scope="{slide}">
@@ -82,7 +81,6 @@ export default {
 
   },
   mounted() {
-    console.info(this.$refs);
     this.content = home.home;
     if (this.content.men.slides.length) {
       this.setExpired(this.content.men.slides);
@@ -122,7 +120,7 @@ export default {
   .main-carousel /deep/ .swiper-slide {
     margin-top: 0;
     margin-bottom: 2rem;
-    transition: all 0.2s ease-in-out;
+    transition: margin-top 0.2s ease-in-out;
   }
 
   .main-carousel /deep/ .swiper-slide-active {

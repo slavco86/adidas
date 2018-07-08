@@ -139,17 +139,4 @@ export default {
       transition: transform 0.5s;
     }
   }
-
-  // .carousel-grid {
-  //   .swiper-wrapper {
-  //     flex-wrap: wrap;
-  //     justify-content: center;
-  //     transform: translate3d(0, 0, 0) !important;
-  //   }
-
-  //   .swiper-slide {
-  //     width: 180px !important;
-  //     margin: 0.5 !important;
-  //   }
-  // }
 </style>
