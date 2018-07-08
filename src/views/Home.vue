@@ -4,7 +4,7 @@
       <img
         class="logo"
         src="../assets/adidas-logo.svg"
-        @click="disableCarousel">
+        @click="toggleCarousel">
       <button
         class="nav-button"
         @click="tab = 'men'">MEN</button>
@@ -13,11 +13,12 @@
         @click="tab = 'women'">WOMEN</button>
     </nav>
     <Carousel
+      ref="carousel"
       :slides="activeTab"
       :options="swiperOptions"
       :responsive="true"
-      :breakpoint="breakpoint"
-      :class="{'main-carousel--flex': breakpoint === 0}"
+      :switch-el="switchEl"
+      :class="{'main-carousel--flex': !switchEl}"
       class="main-carousel">
       <div
         slot-scope="{slide}">
@@ -59,7 +60,7 @@ export default {
         slidesPerView: 1.2,
         spaceBetween: 15,
       },
-      breakpoint: window.innerWidth + 1,
+      switchEl: true,
       tab: 'men',
       content: {
         men: {
@@ -81,6 +82,7 @@ export default {
 
   },
   mounted() {
+    console.info(this.$refs);
     this.content = home.home;
     if (this.content.men.slides.length) {
       this.setExpired(this.content.men.slides);
@@ -91,8 +93,13 @@ export default {
     setExpired(slides) {
       slides.map(slide => this.$set(slide, 'expired', false));
     },
-    disableCarousel() {
-      this.breakpoint = 0;
+    toggleCarousel() {
+      if (this.$refs.carousel.$children[0].$children[0]) {
+        this.$refs.carousel.$children[0].$children[0].swiper.destroy(false, false);
+        this.switchEl = !this.switchEl;
+      } else {
+        this.switchEl = !this.switchEl;
+      }
     },
   },
 };
@@ -115,24 +122,11 @@ export default {
   .main-carousel /deep/ .swiper-slide {
     margin-top: 0;
     margin-bottom: 2rem;
-    transition: margin-top 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
   }
 
   .main-carousel /deep/ .swiper-slide-active {
     margin-top: 2rem;
-  }
-
-  .main-carousel--flex {
-    max-width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0.5rem;
-
-    /deep/ .slide {
-      flex-basis: calc(50% - 1rem);
-      margin: 0.5rem;
-      transition: transform 0.5s;
-    }
   }
 
   .nav-button {
