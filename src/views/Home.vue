@@ -12,13 +12,34 @@
         class="nav-button"
         @click="tab = 'women'">WOMEN</button>
     </nav>
+    <div
+      ref="grid"
+      :class="{'slide-container--hidden' : carousel}"
+      class="slide-container">
+      <div
+        v-for="(slide,index) in activeTab"
+        :key="index"
+        :style="positions[index]"
+        :data-index="index"
+        class="slide"
+        @transitionend="unhideCarousel">
+        <Spot v-bind="slide">
+          <span class="franchise-name">{{ slide.franchise }}</span>
+        </Spot>
+        <Countdown
+          v-if="!slide.expired"
+          :date="slide.launch"
+          @expired="slide.expired = true"/>
+      </div>
+    </div>
     <Carousel
       ref="carousel"
       :slides="activeTab"
       :options="swiperOptions"
-      :responsive="true"
-      :switch-el="switchEl"
-      class="main-carousel">
+      :class="{'main-carousel--hidden': !carousel}"
+      class="main-carousel"
+      @ready="getPositions"
+      @transition-end="getPositions">
       <div
         slot-scope="{slide}">
         <Spot v-bind="slide">
@@ -33,6 +54,11 @@
           @expired="slide.expired = true"/>
       </div>
     </Carousel>
+    <div class="button-container">
+      <div class="up"/>
+      <div class="down"/>
+      <div class="full"/>
+    </div>
   </div>
 </template>
 
@@ -59,7 +85,9 @@ export default {
         slidesPerView: 1.2,
         spaceBetween: 15,
       },
-      switchEl: true,
+      carousel: true,
+      grid: false,
+      positions: [],
       tab: 'men',
       content: {
         men: {
@@ -78,7 +106,6 @@ export default {
     ref() {
       return this.$refs;
     },
-
   },
   mounted() {
     this.content = home.home;
@@ -88,16 +115,38 @@ export default {
     }
   },
   methods: {
+    unhideCarousel() {
+      if (!this.carousel && !this.grid) {
+        this.carousel = !this.carousel;
+      }
+    },
     setExpired(slides) {
       slides.map(slide => this.$set(slide, 'expired', false));
     },
     toggleCarousel() {
-      if (this.$refs.carousel.$children[0].$children[0]) {
-        this.$refs.carousel.$children[0].$children[0].swiper.destroy(false, false);
-        this.switchEl = !this.switchEl;
+      if (this.carousel) {
+        this.carousel = !this.carousel;
+        this.grid = !this.grid;
+        this.getPositions(true);
       } else {
-        this.switchEl = !this.switchEl;
+        this.getPositions();
+        this.grid = !this.grid;
       }
+    },
+    getPositions(grid = false) {
+      this.positions = [];
+      const translate = this.$refs.carousel.$children[0].$children[0].swiper.getTranslate();
+      this.positions = grid ?
+        this.$refs.carousel.$children[0].$children[0].$children.map(() => ({
+          transform: 'translate3d(0px, 0px, 0px)',
+          position: 'relative',
+          width: '100%',
+        })) :
+        this.$refs.carousel.$children[0].$children[0].$children.map(element => ({
+          transform: `translate3d(${element.$el.offsetLeft + translate}px, ${element.$el.offsetTop}px, 0px)`,
+          width: `${element.$el.offsetWidth}px`,
+          position: 'absolute',
+        }));
     },
   },
 };
@@ -115,6 +164,10 @@ export default {
     position: absolute;
     left: 10%;
     top: 25%;
+  }
+
+  .main-carousel--hidden {
+    visibility: hidden;
   }
 
   .main-carousel /deep/ .swiper-slide {
@@ -148,6 +201,48 @@ export default {
   .spot {
     position: relative;
     display: block;
+  }
+
+  .slide-container {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0.5rem;
+    padding: 0.5rem;
+    position: absolute;
+
+    /deep/ .slide {
+      transition: transform 1s, width 1s;
+    }
+  }
+
+  .slide-container--hidden {
+    visibility: hidden;
+
+    /deep/ .slide {
+      transition: none;
+    }
+  }
+
+  .button-container {
+    display: inline-block;
+    border: solid;
+    position: relative;
+    height: auto;
+  }
+
+  .up {
+    position: relative;
+  }
+
+  .up::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: solid;
+    left: 0;
+    top: 0;
   }
 </style>
 
