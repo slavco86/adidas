@@ -13,8 +13,8 @@
     </nav>
     <div
       ref="grid"
-      :class="{'slide-container--hidden' : carousel}"
-      class="slide-container">
+      :class="{'grid-container--hidden' : carousel}"
+      class="grid-container">
       <div
         v-for="(slide,index) in activeTab"
         :key="index"
@@ -23,11 +23,14 @@
         class="slide"
         @transitionend="unhideCarousel">
         <Spot v-bind="slide">
-          <span class="franchise-name">{{ slide.franchise }}</span>
+          <span
+            :class="{'franchise-name--transition': !grid}"
+            class="franchise-name">{{ slide.franchise }}</span>
         </Spot>
         <Countdown
           v-if="!slide.expired"
           :date="slide.launch"
+          :class="{'countdown--transition': !grid}"
           @expired="slide.expired = true"/>
       </div>
     </div>
@@ -43,7 +46,7 @@
         slot-scope="{slide}">
         <Spot v-bind="slide">
           <span
-            data-swiper-parallax="-900"
+            data-swiper-parallax="-500"
             data-swiper-parallax-duration="600"
             class="franchise-name">{{ slide.franchise }}</span>
         </Spot>
@@ -142,14 +145,16 @@ export default {
     getPositions(grid = false) {
       this.positions = [];
       const translate = this.$refs.carousel.$children[0].$children[0].swiper.getTranslate();
+      const activeSlide = this.$refs.carousel.$children[0].$children[0].swiper.activeIndex;
       this.positions = grid ?
         this.$refs.carousel.$children[0].$children[0].$children.map(() => ({
           transform: 'translate3d(0px, 0px, 0px)',
           position: 'relative',
           width: '100%',
         })) :
-        this.$refs.carousel.$children[0].$children[0].$children.map(element => ({
-          transform: `translate3d(${element.$el.offsetLeft + translate}px, ${element.$el.offsetTop}px, 0px)`,
+        this.$refs.carousel.$children[0].$children[0].$children.map((element, index) => ({
+          transform: `translate3d(${element.$el.offsetLeft + translate}px,
+          ${index === activeSlide ? '2' : '0'}rem, 0px)`,
           width: `${element.$el.offsetWidth}px`,
           position: 'absolute',
         }));
@@ -159,8 +164,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  .home {
+    max-height: 100%;
+    overflow: hidden;
+  }
+
   .nav {
-    padding: 3rem 0;
+    padding: 2rem 0;
     text-align: right;
     position: relative;
   }
@@ -172,18 +182,22 @@ export default {
     top: 25%;
   }
 
+  .main-carousel /deep/ .swiper-container {
+    padding-bottom: 2rem;
+  }
+
   .main-carousel--hidden {
     visibility: hidden;
   }
 
   .main-carousel /deep/ .swiper-slide {
     margin-top: 0;
-    margin-bottom: 2rem;
-    transition: margin-top 0.2s ease-in-out;
+    transform: translate3d(0, 0, 0);
+    transition: transform 0.2s ease-in-out;
   }
 
   .main-carousel /deep/ .swiper-slide-active {
-    margin-top: 2rem;
+    transform: translate3d(0, 2rem, 0);
   }
 
   .nav-button {
@@ -193,28 +207,91 @@ export default {
   }
 
   .countdown {
-    display: flex;
+    display: inline-flex;
     margin: 0 auto;
     justify-content: center;
     position: absolute;
+    top: 35%;
+    left: 0;
+    width: 100%;
+    align-items: center;
+
+    & /deep/ .countdown__value {
+      display: inline;
+      margin: 0.5rem;
+
+      &::after {
+        content: ':';
+        position: absolute;
+        right: -10px;
+        top: -0;
+        font-size: 14px;
+      }
+
+      &:last-of-type {
+        &::after {
+          display: none;
+        }
+      }
+
+      &__num i {
+        font-size: 14px;
+        transition: font-size 1s;
+      }
+
+      &__label {
+        text-transform: uppercase;
+        font-size: 6px;
+        margin-top: 5px;
+        transition: font-size 1s;
+      }
+    }
+  }
+
+  .countdown--transition,
+  .main-carousel .countdown {
+    & /deep/ .countdown__value {
+      &::after {
+        font-size: 2rem;
+      }
+
+      &__num i {
+        font-size: 2rem;
+      }
+
+      &__label {
+        font-size: 0.7rem;
+      }
+    }
   }
 
   .franchise-name {
     position: absolute;
     transition-timing-function: ease-out;
+    bottom: 0;
+    left: -100px;
+    font-size: 2.5rem;
+    font-weight: 900;
   }
 
-  .spot {
-    position: relative;
-    display: block;
+  .grid-container .franchise-name {
+    font-size: 1rem;
+    left: 0;
+    transform: translate3d(-50px, 0, 0);
+    transition: font-size 1s, left 1s;
   }
 
-  .slide-container {
+  .grid-container .franchise-name.franchise-name--transition {
+    font-size: 2.5rem;
+    transform: translate3d(-100px, 0, 0);
+  }
+
+  .grid-container {
     max-width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 0.5rem;
-    padding: 0.5rem;
+    grid-gap: 1rem;
+    padding: 1rem;
     position: absolute;
 
     /deep/ .slide {
@@ -222,7 +299,7 @@ export default {
     }
   }
 
-  .slide-container--hidden {
+  .grid-container--hidden {
     visibility: hidden;
 
     /deep/ .slide {
@@ -238,6 +315,7 @@ export default {
     height: auto;
     width: auto;
     padding: 2px;
+    margin-top: 3rem;
   }
 
   .top-left,
