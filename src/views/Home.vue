@@ -3,8 +3,7 @@
     <nav class="nav">
       <img
         class="logo"
-        src="../assets/adidas-logo.svg"
-        @click="toggleCarousel">
+        src="../assets/adidas-logo.svg">
       <button
         class="nav-button"
         @click="tab = 'men'">MEN</button>
@@ -54,10 +53,16 @@
           @expired="slide.expired = true"/>
       </div>
     </Carousel>
-    <div class="button-container">
-      <div class="up"/>
-      <div class="down"/>
-      <div class="full"/>
+    <div
+      class="button-container"
+      @click="toggleCarousel">
+      <div class="top-left"/>
+      <div class="top-right"/>
+      <div class="bottom-left"/>
+      <div class="bottom-right"/>
+      <div
+        :class="{'full--expand': border}"
+        class="full"/>
     </div>
   </div>
 </template>
@@ -87,6 +92,7 @@ export default {
       },
       carousel: true,
       grid: false,
+      border: false,
       positions: [],
       tab: 'men',
       content: {
@@ -124,13 +130,13 @@ export default {
       slides.map(slide => this.$set(slide, 'expired', false));
     },
     toggleCarousel() {
+      this.grid = !this.grid;
+      this.border = !this.border;
       if (this.carousel) {
         this.carousel = !this.carousel;
-        this.grid = !this.grid;
         this.getPositions(true);
       } else {
         this.getPositions();
-        this.grid = !this.grid;
       }
     },
     getPositions(grid = false) {
@@ -225,24 +231,62 @@ export default {
   }
 
   .button-container {
-    display: inline-block;
-    border: solid;
+    display: inline-flex;
+    flex-wrap: wrap;
+    max-width: 36px;
     position: relative;
     height: auto;
+    width: auto;
+    padding: 2px;
   }
 
-  .up {
-    position: relative;
+  .top-left,
+  .top-right,
+  .bottom-left,
+  .bottom-right, {
+    height: 12px;
+    width: 12px;
+    border: solid 1px;
+    margin: 2px;
+    box-shadow: 0 0 1px 0 black inset;
   }
 
-  .up::before {
-    content: '';
+  .top-left {
+    border-radius: 3px 0 0 0;
+  }
+
+  .top-right {
+    border-radius: 0 3px 0 0;
+  }
+
+  .bottom-left {
+    border-radius: 0 0 0 3px;
+  }
+
+  .bottom-right {
+    border-radius: 0 0 3px 0;
+  }
+
+  .full {
+    height: 0;
+    width: 0;
     position: absolute;
-    width: 10px;
-    height: 10px;
-    border: solid;
-    left: 0;
-    top: 0;
+    left: 50%;
+    transform: translate3d(-48%, 0, 0);
+    transition: height 1s, width 1s, border-color 1s, border-radius 1s;
+    align-self: center;
+    box-sizing: content-box;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    background-color: white;
+    box-shadow: 0 0 3px 0 black inset;
+
+    &--expand {
+      height: 80%;
+      width: 77%;
+      border-color: black;
+      border-radius: 3px;
+    }
   }
 </style>
 
