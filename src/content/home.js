@@ -5,8 +5,8 @@ export default {
         {
           franchise: 'EQT',
           image: {
-            desktop: 'http://via.placeholder.com/350x350',
-            mobile: 'http://via.placeholder.com/350x350',
+            desktop: 'http://via.placeholder.com/350x350/969696',
+            mobile: 'http://via.placeholder.com/350x350/969696',
             url: '#',
           },
           path: 'men',
@@ -15,8 +15,8 @@ export default {
         {
           franchise: 'Falcon',
           image: {
-            desktop: 'http://via.placeholder.com/350x350',
-            mobile: 'http://via.placeholder.com/350x350',
+            desktop: 'http://via.placeholder.com/350x350/969696',
+            mobile: 'http://via.placeholder.com/350x350/969696',
             url: '#',
           },
           path: 'men',
@@ -25,8 +25,8 @@ export default {
         {
           franchise: 'Deerupt',
           image: {
-            desktop: 'http://via.placeholder.com/350x350',
-            mobile: 'http://via.placeholder.com/350x350',
+            desktop: 'http://via.placeholder.com/350x350/969696',
+            mobile: 'http://via.placeholder.com/350x350/969696',
             url: '#',
           },
           path: 'men',
@@ -35,8 +35,8 @@ export default {
         {
           franchise: 'POD',
           image: {
-            desktop: 'http://via.placeholder.com/350x350',
-            mobile: 'http://via.placeholder.com/350x350',
+            desktop: 'http://via.placeholder.com/350x350/969696',
+            mobile: 'http://via.placeholder.com/350x350/969696',
             url: '#',
           },
           path: 'men',

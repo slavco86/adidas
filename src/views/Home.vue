@@ -1,13 +1,23 @@
 <template>
-  <div class="home">
+  <div
+    :class="{'home--invert': tab === 'women'}"
+    class="home">
     <nav class="nav">
       <img
+        v-if="tab === 'women'"
         class="logo"
         src="../assets/adidas-logo.svg">
+      <img
+        v-if="tab === 'men'"
+        class="logo"
+        src="../assets/adidas-logo-white.svg">
       <button
+        :class="{'nav-button--inactive': tab === 'women',
+                 'nav-button--invert': tab === 'men'}"
         class="nav-button"
         @click="tab = 'men'">MEN</button>
       <button
+        :class="{'nav-button--inactive': tab === 'men'}"
         class="nav-button"
         @click="tab = 'women'">WOMEN</button>
     </nav>
@@ -24,13 +34,15 @@
         @transitionend="unhideCarousel">
         <Spot v-bind="slide">
           <span
-            :class="{'franchise-name--transition': !grid}"
+            :class="{'franchise-name--transition': !grid,
+                     'franchise-name--invert': tab === 'men'}"
             class="franchise-name">{{ slide.franchise }}</span>
         </Spot>
         <Countdown
           v-if="!slide.expired"
           :date="slide.launch"
-          :class="{'countdown--transition': !grid}"
+          :class="{'countdown--transition': !grid,
+                   'countdown--invert': tab === 'men'}"
           @expired="slide.expired = true"/>
       </div>
     </div>
@@ -46,17 +58,20 @@
         slot-scope="{slide}">
         <Spot v-bind="slide">
           <span
+            :class="{'franchise-name--invert': tab === 'men'}"
             data-swiper-parallax="-500"
             data-swiper-parallax-duration="600"
             class="franchise-name">{{ slide.franchise }}</span>
         </Spot>
         <Countdown
           v-if="!slide.expired"
+          :class="{'countdown--invert': tab === 'men'}"
           :date="slide.launch"
           @expired="slide.expired = true"/>
       </div>
     </Carousel>
     <div
+      :class="{'button-container--invert': tab === 'men'}"
       class="button-container"
       @click="toggleCarousel">
       <div class="top-left"/>
@@ -64,7 +79,8 @@
       <div class="bottom-left"/>
       <div class="bottom-right"/>
       <div
-        :class="{'full--expand': border}"
+        :class="{'full--expand': border,
+                 'full--invert': tab === 'men'}"
         class="full"/>
     </div>
   </div>
@@ -165,8 +181,14 @@ export default {
 
 <style lang="scss" scoped>
   .home {
-    max-height: 100%;
+    height: 100vh;
     overflow: hidden;
+    background-color: rgb(34, 34, 34);
+    transition: background-color 1s;
+  }
+
+  .home--invert {
+    background-color: white;
   }
 
   .nav {
@@ -180,6 +202,21 @@ export default {
     position: absolute;
     left: 10%;
     top: 25%;
+  }
+
+  .nav-button {
+    background: none;
+    font-size: 0.9rem;
+    margin: 0 1rem;
+    font-weight: 600;
+
+    &--inactive {
+      color: #999;
+    }
+
+    &--invert {
+      color: white;
+    }
   }
 
   .main-carousel /deep/ .swiper-container {
@@ -198,12 +235,6 @@ export default {
 
   .main-carousel /deep/ .swiper-slide-active {
     transform: translate3d(0, 2rem, 0);
-  }
-
-  .nav-button {
-    background: none;
-    font-size: 0.9rem;
-    margin: 0 1rem;
   }
 
   .countdown {
@@ -246,6 +277,22 @@ export default {
         transition: font-size 1s;
       }
     }
+
+    &--invert {
+      & /deep/ .countdown__value {
+        &::after {
+          color: white;
+        }
+
+        &__num i {
+          color: white;
+        }
+
+        &__label {
+          color: white;
+        }
+      }
+    }
   }
 
   .countdown--transition,
@@ -272,6 +319,10 @@ export default {
     left: -100px;
     font-size: 2.5rem;
     font-weight: 900;
+
+    &--invert {
+      color: white;
+    }
   }
 
   .grid-container .franchise-name {
@@ -321,7 +372,7 @@ export default {
   .top-left,
   .top-right,
   .bottom-left,
-  .bottom-right, {
+  .bottom-right {
     height: 12px;
     width: 12px;
     border: solid 1px;
@@ -345,6 +396,16 @@ export default {
     border-radius: 0 0 3px 0;
   }
 
+  .button-container--invert {
+    .top-left,
+    .top-right,
+    .bottom-left,
+    .bottom-right {
+      border-color: #999;
+      box-shadow: 0 0 2px 0px #999 inset;
+    }
+  }
+
   .full {
     height: 0;
     width: 0;
@@ -365,6 +426,15 @@ export default {
       border-color: black;
       border-radius: 3px;
     }
+
+    &--invert {
+      box-shadow: 0 0 3px 0 #999 inset;
+      background-color: rgb(34, 34, 34);
+    }
+  }
+
+  .full--expand.full--invert {
+    border-color: #999;
   }
 </style>
 
