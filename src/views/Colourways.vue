@@ -4,82 +4,103 @@
     <!-- This is the main container which contains the adidas logo, close button (called error),
     the two plus buttons -->
     <div class="mainimage">
-      <img class="close"       src="../assets/close_white.png">
-      <img class="adidas"      src="../assets/adidas_white.svg">
-      <img class="add"         src="../assets/add.png">
+      <img
+        class="close"
+        src="../assets/close_white.png">
+      <img
+        class="adidas"
+        src="../assets/adidas_white.svg">
+      <img
+        class="add"
+        src="../assets/add.png">
       <!-- the main shoe image is given a dynamic html value based on what image the user clicks
       in the carousel -->
-      <img class="mainshoe"   :src="defaultImage"> 
-      <img class="addafter"    src="../assets/add.png">
+      <img
+        :src="defaultImage"
+        class="mainshoe">
+      <img
+        class="addafter"
+        src="../assets/add.png">
       <!-- This is the shopping  items which consist of the title of the shoe, price and bag picture -->
       <h3 class="shoppingbagtexttitle">DERUPT</h3>
       <h4 class="shoppingbagtext">£80.00</h4>
-      <img src="../assets/shoppingbag.png"  class="shoppingbagicon">
+      <img
+        src="../assets/shoppingbag.png"
+        class="shoppingbagicon">
     </div>
     <!-- The carousel container shows different show images. On click will change the main show image -->
     <!-- The line below is the main container which sets up the slides and passes in the options -->
-    <Carousel :slides="slides" :options="options" ref="carousel" class="carousel-container">
+    <Carousel
+      ref="carousel"
+      :slides="slides"
+      :options="options"
+      class="carousel-container">
       <!-- The image container appears on the line below -->
-      <div class="image-container" slot-scope="{slide}">
+      <div
+        slot-scope="{slide}"
+        class="image-container">
         <!-- On click the slide url is passed to the click event handler -->
-        <img :src="slide.image" class="image" @click="mainImage($refs.carousel.$children[0].$children[0].swiper.clickedIndex)"/>
+        <img
+          :src="slide.image"
+          class="image"
+          @click="mainImage($refs.carousel.$children[0].$children[0].swiper.clickedIndex)">
       </div>
     </Carousel>
     <!-- Derupt title -->
-    <h1  class="derupt">Derupt</h1>
+    <h1 class="derupt">Derupt</h1>
   </div>
 </template>
 
 <script>
-  import Carousel from '@/containers/Carousel.vue'; //imports the casrousel component (part of swiper)
+import Carousel from '@/containers/Carousel.vue'; // imports the casrousel component (part of swiper)
 
-  //exports the carousel component and gives it a name for future use.
-  export default {
-  name: 'Colourways-container',
+// exports the carousel component and gives it a name for future use.
+export default {
+  name: 'ColourwaysContainer',
   components: {
     Carousel,
   },
 
-  //the date method sets up the vue component. First it declares the main image variable which will change when the user clicks it.
-  //the slides array contains all the images. They are hosted at http://assets.jdsports.com/
+  // the date method sets up the vue component. First it declares the main image variable which will change when the user clicks it.
+  // the slides array contains all the images. They are hosted at http://assets.jdsports.com/
   data() {
     return {
       defaultImage: '',
       slides: [
         {
-          image: "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-0-04670ce96db4cc1da203cc6895aa85e0.png"
+          image: 'https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-0-04670ce96db4cc1da203cc6895aa85e0.png',
         },
         {
-          image:"https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-1-6e0103d3b8a1653704b09acad135b6a9.png"
+          image: 'https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-1-6e0103d3b8a1653704b09acad135b6a9.png',
         },
         {
-          image:"https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-2-57ac562da9a5af2fbd89974727329a02.png"
+          image: 'https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-2-57ac562da9a5af2fbd89974727329a02.png',
         },
         {
-          image:"https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-3-48065ea7006370f09ba101c518513105.png"
+          image: 'https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-3-48065ea7006370f09ba101c518513105.png',
         },
         {
-          image:"https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-4-0ea11a1bd092bb5eacdc608aac48d64c.png"
+          image: 'https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-4-0ea11a1bd092bb5eacdc608aac48d64c.png',
         },
         {
-          image:"https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-5-6fae8c215df40f8eac27d0a2d34c1cf3.png"
+          image: 'https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-5-6fae8c215df40f8eac27d0a2d34c1cf3.png',
         },
         {
-          image:"https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-6-2001fef6fd965b9b7ff7456d1f103818.png"
+          image: 'https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-6-2001fef6fd965b9b7ff7456d1f103818.png',
         },
-        ],
+      ],
 
-        //The options are found at http://idangero.us/swiper/api/. They are swiper options which are fed into the carousel.
+      // The options are found at http://idangero.us/swiper/api/. They are swiper options which are fed into the carousel.
       options: {
         slidesPerView: 6,
         breakpoints: {
           376: {
             slidesPerView: 4,
             spaceBetween: 10,
-          }
-        }
-      }
-    }
+          },
+        },
+      },
+    };
   },
   mounted() {
     this.mainImage(0);
@@ -89,15 +110,15 @@
   //         return this.slides[0].image
   //       }
   //     },
-  //This method receives a click event when the user clicks on an image in the carousel. It is then assigned to the
-  //main image variable which will change the main shoe display image.
-  methods:{
-  mainImage(index) {
-      this.defaultImage =  this.slides[index].image;
+  // This method receives a click event when the user clicks on an image in the carousel. It is then assigned to the
+  // main image variable which will change the main shoe display image.
+  methods: {
+    mainImage(index) {
+      this.defaultImage = this.slides[index].image;
       console.log(this.$refs);
-      }
-  }
-}
+    },
+  },
+};
 
 </script>
 
@@ -108,7 +129,7 @@
 
 @font-face {
 font-family: 'HCo Gotham Cond SSm';
-src:url('../assets/fonts/B1CFB00FA67031B66.woff2') format('woff2'),	
+src:url('../assets/fonts/B1CFB00FA67031B66.woff2') format('woff2'),
 url('../assets/fonts/B1CFB00FA67031B66.woff') format('woff');
 font-weight: 400;
 font-style: normal;
@@ -126,7 +147,7 @@ font-style: normal;
 
 @font-face {
 font-family: 'HCo Gotham Cond SSm';
-src:url('../assets/fonts/DD21C5786A9E30A24.woff2') format('woff2'),	
+src:url('../assets/fonts/DD21C5786A9E30A24.woff2') format('woff2'),
 url('../assets/fonts/DD21C5786A9E30A24.woff') format('woff');
 font-weight: 600;
 font-style: normal;
@@ -219,7 +240,7 @@ font-style: normal;
   height: 85%;
 }
 
-//this styles the right plus icon 
+//this styles the right plus icon
 .addafter {
   position: absolute;
   top: 76%;
@@ -342,7 +363,7 @@ font-style: normal;
   height: 10%;
   width: 10%;
   z-index: 1;
-} 
+}
 
 .shoppingbagtext {
   color: white;
@@ -361,7 +382,7 @@ font-style: normal;
 
 .image-container {
   position: relative;
-  
+
 }
 
 .image {
@@ -378,8 +399,5 @@ font-style: normal;
 }
 
 
-  
-
 </style>
-
 
