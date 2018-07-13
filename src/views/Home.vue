@@ -44,6 +44,10 @@
           :class="{'countdown--transition': !grid,
                    'countdown--invert': tab === 'men'}"
           @expired="slide.expired = true"/>
+        <div
+          :class="{'plus--invert' : tab === 'men',
+                   'plus--transition': !grid}"
+          class="plus"/>
       </div>
     </div>
     <Carousel
@@ -68,6 +72,9 @@
           :class="{'countdown--invert': tab === 'men'}"
           :date="slide.launch"
           @expired="slide.expired = true"/>
+        <div
+          :class="{'plus--invert' : tab === 'men'}"
+          class="plus"/>
       </div>
     </Carousel>
     <div
@@ -108,6 +115,7 @@ export default {
         centeredSlides: true,
         slidesPerView: 1.2,
         spaceBetween: 15,
+        speed: 500,
       },
       carousel: true,
       grid: false,
@@ -230,7 +238,7 @@ export default {
   .main-carousel /deep/ .swiper-slide {
     margin-top: 0;
     transform: translate3d(0, 0, 0);
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.5s ease-in-out;
   }
 
   .main-carousel /deep/ .swiper-slide-active {
@@ -257,6 +265,7 @@ export default {
         right: -10px;
         top: -0;
         font-size: 14px;
+        color: black;
       }
 
       &:last-of-type {
@@ -268,6 +277,7 @@ export default {
       &__num i {
         font-size: 14px;
         transition: font-size 1s;
+        color: black;
       }
 
       &__label {
@@ -275,6 +285,7 @@ export default {
         font-size: 6px;
         margin-top: 5px;
         transition: font-size 1s;
+        color: black;
       }
     }
 
@@ -319,6 +330,7 @@ export default {
     left: -100px;
     font-size: 2.5rem;
     font-weight: 900;
+    color: black;
 
     &--invert {
       color: white;
@@ -326,7 +338,7 @@ export default {
   }
 
   .grid-container .franchise-name {
-    font-size: 1rem;
+    font-size: 1.2rem;
     left: 0;
     transform: translate3d(-50px, 0, 0);
     transition: font-size 1s, left 1s;
@@ -366,7 +378,7 @@ export default {
     height: auto;
     width: auto;
     padding: 2px;
-    margin-top: 3rem;
+    margin-top: 5rem;
   }
 
   .top-left,
@@ -414,15 +426,14 @@ export default {
     transform: translate3d(-48%, 0, 0);
     transition: height 1s, width 1s, border-color 1s, border-radius 1s;
     align-self: center;
-    box-sizing: content-box;
     border: 1px solid transparent;
     border-radius: 6px;
     background-color: white;
     box-shadow: 0 0 3px 0 black inset;
 
     &--expand {
-      height: 80%;
-      width: 77%;
+      height: 83%;
+      width: 83%;
       border-color: black;
       border-radius: 3px;
     }
@@ -435,6 +446,55 @@ export default {
 
   .full--expand.full--invert {
     border-color: #999;
+  }
+
+  .plus {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 35px;
+    height: 35px;
+    color: black;
+
+    &::before,
+    &::after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      border-bottom: solid;
+      left: 0;
+      top: -55%;
+      position: absolute;
+    }
+
+    &::after {
+      top: 0;
+      left: 45%;
+      border-bottom: none;
+      border-left: solid;
+    }
+
+    &--invert {
+      &::after,
+      &::before {
+        border-color: white;
+      }
+    }
+  }
+
+  .grid-container .plus {
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    transition: top 1s, right 1s, width 1s, height 1s;
+
+    &--transition {
+      top: 20px;
+      right: 20px;
+      width: 35px;
+      height: 35px;
+    }
   }
 </style>
 
