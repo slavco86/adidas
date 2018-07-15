@@ -233,6 +233,10 @@ export default {
     padding-bottom: 2rem;
   }
 
+  .main-carousel /deep/ .spot {
+    display: block;
+  }
+
   .main-carousel--hidden {
     visibility: hidden;
   }
@@ -338,7 +342,7 @@ export default {
     position: absolute;
     transition-timing-function: ease-out;
     bottom: 0;
-    left: -100px;
+    left: 20px;
     font-size: 2.5rem;
     font-weight: 900;
     color: black;
@@ -350,19 +354,16 @@ export default {
 
   .grid-container .franchise-name {
     font-size: 1.2rem;
-    left: 0;
-    transform: translate3d(-50px, 0, 0);
+    left: 20px;
     transition: font-size 1s, left 1s;
 
     @media only screen and (min-width: 765px) {
-      transform: translate3d(-120px, 0, 0);
       font-size: 2rem;
     }
   }
 
   .grid-container .franchise-name.franchise-name--transition {
     font-size: 2.5rem;
-    transform: translate3d(-100px, 0, 0);
   }
 
   .grid-container {
@@ -379,6 +380,10 @@ export default {
 
     /deep/ .slide {
       transition: transform 1s, width 1s;
+    }
+
+    /deep/ .spot {
+      display: block;
     }
   }
 
@@ -470,15 +475,13 @@ export default {
 
   .plus {
     position: absolute;
-    bottom: 260px;
-    left: 100px;
+    top: 10px;
+    right: 10px;
     width: 35px;
     height: 35px;
     color: black;
 
     @media only screen and (min-width: 765px) {
-      bottom: 250px;
-      left: 100px;
     }
 
     &::before,
@@ -508,28 +511,22 @@ export default {
   }
 
   .grid-container .plus {
-    bottom: 130px;
-    left: 50px;
+    top: 10px;
+    right: 10px;
     width: 20px;
     height: 20px;
     transition: bottom 1s, left 1s, width 1s, height 1s;
 
     @media only screen and (min-width: 765px) {
-      bottom: 270px;
-      left: 110px;
       width: 30px;
       height: 30px;
     }
 
     &--transition {
-      bottom: 260px;
-      left: 100px;
       width: 35px;
       height: 35px;
 
       @media only screen and (min-width: 765px) {
-        bottom: 250px;
-        left: 100px;
       }
     }
   }
