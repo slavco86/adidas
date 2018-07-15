@@ -37,6 +37,10 @@
             :class="{'franchise-name--transition': !grid,
                      'franchise-name--invert': tab === 'men'}"
             class="franchise-name">{{ slide.franchise }}</span>
+          <div
+            :class="{'plus--invert' : tab === 'men',
+                     'plus--transition': !grid}"
+            class="plus"/>
         </Spot>
         <Countdown
           v-if="!slide.expired"
@@ -44,10 +48,6 @@
           :class="{'countdown--transition': !grid,
                    'countdown--invert': tab === 'men'}"
           @expired="slide.expired = true"/>
-        <div
-          :class="{'plus--invert' : tab === 'men',
-                   'plus--transition': !grid}"
-          class="plus"/>
       </div>
     </div>
     <Carousel
@@ -66,15 +66,15 @@
             data-swiper-parallax="-500"
             data-swiper-parallax-duration="600"
             class="franchise-name">{{ slide.franchise }}</span>
+          <div
+            :class="{'plus--invert' : tab === 'men'}"
+            class="plus"/>
         </Spot>
         <Countdown
           v-if="!slide.expired"
           :class="{'countdown--invert': tab === 'men'}"
           :date="slide.launch"
           @expired="slide.expired = true"/>
-        <div
-          :class="{'plus--invert' : tab === 'men'}"
-          class="plus"/>
       </div>
     </Carousel>
     <div
@@ -110,17 +110,11 @@ export default {
   },
   data() {
     return {
-      swiperOptions: {
-        parallax: true,
-        centeredSlides: true,
-        slidesPerView: 1.2,
-        spaceBetween: 15,
-        speed: 500,
-      },
       carousel: true,
       grid: false,
       border: false,
       positions: [],
+      width: window.innerWidth,
       tab: 'men',
       content: {
         men: {
@@ -136,8 +130,15 @@ export default {
     activeTab() {
       return (this.tab === 'men') ? this.content.men.slides : this.content.women.slides;
     },
-    ref() {
-      return this.$refs;
+    swiperOptions() {
+      const slidesPerView = window.innerWidth > 765 ? 1.8 : 1.2;
+      return {
+        parallax: true,
+        centeredSlides: true,
+        spaceBetween: 15,
+        speed: 500,
+        slidesPerView,
+      };
     },
   },
   mounted() {
@@ -177,9 +178,10 @@ export default {
           width: '100%',
         })) :
         this.$refs.carousel.$children[0].$children[0].$children.map((element, index) => ({
-          transform: `translate3d(${element.$el.offsetLeft + translate}px,
+          transform: `translate3d(${window.innerWidth > 765 ? element.$el.offsetLeft + translate + 160 :
+            element.$el.offsetLeft + translate}px,
           ${index === activeSlide ? '2' : '0'}rem, 0px)`,
-          width: `${element.$el.offsetWidth}px`,
+          width: `${element.$el.children[0].clientWidth}px`,
           position: 'absolute',
         }));
     },
@@ -239,6 +241,10 @@ export default {
     margin-top: 0;
     transform: translate3d(0, 0, 0);
     transition: transform 0.5s ease-in-out;
+
+    @media only screen and (min-width: 765px) {
+      padding: 0 220px;
+    }
   }
 
   .main-carousel /deep/ .swiper-slide-active {
@@ -246,9 +252,9 @@ export default {
   }
 
   .countdown {
-    display: inline-flex;
+    display: flex;
     margin: 0 auto;
-    justify-content: center;
+    justify-content: space-evenly;
     position: absolute;
     top: 35%;
     left: 0;
@@ -256,16 +262,19 @@ export default {
     align-items: center;
 
     & /deep/ .countdown__value {
-      display: inline;
-      margin: 0.5rem;
+      width: 33%;
 
       &::after {
         content: ':';
         position: absolute;
-        right: -10px;
-        top: -0;
+        right: 0;
+        top: 0;
         font-size: 14px;
         color: black;
+
+        @media only screen and (min-width: 765px) {
+          font-size: 2rem;
+        }
       }
 
       &:last-of-type {
@@ -278,6 +287,10 @@ export default {
         font-size: 14px;
         transition: font-size 1s;
         color: black;
+
+        @media only screen and (min-width: 765px) {
+          font-size: 2rem;
+        }
       }
 
       &__label {
@@ -286,19 +299,17 @@ export default {
         margin-top: 5px;
         transition: font-size 1s;
         color: black;
+
+        @media only screen and (min-width: 765px) {
+          font-size: 1rem;
+        }
       }
     }
 
     &--invert {
       & /deep/ .countdown__value {
-        &::after {
-          color: white;
-        }
-
-        &__num i {
-          color: white;
-        }
-
+        &::after,
+        &__num i,
         &__label {
           color: white;
         }
@@ -342,6 +353,11 @@ export default {
     left: 0;
     transform: translate3d(-50px, 0, 0);
     transition: font-size 1s, left 1s;
+
+    @media only screen and (min-width: 765px) {
+      transform: translate3d(-120px, 0, 0);
+      font-size: 2rem;
+    }
   }
 
   .grid-container .franchise-name.franchise-name--transition {
@@ -356,6 +372,10 @@ export default {
     grid-gap: 1rem;
     padding: 1rem;
     position: absolute;
+
+    @media only screen and (min-width: 765px) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
 
     /deep/ .slide {
       transition: transform 1s, width 1s;
@@ -414,7 +434,7 @@ export default {
     .bottom-left,
     .bottom-right {
       border-color: #999;
-      box-shadow: 0 0 2px 0px #999 inset;
+      box-shadow: 0 0 2px 0 #999 inset;
     }
   }
 
@@ -450,11 +470,16 @@ export default {
 
   .plus {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    bottom: 260px;
+    left: 100px;
     width: 35px;
     height: 35px;
     color: black;
+
+    @media only screen and (min-width: 765px) {
+      bottom: 250px;
+      left: 100px;
+    }
 
     &::before,
     &::after {
@@ -483,17 +508,29 @@ export default {
   }
 
   .grid-container .plus {
-    top: 10px;
-    right: 10px;
+    bottom: 130px;
+    left: 50px;
     width: 20px;
     height: 20px;
-    transition: top 1s, right 1s, width 1s, height 1s;
+    transition: bottom 1s, left 1s, width 1s, height 1s;
+
+    @media only screen and (min-width: 765px) {
+      bottom: 270px;
+      left: 110px;
+      width: 30px;
+      height: 30px;
+    }
 
     &--transition {
-      top: 20px;
-      right: 20px;
+      bottom: 260px;
+      left: 100px;
       width: 35px;
       height: 35px;
+
+      @media only screen and (min-width: 765px) {
+        bottom: 250px;
+        left: 100px;
+      }
     }
   }
 </style>
