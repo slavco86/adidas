@@ -48,17 +48,40 @@
     </Carousel>
     <!-- Derupt title -->
     <h1 class="derupt">{{ shoeSize }}</h1>
+    <button id="show-modal" @click="showModal = true">Show Modal</button>
+  <!-- use the modal component, pass in the prop -->
+  <modal v-if="showModal" @close="showModal = false">
+    <!--
+      you can use custom content here to overwrite
+      default content
+    -->
+    <h3 slot="header">custom header</h3>
+  </modal>
+    <!-- <button
+      type="button"
+      class="btn"
+      @click="showModal"
+    >
+      Open Modal!
+    </button>
+
+    <modal
+      v-show="isModalVisible"
+      @close="closeModal"
+    /> -->
   </div>
 </template>
 
 <script>
 import Carousel from '@/containers/Carousel.vue'; // imports the casrousel component (part of swiper)
+import modal from '@/components/Modal.vue';
 
 // exports the carousel component and gives it a name for future use.
 export default {
   name: 'ColourwaysContainer',
   components: {
     Carousel,
+    modal,
   },
 
   props: {
@@ -73,7 +96,8 @@ export default {
   // the slides array contains all the images. They are hosted at http://assets.jdsports.com/
   data() {
     return {
-      showModal: true,
+      // isModalVisible: false,
+      showModal: false,
       defaultImage: '',
       slides: [
         {
@@ -129,6 +153,12 @@ export default {
     //     this.$refs.carousel.$children[0].$children[0].swiper.destroy(false, false);
     //     return true;
     //   }
+    // }
+    // shoeModal() {
+    //   this.isModalVisible = true;
+    // },
+    // closeModal() {
+    //   this.isModalVisible = false;
     // }
   },
   
