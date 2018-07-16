@@ -172,7 +172,6 @@ export default {
       }
     },
     getPositions(grid = false) {
-      console.info(this.$refs);
       this.positions = [];
       const translate = this.$refs.carousel.$children[0].$children[0].swiper.getTranslate();
       const activeSlide = this.$refs.carousel.$children[0].$children[0].swiper.activeIndex;
