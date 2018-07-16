@@ -25,6 +25,8 @@ export default new Router({
       component: Social,
     },
     {
+      // Last modified by Ali Kayani on 11/07/2017
+      // Enables the Colourways route to be loaded
       path: '/colourways',
       name: 'colourways',
       component: Colourways,
