@@ -73,6 +73,7 @@ export default {
   // the slides array contains all the images. They are hosted at http://assets.jdsports.com/
   data() {
     return {
+      showModal: true,
       defaultImage: '',
       slides: [
         {
