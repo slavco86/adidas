@@ -1,14 +1,20 @@
 <template>
-  <div class="container">
+  <div
+    ref="container"
+    class="container">
     <!-- First Content -->
-    <div class="content">
+    <div
+      ref="fContent"
+      class="content">
       <!-- Content Title -->
       <h1 class="content__title">360 Degree</h1>
       <!-- Content Overlay -->
       <div
+        ref="overlay"
+        :style="position"
         class="content__overlay"
-        data-start="height: 0;"
-        data-970-end="height: 100%;">
+        data-18-start="transform: translate3d(0, 100%, 0);"
+        data-800-end="transform: translate3d(0, 0, 0)">
         <!-- Overlay Title -->
         <div class="content__overlay__info">
           <!-- Image Container -->
@@ -63,28 +69,41 @@
 </template>
 
 <script>
-import Skrollr from 'skrollr';
+// import Skrollr from 'skrollr';
 
 export default {
   name: 'Colourways',
-  mounted() {
-    Skrollr.init({
-      forceHeight: true,
-    });
+  data() {
+    return {
+      pageYOffset: 0,
+      position: {},
+      content: '',
+      overlay: '',
+    };
+  },
+
+  created() {
+    window.addEventListener('scroll', this.animateScroll);
+  },
+
+  methods: {
+    animateScroll() {
+      this.pageYOffset = window.pageYOffset;
+      this.overlay = this.$refs.overlay;
+      this.position = {
+        transform: `translate3d(0px, ${this.pageYOffset / 8}px, 0px)`,
+      };
+    },
   },
 };
 </script>
 
 <style lang="scss" scoped>
   .container {
+    max-width: 1950px;
+    margin: 0 auto;
     background-color: #333;
     color: #fff;
-    margin: 0 auto;
-    max-width: 1950px;
-    overflow-x: hidden;
-    overflow-y: auto;
-    scroll-padding: 100px 0 0;
-    scroll-snap-type: y proximity;
   }
 
   .content {
@@ -94,7 +113,6 @@ export default {
     justify-content: center;
     overflow: hidden;
     position: relative;
-    scroll-snap-align: start none;
     width: 100%;
 
     &__title {
@@ -126,18 +144,19 @@ export default {
       flex-direction: column;
       justify-content: flex-end;
       left: 0;
+      height: 100%;
       position: absolute;
       width: 100%;
-      transition: all 1.5s linear;
+      transform: translate3d(0, 100%, 0);
+      transition: transform 0.8s ease-in-out;
       z-index: 1;
 
       &__list {
         list-style: none;
         padding: 0;
-        margin: 3rem 0;
+        margin: 2rem 0;
         position: relative;
         display: flex;
-        margin-bottom: 0;
         transition: all 0.5s linear;
 
         li {
@@ -148,7 +167,8 @@ export default {
 
       &__info {
         display: flex;
-        max-height: 750px;
+        max-width: 500px;
+        padding: 1rem;
         justify-content: center;
       }
 
@@ -166,7 +186,7 @@ export default {
       &__text {
         position: absolute;
         top: 60%;
-        right: 35%;
+        right: 0;
         margin: 0 1rem;
 
         h4 {
