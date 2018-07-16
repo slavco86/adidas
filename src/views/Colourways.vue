@@ -1,4 +1,4 @@
-// Written by Ali K last modified 16/07/2018
+// Last modified by Ali K last modified 16/07/2018
 <template>
   <div class="colourwayscontainer">
     <!-- This is the main container which contains the adidas logo, close button,
@@ -19,8 +19,11 @@
         :src="defaultImage"
         class="mainshoe">
       <img
-        class="addafter"
-        src="../assets/add.png">
+        src="../assets/add.png"
+        class="show-modal" @click="showModal = true"
+        id="addafter"
+        
+      >
       <!-- This is the shopping  items which consist of the title of the shoe, price and bag picture -->
       <h3 class="shoppingbagtexttitle">DERUPT</h3>
       <h4 class="shoppingbagtext">£80.00</h4>
@@ -48,15 +51,15 @@
     </Carousel>
     <!-- Derupt title -->
     <h1 class="derupt">{{ shoeSize }}</h1>
-    <button id="show-modal" @click="showModal = true">Show Modal</button>
+    <!-- <button id="show-modal" @click="showModal = true">Show Modal</button> -->
   <!-- use the modal component, pass in the prop -->
-  <modal v-if="showModal" @close="showModal = false">
-    <!--
-      you can use custom content here to overwrite
-      default content
-    -->
-    <h3 slot="header">custom header</h3>
-  </modal>
+    <modal v-if="showModal" @close="showModal = false">
+      <!--
+        you can use custom content here to overwrite
+        default content
+      -->
+      <h3 slot="header">custom header</h3>
+    </modal>
     <!-- <button
       type="button"
       class="btn"
@@ -400,13 +403,14 @@ font-style: normal;
 }
 
 //this styles the plus icon which appears to the right of the container
-.addafter {
+#addafter {
     position: absolute;
     top:   69%;
     left: 54%;
     width: 48px;
     height: 48px;
     opacity: 0.55;
+    z-index: 2;
   }
 
 //this syles the main derupt lettering which now appears across the screen.

@@ -1,3 +1,4 @@
+// Written by Ali K last modified 16/07/2018 
 <template>
   <transition name="modal">
     <div class="modal-mask">
