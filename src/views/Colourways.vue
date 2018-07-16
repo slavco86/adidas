@@ -1,7 +1,7 @@
-// Written by Ali K last modified 13/07/2018
+// Written by Ali K last modified 16/07/2018
 <template>
   <div class="colourwayscontainer">
-    <!-- This is the main container which contains the adidas logo, close button (called error),
+    <!-- This is the main container which contains the adidas logo, close button,
     the two plus buttons -->
     <div class="mainimage">
       <img
@@ -39,7 +39,7 @@
       <div
         slot-scope="{slide}"
         class="image-container">
-        <!-- On click the slide url is passed to the click event handler -->
+        <!-- On click the index of the clicked slide is passed to the mainimage -->
         <img
           :src="slide.image"
           class="image"
@@ -47,7 +47,7 @@
       </div>
     </Carousel>
     <!-- Derupt title -->
-    <h1 class="derupt">Derupt</h1>
+    <h1 class="derupt">{{ shoeSize }}</h1>
   </div>
 </template>
 
@@ -59,6 +59,14 @@ export default {
   name: 'ColourwaysContainer',
   components: {
     Carousel,
+  },
+
+  props: {
+    shoeSize: {
+      type: String,
+      required: false,
+      default: "Derupt"
+    }
   },
 
   // the date method sets up the vue component. First it declares the main image variable which will change when the user clicks it.
@@ -92,32 +100,37 @@ export default {
 
       // The options are found at http://idangero.us/swiper/api/. They are swiper options which are fed into the carousel.
       options: {
-        slidesPerView: 6,
+        responsive: true,
+        slidesPerView: 7,
+        spaceBetween: -400,
         breakpoints: {
           376: {
-            slidesPerView: 4,
+            slidesPerView: 4.5,
             spaceBetween: 10,
           },
         },
       },
     };
   },
+
   mounted() {
     this.mainImage(0);
   },
-  // computed: {
-  //       defaultImage() {
-  //         return this.slides[0].image
-  //       }
-  //     },
+
   // This method receives a click event when the user clicks on an image in the carousel. It is then assigned to the
   // main image variable which will change the main shoe display image.
   methods: {
     mainImage(index) {
       this.defaultImage = this.slides[index].image;
-      console.log(this.$refs);
     },
+    // destroyCarousel() {
+    //   if(this.slides.length <= this.$refs.carousel.$children[0].$children[0].swiper.params.slidesPerView) {
+    //     this.$refs.carousel.$children[0].$children[0].swiper.destroy(false, false);
+    //     return true;
+    //   }
+    // }
   },
+  
 };
 
 </script>
@@ -125,7 +138,7 @@ export default {
 <style lang="scss" scoped>
 
 // The fonts below are the Gotham font used by JD. They are stored in the assets folder.
-// They are differnent weights.
+// They are different weights.
 
 @font-face {
 font-family: 'HCo Gotham Cond SSm';
@@ -209,6 +222,8 @@ font-style: normal;
   height: 42px;
 }
 
+//this styles the main derupt text
+
 .derupt {
   position: absolute;
   top: 207px;
@@ -219,7 +234,7 @@ font-style: normal;
   font-weight: 900;
   z-index: 0;
   color:#333333;
-  letter-spacing: -10px;
+  letter-spacing: -10px
 
 }
 
@@ -276,14 +291,18 @@ font-style: normal;
   font-size: 10px;
 }
 
+//this styles the carousel container
+
 .carousel-container {
   margin-top: 15%;
 }
 
+//this styles the main image container
 .image-container {
   position: relative;
 }
 
+//this styles the actual slides, notice the opactity is set
 .image {
   display: block;
   width: 80px;
@@ -291,32 +310,39 @@ font-style: normal;
   opacity: 0.5;
 }
 
+//when the user hovers over the image the opactity will be set to 1 so the 
+//thumbnail is fully visible
 .image:hover {
   opacity: 1;
 }
 
 //----------------------------------//Media query for larger screens------------------------------------------
 
-@media only screen and (min-width: 766px) {
+@media only screen and (min-width: 1365px) {
 
+//this styles the main colourways container
 .colourwayscontainer {
      background: #222222;
-     height: 100vh;
+     height: 98vh;
   }
 
+
+  //this is the stylign for tha main shoe image
  .mainimage {
     position: relative;
   }
 
-
+  //the main adidas logo now appears on the desktop site and is given a position
   .adidas {
+    display: inline;
     position: absolute;
-    height: 18%;
-    width: 14%;
-    top: 0%;
-    left: 4%;
+    width: 72px;
+    top: 5%;
+    left: 6%;
 }
 
+  //this is the styling for the close button which appears on the top right had side of 
+  //the screen
   .close {
     position: absolute;
     top: 4%;
@@ -324,14 +350,17 @@ font-style: normal;
     right:  5%;
   }
 
+//this styles the plus icon which appears on the left of the show
 .add {
     position: absolute;
-    top: 35%;
+    top: 41%;
     left: 35%;
-    width: 2%;
-    height: 5%;
+    width: 48px;
+    height: 48px;
+    opacity: 0.55;
   }
 
+//this styles the main shoe container
 .mainshoe {
   margin-top: 5%;
   width: 30%;
@@ -339,52 +368,62 @@ font-style: normal;
   z-index: 1;
 }
 
+//this styles the plus icon which appears to the right of the container
 .addafter {
     position: absolute;
-    top:   44%;
-    left: 58%;
-    width: 2%;
-    height: 5%;
+    top:   69%;
+    left: 54%;
+    width: 48px;
+    height: 48px;
+    opacity: 0.55;
   }
 
+//this syles the main derupt lettering which now appears across the screen.
   .derupt {
     position: absolute;
-    font-family: Gotham Black;
-    font-size: 28vw;
-    top: 10%;
-    color:#333333;
-    letter-spacing: 100%;
+    font-family: 'HCo Gotham SSm';
+    transform: rotate(0deg);
+    font-size: 29vw;
+    font-weight: 900px;
+    letter-spacing: -10px;
+    top: 8%;
+    left: -3%;
   }
 
-.shoppingbag {
+//this styles the Derupt title
+.shoppingbagtexttitle {
+  position: absolute;
+  top: 51%;
+  right: 14%;
+  color: white;
+  font-size: 23px;
+}
+
+//this text styles the price of the show
+.shoppingbagtext {
+  position: absolute;
+  top: 57%;
+  right: 14%;
+  color: white;
+  font-size: 21px;
+}
+
+//this styles the shopping bag icon
+.shoppingbagicon {
   position: fixed;
-  right: 10%;
-  top: 40%;
-  height: 10%;
-  width: 10%;
+  right: 14%;
+  top: 50%;
+  width: 72px;
   z-index: 1;
 }
 
-.shoppingbagtext {
-  color: white;
-}
-
-.swiper-container {
-    width: 600px;
-    height: 300px;
-}
-
+//this simpy positions the carousel container
 .carousel-container {
-  padding-top: 5%;
-  margin-left: 220px;
-
+  margin-top: 6%;
+  margin-left: 20%;
 }
 
-.image-container {
-  position: relative;
-
-}
-
+//this stlyes the slides which are shown on the screen.
 .image {
   display: block;
   width: 80px;
@@ -392,12 +431,13 @@ font-style: normal;
   opacity: 0.5;
 }
 
+
+//sets the image opactity to 1 when the user clicks on a shoe
 .image:hover {
   opacity: 1;
 }
 
 }
-
 
 </style>
 
