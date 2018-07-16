@@ -12,9 +12,7 @@
       <div
         ref="overlay"
         :style="position"
-        class="content__overlay"
-        data-18-start="transform: translate3d(0, 100%, 0);"
-        data-800-end="transform: translate3d(0, 0, 0)">
+        class="content__overlay">
         <!-- Overlay Title -->
         <div class="content__overlay__info">
           <!-- Image Container -->
@@ -75,9 +73,11 @@ export default {
   name: 'Colourways',
   data() {
     return {
-      pageYOffset: 0,
+      startPosition: 0,
+      windowHeight: '',
+      endLocation: '',
+      distance: '',
       position: {},
-      content: '',
       overlay: '',
     };
   },
@@ -88,11 +88,21 @@ export default {
 
   methods: {
     animateScroll() {
-      this.pageYOffset = window.pageYOffset;
+      this.startPosition = window.pageYOffset;
       this.overlay = this.$refs.overlay;
-      this.position = {
-        transform: `translate3d(0px, ${this.pageYOffset / 8}px, 0px)`,
-      };
+      this.endLocation = this.overlay.offsetTop;
+      this.distance = (this.startPosition - this.endLocation);
+
+      if (this.startPosition === this.endLocation) {
+        this.position = {
+          transform: 'translate3d(0px, 100%, 0px)',
+        };
+      } else {
+        this.position = {
+          transform: 'translate3d(0px, 0, 0px)',
+        };
+      }
+
     },
   },
 };
