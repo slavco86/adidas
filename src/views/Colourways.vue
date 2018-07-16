@@ -24,7 +24,9 @@
               <!-- <div class="content__overlay__more-info">+</div> -->
           </span>
           <!-- Content Text -->
-          <div class="content__overlay__text">
+          <div
+            :style="position"
+            class="content__overlay__text">
             <h4>Deerupt</h4>
             <p>£80.00</p>
             <span class="quick-buy"/>
@@ -32,9 +34,8 @@
         </div>
         <!-- Colourways List -->
         <ul
-          class="content__overlay__list"
-          data-500-start="bottom: 2.55rem;"
-          data-600-end="bottom: 1rem;">
+          :style="position"
+          class="content__overlay__list">
           <li>
             <img
               src="//via.placeholder.com/70x70"
@@ -99,10 +100,9 @@ export default {
         };
       } else {
         this.position = {
-          transform: 'translate3d(0px, 0, 0px)',
+          transform: 'translate3d(0px, 0px, 0px)',
         };
       }
-
     },
   },
 };
@@ -167,7 +167,8 @@ export default {
         margin: 2rem 0;
         position: relative;
         display: flex;
-        transition: all 0.5s linear;
+        transform: translate3d(0, 200px, 0);
+        transition: transform 1.6s cubic-bezier(0.76, -0.4, 0.28, 1.54);
 
         li {
           margin: 0 0.2rem;
@@ -198,6 +199,8 @@ export default {
         top: 60%;
         right: 0;
         margin: 0 1rem;
+        transform: translate3d(0, 500px, 0);
+        transition: transform 1.6s cubic-bezier(0.76, -0.4, 0.28, 1.54);
 
         h4 {
           font-size: 1rem;
