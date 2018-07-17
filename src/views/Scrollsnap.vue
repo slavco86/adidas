@@ -1,84 +1,54 @@
 <template>
-  <div id="container">
-    <section>
-      <h1>First</h1>
-    </section>
-    <section>
-      <h1>Second</h1>
-    </section>
-    <section>
-      <h1>Third</h1>
-    </section>
-
-    <div class="status" v-cloak>
-      Active panel: {{activePanelName}}
+  <div>
+    <div class="section first">First Section</div>
+    <div id="fullpage">
+      <div class="section">Some section</div>
+      <div class="section">Some section</div>
+      <div class="section">Some section</div>
     </div>
   </div>
 </template>
 
 <script>
-import PanelSnap from 'panelsnap';
+import Fullpage from 'fullpage.js';
+import 'fullpage.js/dist/fullpage.css';
 
 export default {
   data() {
     return {
-      activePanel: null,
+      fullpage: null,
     };
   },
 
-  computed: {
-    activePanelName() {
-      if (!this.activePanel) {
-        return '';
-      }
-      return this.activePanel.querySelector('h1').innerText;
-    },
-  },
-
   mounted() {
-    this.panelSnapInstance = new PanelSnap({
-      panelSelector: '#container > section',
+    this.fullpage = new Fullpage('#fullpage', {
+      licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
+      autoScrolling: true,
+      fitToSection: true,
     });
 
-    this.panelSnapInstance.on('activatePanel', this.activatePanel);
-  },
-
-  methods: {
-    activatePanel(panel) {
-      this.activePanel = panel;
-    }
+    // this.fullpage.setAllowScrolling(false);
   },
 };
 </script>
 
 <style lang="scss" scoped>
-  section {
-    min-height: calc(100vh + 20px);
-    background-color: cyan;
-    color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 3rem;
-
-    &:nth-child(2) {
-      background-color: hotpink;
-    }
-
-    &:last-child {
-      background-color: greenyellow;
-    }
+  .section.first {
+    height: 100vh;
+    background-color: yellow;
+    transform: translate3d(0, 0, 0);
   }
 
-  .status {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 10px;
-    text-align: center;
+  .section {
+    transform: translate3d(0, -50px, 0);
+    background-color: hotpink;
   }
-  [v-cloak] {
-    visibility: hidden;
+
+  .section:nth-child(2) {
+    background-color: red;
+  }
+
+  .section:nth-child(3) {
+    background-color: blue;
   }
 </style>
