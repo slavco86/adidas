@@ -3,25 +3,24 @@
     <div class="modal-mask">
       <div class="modal-wrapper">
         <div class="modal-container">
-
-          <div class="modal-header">
-            <slot name="header">
+          <img
+              class="close"
+              src="../assets/close_black.png"
+              @click="$emit('close')"
+              id="closem"
+              >
+          <div class="modal-header" id="modalh">
+            <slot name="header" >
               default header
             </slot>
           </div>
-
           <div class="modal-body">
             <slot name="body">
               default body
             </slot>
           </div>
-
           <div class="modal-footer">
             <slot name="footer">
-              default footer
-              <button class="modal-default-button" @click="$emit('close')">
-                OK
-              </button>
             </slot>
           </div>
         </div>
@@ -39,6 +38,43 @@ export default {
 </script>
 
 <style>
+
+@font-face {
+font-family: 'HCo Gotham SSm';
+src:url('../assets/fonts/F4715F49B60D9B144.woff2') format('woff2'),
+url('../assets/fonts/F4715F49B60D9B144.woff') format('woff');
+font-weight: 400;
+font-style: normal;
+}
+
+
+@font-face {
+font-family: 'HCo Gotham SSm';
+src:url('../assets/fonts/725262BC71949F842.woff2') format('woff2'),
+url('../assets/fonts/725262BC71949F842.woff') format('woff');
+font-weight: 500;
+font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'HCo Gotham SSm';
+  src: url('../assets/fonts/B5416F0FED9EA9CD2.woff2') format('woff2'),
+  url('../assets/fonts/B5416F0FED9EA9CD2.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+#modalh {
+  padding-top: 23%;
+}
+
+#closem {
+  position: relative;
+  left: 45%;
+  width: 50px;
+}
+
 .modal-mask {
   position: fixed;
   z-index: 9998;
@@ -57,7 +93,8 @@ export default {
 }
 
 .modal-container {
-  width: 300px;
+  width: 375px;
+  height: 678px;
   margin: 0px auto;
   padding: 20px 30px;
   background-color: #fff;
@@ -76,9 +113,9 @@ export default {
   margin: 20px 0;
 }
 
-.modal-default-button {
+/* .modal-default-button {
   float: right;
-}
+} */
 
 /*
  * The following styles are auto-applied to elements with

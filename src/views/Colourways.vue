@@ -40,24 +40,23 @@
           @click="mainImage($refs.carousel.$children[0].$children[0].swiper.clickedIndex)">
       </div>
     </Carousel>
-    <!-- Derupt title -->
     <div class="franchise-container"> 
     <h1 class="derupt">{{ franchise }}</h1>
     </div>
-    <!-- <button id="show-modal" @click="showModal = true">Show Modal</button> -->
-  <!-- use the modal component, pass in the prop -->
-    <modal v-if="showModal" @close="showModal = false">
-      <!--
-        you can use custom content here to overwrite
-        default content
-      -->
-      <h3 slot="header">DEERUPT</h3>
+    <modal v-if="showModal" @close="showModal = false" >
+      <h1 slot="header" id="modalh">DEERUPT</h1>
+        <h2 slot="body"><span id="modalb">DISRUPTIVELY SIMPLE</span><br /><br />
+          <span class="modalc">With Deerupt, a silhouette becomes <br />
+          the unexpected. Comfort becomes </br >
+          the unprecedented. Fit becomes <br />
+          an experience. </span>
+        </h2>
     </modal>
   </div>
 </template>
 
 <script>
-import Carousel from '@/containers/Carousel.vue'; // imports the casrousel component (part of swiper)
+import Carousel from '@/containers/Carousel.vue';
 import modal from '@/components/Modal.vue';
 
 export default {
@@ -69,7 +68,6 @@ export default {
 
   data() {
     return {
-      // isModalVisible: false,
       showModal: false,
       defaultImage: '',
       slides: [
@@ -293,6 +291,22 @@ font-style: normal;
 
 .image:hover {
   opacity: 1;
+}
+
+#modalh {
+  font-family: 'HCo Gotham SSm';
+  font-size: 32px;
+  font-weight: 900;
+}
+
+#modalb {
+  font-family: 'HCo Gotham SSm';
+  font-size: 16px;
+  font-weight: 700;
+}
+
+#modalc {
+  font-family: 'HCo Gotham SSm';
 }
 
 @media only screen and (min-width: 1366px) {
