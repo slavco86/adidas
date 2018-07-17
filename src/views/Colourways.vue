@@ -18,7 +18,7 @@
       <img
         class="addafter"
         src="../assets/add.png">
-      <h3 class="shoppingbagtexttitle">DERUPT</h3>
+      <h3 class="shoppingbagtexttitle">{{ franchise }}</h3>
       <h4 class="shoppingbagtext">£80.00</h4>
       <img
         src="../assets/shoppingbag.png"
@@ -347,9 +347,8 @@ font-style: normal;
   }
 
   .shoppingbagicon {
-    position: fixed;
     right: 14%;
-    top: 50%;
+    top: 63%;
     width: 72px;
     z-index: 1;
   }
