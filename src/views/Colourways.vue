@@ -58,20 +58,8 @@
         you can use custom content here to overwrite
         default content
       -->
-      <h3 slot="header">custom header</h3>
+      <h3 slot="header">DEERUPT</h3>
     </modal>
-    <!-- <button
-      type="button"
-      class="btn"
-      @click="showModal"
-    >
-      Open Modal!
-    </button>
-
-    <modal
-      v-show="isModalVisible"
-      @close="closeModal"
-    /> -->
   </div>
 </template>
 
@@ -91,7 +79,7 @@ export default {
     shoeSize: {
       type: String,
       required: false,
-      default: "Derupt"
+      default: "Deerupt"
     }
   },
 
@@ -260,11 +248,11 @@ font-style: normal;
 
 .derupt {
   position: absolute;
-  top: 207px;
-  left: -236px;
+  top: 35%;
+  left: -68%;
   font-family: 'HCo Gotham SSm';
   transform: rotate(270deg);
-  font-size: 49vw;
+  font-size: 43vw;
   font-weight: 900;
   z-index: 0;
   color:#333333;
@@ -290,10 +278,10 @@ font-style: normal;
 }
 
 //this styles the right plus icon
-.addafter {
+#addafter {
   position: absolute;
   top: 76%;
-  right: 39%;
+  right: 36%;
   width: 4.5%;
   height: 4%;
 }
@@ -418,7 +406,7 @@ font-style: normal;
     position: absolute;
     font-family: 'HCo Gotham SSm';
     transform: rotate(0deg);
-    font-size: 29vw;
+    font-size: 25vw;
     font-weight: 900px;
     letter-spacing: -10px;
     top: 8%;
