@@ -38,12 +38,23 @@
           @click="mainImage($refs.carousel.$children[0].$children[0].swiper.clickedIndex)">
       </div>
     </Carousel>
+    <!-- Derupt title -->
     <h1 class="derupt">{{ franchise }}</h1>
+    <!-- <button id="show-modal" @click="showModal = true">Show Modal</button> -->
+  <!-- use the modal component, pass in the prop -->
+    <modal v-if="showModal" @close="showModal = false">
+      <!--
+        you can use custom content here to overwrite
+        default content
+      -->
+      <h3 slot="header">DEERUPT</h3>
+    </modal>
   </div>
 </template>
 
 <script>
-import Carousel from '@/containers/Carousel.vue';
+import Carousel from '@/containers/Carousel.vue'; // imports the casrousel component (part of swiper)
+import modal from '@/components/Modal.vue';
 
 export default {
   name: 'ColourwaysContainer',
@@ -112,6 +123,12 @@ export default {
     goBack() {
       return this.$router.push('/');
     },
+    // shoeModal() {
+    //   this.isModalVisible = true;
+    // },
+    // closeModal() {
+    //   this.isModalVisible = false;
+    // }
   },
 
 };
@@ -313,7 +330,7 @@ font-style: normal;
     z-index: 1;
   }
 
-.addafter {
+#addafter {
     position: absolute;
     top: 69%;
     left: 54%;
