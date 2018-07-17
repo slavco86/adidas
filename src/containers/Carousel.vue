@@ -1,33 +1,31 @@
 <template>
   <div>
-    <transition
-      name="switch"
-      mode="out-in">
-      <div
-        v-if="switchEl"
-        key="el">
-        <Carousel
-          v-if="enableCarousel && slides.length > 1"
-          key = "carousel"
-          ref="slider"
-          :options="options"
-          :slides="slides">
-          <div slot-scope="{slide}">
-            <slot :slide="slide"/>
-          </div>
-        </Carousel>
-      </div>
-      <div
-        v-else
-        class="slide-container">
-        <div
-          v-for="(slide, key) in slides"
-          :key="key"
-          class="slide">
+    <div
+      v-if="switchEl"
+      key="el">
+      <Carousel
+        v-if="enableCarousel && slides.length > 1"
+        key = "carousel"
+        ref="slider"
+        :options="options"
+        :slides="slides"
+        @ready="emitReady"
+        @transition-end="transitionEnd">
+        <div slot-scope="{slide}">
           <slot :slide="slide"/>
         </div>
+      </Carousel>
+    </div>
+    <div
+      v-else
+      class="slide-container">
+      <div
+        v-for="(slide, key) in slides"
+        :key="key"
+        class="slide">
+        <slot :slide="slide"/>
       </div>
-    </transition>
+    </div>
   </div>
 </template>
 
@@ -90,53 +88,13 @@ export default {
     },
     destroyCarousel() {
       this.$refs.slider.$children[0].swiper.destroy(false, false);
-      console.info('hell yeah');
     },
-    hello() {
-      console.info('ello');
+    emitReady() {
+      this.$emit('ready');
     },
-
+    transitionEnd() {
+      this.$emit('transition-end');
+    },
   },
 };
 </script>
-
-<style lang="scss" scoped>
-  .switch-enter,
-  .switch-leave-to {
-    opacity: 0;
-  }
-
-  .switch-leave-active {
-    transition: opacity 1s;
-
-    &/deep/ .swiper-slide {
-      margin-top: 2rem;
-    }
-  }
-
-  .switch-enter-active {
-    transition: opacity 1s;
-
-    &/deep/ .swiper-slide-active {
-      margin-top: 0;
-    }
-  }
-
-  .switch-enter-to,
-  .switch-leave {
-    opacity: 1;
-  }
-
-  .slide-container {
-    max-width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0.5rem;
-
-    /deep/ .slide {
-      flex-basis: calc(50% - 1rem);
-      margin: 0.5rem;
-      transition: transform 0.5s;
-    }
-  }
-</style>

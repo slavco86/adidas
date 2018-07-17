@@ -1,11 +1,5 @@
 <template>
   <div class="countdown">
-    <div class="countdown__value countdown__value--days">
-      <div
-        class="countdown__value__num"
-        v-html="days"/>
-      <div class="countdown__value__label">{{ content.days }}</div>
-    </div>
     <div class="countdown__value">
       <div
         class="countdown__value__num"
@@ -46,8 +40,8 @@ export default {
         return {
           days: 'days',
           hours: 'hours',
-          minutes: 'minutes',
-          seconds: 'seconds',
+          minutes: 'mins',
+          seconds: 'secs',
         };
       },
     },
@@ -74,7 +68,7 @@ export default {
     },
 
     hours() {
-      return this.two_digits(Math.trunc((this.countdownDate - this.now) / 60 / 60) % 24);
+      return this.two_digits(Math.trunc((this.countdownDate - this.now) / 60 / 60));
     },
 
     days() {
