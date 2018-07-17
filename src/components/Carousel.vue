@@ -2,7 +2,9 @@
   <swiper
     ref="carousel"
     :options="options"
-    :global-options="globalOptions">
+    :global-options="globalOptions"
+    @images-ready="emitReady"
+    @transition-end="transitionEnd">
 
     <swiper-slide
       v-for="(slide, key) in slides"
@@ -54,6 +56,15 @@ export default {
     return {
       globalOptions: {},
     };
+  },
+
+  methods: {
+    emitReady() {
+      this.$emit('ready');
+    },
+    transitionEnd() {
+      this.$emit('transition-end');
+    },
   },
 };
 </script>

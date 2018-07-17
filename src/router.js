@@ -3,8 +3,7 @@ import Router from 'vue-router';
 import Home from './views/Home.vue';
 import About from './views/About.vue';
 import Social from './views/Social.vue';
-import Colourways from './views/Parallax.vue';
-import ScrollSnap from './views/Scrollsnap.vue';
+import Content from './views/Content.vue';
 
 Vue.use(Router);
 
@@ -26,14 +25,11 @@ export default new Router({
       component: Social,
     },
     {
-      path: '/colourways',
+      // Last modified by Ali Kayani on 11/07/2017
+      // Enables the Colourways route to be loaded
+      path: '/:franchise',
       name: 'colourways',
-      component: Colourways,
-    },
-    {
-      path: '/scrollsnap',
-      name: 'scrollsnap',
-      component: ScrollSnap,
+      component: Content,
     },
   ],
 });

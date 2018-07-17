@@ -1,38 +1,6 @@
 <template>
   <div
-    :class="{'social--animate': activeSocial}"
     class="social">
-    <div class="social__text">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi vel error recusandae,
-      nulla iure amet necessitatibus consequuntur temporibus quis rerum ratione minus reiciendis.
-      Totam corrupti ipsum iure. Illum deleniti obcaecati quibusdam maxime laudantium culpa, earum
-      dignissimos, repellendus labore incidunt laborum vel alias tempore. Iure qui quam dicta magnam
-      temporibus doloremque fugit voluptates perspiciatis, libero consequuntur aliquid maxime odit
-      quo inventore deleniti tempora nesciunt, necessitatibus, vel ipsum quasi fugiat provident
-      harum vitae! Libero, corrupti accusantium. Sint magnam eum animi tempore fuga incidunt fugit
-      explicabo saepe dolorem consequuntur repellendus eius placeat enim porro, error ut culpa,
-      cum et nulla laudantium aperiam aliquam!</p>
-
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi vel error recusandae,
-      nulla iure amet necessitatibus consequuntur temporibus quis rerum ratione minus reiciendis.
-      Totam corrupti ipsum iure. Illum deleniti obcaecati quibusdam maxime laudantium culpa, earum
-      dignissimos, repellendus labore incidunt laborum vel alias tempore. Iure qui quam dicta magnam
-      temporibus doloremque fugit voluptates perspiciatis, libero consequuntur aliquid maxime odit
-      quo inventore deleniti tempora nesciunt, necessitatibus, vel ipsum quasi fugiat provident
-      harum vitae! Libero, corrupti accusantium. Sint magnam eum animi tempore fuga incidunt fugit
-      explicabo saepe dolorem consequuntur repellendus eius placeat enim porro, error ut culpa,
-      cum et nulla laudantium aperiam aliquam!</p>
-
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi vel error recusandae,
-      nulla iure amet necessitatibus consequuntur temporibus quis rerum ratione minus reiciendis.
-      Totam corrupti ipsum iure. Illum deleniti obcaecati quibusdam maxime laudantium culpa, earum
-      dignissimos, repellendus labore incidunt laborum vel alias tempore. Iure qui quam dicta magnam
-      temporibus doloremque fugit voluptates perspiciatis, libero consequuntur aliquid maxime odit
-      quo inventore deleniti tempora nesciunt, necessitatibus, vel ipsum quasi fugiat provident
-      harum vitae! Libero, corrupti accusantium. Sint magnam eum animi tempore fuga incidunt fugit
-      explicabo saepe dolorem consequuntur repellendus eius placeat enim porro, error ut culpa,
-      cum et nulla laudantium aperiam aliquam!</p>
-    </div>
 
     <p class="social__text">Get Social</p>
     <h2 class="social__title">#Creator</h2>
@@ -51,7 +19,7 @@
 import inView from 'in-view';
 import Grid from '@/components/Grid.vue';
 
-inView.threshold(0.25);
+inView.threshold(0.05);
 
 export default {
   name: 'Social',
@@ -81,17 +49,11 @@ export default {
 
 <style lang="scss" scoped>
   .social {
-    background-color: #333;
+    background-color: #222;
     color: #fff;
     display: flex;
     flex-direction: column;
     padding: 1rem;
-    transform: translate3d(0, 150px, 20px);
-    transition: transform 0.5s cubic-bezier(0, 0.72, 0.96, 0.6);
-
-    &--animate {
-      transform: translate3d(0, 0, 0);
-    }
 
     &__text {
       margin: 1rem 0;

@@ -1,12 +1,12 @@
-// import { shallowMount } from '@vue/test-utils';
-// import HelloWorld from '@/components/HelloWorld.vue';
+import { shallowMount } from '@vue/test-utils';
+import VueRouter from 'vue-router';
+import Router from '@/router.js';
 
-// describe('HelloWorld.vue', () => {
-//   it('renders props.msg when passed', () => {
-//     const msg = 'new message';
-//     const wrapper = shallowMount(HelloWorld, {
-//       propsData: { msg },
-//     });
-//     expect(wrapper.text()).toMatch(msg);
-//   });
-// });
+
+// This test checks that the router arrar contains three routes.
+describe('router.js', () => {
+  const tempArray = Router.options.routes.length;
+  it('should contain three routes', () => {
+    expect(tempArray).toBe(3);
+  });
+});
