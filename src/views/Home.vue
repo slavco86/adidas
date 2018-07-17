@@ -51,6 +51,7 @@
           @expired="slide.expired = true"/>
       </div>
     </div>
+
     <Carousel
       ref="carousel"
       :slides="activeTab"
