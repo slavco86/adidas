@@ -1,6 +1,8 @@
 <template>
   <div>
-    <div class="section first">First Section</div>
+    <router-link
+      to="/"
+      class="back">Back</router-link>
     <div id="fullpage">
       <div class="section">Some section</div>
       <div class="section">Some section</div>
@@ -33,6 +35,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  .back {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 10;
+  }
   .section.first {
     height: 100vh;
     background-color: yellow;
