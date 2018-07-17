@@ -60,7 +60,8 @@
       @ready="getPositions"
       @transition-end="getPositions">
       <div
-        slot-scope="{slide}">
+        slot-scope="{slide}"
+        @click="goTo(slide.franchise)">
         <Spot v-bind="slide">
           <span
             :class="{'franchise-name--invert': tab === 'men'}"
@@ -153,6 +154,9 @@ export default {
     }
   },
   methods: {
+    goTo(franchise) {
+      this.$router.push(franchise);
+    },
     unhideCarousel() {
       if (!this.carousel && !this.grid) {
         this.carousel = !this.carousel;
@@ -199,7 +203,7 @@ export default {
     height: -webkit-fill-available;
     overflow: hidden;
     background-color: rgb(34, 34, 34);
-    transition: background-color 1s;
+    transition: background-color 1s, opacity 1s;
   }
 
   .home--invert {

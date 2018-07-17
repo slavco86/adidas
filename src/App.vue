@@ -5,12 +5,32 @@
       <router-link to="/about">About</router-link> |
       <router-link to="/colourways">Colourways</router-link>
     </div> -->
-    <router-view/>
+    <transition
+      name="fade">
+      <router-view/>
+    </transition>
   </div>
 </template>
 
-
 <style lang="scss">
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 1s;
+  position: absolute;
+  width: 100%;
+
+}
+
+.fade-enter-to,
+.fade-leave {
+  opacity: 1;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

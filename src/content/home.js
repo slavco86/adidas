@@ -7,8 +7,8 @@ export default {
           image: {
             desktop: 'http://via.placeholder.com/350x350/969696',
             mobile: 'http://via.placeholder.com/350x350/969696',
-            url: '#',
           },
+          url: '#',
           path: 'men',
           launch: 'June 3, 201',
         },
@@ -17,8 +17,8 @@ export default {
           image: {
             desktop: 'http://via.placeholder.com/350x350/969696',
             mobile: 'http://via.placeholder.com/350x350/969696',
-            url: '#',
           },
+          url: '#',
           path: 'men',
           launch: 'July 15, 2018',
         },
@@ -27,8 +27,8 @@ export default {
           image: {
             desktop: 'http://via.placeholder.com/350x350/969696',
             mobile: 'http://via.placeholder.com/350x350/969696',
-            url: '#',
           },
+          url: '#',
           path: 'men',
           launch: 'July 30, 2018',
         },
@@ -37,8 +37,8 @@ export default {
           image: {
             desktop: 'http://via.placeholder.com/350x350/969696',
             mobile: 'http://via.placeholder.com/350x350/969696',
-            url: '#',
           },
+          url: '#',
           path: 'men',
           launch: 'July 31, 2018',
         },
@@ -51,8 +51,8 @@ export default {
           image: {
             desktop: 'http://via.placeholder.com/450x450',
             mobile: 'http://via.placeholder.com/450x450',
-            url: '#',
           },
+          url: '#',
           path: 'women',
           launch: 'June 30, 2018',
         },
@@ -61,8 +61,8 @@ export default {
           image: {
             desktop: 'http://via.placeholder.com/450x450',
             mobile: 'http://via.placeholder.com/450x450',
-            url: '#',
           },
+          url: '#',
           path: 'women',
           launch: 'July 30, 2018',
         },
@@ -71,8 +71,8 @@ export default {
           image: {
             desktop: 'http://via.placeholder.com/450x450',
             mobile: 'http://via.placeholder.com/450x450',
-            url: '#',
           },
+          url: '#',
           path: 'women',
           launch: 'August 30, 2018',
         },
@@ -81,8 +81,8 @@ export default {
           image: {
             desktop: 'http://via.placeholder.com/450x450',
             mobile: 'http://via.placeholder.com/450x450',
-            url: '#',
           },
+          url: '#',
           path: 'women',
           launch: 'August 30, 2018',
         },
