@@ -22,32 +22,30 @@
         @click="changeTab('women')">WOMEN</button>
     </nav>
     <div
-      ref="grid"
-      :class="{'grid-container--hidden' : carousel,
-               'grid-container--grid': !grid}"
-      class="grid-container">
+      :class="{'grid--animate': grid}"
+      class="grid">
       <div
-        v-for="(slide,index) in activeTab"
-        :key="index"
-        :style="positions[index]"
-        :data-index="index"
-        class="slide"
-        @transitionend="unhideCarousel">
-        <Spot v-bind="slide">
+        v-for="(slide,key) in activeTab"
+        :key="key"
+        class="grid__product"
+        @click="goTo(slide.franchise)">
+        <Spot
+          v-bind="slide"
+          class="grid__product">
           <span
-            :class="{'franchise-name--transition': !grid,
-                     'franchise-name--invert': tab === 'men'}"
-            class="franchise-name">{{ slide.franchise }}</span>
+            :class="{'franchise-name--invert': tab === 'men'}"
+            data-swiper-parallax="-500"
+            data-swiper-parallax-duration="600"
+            class="franchise-name franchise-name--grid">{{ slide.franchise }}</span>
           <div
-            :class="{'plus--invert' : tab === 'men',
-                     'plus--transition': !grid}"
+            :class="{'plus--invert' : tab === 'men'}"
             class="plus"/>
         </Spot>
         <Countdown
           v-if="!slide.expired"
+          :class="{'countdown--invert': tab === 'men'}"
           :date="slide.launch"
-          :class="{'countdown--transition': !grid,
-                   'countdown--invert': tab === 'men'}"
+          class="countdown--grid"
           @expired="slide.expired = true"/>
       </div>
     </div>
@@ -55,10 +53,8 @@
       ref="carousel"
       :slides="activeTab"
       :options="swiperOptions"
-      :class="{'main-carousel--hidden': !carousel}"
-      class="main-carousel"
-      @ready="getPositions"
-      @transition-end="getPositions">
+      :class="{'main-carousel--hidden': grid}"
+      class="main-carousel">
       <div
         slot-scope="{slide}"
         @click="goTo(slide.franchise)">
@@ -83,7 +79,8 @@
       :class="{'button-container--invert': tab === 'men',
                'button-container--grid' : grid}"
       class="button-container"
-      @click="toggleCarousel">
+      @click="toggleCarousel"
+      @transitionend="unhideCarousel">
       <div class="top-left"/>
       <div class="top-right"/>
       <div class="bottom-left"/>
@@ -170,407 +167,371 @@ export default {
       this.border = !this.border;
       if (this.carousel) {
         this.carousel = !this.carousel;
-        this.getPositions(true);
-      } else {
-        this.getPositions();
       }
     },
     changeTab(name) {
       this.tab = name;
       this.$refs.carousel.$children[0].$children[0].swiper.slideTo(0);
     },
-    getPositions(grid = false) {
-      this.positions = [];
-      const translate = this.$refs.carousel.$children[0].$children[0].swiper.getTranslate();
-      const activeSlide = this.$refs.carousel.$children[0].$children[0].swiper.activeIndex;
-      this.positions = grid ?
-        this.$refs.carousel.$children[0].$children[0].$children.map(() => ({
-          transform: 'translate3d(0px, 0px, 0px)',
-          position: 'relative',
-          width: `${this.width < 1024 ? (this.width / 2) - 25 : (this.width / 4) - 25}px`,
-        })) :
-        this.$refs.carousel.$children[0].$children[0].$children.map((element, index) => ({
-          transform: `translate3d(${this.width > 765
-            ? element.$el.offsetLeft + translate + element.$el.children[0].offsetLeft
-            : element.$el.offsetLeft + translate}px,
-          ${index === activeSlide ? '-2' : '0'}rem, 0px)`,
-          width: `${element.$el.children[0].clientWidth}px`,
-          position: 'absolute',
-        }));
-    },
   },
 };
 </script>
 
 <style lang="scss" scoped>
-  .home {
-    height: -webkit-fill-available;
-    overflow: hidden;
-    background-color: rgb(34, 34, 34);
-    transition: background-color 1s, opacity 1s;
-  }
+.grid {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 1rem auto;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
 
-  .home--invert {
-    background-color: white;
-  }
-
-  .nav {
-    padding: 2rem 0;
-    text-align: right;
-    position: relative;
-
-    @media only screen and (min-width: 765px) {
-      padding: 2rem 4rem;
-    }
-  }
-
-  .logo {
-    width: 50px;
-    position: absolute;
-    left: 10%;
-    top: 25%;
-  }
-
-  .nav-button {
-    background: none;
-    font-size: 0.9rem;
-    margin: 0 1rem;
-    font-weight: 600;
-
-    &--inactive {
-      color: #999;
-    }
-
-    &--invert {
-      color: white;
-    }
-  }
-
-  .main-carousel {
-    margin-top: 2rem;
+  &__product {
+    flex: 0 0 50%;
+    height: auto;
+    max-width: 635px;
+    display: block;
+    padding: 0.5rem;
+    transition: transform 1s ease-in-out;
 
     @media only screen and (min-width: 765px) and (max-width: 1024px) {
-      margin-top: 10rem;
-    }
-  }
-
-  .main-carousel /deep/ .swiper-container {
-    padding-top: 2rem;
-  }
-
-  .main-carousel /deep/ .spot {
-    display: block;
-  }
-
-  .main-carousel--hidden {
-    visibility: hidden;
-  }
-
-  .main-carousel /deep/ .swiper-slide {
-    margin-top: 0;
-    transform: translate3d(0, 0, 0);
-    transition: transform 0.5s ease-in-out;
-
-    @media only screen and (min-width: 1024px) {
-      padding: 0 12.5%;
-    }
-  }
-
-  .main-carousel /deep/ .swiper-slide-active {
-    transform: translate3d(0, -2rem, 0);
-  }
-
-  .countdown {
-    display: flex;
-    margin: 0 auto;
-    justify-content: space-evenly;
-    position: absolute;
-    top: 35%;
-    left: 0;
-    width: 100%;
-    align-items: center;
-
-    & /deep/ .countdown__value {
-      width: 33%;
-
-      &::after {
-        content: ':';
-        position: absolute;
-        right: 0;
-        top: 0;
-        font-size: 14px;
-        color: black;
-
-        @media only screen and (min-width: 765px) {
-          font-size: 2rem;
-        }
-      }
-
-      &:last-of-type {
-        &::after {
-          display: none;
-        }
-      }
-
-      &__num i {
-        font-size: 14px;
-        transition: font-size 1s;
-        color: black;
-
-        @media only screen and (min-width: 765px) {
-          font-size: 2rem;
-        }
-      }
-
-      &__label {
-        text-transform: uppercase;
-        font-size: 6px;
-        margin-top: 5px;
-        transition: font-size 1s;
-        color: black;
-
-        @media only screen and (min-width: 765px) {
-          font-size: 1rem;
-        }
-      }
+      flex: 0 0 19%;
     }
 
-    &--invert {
-      & /deep/ .countdown__value {
-        &::after,
-        &__num i,
-        &__label {
-          color: white;
-        }
-      }
-    }
-  }
-
-  .countdown--transition,
-  .main-carousel .countdown {
-    & /deep/ .countdown__value {
-      &::after {
-        font-size: 2rem;
-      }
-
-      &__num i {
-        font-size: 2rem;
-      }
-
-      &__label {
-        font-size: 0.7rem;
-      }
-    }
-  }
-
-  .franchise-name {
-    position: absolute;
-    transition-timing-function: ease-out;
-    bottom: -20px;
-    left: 20px;
-    font-size: 3.5rem;
-    font-weight: 900;
-    color: black;
-    text-align: left;
-    line-height: 45px;
-
-    &--invert {
-      color: white;
-    }
-  }
-
-  .grid-container .franchise-name {
-    font-size: 1.2rem;
-    left: 20px;
-    transition: font-size 1s, left 1s;
-
-    @media only screen and (min-width: 765px) {
-      font-size: 2rem;
-    }
-  }
-
-  .grid-container .franchise-name.franchise-name--transition {
-    font-size: 2.5rem;
-  }
-
-  .grid-container {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 1rem;
-    padding: 1rem;
-    position: absolute;
-    justify-content: center;
-    transition: margin-top 1s;
-
-    @media only screen and (min-width: 1024px) {
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+    &:first-child {
+      transform: translate3d(-100%, -100%, 0);
     }
 
-    &--grid {
-      @media only screen and (min-width: 765px) and (max-width: 1024px) {
-        margin-top: 10rem;
-      }
+    &:nth-child(2) {
+      transform: translate3d(100%, -100%, 0);
     }
 
-    /deep/ .slide {
-      transition: transform 1s, width 1s;
+    &:nth-child(3) {
+      transform: translate3d(-100%, 100%, 0);
     }
 
-    /deep/ .spot {
+    &:last-child {
+      transform: translate3d(600px, 600px, 0);
+    }
+
+    &__text {
+      color: #ccc;
       display: block;
+      margin: 0.75rem 0;
+      text-align: left;
+      font-size: 1rem;
+    }
+
+    img {
+      display: block;
+      height: auto;
+      width: 100%;
     }
   }
+}
 
-  .grid-container--hidden {
-    visibility: hidden;
+.grid--animate .grid__product {
+  transform: translate3d(0, 0, 0);
+}
 
-    /deep/ .slide {
-      transition: none;
-    }
+.home {
+  height: -webkit-fill-available;
+  background-color: rgb(34, 34, 34);
+  transition: background-color 1s, opacity 1s;
+}
+
+.home--invert {
+  background-color: white;
+}
+
+.nav {
+  padding: 2rem 0;
+  text-align: right;
+  position: relative;
+
+  @media only screen and (min-width: 765px) {
+    padding: 2rem 4rem;
+  }
+}
+
+.logo {
+  width: 50px;
+  position: absolute;
+  left: 10%;
+  top: 25%;
+}
+
+.nav-button {
+  background: none;
+  font-size: 0.9rem;
+  margin: 0 1rem;
+  font-weight: 600;
+
+  &--inactive {
+    color: #999;
   }
 
-  .button-container {
-    display: inline-flex;
-    flex-wrap: wrap;
-    max-width: 36px;
-    position: relative;
-    height: auto;
-    width: auto;
-    padding: 2px;
-    margin-top: 2rem;
-    transition: margin-top 1s;
+  &--invert {
+    color: white;
+  }
+}
 
-    &--grid {
-      @media only screen and (min-width: 765px) and (max-width: 1024px) {
-        margin-top: 14rem;
+.main-carousel {
+  margin-top: 2rem;
+  transform: scale3d(1, 1, 1);
+  opacity: 1;
+  transition: transform 1s, opacity 1s 0.2s;
+
+  @media only screen and (min-width: 765px) and (max-width: 1024px) {
+    margin-top: 10rem;
+  }
+
+  &--hidden {
+    transform: scale3d(0, 0, 0);
+    opacity: 0;
+  }
+}
+
+.main-carousel /deep/ .swiper-container {
+  padding-top: 2rem;
+}
+
+.main-carousel /deep/ .spot {
+  display: block;
+}
+
+.main-carousel /deep/ .swiper-slide {
+  margin-top: 0;
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.5s ease-in-out;
+
+  @media only screen and (min-width: 1024px) {
+    padding: 0 12.5%;
+  }
+}
+
+.main-carousel /deep/ .swiper-slide-active {
+  transform: translate3d(0, -2rem, 0);
+}
+
+.countdown {
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-evenly;
+  position: absolute;
+  top: 35%;
+  left: 0;
+  width: 100%;
+  align-items: center;
+
+  & /deep/ .countdown__value {
+    width: 33%;
+
+    &::after {
+      content: ':';
+      position: absolute;
+      right: 0;
+      top: 0;
+      font-size: 2rem;
+      color: black;
+
+      @media only screen and (min-width: 765px) {
+        font-size: 2rem;
+      }
+    }
+
+    &:last-of-type {
+      &::after {
+        display: none;
+      }
+    }
+
+    &__num i {
+      font-size: 2rem;
+      color: black;
+
+      @media only screen and (min-width: 765px) {
+        font-size: 2rem;
+      }
+    }
+
+    &__label {
+      text-transform: uppercase;
+      font-size: 1rem;
+      margin-top: 5px;
+      color: black;
+
+      @media only screen and (min-width: 765px) {
+        font-size: 1rem;
       }
     }
   }
 
+  &--invert {
+    left: 12%;
+    width: 80%;
+    & /deep/ .countdown__value {
+      &::after,
+      &__num i,
+      &__label {
+        color: white;
+      }
+    }
+  }
+
+  &--grid {
+    & /deep/ .countdown__value {
+      &::after,
+      &__num i,
+      &__label {
+        font-size: .8rem;
+      }
+    }
+  }
+}
+
+.franchise-name {
+  position: absolute;
+  transition-timing-function: ease-out;
+  bottom: -20px;
+  left: 20px;
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: black;
+  text-align: left;
+  line-height: 45px;
+
+  &--invert {
+    color: white;
+  }
+
+  &--grid {
+    font-size: 1rem;
+    bottom: 0;
+  }
+}
+
+.button-container {
+  display: inline-flex;
+  flex-wrap: wrap;
+  max-width: 36px;
+  position: relative;
+  height: auto;
+  width: auto;
+  padding: 2px;
+  margin-top: 2rem;
+  transition: margin-top 1s;
+
+  &--grid {
+    @media only screen and (min-width: 765px) and (max-width: 1024px) {
+      margin-top: 14rem;
+    }
+  }
+}
+
+.top-left,
+.top-right,
+.bottom-left,
+.bottom-right {
+  height: 12px;
+  width: 12px;
+  border: solid 1px;
+  margin: 2px;
+  box-shadow: 0 0 1px 0 black inset;
+}
+
+.top-left {
+  border-radius: 3px 0 0 0;
+}
+
+.top-right {
+  border-radius: 0 3px 0 0;
+}
+
+.bottom-left {
+  border-radius: 0 0 0 3px;
+}
+
+.bottom-right {
+  border-radius: 0 0 3px 0;
+}
+
+.button-container--invert {
   .top-left,
   .top-right,
   .bottom-left,
   .bottom-right {
-    height: 12px;
-    width: 12px;
-    border: solid 1px;
-    margin: 2px;
-    box-shadow: 0 0 1px 0 black inset;
-  }
-
-  .top-left {
-    border-radius: 3px 0 0 0;
-  }
-
-  .top-right {
-    border-radius: 0 3px 0 0;
-  }
-
-  .bottom-left {
-    border-radius: 0 0 0 3px;
-  }
-
-  .bottom-right {
-    border-radius: 0 0 3px 0;
-  }
-
-  .button-container--invert {
-    .top-left,
-    .top-right,
-    .bottom-left,
-    .bottom-right {
-      border-color: #999;
-      box-shadow: 0 0 2px 0 #999 inset;
-    }
-  }
-
-  .full {
-    height: 0;
-    width: 0;
-    position: absolute;
-    left: 50%;
-    transform: translate3d(-48%, 0, 0);
-    transition: height 1s, width 1s, border-color 1s, border-radius 1s;
-    align-self: center;
-    border: 1px solid transparent;
-    border-radius: 6px;
-    background-color: white;
-    box-shadow: 0 0 3px 0 black inset;
-
-    &--expand {
-      height: 83%;
-      width: 83%;
-      border-color: black;
-      border-radius: 3px;
-    }
-
-    &--invert {
-      box-shadow: 0 0 3px 0 #999 inset;
-      background-color: rgb(34, 34, 34);
-    }
-  }
-
-  .full--expand.full--invert {
     border-color: #999;
+    box-shadow: 0 0 2px 0 #999 inset;
+  }
+}
+
+.full {
+  height: 0;
+  width: 0;
+  position: absolute;
+  left: 50%;
+  transform: translate3d(-48%, 0, 0);
+  transition: height 1s, width 1s, border-color 1s, border-radius 1s;
+  align-self: center;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background-color: white;
+  box-shadow: 0 0 3px 0 black inset;
+
+  &--expand {
+    height: 83%;
+    width: 83%;
+    border-color: black;
+    border-radius: 3px;
   }
 
-  .plus {
+  &--invert {
+    box-shadow: 0 0 3px 0 #999 inset;
+    background-color: rgb(34, 34, 34);
+  }
+}
+
+.full--expand.full--invert {
+  border-color: #999;
+}
+
+.plus {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 35px;
+  height: 35px;
+  color: black;
+
+  @media only screen and (min-width: 765px) {
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    border-bottom: solid;
+    left: 0;
+    top: -55%;
     position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 35px;
-    height: 35px;
-    color: black;
-
-    @media only screen and (min-width: 765px) {
-    }
-
-    &::before,
-    &::after {
-      content: '';
-      width: 100%;
-      height: 100%;
-      border-bottom: solid;
-      left: 0;
-      top: -55%;
-      position: absolute;
-    }
-
-    &::after {
-      top: 0;
-      left: 45%;
-      border-bottom: none;
-      border-left: solid;
-    }
-
-    &--invert {
-      &::after,
-      &::before {
-        border-color: white;
-      }
-    }
   }
 
-  .grid-container .plus {
-    top: 10px;
-    right: 10px;
-    width: 20px;
-    height: 20px;
-    transition: width 1s, height 1s;
+  &::after {
+    top: 0;
+    left: 45%;
+    border-bottom: none;
+    border-left: solid;
+  }
 
-    @media only screen and (min-width: 765px) {
-      width: 30px;
-      height: 30px;
-    }
-
-    &--transition {
-      width: 35px;
-      height: 35px;
-
-      @media only screen and (min-width: 765px) {
-      }
+  &--invert {
+    &::after,
+    &::before {
+      border-color: white;
     }
   }
+}
 </style>
 
