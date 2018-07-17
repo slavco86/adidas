@@ -183,7 +183,7 @@ export default {
         this.$refs.carousel.$children[0].$children[0].$children.map(() => ({
           transform: 'translate3d(0px, 0px, 0px)',
           position: 'relative',
-          width: 'auto',
+          width: `${this.width < 1024 ? (this.width / 2) - 25 : (this.width / 4) - 25}px`,
         })) :
         this.$refs.carousel.$children[0].$children[0].$children.map((element, index) => ({
           transform: `translate3d(${this.width > 765 ? element.$el.offsetLeft + translate
