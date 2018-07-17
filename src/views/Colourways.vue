@@ -18,6 +18,7 @@
       <img
         class="addafter"
         src="../assets/add.png"
+        id="addafter"
         @click="showModal = true">
       <h3 class="shoppingbagtexttitle">{{ franchise }}</h3>
       <h4 class="shoppingbagtext">£80.00</h4>
@@ -97,16 +98,14 @@ export default {
 
       options: {
         responsive: true,
-        // slidesPerView: 7,
-        // spaceBetween: -400,
         breakpoints: {
           765: {
             slidesPerView: 4.5,
           },
-          1366: {
+          1600: {
             slidesPerView: 7,
-            spaceBetween: -400,
-          }
+            spaceBetween: -400
+          },
         },
       },
     };
@@ -296,7 +295,7 @@ font-style: normal;
   opacity: 1;
 }
 
-@media only screen and (min-width: 1365px) {
+@media only screen and (min-width: 1366px) {
   .colourwayscontainer {
     background: #222;
     height: 98vh;
@@ -347,20 +346,28 @@ font-style: normal;
     z-index: 2;
   }
 
-  .derupt {
+  .franchise-container {
+    transform: rotate(360deg);
     position: absolute;
+    top: 19%;
+    left: -1%;
+    width: 100vh;
+
+  }
+
+  .derupt {
     font-family: 'HCo Gotham SSm';
     transform: rotate(0deg);
     font-size: 25vw;
     font-weight: 900px;
     letter-spacing: -10px;
-    top: 8%;
-    left: -3%;
+    width: 180vh;
+    font-size: 337px;
   }
 
   .shoppingbagtexttitle {
     position: absolute;
-    top: 51%;
+    top: 60%;
     right: 14%;
     color: white;
     font-size: 23px;
@@ -368,7 +375,7 @@ font-style: normal;
 
   .shoppingbagtext {
     position: absolute;
-    top: 57%;
+    top: 66%;
     right: 14%;
     color: white;
     font-size: 21px;
@@ -376,7 +383,7 @@ font-style: normal;
 
   .shoppingbagicon {
     right: 14%;
-    top: 63%;
+    top: 73%;
     width: 72px;
     z-index: 1;
   }
