@@ -15,11 +15,11 @@
         :class="{'nav-button--inactive': tab === 'women',
                  'nav-button--invert': tab === 'men'}"
         class="nav-button"
-        @click="tab = 'men'">MEN</button>
+        @click="changeTab('men')">MEN</button>
       <button
         :class="{'nav-button--inactive': tab === 'men'}"
         class="nav-button"
-        @click="tab = 'women'">WOMEN</button>
+        @click="changeTab('women')">WOMEN</button>
     </nav>
     <div
       ref="grid"
@@ -175,6 +175,10 @@ export default {
         this.getPositions();
       }
     },
+    changeTab(name) {
+      this.tab = name;
+      this.$refs.carousel.$children[0].$children[0].swiper.slideTo(0);
+    },
     getPositions(grid = false) {
       this.positions = [];
       const translate = this.$refs.carousel.$children[0].$children[0].swiper.getTranslate();
@@ -186,10 +190,10 @@ export default {
           width: `${this.width < 1024 ? (this.width / 2) - 25 : (this.width / 4) - 25}px`,
         })) :
         this.$refs.carousel.$children[0].$children[0].$children.map((element, index) => ({
-          transform: `translate3d(${this.width > 765 ? element.$el.offsetLeft + translate
-          + element.$el.children[0].offsetLeft :
-            element.$el.offsetLeft + translate}px,
-          ${index === activeSlide ? '2' : '0'}rem, 0px)`,
+          transform: `translate3d(${this.width > 765
+            ? element.$el.offsetLeft + translate + element.$el.children[0].offsetLeft
+            : element.$el.offsetLeft + translate}px,
+          ${index === activeSlide ? '-2' : '0'}rem, 0px)`,
           width: `${element.$el.children[0].clientWidth}px`,
           position: 'absolute',
         }));
@@ -243,13 +247,15 @@ export default {
   }
 
   .main-carousel {
+    margin-top: 2rem;
+
     @media only screen and (min-width: 765px) and (max-width: 1024px) {
       margin-top: 10rem;
     }
   }
 
   .main-carousel /deep/ .swiper-container {
-    padding-bottom: 2rem;
+    padding-top: 2rem;
   }
 
   .main-carousel /deep/ .spot {
@@ -271,7 +277,7 @@ export default {
   }
 
   .main-carousel /deep/ .swiper-slide-active {
-    transform: translate3d(0, 2rem, 0);
+    transform: translate3d(0, -2rem, 0);
   }
 
   .countdown {
@@ -360,11 +366,13 @@ export default {
   .franchise-name {
     position: absolute;
     transition-timing-function: ease-out;
-    bottom: 0;
+    bottom: -20px;
     left: 20px;
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     font-weight: 900;
     color: black;
+    text-align: left;
+    line-height: 45px;
 
     &--invert {
       color: white;
