@@ -239,7 +239,7 @@ font-style: normal;
   height: 85%;
 }
 
-#addafter {
+.addafter {
   position: absolute;
   top: 76%;
   right: 36%;
