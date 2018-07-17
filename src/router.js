@@ -4,6 +4,7 @@ import Home from './views/Home.vue';
 import About from './views/About.vue';
 import Social from './views/Social.vue';
 import Colourways from './views/Colourways.vue';
+import ScrollSnap from './views/Scrollsnap.vue';
 
 Vue.use(Router);
 
@@ -28,6 +29,11 @@ export default new Router({
       path: '/colourways',
       name: 'colourways',
       component: Colourways,
+    },
+    {
+      path: '/scrollsnap',
+      name: 'scrollsnap',
+      component: ScrollSnap,
     },
   ],
 });
