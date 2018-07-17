@@ -17,7 +17,8 @@
         class="mainshoe">
       <img
         class="addafter"
-        src="../assets/add.png">
+        src="../assets/add.png"
+        @click="showModal = true">
       <h3 class="shoppingbagtexttitle">{{ franchise }}</h3>
       <h4 class="shoppingbagtext">£80.00</h4>
       <img
@@ -39,7 +40,9 @@
       </div>
     </Carousel>
     <!-- Derupt title -->
+    <div class="franchise-container"> 
     <h1 class="derupt">{{ franchise }}</h1>
+    </div>
     <!-- <button id="show-modal" @click="showModal = true">Show Modal</button> -->
   <!-- use the modal component, pass in the prop -->
     <modal v-if="showModal" @close="showModal = false">
@@ -94,13 +97,16 @@ export default {
 
       options: {
         responsive: true,
-        slidesPerView: 7,
-        spaceBetween: -400,
+        // slidesPerView: 7,
+        // spaceBetween: -400,
         breakpoints: {
-          376: {
+          765: {
             slidesPerView: 4.5,
-            spaceBetween: 10,
           },
+          1366: {
+            slidesPerView: 7,
+            spaceBetween: -400,
+          }
         },
       },
     };
@@ -123,12 +129,6 @@ export default {
     goBack() {
       return this.$router.push('/');
     },
-    // shoeModal() {
-    //   this.isModalVisible = true;
-    // },
-    // closeModal() {
-    //   this.isModalVisible = false;
-    // }
   },
 
 };
@@ -191,6 +191,7 @@ font-style: normal;
 }
 
 .colourwayscontainer {
+  position: relative;
   background: #222;
   height: 95vh;
 }
@@ -211,18 +212,23 @@ font-style: normal;
   height: 42px;
 }
 
-.derupt {
-  position: absolute;
-  top: 35%;
-  left: -68%;
-  font-family: 'HCo Gotham SSm';
+.franchise-container {
   transform: rotate(270deg);
-  font-size: 43vw;
+  bottom: 17%;
+  left: -39%;
+  width: 100vh;
+  height: 64vh;
+  position: absolute;
+}
+
+
+.derupt {
+  font-family: 'HCo Gotham SSm';
+  font-size: 162px;
   font-weight: 900;
   z-index: 0;
   color:#333333;
   letter-spacing: -10px;
-
 }
 
 .add {
@@ -245,6 +251,7 @@ font-style: normal;
   right: 36%;
   width: 4.5%;
   height: 4%;
+  z-index: 2;
 }
 
 .shoppingbagicon {
