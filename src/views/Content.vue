@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="content-page">
     <router-link
       to="/"
       class="close">
@@ -45,6 +45,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.content-page {
+  // required to pop over the top of MESH header
+  z-index: 1;
+}
+
 .section {
   transform: translate3d(0, -50px, 0);
 
