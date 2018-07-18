@@ -27,7 +27,7 @@ export default new Router({
     {
       // Last modified by Ali Kayani on 11/07/2017
       // Enables the Colourways route to be loaded
-      path: '/:franchise',
+      path: '/:gender/:franchise',
       name: 'colourways',
       component: Content,
     },

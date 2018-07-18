@@ -28,7 +28,7 @@
         v-for="(slide,key) in activeTab"
         :key="key"
         class="grid-view__product"
-        @click="goTo(slide.franchise)">
+        @click="goTo(`${tab}/${slide.franchise}`)">
         <Spot v-bind="slide">
           <span
             :class="{'franchise-name--invert': tab === 'men'}"
@@ -56,7 +56,7 @@
       class="main-carousel">
       <div
         slot-scope="{slide}"
-        @click="goTo(slide.franchise)">
+        @click="goTo(`${tab}/${slide.franchise}`)">
         <Spot v-bind="slide">
           <span
             :class="{'franchise-name--invert': tab === 'men'}"
@@ -97,7 +97,7 @@
 import Carousel from '@/containers/Carousel.vue';
 import Countdown from '@/components/Countdown.vue';
 import Spot from '@/components/Spot.vue';
-import home from '@/content/home';
+import home from '@/content/home.json';
 
 export default {
   name: 'Home',

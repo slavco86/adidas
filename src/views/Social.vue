@@ -39,7 +39,6 @@ export default {
   data() {
     return {
       activateAnimation: false,
-      activeSocial: false,
       slides: [
         {
           image: {
@@ -84,11 +83,6 @@ export default {
       })
       .on('exit', () => {
         this.activateAnimation = false;
-      });
-
-    inView('.social')
-      .once('enter', () => {
-        this.activeSocial = true;
       });
   },
 };

@@ -16,9 +16,9 @@
         :src="defaultImage"
         class="mainshoe">
       <img
+        id="addafter"
         class="addafter"
         src="../assets/add.png"
-        id="addafter"
         @click="showModal = true">
       <h3 class="shoppingbagtexttitle">{{ franchise }}</h3>
       <h4 class="shoppingbagtext">£80.00</h4>
@@ -40,13 +40,13 @@
           @click="mainImage($refs.carousel.$children[0].$children[0].swiper.clickedIndex)">
       </div>
     </Carousel>
-    <div class="franchise-container"> 
-    <h1 class="derupt">{{ franchise }}</h1>
+    <div class="franchise-container">
+      <h1 class="derupt">{{ franchise }}</h1>
     </div>
     <modal v-if="showModal" @close="showModal = false" >
       <h1 slot="header" id="modalh">DEERUPT</h1>
-        <h2 slot="body"><span id="modalb">DISRUPTIVELY SIMPLE</span><br /><br />
-          <span class="modalc">With Deerupt, a silhouette becomes <br />
+      <h2 slot="body"><span id="modalb">DISRUPTIVELY SIMPLE</span><br /><br />
+      <span class="modalc">With Deerupt, a silhouette becomes <br />
           the unexpected. Comfort becomes </br >
           the unprecedented. Fit becomes <br />
           an experience. </span>
@@ -102,7 +102,7 @@ export default {
           },
           1600: {
             slidesPerView: 7,
-            spaceBetween: -400
+            // spaceBetween: -400,
           },
         },
       },
@@ -274,10 +274,6 @@ font-style: normal;
   font-size: 10px;
 }
 
-.carousel-container {
-  margin-top: 15%;
-}
-
 .image-container {
   position: relative;
 }
@@ -403,8 +399,9 @@ font-style: normal;
   }
 
   .carousel-container {
+    margin: 0 auto;
     margin-top: 6%;
-    margin-left: 20%;
+    width: 50%;
   }
 
   .image {
