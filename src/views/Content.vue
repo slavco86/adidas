@@ -43,6 +43,7 @@ export default {
   },
 
   beforeDestroy() {
+    this.fullpage.moveTo(1);
     this.fullpage.destroy();
   },
 };
