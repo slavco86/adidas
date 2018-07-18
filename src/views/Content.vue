@@ -36,11 +36,11 @@ export default {
     };
   },
 
-  mounted() {
-    this.fullpage = new Fullpage('#content', {
-      licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
-    });
-  },
+  // mounted() {
+  //   this.fullpage = new Fullpage('#content', {
+  //     licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
+  //   });
+  // },
 };
 </script>
 

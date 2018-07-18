@@ -25,7 +25,7 @@
       :class="{'grid--animate': grid}"
       class="grid-view">
       <div
-        v-for="(slide,key) in activeTab"
+        v-for="(slide,key) in slides"
         :key="key"
         class="grid-view__product"
         @click="goTo(`${tab}/${slide.franchise}`)">
@@ -50,7 +50,7 @@
 
     <Carousel
       ref="carousel"
-      :slides="activeTab"
+      :slides="slides"
       :options="swiperOptions"
       :class="{'main-carousel--hidden': grid}"
       class="main-carousel">
@@ -97,7 +97,6 @@
 import Carousel from '@/containers/Carousel.vue';
 import Countdown from '@/components/Countdown.vue';
 import Spot from '@/components/Spot.vue';
-import home from '@/content/home.json';
 
 export default {
   name: 'Home',
@@ -105,7 +104,12 @@ export default {
     Carousel,
     Spot,
     Countdown,
-    home,
+  },
+  props: {
+    franchises: {
+      type: Array,
+      required: true,
+    },
   },
   data() {
     return {
@@ -113,6 +117,7 @@ export default {
       grid: false,
       border: false,
       positions: [],
+      slides: [],
       width: window.innerWidth,
       tab: 'men',
       content: {
@@ -126,9 +131,6 @@ export default {
     };
   },
   computed: {
-    activeTab() {
-      return (this.tab === 'men') ? this.content.men.slides : this.content.women.slides;
-    },
     swiperOptions() {
       const desktop = this.width > 765;
       const slidesPerView = desktop ? 1.8 : 1.2;
@@ -143,10 +145,9 @@ export default {
     },
   },
   mounted() {
-    this.content = home.home;
-    if (this.content.men.slides.length) {
-      this.setExpired(this.content.men.slides);
-      this.setExpired(this.content.women.slides);
+    this.slides = this.franchises;
+    if (this.slides.length) {
+      this.setExpired(this.slides);
     }
   },
   methods: {
