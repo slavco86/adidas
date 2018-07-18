@@ -4,8 +4,18 @@
 
     <p class="social__text">Get Social</p>
     <h2 class="social__title">#Creator</h2>
+    <div
+      :class="{'grid--animate': activateAnimation}"
+      class="grid">
+      <Spot
+        v-for="(slide,key) in slides"
+        :key="key"
+        v-bind="slide"
+        class="grid__product">
+        <span class="grid__product__text">{{ slide.text }}</span>
+      </Spot>
 
-    <Grid :class="{'grid--animate': activateAnimation}"/>
+    </div>
 
     <a
       href="#"
@@ -17,31 +27,62 @@
 
 <script>
 import inView from 'in-view';
-import Grid from '@/components/Grid.vue';
+import Spot from '@/components/Spot.vue';
 
-inView.threshold(0.05);
+inView.threshold(0.5);
 
 export default {
   name: 'Social',
   components: {
-    Grid,
+    Spot,
   },
   data() {
     return {
       activateAnimation: false,
-      activeSocial: false,
+      slides: [
+        {
+          image: {
+            desktop: 'http://via.placeholder.com/350x350',
+            mobile: 'http://via.placeholder.com/350x350',
+          },
+          url: '#',
+          text: '@socialhandle',
+        },
+        {
+          image: {
+            desktop: 'http://via.placeholder.com/350x350',
+            mobile: 'http://via.placeholder.com/350x350',
+          },
+          url: '#',
+          text: '@socialhandle',
+        },
+        {
+          image: {
+            desktop: 'http://via.placeholder.com/350x350',
+            mobile: 'http://via.placeholder.com/350x350',
+          },
+          url: '#',
+          text: '@socialhandle',
+        },
+        {
+          image: {
+            desktop: 'http://via.placeholder.com/350x350',
+            mobile: 'http://via.placeholder.com/350x350',
+          },
+          url: '#',
+          text: '@socialhandle',
+        },
+      ],
     };
   },
 
   mounted() {
     inView('.grid')
-      .once('enter', () => {
+      .on('enter', () => {
         this.activateAnimation = true;
-      });
-
-    inView('.social')
-      .once('enter', () => {
-        this.activeSocial = true;
+      })
+      .on('exit', () => {
+        this.activateAnimation = false;
       });
   },
 };
@@ -73,6 +114,75 @@ export default {
       margin: 0 1rem;
       padding: 1rem 1.5rem;
       text-transform: uppercase;
+    }
+  }
+
+  .grid {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 1rem auto;
+    overflow: hidden;
+
+    &__product {
+      flex: 0 0 50%;
+      height: auto;
+      max-width: 635px;
+      // min-width: 150px;
+      padding: 0.5rem;
+      transition: transform 1s ease-in-out;
+
+      @media only screen and (min-width: 1024px) {
+        flex: 0 0 19%;
+      }
+
+      &:first-child {
+        transform: translate3d(-100%, -100%, 0);
+      }
+
+      &:nth-child(2) {
+        transform: translate3d(100%, -100%, 0);
+      }
+
+      &:nth-child(3) {
+        transform: translate3d(-100%, 100%, 0);
+      }
+
+      &:last-child {
+        transform: translate3d(100%, 100%, 0);
+      }
+
+      &__text {
+        color: #ccc;
+        display: block;
+        margin: 0.75rem 0;
+        text-align: left;
+        font-size: 1rem;
+      }
+
+      img {
+        display: block;
+        height: auto;
+        width: 100%;
+      }
+    }
+  }
+
+  .grid--animate {
+    padding: 50px 0;
+    .grid__product {
+      transform: translate3d(0, 0, 0);
+      @media only screen and (min-width: 1024px) {
+        margin: 0 10px;
+
+        &:nth-child(odd) {
+          transform: translate3d(0, -50px, 0);
+        }
+
+        &:nth-child(even) {
+          transform: translate3d(0, 50px, 0);
+        }
+      }
     }
   }
 </style>
