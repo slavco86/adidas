@@ -12,7 +12,7 @@
     "print:code": "release code"
   },
   "dependencies": {
-    "fullpage.js": "3.0.1",
+    "fullpage.js": "steriley/fullPage.js#8edbd14",
     "in-view": "0.6.1",
     "panelsnap": "^1.2.1",
     "skrollr": "^0.6.26",
