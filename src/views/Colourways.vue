@@ -12,8 +12,7 @@
         class="add"
         src="../assets/add.png">
       <img
-        :key="defaultImage"
-        :src="defaultImage"
+        :src="mainImage"
         class="mainshoe">
       <img
         class="addafter"
@@ -36,11 +35,12 @@
         class="image-container">
         <img
           :src="slide.image"
+          :class="{ isActive : slide.active }"
           class="image"
-          @click="mainImage($refs.carousel.$children[0].$children[0].swiper.clickedIndex)  ">
+          @click="changeImage(slide)">
       </div>
     </Carousel>
-    <div class="franchise-container"> 
+    <div class="franchise-container">
     <h1 class="derupt">{{ franchise }}</h1>
     </div>
     <modal v-if="showModal" @close="showModal = false" >
@@ -73,24 +73,31 @@ export default {
       slides: [
         {
           image: 'https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-2-57ac562da9a5af2fbd89974727329a02.png',
+          active: true,
         },
         {
           image: 'https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-0-04670ce96db4cc1da203cc6895aa85e0.png',
+          active: false,
         },
         {
           image: 'https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-1-6e0103d3b8a1653704b09acad135b6a9.png',
+          active: false,
         },
         {
           image: 'https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-3-48065ea7006370f09ba101c518513105.png',
+          active: false,
         },
         {
           image: 'https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-4-0ea11a1bd092bb5eacdc608aac48d64c.png',
+          active: false,
         },
         {
           image: 'https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-5-6fae8c215df40f8eac27d0a2d34c1cf3.png',
+          active: false,
         },
         {
           image: 'https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-6-2001fef6fd965b9b7ff7456d1f103818.png',
+          active: false,
         },
       ],
 
@@ -102,7 +109,7 @@ export default {
           764: {
             slidesPerView: 4.5,
             spaceBetween: 10
-            
+
           },
           1024: {
             slidesPerView: 5.2,
@@ -117,16 +124,31 @@ export default {
     franchise() {
       return this.$route.params.franchise;
     },
+
+    mainImage() {
+      return this.slides.filter(slide => slide.active).pop().image;
+    },
   },
 
-  mounted() {
-    this.mainImage(0);
-  },
+  // mounted() {
+  //   this.mainImage(0);
+  // },
 
   methods: {
-    mainImage(index = 0) {
-      this.defaultImage = this.slides[index].image;
+    changeImage(selectedSlide) {
+      this.slides.map((slide) => {
+        const newSlide = slide;
+
+        if (newSlide.image === selectedSlide.image) {
+          newSlide.active = true;
+          return true;
+        }
+
+        newSlide.active = false;
+        return false;
+      });
     },
+
     goBack() {
       return this.$router.push('/');
     },
@@ -203,6 +225,10 @@ font-style: normal;
 // .carousel-container /deep/ .swiper-slide:hover{
 //   opacity: 1;
 // }
+
+.image.isActive {
+  opacity: 1;
+}
 
 .colourwayscontainer {
   position: relative;
