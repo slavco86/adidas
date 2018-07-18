@@ -5,7 +5,7 @@
         <div class="modal-container">
           <img
               class="close"
-              src="../assets/close_black.png"
+              src="../assets/close_white.png"
               @click="$emit('close')"
               id="closem"
               >
@@ -85,6 +85,7 @@ font-style: normal;
   background-color: rgba(0, 0, 0, .5);
   display: table;
   transition: opacity .3s ease;
+
 }
 
 .modal-wrapper {
@@ -113,19 +114,6 @@ font-style: normal;
   margin: 20px 0;
 }
 
-/* .modal-default-button {
-  float: right;
-} */
-
-/*
- * The following styles are auto-applied to elements with
- * transition="modal" when their visibility is toggled
- * by Vue.js.
- *
- * You can easily play with the modal transition by editing
- * these styles.
- */
-
 .modal-enter {
   opacity: 0;
 }
@@ -139,4 +127,60 @@ font-style: normal;
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
+
+@media only screen and (min-width: 765px) { 
+
+  .modal-container {
+    width: 765px;
+    height: 1024px;
+    margin: 0px auto;
+    padding: 20px 30px;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
+    transition: all .3s ease;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+#closem {
+  position: relative;
+  left: 45%;
+  width: 63px;
+}
+
+#modalh {
+  padding-top: 20%;
+}
+
+@media only screen and (min-width: 1025px) {
+
+.modal-container {
+    width: 718px;
+    height: 529px;
+    margin: 0px auto;
+    padding: 20px 30px;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
+    transition: all .3s ease;
+    font-family: Helvetica, Arial, sans-serif;
+
+  }
+
+  #closem {
+    position: relative;
+    margin-top: -7%;
+    left: 53%;
+    width: 53px;
+  }
+
+  #modalh {
+    padding-top: 8%;
+  }
+
+  }
+
+}
+
+
 </style>

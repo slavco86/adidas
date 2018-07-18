@@ -37,7 +37,7 @@
         <img
           :src="slide.image"
           class="image"
-          @click="mainImage($refs.carousel.$children[0].$children[0].swiper.clickedIndex)">
+          @click="mainImage($refs.carousel.$children[0].$children[0].swiper.clickedIndex)  ">
       </div>
     </Carousel>
     <div class="franchise-container"> 
@@ -47,7 +47,7 @@
       <h1 slot="header" id="modalh">DEERUPT</h1>
         <h2 slot="body"><span id="modalb">DISRUPTIVELY SIMPLE</span><br /><br />
           <span class="modalc">With Deerupt, a silhouette becomes <br />
-          the unexpected. Comfort becomes </br >
+          the unexpected. Comfort becomes <br />
           the unprecedented. Fit becomes <br />
           an experience. </span>
         </h2>
@@ -72,13 +72,13 @@ export default {
       defaultImage: '',
       slides: [
         {
+          image: 'https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-2-57ac562da9a5af2fbd89974727329a02.png',
+        },
+        {
           image: 'https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-0-04670ce96db4cc1da203cc6895aa85e0.png',
         },
         {
           image: 'https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-1-6e0103d3b8a1653704b09acad135b6a9.png',
-        },
-        {
-          image: 'https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-2-57ac562da9a5af2fbd89974727329a02.png',
         },
         {
           image: 'https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-3-48065ea7006370f09ba101c518513105.png',
@@ -96,13 +96,17 @@ export default {
 
       options: {
         responsive: true,
+        slidesPerView: 7,
+        spaceBetween: -400,
         breakpoints: {
-          765: {
+          764: {
             slidesPerView: 4.5,
+            spaceBetween: 10
+            
           },
-          1600: {
-            slidesPerView: 7,
-            spaceBetween: -400
+          1024: {
+            slidesPerView: 5.2,
+             spaceBetween: 100
           },
         },
       },
@@ -186,6 +190,19 @@ font-style: normal;
   font-weight: 700;
   font-style: normal;
 }
+
+
+// .carousel-container /deep/ .swiper-slide:first-of-type {
+//   opacity: 1;
+// }
+
+// .carousel-container /deep/ .swiper-slide:not(:first-of-type) {
+//   opacity: 0.5;
+// }
+
+// .carousel-container /deep/ .swiper-slide:hover{
+//   opacity: 1;
+// }
 
 .colourwayscontainer {
   position: relative;
@@ -278,6 +295,7 @@ font-style: normal;
   margin-top: 15%;
 }
 
+
 .image-container {
   position: relative;
 }
@@ -286,11 +304,6 @@ font-style: normal;
   display: block;
   width: 80px;
   height: 74px;
-  opacity: 0.5;
-}
-
-.image:hover {
-  opacity: 1;
 }
 
 #modalh {
@@ -309,7 +322,139 @@ font-style: normal;
   font-family: 'HCo Gotham SSm';
 }
 
-@media only screen and (min-width: 1366px) {
+
+@media only screen and (min-width: 765px) {
+
+.colourwayscontainer {
+    position: relative;
+    background: #222;
+    height: 98vh;
+  }
+
+.mainimage {
+    position: relative;
+  }
+
+
+.adidas {
+    display: inline;
+    position: absolute;
+    width: 100px;
+    top: 4%;
+    left: 7%;
+  }
+
+.close {
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    width: 67px;
+    height: 70px;
+  }
+
+  .add {
+    position: absolute;
+    top: 53%;
+    left: 21%;
+    width: 48px;
+    height: 48px;
+    opacity: 0.55;
+  }
+
+  .mainshoe {
+    width: 61%;
+    z-index: 1;
+  }
+
+  #addafter {
+    position: absolute;
+    top: 73%;
+    left: 58%;
+    width: 48px;
+    height: 48px;
+    opacity: 0.55;
+    z-index: 2;
+  }
+
+   .franchise-container {
+    transform: rotate(360deg);
+    position: absolute;
+    top: 35%;
+    left: -3%;
+    width: 100vh;
+
+  }
+
+   .derupt {
+    font-family: 'HCo Gotham SSm';
+    transform: rotate(0deg);
+    font-size: 25vw;
+    font-weight: 900px;
+    letter-spacing: -10px;
+    width: 78vh;
+    font-size: 201px;
+  }
+
+  .shoppingbagtexttitle {
+    position: absolute;
+    top: 59%;
+    right: 11%;
+    color: white;
+    font-size: 23px;
+  }
+
+  .shoppingbagtext {
+    position: absolute;
+    top: 64%;
+    right: 11%;
+    color: white;
+    font-size: 21px;
+  }
+
+  .shoppingbagicon {
+    right: 11%;
+    top: 70%;
+    width: 72px;
+    z-index: 1;
+  }
+
+  .carousel-container {
+    margin-top: 6%;
+    margin-left: 5%;
+  }
+
+  .image {
+    display: block;
+    width: 155px;
+    height: 154px;
+    opacity: 0.5;
+  }
+
+  .image:hover {
+    opacity: 1;
+  }
+
+  #modalh {
+  font-family: 'HCo Gotham SSm';
+  font-size: 110px;
+  font-weight: 900;
+}
+
+  #modalb {
+  font-family: 'HCo Gotham SSm';
+  font-size: 37px;
+  font-weight: 700;
+}
+
+ .modalc {
+  font-family: 'HCo Gotham SSm';
+  font-size: 24px;
+}
+
+}
+
+
+@media only screen and (min-width: 1025px) {
   .colourwayscontainer {
     background: #222;
     height: 98vh;
@@ -329,9 +474,9 @@ font-style: normal;
 
   .close {
     position: absolute;
-    top: 4%;
+    top: 8%;
     height: 10%;
-    right: 5%;
+    right: 3%;
   }
 
   .add {
@@ -417,6 +562,24 @@ font-style: normal;
   .image:hover {
     opacity: 1;
   }
+
+  #modalh {
+  font-family: 'HCo Gotham SSm';
+  font-size: 53px;
+  font-weight: 900;
+}
+
+  #modalb {
+  font-family: 'HCo Gotham SSm';
+  font-size: 27px;
+  font-weight: 700;
+}
+
+ .modalc {
+  font-family: 'HCo Gotham SSm';
+  font-size: 20px;
+}
+
 }
 
 </style>
