@@ -27,24 +27,27 @@
       <div
         v-for="(slide,key) in slides"
         :key="key"
-        class="grid-view__product"
-        @click="goTo(`${tab}/${slide.franchise}`)">
-        <Spot v-bind="slide">
-          <span
-            :class="{'franchise-name--invert': tab === 'men'}"
-            data-swiper-parallax="-500"
-            data-swiper-parallax-duration="600"
-            class="franchise-name franchise-name--grid">{{ slide.franchise }}</span>
-          <div
-            :class="{'plus--invert' : tab === 'men'}"
-            class="plus"/>
-        </Spot>
-        <Countdown
-          v-if="!slide.expired"
-          :class="{'countdown--invert': tab === 'men'}"
-          :date="slide.launch"
-          class="countdown--grid"
-          @expired="slide.expired = true"/>
+        class="grid-view__product">
+        <router-link
+          :to="`${tab}/${slide.franchise}`"
+          tag="div">
+          <Spot v-bind="slide">
+            <span
+              :class="{'franchise-name--invert': tab === 'men'}"
+              data-swiper-parallax="-500"
+              data-swiper-parallax-duration="600"
+              class="franchise-name franchise-name--grid">{{ slide.franchise }}</span>
+            <div
+              :class="{'plus--invert' : tab === 'men'}"
+              class="plus"/>
+          </Spot>
+          <Countdown
+            v-if="!slide.expired"
+            :class="{'countdown--invert': tab === 'men'}"
+            :date="slide.launch"
+            class="countdown--grid"
+            @expired="slide.expired = true"/>
+        </router-link>
       </div>
     </div>
 
@@ -86,7 +89,7 @@
       <div class="bottom-left"/>
       <div class="bottom-right"/>
       <div
-        :class="{'full--expand': border,
+        :class="{'full--expand': grid,
                  'full--invert': tab === 'men'}"
         class="full"/>
     </div>
@@ -116,19 +119,9 @@ export default {
     return {
       carousel: true,
       grid: false,
-      border: false,
-      positions: [],
       slides: [],
       width: window.innerWidth,
       tab: 'men',
-      content: {
-        men: {
-          slides: [],
-        },
-        women: {
-          slides: [],
-        },
-      },
     };
   },
   computed: {
