@@ -37,7 +37,8 @@
         <img
           :src="slide.image"
           class="image"
-          @click="mainImage($refs.carousel.$children[0].$children[0].swiper.clickedIndex)  ">
+          @click="mainImage($refs.carousel.$children[0].$children[0].swiper.clickedIndex); 
+           secondFunction($refs.carousel.$children[0].$children[0].swiper.clickedIndex)">
       </div>
     </Carousel>
     <div class="franchise-container"> 
@@ -56,6 +57,7 @@
 </template>
 
 <script>
+
 import Carousel from '@/containers/Carousel.vue';
 import modal from '@/components/Modal.vue';
 
@@ -95,7 +97,7 @@ export default {
       ],
 
       options: {
-        responsive: true,
+        // responsive: true,
         slidesPerView: 7,
         spaceBetween: -400,
         breakpoints: {
@@ -130,6 +132,9 @@ export default {
     goBack() {
       return this.$router.push('/');
     },
+    secondFunction(index) {
+      console.log(this.defaultImage);
+    }
   },
 
 };
@@ -137,33 +142,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
-@font-face {
-font-family: 'HCo Gotham Cond SSm';
-src:url('../assets/fonts/B1CFB00FA67031B66.woff2') format('woff2'),
-url('../assets/fonts/B1CFB00FA67031B66.woff') format('woff');
-font-weight: 400;
-font-style: normal;
-}
-
-
-@font-face {
-font-family: 'HCo Gotham Cond SSm';
-src:url('../assets/fonts/9AF882D5BD620EB9E.woff2') format('woff2'),
-url('../assets/fonts/9AF882D5BD620EB9E.woff') format('woff');
-font-weight: 500;
-font-style: normal;
-}
-
-
-@font-face {
-font-family: 'HCo Gotham Cond SSm';
-src:url('../assets/fonts/DD21C5786A9E30A24.woff2') format('woff2'),
-url('../assets/fonts/DD21C5786A9E30A24.woff') format('woff');
-font-weight: 600;
-font-style: normal;
-}
-
 
 @font-face {
 font-family: 'HCo Gotham SSm';
@@ -200,7 +178,7 @@ font-style: normal;
 //   opacity: 0.5;
 // }
 
-// .carousel-container /deep/ .swiper-slide:hover{
+// .carousel-container /deep/ .swiper-slide:hover {
 //   opacity: 1;
 // }
 
@@ -305,6 +283,7 @@ font-style: normal;
   width: 80px;
   height: 74px;
 }
+
 
 #modalh {
   font-family: 'HCo Gotham SSm';
@@ -427,12 +406,12 @@ font-style: normal;
     display: block;
     width: 155px;
     height: 154px;
-    opacity: 0.5;
+    // opacity: 0.5;
   }
 
-  .image:hover {
-    opacity: 1;
-  }
+  // .image:hover {
+  //   opacity: 1;
+  // }
 
   #modalh {
   font-family: 'HCo Gotham SSm';
@@ -556,12 +535,12 @@ font-style: normal;
     display: block;
     width: 80px;
     height: 74px;
-    opacity: 0.5;
+    // opacity: 0.5;
   }
 
-  .image:hover {
-    opacity: 1;
-  }
+  // .image:hover {
+  //   opacity: 1;
+  // }
 
   #modalh {
   font-family: 'HCo Gotham SSm';
