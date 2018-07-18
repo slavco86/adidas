@@ -9,7 +9,7 @@
     <swiper-slide
       v-for="(slide, key) in slides"
       :key="key">
-      <slot :slide="slide"/>
+      <slot :slide="addKey(slide, key)" />
     </swiper-slide>
 
     <div
@@ -62,8 +62,16 @@ export default {
     emitReady() {
       this.$emit('ready');
     },
+
     transitionEnd() {
       this.$emit('transition-end');
+    },
+
+    addKey(slide, key) {
+      return {
+        ...slide,
+        key,
+      };
     },
   },
 };
