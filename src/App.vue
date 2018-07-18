@@ -18,7 +18,6 @@
   transition: opacity 1s;
   position: absolute;
   width: 100%;
-
 }
 
 .fade-enter-to,

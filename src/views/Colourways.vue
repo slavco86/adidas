@@ -2,10 +2,6 @@
   <div class="colourwayscontainer">
     <div class="mainimage">
       <img
-        class="close"
-        src="../assets/close_white.png"
-        @click="goBack">
-      <img
         class="adidas"
         src="../assets/adidas_white.svg">
       <img
@@ -62,7 +58,6 @@
 </template>
 
 <script>
-
 import Carousel from '@/containers/Carousel.vue';
 import modal from '@/components/Modal.vue';
 
@@ -151,10 +146,6 @@ export default {
         return false;
       });
     },
-
-    goBack() {
-      return this.$router.push('/');
-    },
   },
 
 };
@@ -197,7 +188,7 @@ font-style: normal;
 .colourwayscontainer {
   position: relative;
   background: #222;
-  height: 95vh;
+  height: 100%;
 }
 
 .adidas {
@@ -445,7 +436,7 @@ font-style: normal;
 @media only screen and (min-width: 1025px) {
   .colourwayscontainer {
     background: #222;
-    height: 98vh;
+    height: 100%;
   }
 
   .mainimage {
@@ -536,8 +527,9 @@ font-style: normal;
   }
 
   .carousel-container {
+    margin: 0 auto;
     margin-top: 6%;
-    margin-left: 20%;
+    width: 50%;
   }
 
   .image {

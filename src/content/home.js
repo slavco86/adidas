@@ -5,8 +5,8 @@ export default {
         {
           franchise: 'EQT',
           image: {
-            desktop: 'http://via.placeholder.com/350x350/969696',
-            mobile: 'http://via.placeholder.com/350x350/969696',
+            desktop: 'https://via.placeholder.com/350x350/969696',
+            mobile: 'https://via.placeholder.com/350x350/969696',
           },
           url: '#',
           path: 'men',
@@ -15,8 +15,8 @@ export default {
         {
           franchise: 'Falcon',
           image: {
-            desktop: 'http://via.placeholder.com/350x350/969696',
-            mobile: 'http://via.placeholder.com/350x350/969696',
+            desktop: 'https://via.placeholder.com/350x350/969696',
+            mobile: 'https://via.placeholder.com/350x350/969696',
           },
           url: '#',
           path: 'men',
@@ -25,8 +25,8 @@ export default {
         {
           franchise: 'Deerupt',
           image: {
-            desktop: 'http://via.placeholder.com/350x350/969696',
-            mobile: 'http://via.placeholder.com/350x350/969696',
+            desktop: 'https://via.placeholder.com/350x350/969696',
+            mobile: 'https://via.placeholder.com/350x350/969696',
           },
           url: '#',
           path: 'men',
@@ -35,8 +35,8 @@ export default {
         {
           franchise: 'POD',
           image: {
-            desktop: 'http://via.placeholder.com/350x350/969696',
-            mobile: 'http://via.placeholder.com/350x350/969696',
+            desktop: 'https://via.placeholder.com/350x350/969696',
+            mobile: 'https://via.placeholder.com/350x350/969696',
           },
           url: '#',
           path: 'men',
@@ -49,8 +49,8 @@ export default {
         {
           franchise: 'EQT',
           image: {
-            desktop: 'http://via.placeholder.com/450x450',
-            mobile: 'http://via.placeholder.com/450x450',
+            desktop: 'https://via.placeholder.com/450x450',
+            mobile: 'https://via.placeholder.com/450x450',
           },
           url: '#',
           path: 'women',
@@ -59,8 +59,8 @@ export default {
         {
           franchise: 'Samba Rose',
           image: {
-            desktop: 'http://via.placeholder.com/450x450',
-            mobile: 'http://via.placeholder.com/450x450',
+            desktop: 'https://via.placeholder.com/450x450',
+            mobile: 'https://via.placeholder.com/450x450',
           },
           url: '#',
           path: 'women',
@@ -69,8 +69,8 @@ export default {
         {
           franchise: 'Deerupt',
           image: {
-            desktop: 'http://via.placeholder.com/450x450',
-            mobile: 'http://via.placeholder.com/450x450',
+            desktop: 'https://via.placeholder.com/450x450',
+            mobile: 'https://via.placeholder.com/450x450',
           },
           url: '#',
           path: 'women',
@@ -79,8 +79,8 @@ export default {
         {
           franchise: 'Arkyn',
           image: {
-            desktop: 'http://via.placeholder.com/450x450',
-            mobile: 'http://via.placeholder.com/450x450',
+            desktop: 'https://via.placeholder.com/450x450',
+            mobile: 'https://via.placeholder.com/450x450',
           },
           url: '#',
           path: 'women',
