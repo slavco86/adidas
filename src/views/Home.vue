@@ -54,9 +54,10 @@
       :options="swiperOptions"
       :class="{'main-carousel--hidden': grid}"
       class="main-carousel">
-      <div
+      <router-link
         slot-scope="{slide}"
-        @click="goTo(`${tab}/${slide.franchise}`)">
+        :to="`${tab}/${slide.franchise}`"
+        tag="div">
         <Spot v-bind="slide">
           <span
             :class="{'franchise-name--invert': tab === 'men'}"
@@ -72,7 +73,7 @@
           :class="{'countdown--invert': tab === 'men'}"
           :date="slide.launch"
           @expired="slide.expired = true"/>
-      </div>
+      </router-link>
     </Carousel>
     <div
       :class="{'button-container--invert': tab === 'men',
@@ -150,9 +151,6 @@ export default {
     }
   },
   methods: {
-    goTo(franchise) {
-      this.$router.push(franchise);
-    },
     unhideCarousel() {
       if (!this.carousel && !this.grid) {
         this.carousel = !this.carousel;
