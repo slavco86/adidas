@@ -39,14 +39,20 @@
     <div class="franchise-container">
       <h1 class="derupt">{{ franchise }}</h1>
     </div>
-    <modal v-if="showModal" @close="showModal = false" >
-      <h1 slot="header" id="modalh">DEERUPT</h1>
-      <h2 slot="body"><span id="modalb">DISRUPTIVELY SIMPLE</span><br /><br />
-      <span class="modalc">With Deerupt, a silhouette becomes <br />
-          the unexpected. Comfort becomes </br >
-          the unprecedented. Fit becomes <br />
+    <modal
+      v-if="showModal"
+      @close="showModal = false" >
+      <h1
+        id="modalh"
+        slot="header">
+        DEERUPT
+      </h1>
+      <h2 slot="body"><span id="modalb">DISRUPTIVELY SIMPLE</span><br><br>
+        <span class="modalc">With Deerupt, a silhouette becomes <br>
+          the unexpected. Comfort becomes <br>
+          the unprecedented. Fit becomes <br>
           an experience. </span>
-        </h2>
+      </h2>
     </modal>
   </div>
 </template>
