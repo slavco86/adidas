@@ -177,22 +177,18 @@ export default {
   .grid--animate {
     padding: 50px 0;
     .grid__product {
-      margin: 0 10px;
-      &:first-child {
+      transform: translate3d(0, 0, 0);
+      @media only screen and (min-width: 1024px) {
+        margin: 0 10px;
+
+        &:nth-child(odd) {
           transform: translate3d(0, -50px, 0);
         }
 
-        &:nth-child(2) {
+        &:nth-child(even) {
           transform: translate3d(0, 50px, 0);
         }
-
-        &:nth-child(3) {
-          transform: translate3d(0, -50px, 0);
-        }
-
-        &:last-child {
-          transform: translate3d(0, 50px, 0);
-        }
+      }
     }
   }
 </style>
