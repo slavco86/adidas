@@ -33,7 +33,7 @@
           :src="slide.image"
           :class="{ isActive : slide.active }"
           class="image"
-          @click="changeImage(slide)">
+          @click="changeImage(slide.key)">
       </div>
     </Carousel>
     <div class="franchise-container">
@@ -71,7 +71,7 @@ export default {
   data() {
     return {
       showModal: false,
-      defaultImage: '',
+      selectedIndex: 0,
       slides: [
         {
           image: 'https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-2-57ac562da9a5af2fbd89974727329a02.png',
@@ -106,7 +106,6 @@ export default {
       options: {
         // responsive: true,
         slidesPerView: 7,
-        spaceBetween: -100,
         breakpoints: {
           764: {
             slidesPerView: 4.5,
@@ -128,23 +127,16 @@ export default {
     },
 
     mainImage() {
-      return this.slides.filter(slide => slide.active).pop().image;
+      return this.slides[this.selectedIndex].image;
     },
   },
 
   methods: {
     changeImage(selectedSlide) {
-      this.slides.map((slide) => {
-        const newSlide = slide;
+      this.slides[this.selectedIndex].active = false;
+      this.slides[selectedSlide].active = true;
 
-        if (newSlide.image === selectedSlide.image) {
-          newSlide.active = true;
-          return true;
-        }
-
-        newSlide.active = false;
-        return false;
-      });
+      this.selectedIndex = selectedSlide;
     },
   },
 
