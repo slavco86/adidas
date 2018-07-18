@@ -47,6 +47,10 @@ export default {
 <style lang="scss" scoped>
 .section {
   transform: translate3d(0, -50px, 0);
+
+  @media screen and (min-width: 765px) {
+    transform: translate3d(0, -202px, 0);
+  }
 }
 
 .section__inner {
