@@ -17,7 +17,9 @@
         class="mainshoe">
       <img
         class="addafter"
-        src="../assets/add.png">
+        src="../assets/add.png"
+        id="addafter"
+        @click="showModal = true">
       <h3 class="shoppingbagtexttitle">{{ franchise }}</h3>
       <h4 class="shoppingbagtext">£80.00</h4>
       <img
@@ -38,22 +40,23 @@
           @click="mainImage($refs.carousel.$children[0].$children[0].swiper.clickedIndex)">
       </div>
     </Carousel>
-    <!-- Derupt title -->
+    <div class="franchise-container"> 
     <h1 class="derupt">{{ franchise }}</h1>
-    <!-- <button id="show-modal" @click="showModal = true">Show Modal</button> -->
-  <!-- use the modal component, pass in the prop -->
-    <modal v-if="showModal" @close="showModal = false">
-      <!--
-        you can use custom content here to overwrite
-        default content
-      -->
-      <h3 slot="header">DEERUPT</h3>
+    </div>
+    <modal v-if="showModal" @close="showModal = false" >
+      <h1 slot="header" id="modalh">DEERUPT</h1>
+        <h2 slot="body"><span id="modalb">DISRUPTIVELY SIMPLE</span><br /><br />
+          <span class="modalc">With Deerupt, a silhouette becomes <br />
+          the unexpected. Comfort becomes </br >
+          the unprecedented. Fit becomes <br />
+          an experience. </span>
+        </h2>
     </modal>
   </div>
 </template>
 
 <script>
-import Carousel from '@/containers/Carousel.vue'; // imports the casrousel component (part of swiper)
+import Carousel from '@/containers/Carousel.vue';
 import modal from '@/components/Modal.vue';
 
 export default {
@@ -65,7 +68,6 @@ export default {
 
   data() {
     return {
-      // isModalVisible: false,
       showModal: false,
       defaultImage: '',
       slides: [
@@ -94,12 +96,13 @@ export default {
 
       options: {
         responsive: true,
-        slidesPerView: 7,
-        spaceBetween: -400,
         breakpoints: {
-          376: {
+          765: {
             slidesPerView: 4.5,
-            spaceBetween: 10,
+          },
+          1600: {
+            slidesPerView: 7,
+            spaceBetween: -400
           },
         },
       },
@@ -123,12 +126,6 @@ export default {
     goBack() {
       return this.$router.push('/');
     },
-    // shoeModal() {
-    //   this.isModalVisible = true;
-    // },
-    // closeModal() {
-    //   this.isModalVisible = false;
-    // }
   },
 
 };
@@ -191,6 +188,7 @@ font-style: normal;
 }
 
 .colourwayscontainer {
+  position: relative;
   background: #222;
   height: 95vh;
 }
@@ -211,18 +209,23 @@ font-style: normal;
   height: 42px;
 }
 
-.derupt {
-  position: absolute;
-  top: 35%;
-  left: -68%;
-  font-family: 'HCo Gotham SSm';
+.franchise-container {
   transform: rotate(270deg);
-  font-size: 43vw;
+  bottom: 17%;
+  left: -39%;
+  width: 100vh;
+  height: 64vh;
+  position: absolute;
+}
+
+
+.derupt {
+  font-family: 'HCo Gotham SSm';
+  font-size: 162px;
   font-weight: 900;
   z-index: 0;
   color:#333333;
   letter-spacing: -10px;
-
 }
 
 .add {
@@ -245,6 +248,7 @@ font-style: normal;
   right: 36%;
   width: 4.5%;
   height: 4%;
+  z-index: 2;
 }
 
 .shoppingbagicon {
@@ -289,7 +293,23 @@ font-style: normal;
   opacity: 1;
 }
 
-@media only screen and (min-width: 1365px) {
+#modalh {
+  font-family: 'HCo Gotham SSm';
+  font-size: 32px;
+  font-weight: 900;
+}
+
+#modalb {
+  font-family: 'HCo Gotham SSm';
+  font-size: 16px;
+  font-weight: 700;
+}
+
+#modalc {
+  font-family: 'HCo Gotham SSm';
+}
+
+@media only screen and (min-width: 1366px) {
   .colourwayscontainer {
     background: #222;
     height: 98vh;
@@ -340,20 +360,28 @@ font-style: normal;
     z-index: 2;
   }
 
-  .derupt {
+  .franchise-container {
+    transform: rotate(360deg);
     position: absolute;
+    top: 19%;
+    left: -1%;
+    width: 100vh;
+
+  }
+
+  .derupt {
     font-family: 'HCo Gotham SSm';
     transform: rotate(0deg);
     font-size: 25vw;
     font-weight: 900px;
     letter-spacing: -10px;
-    top: 8%;
-    left: -3%;
+    width: 180vh;
+    font-size: 337px;
   }
 
   .shoppingbagtexttitle {
     position: absolute;
-    top: 51%;
+    top: 60%;
     right: 14%;
     color: white;
     font-size: 23px;
@@ -361,7 +389,7 @@ font-style: normal;
 
   .shoppingbagtext {
     position: absolute;
-    top: 57%;
+    top: 66%;
     right: 14%;
     color: white;
     font-size: 21px;
@@ -369,7 +397,7 @@ font-style: normal;
 
   .shoppingbagicon {
     right: 14%;
-    top: 63%;
+    top: 73%;
     width: 72px;
     z-index: 1;
   }
