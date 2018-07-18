@@ -23,15 +23,13 @@
     </nav>
     <div
       :class="{'grid--animate': grid}"
-      class="grid">
+      class="grid-view">
       <div
         v-for="(slide,key) in activeTab"
         :key="key"
-        class="grid__product"
+        class="grid-view__product"
         @click="goTo(slide.franchise)">
-        <Spot
-          v-bind="slide"
-          class="grid__product">
+        <Spot v-bind="slide">
           <span
             :class="{'franchise-name--invert': tab === 'men'}"
             data-swiper-parallax="-500"
@@ -179,7 +177,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.grid {
+.grid-view {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -196,7 +194,11 @@ export default {
     padding: 0.5rem;
     transition: transform 1s ease-in-out;
 
-    @media only screen and (min-width: 765px) and (max-width: 1024px) {
+    /deep/ .spot {
+      display: block;
+    }
+
+    @media only screen and (min-width: 1024px) {
       flex: 0 0 19%;
     }
 
@@ -213,7 +215,7 @@ export default {
     }
 
     &:last-child {
-      transform: translate3d(600px, 600px, 0);
+      transform: translate3d(100%, 100%, 0);
     }
 
     &__text {
@@ -232,7 +234,7 @@ export default {
   }
 }
 
-.grid--animate .grid__product {
+.grid--animate .grid-view__product {
   transform: translate3d(0, 0, 0);
 }
 

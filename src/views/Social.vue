@@ -29,7 +29,7 @@
 import inView from 'in-view';
 import Spot from '@/components/Spot.vue';
 
-inView.threshold(0.05);
+inView.threshold(0.5);
 
 export default {
   name: 'Social',
@@ -79,8 +79,11 @@ export default {
 
   mounted() {
     inView('.grid')
-      .once('enter', () => {
+      .on('enter', () => {
         this.activateAnimation = true;
+      })
+      .on('exit', () => {
+        this.activateAnimation = false;
       });
 
     inView('.social')
@@ -135,20 +138,24 @@ export default {
       padding: 0.5rem;
       transition: transform 1s ease-in-out;
 
+      @media only screen and (min-width: 1024px) {
+        flex: 0 0 19%;
+      }
+
       &:first-child {
-        transform: translate3d(-600px, -600px, 0);
+        transform: translate3d(-100%, -100%, 0);
       }
 
       &:nth-child(2) {
-        transform: translate3d(600px, -600px, 0);
+        transform: translate3d(100%, -100%, 0);
       }
 
       &:nth-child(3) {
-        transform: translate3d(-600px, 600px, 0);
+        transform: translate3d(-100%, 100%, 0);
       }
 
       &:last-child {
-        transform: translate3d(600px, 600px, 0);
+        transform: translate3d(100%, 100%, 0);
       }
 
       &__text {
@@ -167,7 +174,25 @@ export default {
     }
   }
 
-  .grid--animate .grid__product {
-    transform: translate3d(0, 0, 0);
+  .grid--animate {
+    padding: 50px 0;
+    .grid__product {
+      margin: 0 10px;
+      &:first-child {
+          transform: translate3d(0, -50px, 0);
+        }
+
+        &:nth-child(2) {
+          transform: translate3d(0, 50px, 0);
+        }
+
+        &:nth-child(3) {
+          transform: translate3d(0, -50px, 0);
+        }
+
+        &:last-child {
+          transform: translate3d(0, 50px, 0);
+        }
+    }
   }
 </style>
