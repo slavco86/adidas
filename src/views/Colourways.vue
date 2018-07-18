@@ -111,7 +111,7 @@ export default {
       options: {
         // responsive: true,
         slidesPerView: 7,
-        spaceBetween: -400,
+        spaceBetween: -100,
         breakpoints: {
           764: {
             slidesPerView: 4.5,
@@ -189,18 +189,6 @@ font-style: normal;
   font-style: normal;
 }
 
-
-// .carousel-container /deep/ .swiper-slide:first-of-type {
-//   opacity: 1;
-// }
-
-// .carousel-container /deep/ .swiper-slide:not(:first-of-type) {
-//   opacity: 0.5;
-// }
-
-// .carousel-container /deep/ .swiper-slide:hover {
-//   opacity: 1;
-// }
 
 .image.isActive {
   opacity: 1;
@@ -306,6 +294,7 @@ font-style: normal;
   display: block;
   width: 80px;
   height: 74px;
+  opacity: 0.5;
 }
 
 
@@ -430,12 +419,9 @@ font-style: normal;
     display: block;
     width: 155px;
     height: 154px;
-    // opacity: 0.5;
+    opacity: 0.5;
   }
-
-  // .image:hover {
-  //   opacity: 1;
-  // }
+  
 
   #modalh {
   font-family: 'HCo Gotham SSm';
@@ -561,10 +547,6 @@ font-style: normal;
     height: 74px;
     // opacity: 0.5;
   }
-
-  // .image:hover {
-  //   opacity: 1;
-  // }
 
   #modalh {
   font-family: 'HCo Gotham SSm';
