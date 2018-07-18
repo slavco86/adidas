@@ -421,7 +421,6 @@ font-style: normal;
     height: 154px;
     opacity: 0.5;
   }
-  
 
   #modalh {
   font-family: 'HCo Gotham SSm';
