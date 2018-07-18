@@ -3,9 +3,10 @@ import Router from 'vue-router';
 import Home from './views/Home.vue';
 import About from './views/About.vue';
 import Social from './views/Social.vue';
-import Content from './views/Content.vue';
 
 Vue.use(Router);
+
+const Content = () => import(/* webpackChunkName: "page-content" */ './views/Content.vue');
 
 export default new Router({
   routes: [

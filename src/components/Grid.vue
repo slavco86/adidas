@@ -7,7 +7,7 @@
       class="grid__product">
 
       <img
-        src="http://via.placeholder.com/350x350"
+        src="https://via.placeholder.com/350x350"
         alt="">
       <span class="grid__product__text">@socialhandle</span>
     </a>
@@ -16,7 +16,7 @@
       href="#"
       class="grid__product">
       <img
-        src="http://via.placeholder.com/350x350"
+        src="https://via.placeholder.com/350x350"
         alt="">
       <span class="grid__product__text">@socialhandle</span>
     </a>
@@ -25,7 +25,7 @@
       href="#"
       class="grid__product">
       <img
-        src="http://via.placeholder.com/350x350"
+        src="https://via.placeholder.com/350x350"
         alt="">
       <span class="grid__product__text">@socialhandle</span>
     </a>
@@ -34,7 +34,7 @@
       href="#"
       class="grid__product">
       <img
-        src="http://via.placeholder.com/350x350"
+        src="https://via.placeholder.com/350x350"
         alt="">
       <span class="grid__product__text">@socialhandle</span>
     </a>
