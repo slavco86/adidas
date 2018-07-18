@@ -41,6 +41,10 @@ export default {
       licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
     });
   },
+
+  beforeDestroy() {
+    this.fullpage.destroy();
+  },
 };
 </script>
 
