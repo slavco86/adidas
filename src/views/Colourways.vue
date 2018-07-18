@@ -15,9 +15,9 @@
         :src="mainImage"
         class="mainshoe">
       <img
+        id="addafter"
         class="addafter"
         src="../assets/add.png"
-        id="addafter"
         @click="showModal = true">
       <h3 class="shoppingbagtexttitle">{{ franchise }}</h3>
       <h4 class="shoppingbagtext">£80.00</h4>
@@ -41,21 +41,28 @@
       </div>
     </Carousel>
     <div class="franchise-container">
-    <h1 class="derupt">{{ franchise }}</h1>
+      <h1 class="derupt">{{ franchise }}</h1>
     </div>
-    <modal v-if="showModal" @close="showModal = false" >
-      <h1 slot="header" id="modalh">DEERUPT</h1>
-        <h2 slot="body"><span id="modalb">DISRUPTIVELY SIMPLE</span><br /><br />
-          <span class="modalc">With Deerupt, a silhouette becomes <br />
-          the unexpected. Comfort becomes <br />
-          the unprecedented. Fit becomes <br />
+    <modal
+      v-if="showModal"
+      @close="showModal = false" >
+      <h1
+        id="modalh"
+        slot="header">
+        DEERUPT
+      </h1>
+      <h2 slot="body"><span id="modalb">DISRUPTIVELY SIMPLE</span><br><br>
+        <span class="modalc">With Deerupt, a silhouette becomes <br>
+          the unexpected. Comfort becomes <br>
+          the unprecedented. Fit becomes <br>
           an experience. </span>
-        </h2>
+      </h2>
     </modal>
   </div>
 </template>
 
 <script>
+
 import Carousel from '@/containers/Carousel.vue';
 import modal from '@/components/Modal.vue';
 
@@ -102,18 +109,18 @@ export default {
       ],
 
       options: {
-        responsive: true,
+        // responsive: true,
         slidesPerView: 7,
         spaceBetween: -400,
         breakpoints: {
           764: {
             slidesPerView: 4.5,
-            spaceBetween: 10
+            spaceBetween: 10,
 
           },
           1024: {
             slidesPerView: 5.2,
-             spaceBetween: 100
+            spaceBetween: 100,
           },
         },
       },
@@ -129,10 +136,6 @@ export default {
       return this.slides.filter(slide => slide.active).pop().image;
     },
   },
-
-  // mounted() {
-  //   this.mainImage(0);
-  // },
 
   methods: {
     changeImage(selectedSlide) {
@@ -159,33 +162,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
-@font-face {
-font-family: 'HCo Gotham Cond SSm';
-src:url('../assets/fonts/B1CFB00FA67031B66.woff2') format('woff2'),
-url('../assets/fonts/B1CFB00FA67031B66.woff') format('woff');
-font-weight: 400;
-font-style: normal;
-}
-
-
-@font-face {
-font-family: 'HCo Gotham Cond SSm';
-src:url('../assets/fonts/9AF882D5BD620EB9E.woff2') format('woff2'),
-url('../assets/fonts/9AF882D5BD620EB9E.woff') format('woff');
-font-weight: 500;
-font-style: normal;
-}
-
-
-@font-face {
-font-family: 'HCo Gotham Cond SSm';
-src:url('../assets/fonts/DD21C5786A9E30A24.woff2') format('woff2'),
-url('../assets/fonts/DD21C5786A9E30A24.woff') format('woff');
-font-weight: 600;
-font-style: normal;
-}
-
 
 @font-face {
 font-family: 'HCo Gotham SSm';
@@ -222,7 +198,7 @@ font-style: normal;
 //   opacity: 0.5;
 // }
 
-// .carousel-container /deep/ .swiper-slide:hover{
+// .carousel-container /deep/ .swiper-slide:hover {
 //   opacity: 1;
 // }
 
@@ -331,6 +307,7 @@ font-style: normal;
   width: 80px;
   height: 74px;
 }
+
 
 #modalh {
   font-family: 'HCo Gotham SSm';
@@ -453,12 +430,12 @@ font-style: normal;
     display: block;
     width: 155px;
     height: 154px;
-    opacity: 0.5;
+    // opacity: 0.5;
   }
 
-  .image:hover {
-    opacity: 1;
-  }
+  // .image:hover {
+  //   opacity: 1;
+  // }
 
   #modalh {
   font-family: 'HCo Gotham SSm';
@@ -582,12 +559,12 @@ font-style: normal;
     display: block;
     width: 80px;
     height: 74px;
-    opacity: 0.5;
+    // opacity: 0.5;
   }
 
-  .image:hover {
-    opacity: 1;
-  }
+  // .image:hover {
+  //   opacity: 1;
+  // }
 
   #modalh {
   font-family: 'HCo Gotham SSm';

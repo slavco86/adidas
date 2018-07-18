@@ -4,12 +4,13 @@
       <div class="modal-wrapper">
         <div class="modal-container">
           <img
-              class="close"
-              src="../assets/close_white.png"
-              @click="$emit('close')"
-              id="closem"
-              >
-          <div class="modal-header" id="modalh">
+            id="closem"
+            class="close"
+            src="../assets/close_white.png"
+            @click="$emit('close')">
+          <div
+            id="modalh"
+            class="modal-header">
             <slot name="header" >
               default header
             </slot>
@@ -20,8 +21,7 @@
             </slot>
           </div>
           <div class="modal-footer">
-            <slot name="footer">
-            </slot>
+            <slot name="footer"/>
           </div>
         </div>
       </div>
@@ -30,11 +30,9 @@
 </template>
 
 <script>
-
 export default {
-  name: 'modal',
-}
-
+  name: 'Modal',
+};
 </script>
 
 <style>
@@ -128,7 +126,7 @@ font-style: normal;
   transform: scale(1.1);
 }
 
-@media only screen and (min-width: 765px) { 
+@media only screen and (min-width: 765px) {
 
   .modal-container {
     width: 765px;
