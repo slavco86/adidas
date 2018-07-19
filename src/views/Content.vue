@@ -88,19 +88,12 @@ export default {
 .content-page {
   background-color: #222;
   // required to pop over the top of MESH header
-  z-index: 1;
-}
-
-.section {
   transform: translate3d(0, -50px, 0);
+  z-index: 1;
 
   @media screen and (min-width: 765px) {
     transform: translate3d(0, -202px, 0);
   }
-}
-
-.section__inner {
-  height: 100%;
 }
 
 .close {

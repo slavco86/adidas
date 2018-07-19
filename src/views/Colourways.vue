@@ -12,17 +12,20 @@
           :src="mainImage"
           class="mainshoe">
       </div>
+
       <img
         id="addafter"
         class="addafter"
         src="../assets/add.png"
         @click="showModal = true">
+
       <h3 class="shoppingbagtexttitle">{{ franchise }}</h3>
       <h4 class="shoppingbagtext">£80.00</h4>
       <img
         src="../assets/shoppingbag.png"
         class="shoppingbagicon">
     </div>
+
     <Carousel
       ref="carousel"
       :slides="slides"
@@ -38,9 +41,11 @@
           @click="changeImage(slide.key)">
       </div>
     </Carousel>
+
     <div class="franchise-container">
       <h1 class="derupt">{{ franchise }}</h1>
     </div>
+
     <modal
       v-if="showModal"
       @close="showModal = false" >
@@ -49,11 +54,14 @@
         slot="header">
         DEERUPT
       </h1>
-      <h2 slot="body"><span id="modalb">DISRUPTIVELY SIMPLE</span><br><br>
+      <h2 slot="body">
+        <span id="modalb">DISRUPTIVELY SIMPLE</span>
+        <br><br>
         <span class="modalc">With Deerupt, a silhouette becomes <br>
           the unexpected. Comfort becomes <br>
           the unprecedented. Fit becomes <br>
-          an experience. </span>
+          an experience.
+        </span>
       </h2>
     </modal>
   </div>
@@ -188,7 +196,6 @@ font-style: normal;
 
 .colourwayscontainer {
   position: relative;
-  background: #222;
   height: 100%;
   overflow: hidden;
 }
@@ -313,7 +320,7 @@ font-style: normal;
 
 .colourwayscontainer {
     position: relative;
-    background: #222;
+
     height: 98vh;
   }
 
@@ -440,7 +447,6 @@ font-style: normal;
 
 @media only screen and (min-width: 1025px) {
   .colourwayscontainer {
-    background: #222;
     height: 100%;
   }
 
