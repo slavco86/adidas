@@ -64,7 +64,7 @@ font-style: normal;
 }
 
 #modalh {
-  padding-top: 33%;
+  padding-top: 58%;
 }
 
 #closem {
