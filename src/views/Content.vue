@@ -6,14 +6,12 @@
       <img src="../assets/close_white.png">
     </router-link>
     <div id="content">
-      <div class="section">
-        <Colourways class="section__inner"/>
-      </div>
-      <div class="section">
-        <Social
-          :active="section === 1"
-          class="section__inner"/>
-      </div>
+      <component
+        v-for="component in anchors"
+        :key="component"
+        :is="component"
+        :active="section === component"
+        class="section section__inner"/>
     </div>
   </div>
 </template>
@@ -34,17 +32,23 @@ export default {
 
   data() {
     return {
+      anchors: ['colourways', 'social'],
       fullpage: null,
-      section: 0,
+      section: null,
     };
   },
 
   mounted() {
+    const { anchors } = this;
+
     this.fullpage = new Fullpage('#content', {
       licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
+      anchors,
+      lockAnchors: true,
       onLeave: (origin, destination) => {
-        this.section = destination.index;
-        return destination.index;
+        this.section = destination.anchor;
+
+        return destination;
       },
     });
   },
