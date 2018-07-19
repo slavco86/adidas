@@ -172,7 +172,6 @@ export default {
       return newSlides;
     },
     countdownExpired(index) {
-      console.info(index);
       this.pictures[index].expired = true;
     },
     toggleCarousel() {
@@ -181,9 +180,6 @@ export default {
       if (this.carousel) {
         this.carousel = !this.carousel;
       }
-    },
-    expired() {
-      console.info('expired');
     },
   },
 };
