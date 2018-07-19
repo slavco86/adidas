@@ -1,6 +1,5 @@
 <template>
-  <div
-    class="social">
+  <div class="social">
 
     <p class="social__text">Get Social</p>
     <h2 class="social__title">#Creator</h2>
@@ -13,6 +12,7 @@
         v-bind="slide"
         class="grid__product">
         <span class="grid__product__text">{{ slide.text }}</span>
+        <QuickBuy/>
       </Spot>
 
     </div>
@@ -28,6 +28,7 @@
 <script>
 import inView from 'in-view';
 import Spot from '@/components/Spot.vue';
+import QuickBuy from '@/components/QuickBuy.vue';
 
 inView.threshold(0.5);
 
@@ -35,39 +36,40 @@ export default {
   name: 'Social',
   components: {
     Spot,
+    QuickBuy,
   },
   data() {
     return {
-      activateAnimation: false,
+      activateAnimation: true,
       slides: [
         {
           image: {
-            desktop: 'http://via.placeholder.com/350x350',
-            mobile: 'http://via.placeholder.com/350x350',
+            desktop: 'https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-2-2a8c507c89fd260fa4a231b30922f069.jpg',
+            mobile: 'https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-2-2a8c507c89fd260fa4a231b30922f069.jpg',
           },
           url: '#',
           text: '@socialhandle',
         },
         {
           image: {
-            desktop: 'http://via.placeholder.com/350x350',
-            mobile: 'http://via.placeholder.com/350x350',
+            desktop: 'https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-2-2a8c507c89fd260fa4a231b30922f069.jpg',
+            mobile: 'https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-2-2a8c507c89fd260fa4a231b30922f069.jpg',
           },
           url: '#',
           text: '@socialhandle',
         },
         {
           image: {
-            desktop: 'http://via.placeholder.com/350x350',
-            mobile: 'http://via.placeholder.com/350x350',
+            desktop: 'https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-2-2a8c507c89fd260fa4a231b30922f069.jpg',
+            mobile: 'https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-2-2a8c507c89fd260fa4a231b30922f069.jpg',
           },
           url: '#',
           text: '@socialhandle',
         },
         {
           image: {
-            desktop: 'http://via.placeholder.com/350x350',
-            mobile: 'http://via.placeholder.com/350x350',
+            desktop: 'https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-2-2a8c507c89fd260fa4a231b30922f069.jpg',
+            mobile: 'https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-2-2a8c507c89fd260fa4a231b30922f069.jpg',
           },
           url: '#',
           text: '@socialhandle',
@@ -128,9 +130,31 @@ export default {
       flex: 0 0 50%;
       height: auto;
       max-width: 635px;
-      // min-width: 150px;
       padding: 0.5rem;
       transition: transform 1s ease-in-out;
+
+      /deep/ .quickBuy {
+        align-items: center;
+        background-color: #fff;
+        border-radius: 50%;
+        bottom: 4rem;
+        color: transparent;
+        display: flex;
+        height: 50px;
+        position: absolute;
+        right: 1rem;
+        width: 50px;
+
+        img {
+          display: block;
+          width: 100%;
+          height: auto;
+        }
+
+        &--invert {
+          background-color: #fff;
+        }
+      }
 
       @media only screen and (min-width: 1024px) {
         flex: 0 0 19%;
@@ -170,8 +194,10 @@ export default {
 
   .grid--animate {
     padding: 50px 0;
+
     .grid__product {
       transform: translate3d(0, 0, 0);
+
       @media only screen and (min-width: 1024px) {
         margin: 0 10px;
 
