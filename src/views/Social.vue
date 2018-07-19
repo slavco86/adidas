@@ -5,7 +5,7 @@
     <p class="social__text">Get Social</p>
     <h2 class="social__title">#Creator</h2>
     <div
-      :class="{'grid--animate': activateAnimation}"
+      :class="{'grid--animate': active}"
       class="grid">
       <Spot
         v-for="(slide,key) in slides"
@@ -26,16 +26,22 @@
 </template>
 
 <script>
-import inView from 'in-view';
 import Spot from '@/components/Spot.vue';
-
-inView.threshold(0.5);
 
 export default {
   name: 'Social',
   components: {
     Spot,
   },
+
+  props: {
+    active: {
+      type: Boolean,
+      default: false,
+    },
+  },
+
+
   data() {
     return {
       activateAnimation: false,
@@ -74,16 +80,6 @@ export default {
         },
       ],
     };
-  },
-
-  mounted() {
-    inView('.grid')
-      .on('enter', () => {
-        this.activateAnimation = true;
-      })
-      .on('exit', () => {
-        this.activateAnimation = false;
-      });
   },
 };
 </script>
@@ -170,8 +166,10 @@ export default {
 
   .grid--animate {
     padding: 50px 0;
+
     .grid__product {
       transform: translate3d(0, 0, 0);
+
       @media only screen and (min-width: 1024px) {
         margin: 0 10px;
 

@@ -1,16 +1,35 @@
 <template>
   <div id="app">
-    <!-- <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
-      <router-link to="/colourways">Colourways</router-link>
-    </div> -->
     <transition
-      name="fade">
-      <router-view/>
+      name="fade"
+      @enter="pageTransitionStart"
+      @afterEnter="pageTransitionEnd">
+      <router-view :route-animating="routeAnimating"/>
     </transition>
   </div>
 </template>
+
+<script>
+export default {
+  name: 'App',
+
+  data() {
+    return {
+      routeAnimating: false,
+    };
+  },
+
+  methods: {
+    pageTransitionStart() {
+      this.routeAnimating = true;
+    },
+
+    pageTransitionEnd() {
+      this.routeAnimating = false;
+    },
+  },
+};
+</script>
 
 <style lang="scss">
 .fade-enter-active,
