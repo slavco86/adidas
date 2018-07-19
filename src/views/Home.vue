@@ -48,11 +48,10 @@
               class="plus"/>
           </Spot>
           <Countdown
-            v-if="!slide.expired"
+            v-if="!slide.expired && grid"
             :class="{'countdown--invert': gender === 'men'}"
             :date="slide.launch"
-            class="countdown--grid"
-            @expired="expired"/>
+            class="countdown--grid"/>
         </router-link>
       </div>
     </div>
