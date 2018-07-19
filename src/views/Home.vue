@@ -383,6 +383,7 @@ export default {
   &--invert {
     left: 12%;
     width: 80%;
+
     & /deep/ .countdown__value {
       &::after,
       &__num i,
@@ -397,7 +398,7 @@ export default {
       &::after,
       &__num i,
       &__label {
-        font-size: .8rem;
+        font-size: 0.8rem;
       }
     }
   }
@@ -516,9 +517,6 @@ export default {
   width: 35px;
   height: 35px;
   color: black;
-
-  @media only screen and (min-width: 765px) {
-  }
 
   &::before,
   &::after {
