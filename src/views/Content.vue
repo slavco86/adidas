@@ -30,6 +30,13 @@ export default {
     Social,
   },
 
+  props: {
+    routeAnimating: {
+      type: Boolean,
+      default: true,
+    },
+  },
+
   data() {
     return {
       anchors: ['colourways', 'social'],
@@ -39,29 +46,47 @@ export default {
   },
 
   mounted() {
-    const { anchors } = this;
-
-    this.fullpage = new Fullpage('#content', {
-      licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
-      anchors,
-      lockAnchors: true,
-      onLeave: (origin, destination) => {
-        this.section = destination.anchor;
-
-        return destination;
-      },
+    this.$watch('routeAnimating', (newVal) => {
+      if (newVal === false) {
+        // TODO: sort this shit out.
+        setTimeout(() => {
+          this.enableFullpage();
+        }, 1);
+      }
     });
   },
 
   beforeDestroy() {
-    this.fullpage.moveTo(1);
-    this.fullpage.destroy();
+    if (this.fullpage) {
+      this.fullpage.moveTo(1);
+      this.fullpage.destroy('all');
+      this.fullpage = null;
+    }
+  },
+
+  methods: {
+    enableFullpage() {
+      const { anchors } = this;
+
+      this.fullpage = new Fullpage('#content', {
+        licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
+        anchors,
+        lockAnchors: true,
+        scrollBar: true,
+        onLeave: (origin, destination) => {
+          this.section = destination.anchor;
+
+          return destination;
+        },
+      });
+    },
   },
 };
 </script>
 
 <style lang="scss" scoped>
 .content-page {
+  background-color: #222;
   // required to pop over the top of MESH header
   z-index: 1;
 }
@@ -82,7 +107,7 @@ export default {
   position: fixed;
   top: 1rem;
   right: 1rem;
-  z-index: 10;
+  z-index: 5;
 
   img {
     width: 59px;
