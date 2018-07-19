@@ -13,6 +13,7 @@
         <component
           :is="component"
           :active="section === component"
+          :data="content[component]"
           class="section__inner"/>
       </div>
     </div>
@@ -34,6 +35,12 @@ export default {
   },
 
   props: {
+    content: {
+      type: Object,
+      default() {
+        return {};
+      },
+    },
     routeAnimating: {
       type: Boolean,
       default: true,
