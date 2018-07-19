@@ -64,7 +64,7 @@ font-style: normal;
 }
 
 #modalh {
-  padding-top: 23%;
+  padding-top: 33%;
 }
 
 #closem {
@@ -101,6 +101,8 @@ font-style: normal;
   box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
   transition: all .3s ease;
   font-family: Helvetica, Arial, sans-serif;
+  background-image: url("../assets/swmobile.png");
+  background-repeat: no-repeat;
 }
 
 .modal-header h3 {
@@ -138,6 +140,9 @@ font-style: normal;
     box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
     transition: all .3s ease;
     font-family: Helvetica, Arial, sans-serif;
+    background-image: url("../assets/swtablet.png");
+    background-repeat: no-repeat center center fixed;
+    background-size: cover;
 }
 
 #closem {
@@ -162,6 +167,8 @@ font-style: normal;
     box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
     transition: all .3s ease;
     font-family: Helvetica, Arial, sans-serif;
+    /* background-image: url("../assets/swdesktop.png");
+    background-repeat: no-repeat; */
 
   }
 

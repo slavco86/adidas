@@ -231,8 +231,8 @@ font-style: normal;
 
 .add {
   position: absolute;
-  top: 36%;
-  left: 19%;
+  top: 50%;
+  left: 18%;
   width: 4.5%;
   height: 4%;
 }
