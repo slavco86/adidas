@@ -10,7 +10,9 @@
         <Colourways class="section__inner"/>
       </div>
       <div class="section">
-        <Social class="section__inner"/>
+        <Social
+          :active="section === 1"
+          class="section__inner"/>
       </div>
     </div>
   </div>
@@ -33,12 +35,17 @@ export default {
   data() {
     return {
       fullpage: null,
+      section: 0,
     };
   },
 
   mounted() {
     this.fullpage = new Fullpage('#content', {
       licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
+      onLeave: (origin, destination) => {
+        this.section = destination.index;
+        return destination.index;
+      },
     });
   },
 
