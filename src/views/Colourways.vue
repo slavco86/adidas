@@ -190,6 +190,7 @@ font-style: normal;
   position: relative;
   background: #222;
   height: 100%;
+  overflow: hidden;
 }
 
 .adidas {
