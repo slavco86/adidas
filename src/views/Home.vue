@@ -81,7 +81,7 @@
           v-if="!slide.expired"
           :class="{'countdown--invert': gender === 'men'}"
           :date="slide.launch"
-          @expired="countdownExpired(slide.index)"/>
+          @expired="countdownExpired(slide.key)"/>
       </router-link>
     </Carousel>
     <div

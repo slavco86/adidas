@@ -39,6 +39,7 @@ export default {
       default() {
         return {};
       },
+    },
     routeAnimating: {
       type: Boolean,
       default: true,
