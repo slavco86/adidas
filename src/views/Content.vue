@@ -30,6 +30,15 @@ export default {
     Social,
   },
 
+  props: {
+    content: {
+      type: Object,
+      default() {
+        return {};
+      },
+    },
+  },
+
   data() {
     return {
       fullpage: null,
