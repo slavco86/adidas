@@ -188,6 +188,7 @@ font-style: normal;
 }
 
 .colourwayscontainer {
+
   position: relative;
   background: #222;
   height: 100%;
@@ -314,7 +315,7 @@ font-style: normal;
 .colourwayscontainer {
     position: relative;
     background: #222;
-    height: 98vh;
+    height: 100%
   }
 
 .mainimage {
@@ -367,9 +368,9 @@ font-style: normal;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 139%;
+    width: 100%;
     margin-top: -90%;
-    margin-left: -20%;
+    margin-left: -1%;
     height: 41%;
   }
 
@@ -498,7 +499,7 @@ font-style: normal;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 103%;
+    width: 100%;
     margin-top: -41%;
     margin-left: -2%;
     height: 43%;
