@@ -68,6 +68,13 @@ export default {
     modal,
   },
 
+  props: {
+    active: {
+      type: Boolean,
+      default: false,
+    },
+  },
+
   data() {
     return {
       showModal: false,
