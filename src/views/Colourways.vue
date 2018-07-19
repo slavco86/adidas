@@ -7,9 +7,11 @@
       <img
         class="add"
         src="../assets/add.png">
-      <img
-        :src="mainImage"
-        class="mainshoe">
+      <div class="mainShoeContainer">
+        <img
+          :src="mainImage"
+          class="mainshoe">
+      </div>
       <img
         id="addafter"
         class="addafter"
@@ -106,7 +108,7 @@ export default {
       options: {
         // responsive: true,
         slidesPerView: 7,
-        spaceBetween: -100,
+        // spaceBetween: -100,
         breakpoints: {
           764: {
             slidesPerView: 4.5,
@@ -443,11 +445,15 @@ font-style: normal;
     position: relative;
   }
 
+  .mainShoeContainer{
+    padding-top: 5%;
+  }
+
   .adidas {
     display: inline;
     position: absolute;
     width: 72px;
-    top: 5%;
+    top: 9%;
     left: 6%;
   }
 
@@ -460,7 +466,7 @@ font-style: normal;
 
   .add {
     position: absolute;
-    top: 41%;
+    top: 48%;
     left: 35%;
     width: 48px;
     height: 48px;
@@ -486,56 +492,54 @@ font-style: normal;
 
   .franchise-container {
     transform: rotate(360deg);
-    position: absolute;
-    top: 19%;
-    left: -1%;
-    width: 100vh;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 103%;
+    margin-top: -7%;
+    height: 43%;
   }
 
   .derupt {
     font-family: 'HCo Gotham SSm';
     transform: rotate(0deg);
-    font-size: 25vw;
-    font-weight: 900px;
-    letter-spacing: -10px;
-    width: 180vh;
-    font-size: 337px;
+    font-size: 342px;
+    flex: 1 0 auto;
   }
 
   .shoppingbagtexttitle {
     position: absolute;
-    top: 60%;
-    right: 14%;
+    top: 52%;
+    right: 13%;
     color: white;
     font-size: 23px;
   }
 
   .shoppingbagtext {
     position: absolute;
-    top: 66%;
-    right: 14%;
+    top: 59%;
+    right: 13%;
     color: white;
     font-size: 21px;
   }
 
   .shoppingbagicon {
-    right: 14%;
-    top: 73%;
+    right: 13%;
+    top: 65%;
     width: 72px;
     z-index: 1;
   }
 
   .carousel-container {
     margin: 0 auto;
-    margin-top: 6%;
+    margin-top: 3%;
     width: 50%;
   }
 
   .image {
     display: block;
-    width: 80px;
-    height: 74px;
+    width: 93px;
+    height: 97px;
     // opacity: 0.5;
   }
 
