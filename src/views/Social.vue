@@ -1,27 +1,28 @@
 <template>
   <div
     class="social">
+    <div class="social__inner">
+      <p class="social__text">Get Social</p>
+      <h2 class="social__title">#Creator</h2>
+      <div
+        :class="{'grid--animate': active}"
+        class="grid">
+        <Spot
+          v-for="(slide,key) in slides"
+          :key="key"
+          v-bind="slide"
+          class="grid__product">
+          <span class="grid__product__text">{{ slide.text }}</span>
+        </Spot>
 
-    <p class="social__text">Get Social</p>
-    <h2 class="social__title">#Creator</h2>
-    <div
-      :class="{'grid--animate': active}"
-      class="grid">
-      <Spot
-        v-for="(slide,key) in slides"
-        :key="key"
-        v-bind="slide"
-        class="grid__product">
-        <span class="grid__product__text">{{ slide.text }}</span>
-      </Spot>
+      </div>
 
+      <a
+        href="#"
+        class="social__cta">
+        Follow us
+      </a>
     </div>
-
-    <a
-      href="#"
-      class="social__cta">
-      Follow us
-    </a>
   </div>
 </template>
 
@@ -86,11 +87,10 @@ export default {
 
 <style lang="scss" scoped>
   .social {
-    background-color: #222;
-    color: #fff;
+    align-items: center;
     display: flex;
-    flex-direction: column;
-    padding: 1rem;
+    height: 100vh;
+    justify-content: center;
 
     &__text {
       margin: 1rem 0;
@@ -111,6 +111,14 @@ export default {
       padding: 1rem 1.5rem;
       text-transform: uppercase;
     }
+  }
+
+  .social__inner {
+    background-color: #222;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
   }
 
   .grid {

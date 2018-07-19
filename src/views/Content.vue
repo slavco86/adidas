@@ -6,12 +6,15 @@
       <img src="../assets/close_white.png">
     </router-link>
     <div id="content">
-      <component
+      <div
         v-for="component in anchors"
         :key="component"
-        :is="component"
-        :active="section === component"
-        class="section section__inner"/>
+        class="section">
+        <component
+          :is="component"
+          :active="section === component"
+          class="section__inner"/>
+      </div>
     </div>
   </div>
 </template>
@@ -41,7 +44,7 @@ export default {
     return {
       anchors: ['colourways', 'social'],
       fullpage: null,
-      section: null,
+      section: 'social',
     };
   },
 
@@ -88,8 +91,8 @@ export default {
 .content-page {
   background-color: #222;
   // required to pop over the top of MESH header
-  transform: translate3d(0, -50px, 0);
   z-index: 1;
+  transform: translate3d(0, -50px, 0);
 
   @media screen and (min-width: 765px) {
     transform: translate3d(0, -202px, 0);
