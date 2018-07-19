@@ -1,8 +1,7 @@
 <template>
   <div class="social">
-
-    <p class="social__text">Get Social</p>
-    <h2 class="social__title">#Creator</h2>
+    <p class="social__text">{{ header.text }}</p>
+    <h2 class="social__title">{{ header.title }}</h2>
     <div
       :class="{'grid--animate': activateAnimation}"
       class="grid">
@@ -12,7 +11,7 @@
         v-bind="slide"
         class="grid__product">
         <span class="grid__product__text">{{ slide.text }}</span>
-        <QuickBuy/>
+        <QuickBuy :text="header.text"/>
       </Spot>
 
     </div>
@@ -41,45 +40,15 @@ export default {
   data() {
     return {
       activateAnimation: true,
-      slides: [
-        {
-          image: {
-            desktop: 'https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-2-2a8c507c89fd260fa4a231b30922f069.jpg',
-            mobile: 'https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-2-2a8c507c89fd260fa4a231b30922f069.jpg',
-          },
-          url: '#',
-          text: '@socialhandle',
-        },
-        {
-          image: {
-            desktop: 'https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-2-2a8c507c89fd260fa4a231b30922f069.jpg',
-            mobile: 'https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-2-2a8c507c89fd260fa4a231b30922f069.jpg',
-          },
-          url: '#',
-          text: '@socialhandle',
-        },
-        {
-          image: {
-            desktop: 'https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-2-2a8c507c89fd260fa4a231b30922f069.jpg',
-            mobile: 'https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-2-2a8c507c89fd260fa4a231b30922f069.jpg',
-          },
-          url: '#',
-          text: '@socialhandle',
-        },
-        {
-          image: {
-            desktop: 'https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-2-2a8c507c89fd260fa4a231b30922f069.jpg',
-            mobile: 'https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-2-2a8c507c89fd260fa4a231b30922f069.jpg',
-          },
-          url: '#',
-          text: '@socialhandle',
-        },
-      ],
+      header: {
+        text: 'Get Social',
+        title: '#Creator',
+      },
     };
   },
 
   mounted() {
-    inView('.grid')
+    inView('.social')
       .on('enter', () => {
         this.activateAnimation = true;
       })
@@ -185,7 +154,7 @@ export default {
 }
 
 .grid--animate {
-  padding: 50px 0;
+  // padding: 50px 0;
 
   .grid__product {
     transform: translate3d(0, 0, 0);

@@ -1,8 +1,7 @@
 <template>
   <button
-    :href="url"
-    :data-ip-position="name"
-    :data-ip-name="name"
+    :data-ip-position="text"
+    :data-ip-name="text"
     class="ga-ip quickBuy"
     @click="quickBuy">
     <!-- <slot/> -->
@@ -21,6 +20,10 @@ export default {
   },
   props: {
     url: {
+      type: String,
+      default: undefined,
+    },
+    text: {
       type: String,
       default: undefined,
     },

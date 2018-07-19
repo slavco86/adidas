@@ -2,10 +2,10 @@
 @function setBackgroundColor($color) {
 
   @if (lightness($color) < 40) {
-    @return #000;
+    @return #fff;
   }
 
   @else {
-    @return transparant;
+    @return transparent;
   }
 }

@@ -139,13 +139,10 @@ export default {
       this.selectedIndex = selectedSlide;
     },
   },
-
 };
-
 </script>
 
 <style lang="scss" scoped>
-
 @font-face {
 font-family: 'HCo Gotham SSm';
 src:url('../assets/fonts/F4715F49B60D9B144.woff2') format('woff2'),
@@ -153,7 +150,6 @@ url('../assets/fonts/F4715F49B60D9B144.woff') format('woff');
 font-weight: 400;
 font-style: normal;
 }
-
 
 @font-face {
 font-family: 'HCo Gotham SSm';
@@ -163,7 +159,6 @@ font-weight: 500;
 font-style: normal;
 }
 
-
 @font-face {
   font-family: 'HCo Gotham SSm';
   src: url('../assets/fonts/B5416F0FED9EA9CD2.woff2') format('woff2'),
@@ -171,7 +166,6 @@ font-style: normal;
   font-weight: 700;
   font-style: normal;
 }
-
 
 .image.isActive {
   opacity: 1;
@@ -208,13 +202,12 @@ font-style: normal;
   position: absolute;
 }
 
-
 .derupt {
   font-family: 'HCo Gotham SSm';
   font-size: 162px;
   font-weight: 900;
   z-index: 0;
-  color:#333333;
+  color:#333;
   letter-spacing: -10px;
 }
 
