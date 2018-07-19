@@ -211,21 +211,22 @@ font-style: normal;
 
 .franchise-container {
   transform: rotate(270deg);
-  bottom: 17%;
-  left: -39%;
-  width: 100vh;
-  height: 64vh;
-  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -109%;
+  width: 40%;
+  height: 44%;
 }
-
 
 .derupt {
   font-family: 'HCo Gotham SSm';
-  font-size: 162px;
-  font-weight: 900;
-  z-index: 0;
   color:#333333;
   letter-spacing: -10px;
+  font-size: 169px;
+  font-weight: 900;
+  z-index: 0;
+  flex: 1 0 auto;
 }
 
 .add {
@@ -361,24 +362,26 @@ font-style: normal;
     z-index: 2;
   }
 
-   .franchise-container {
+.franchise-container {
     transform: rotate(360deg);
-    position: absolute;
-    top: 35%;
-    left: -3%;
-    width: 100vh;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 139%;
+    margin-top: -90%;
+    margin-left: -20%;
+    height: 41%;
   }
 
-   .derupt {
+  .derupt {
     font-family: 'HCo Gotham SSm';
-    transform: rotate(0deg);
-    font-size: 25vw;
-    font-weight: 900px;
+    color:#333333;
     letter-spacing: -10px;
-    width: 78vh;
-    font-size: 201px;
+    transform: rotate(0deg);
+    font-size: 192px;
+    flex: 1 0 auto;
   }
+
 
   .shoppingbagtexttitle {
     position: absolute;
@@ -482,8 +485,8 @@ font-style: normal;
 
 #addafter {
     position: absolute;
-    top: 69%;
-    left: 54%;
+    top: 72%;
+    left: 55%;
     width: 48px;
     height: 48px;
     opacity: 0.55;
@@ -496,7 +499,8 @@ font-style: normal;
     align-items: center;
     justify-content: center;
     width: 103%;
-    margin-top: -7%;
+    margin-top: -41%;
+    margin-left: -2%;
     height: 43%;
   }
 
