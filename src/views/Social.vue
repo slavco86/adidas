@@ -1,41 +1,48 @@
 <template>
   <div
     class="social">
+    <div class="social__inner">
+      <p class="social__text">Get Social</p>
+      <h2 class="social__title">#Creator</h2>
+      <div
+        :class="{'grid--animate': active}"
+        class="grid">
+        <Spot
+          v-for="(slide,key) in slides"
+          :key="key"
+          v-bind="slide"
+          class="grid__product">
+          <span class="grid__product__text">{{ slide.text }}</span>
+        </Spot>
 
-    <p class="social__text">Get Social</p>
-    <h2 class="social__title">#Creator</h2>
-    <div
-      :class="{'grid--animate': activateAnimation}"
-      class="grid">
-      <Spot
-        v-for="(slide,key) in slides"
-        :key="key"
-        v-bind="slide"
-        class="grid__product">
-        <span class="grid__product__text">{{ slide.text }}</span>
-      </Spot>
+      </div>
 
+      <a
+        href="#"
+        class="social__cta">
+        Follow us
+      </a>
     </div>
-
-    <a
-      href="#"
-      class="social__cta">
-      Follow us
-    </a>
   </div>
 </template>
 
 <script>
-import inView from 'in-view';
 import Spot from '@/components/Spot.vue';
-
-inView.threshold(0.5);
 
 export default {
   name: 'Social',
   components: {
     Spot,
   },
+
+  props: {
+    active: {
+      type: Boolean,
+      default: false,
+    },
+  },
+
+
   data() {
     return {
       activateAnimation: false,
@@ -75,26 +82,15 @@ export default {
       ],
     };
   },
-
-  mounted() {
-    inView('.grid')
-      .on('enter', () => {
-        this.activateAnimation = true;
-      })
-      .on('exit', () => {
-        this.activateAnimation = false;
-      });
-  },
 };
 </script>
 
 <style lang="scss" scoped>
   .social {
-    background-color: #222;
-    color: #fff;
+    align-items: center;
     display: flex;
-    flex-direction: column;
-    padding: 1rem;
+    height: 100vh;
+    justify-content: center;
 
     &__text {
       margin: 1rem 0;
@@ -115,6 +111,14 @@ export default {
       padding: 1rem 1.5rem;
       text-transform: uppercase;
     }
+  }
+
+  .social__inner {
+    background-color: #222;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
   }
 
   .grid {
@@ -170,8 +174,10 @@ export default {
 
   .grid--animate {
     padding: 50px 0;
+
     .grid__product {
       transform: translate3d(0, 0, 0);
+
       @media only screen and (min-width: 1024px) {
         margin: 0 10px;
 

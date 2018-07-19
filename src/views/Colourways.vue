@@ -7,20 +7,25 @@
       <img
         class="add"
         src="../assets/add.png">
-      <img
-        :src="mainImage"
-        class="mainshoe">
+      <div class="mainShoeContainer">
+        <img
+          :src="mainImage"
+          class="mainshoe">
+      </div>
+
       <img
         id="addafter"
         class="addafter"
         src="../assets/add.png"
         @click="showModal = true">
+
       <h3 class="shoppingbagtexttitle">{{ franchise }}</h3>
       <h4 class="shoppingbagtext">£80.00</h4>
       <img
         src="../assets/shoppingbag.png"
         class="shoppingbagicon">
     </div>
+
     <Carousel
       ref="carousel"
       :slides="slides"
@@ -36,9 +41,11 @@
           @click="changeImage(slide.key)">
       </div>
     </Carousel>
+
     <div class="franchise-container">
       <h1 class="derupt">{{ franchise }}</h1>
     </div>
+
     <modal
       v-if="showModal"
       @close="showModal = false" >
@@ -47,11 +54,14 @@
         slot="header">
         DEERUPT
       </h1>
-      <h2 slot="body"><span id="modalb">DISRUPTIVELY SIMPLE</span><br><br>
+      <h2 slot="body">
+        <span id="modalb">DISRUPTIVELY SIMPLE</span>
+        <br><br>
         <span class="modalc">With Deerupt, a silhouette becomes <br>
           the unexpected. Comfort becomes <br>
           the unprecedented. Fit becomes <br>
-          an experience. </span>
+          an experience.
+        </span>
       </h2>
     </modal>
   </div>
@@ -66,6 +76,13 @@ export default {
   components: {
     Carousel,
     modal,
+  },
+
+  props: {
+    active: {
+      type: Boolean,
+      default: false,
+    },
   },
 
   data() {
@@ -179,8 +196,8 @@ font-style: normal;
 
 .colourwayscontainer {
   position: relative;
-  background: #222;
   height: 100%;
+  overflow: hidden;
 }
 
 .adidas {
@@ -201,27 +218,28 @@ font-style: normal;
 
 .franchise-container {
   transform: rotate(270deg);
-  bottom: 17%;
-  left: -39%;
-  width: 100vh;
-  height: 64vh;
-  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -109%;
+  width: 40%;
+  height: 44%;
 }
-
 
 .derupt {
   font-family: 'HCo Gotham SSm';
-  font-size: 162px;
-  font-weight: 900;
-  z-index: 0;
   color:#333333;
   letter-spacing: -10px;
+  font-size: 169px;
+  font-weight: 900;
+  z-index: 0;
+  flex: 1 0 auto;
 }
 
 .add {
   position: absolute;
-  top: 36%;
-  left: 19%;
+  top: 50%;
+  left: 18%;
   width: 4.5%;
   height: 4%;
 }
@@ -302,7 +320,7 @@ font-style: normal;
 
 .colourwayscontainer {
     position: relative;
-    background: #222;
+
     height: 98vh;
   }
 
@@ -351,24 +369,26 @@ font-style: normal;
     z-index: 2;
   }
 
-   .franchise-container {
+.franchise-container {
     transform: rotate(360deg);
-    position: absolute;
-    top: 35%;
-    left: -3%;
-    width: 100vh;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 139%;
+    margin-top: -90%;
+    margin-left: -20%;
+    height: 41%;
   }
 
-   .derupt {
+  .derupt {
     font-family: 'HCo Gotham SSm';
-    transform: rotate(0deg);
-    font-size: 25vw;
-    font-weight: 900px;
+    color:#333333;
     letter-spacing: -10px;
-    width: 78vh;
-    font-size: 201px;
+    transform: rotate(0deg);
+    font-size: 192px;
+    flex: 1 0 auto;
   }
+
 
   .shoppingbagtexttitle {
     position: absolute;
@@ -427,7 +447,6 @@ font-style: normal;
 
 @media only screen and (min-width: 1025px) {
   .colourwayscontainer {
-    background: #222;
     height: 100%;
   }
 
@@ -435,11 +454,15 @@ font-style: normal;
     position: relative;
   }
 
+  .mainShoeContainer{
+    padding-top: 5%;
+  }
+
   .adidas {
     display: inline;
     position: absolute;
     width: 72px;
-    top: 5%;
+    top: 9%;
     left: 6%;
   }
 
@@ -452,7 +475,7 @@ font-style: normal;
 
   .add {
     position: absolute;
-    top: 41%;
+    top: 48%;
     left: 35%;
     width: 48px;
     height: 48px;
@@ -468,8 +491,8 @@ font-style: normal;
 
 #addafter {
     position: absolute;
-    top: 69%;
-    left: 54%;
+    top: 72%;
+    left: 55%;
     width: 48px;
     height: 48px;
     opacity: 0.55;
@@ -478,56 +501,55 @@ font-style: normal;
 
   .franchise-container {
     transform: rotate(360deg);
-    position: absolute;
-    top: 19%;
-    left: -1%;
-    width: 100vh;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 103%;
+    margin-top: -41%;
+    margin-left: -2%;
+    height: 43%;
   }
 
   .derupt {
     font-family: 'HCo Gotham SSm';
     transform: rotate(0deg);
-    font-size: 25vw;
-    font-weight: 900px;
-    letter-spacing: -10px;
-    width: 180vh;
-    font-size: 337px;
+    font-size: 342px;
+    flex: 1 0 auto;
   }
 
   .shoppingbagtexttitle {
     position: absolute;
-    top: 60%;
-    right: 14%;
+    top: 52%;
+    right: 13%;
     color: white;
     font-size: 23px;
   }
 
   .shoppingbagtext {
     position: absolute;
-    top: 66%;
-    right: 14%;
+    top: 59%;
+    right: 13%;
     color: white;
     font-size: 21px;
   }
 
   .shoppingbagicon {
-    right: 14%;
-    top: 73%;
+    right: 13%;
+    top: 65%;
     width: 72px;
     z-index: 1;
   }
 
   .carousel-container {
     margin: 0 auto;
-    margin-top: 6%;
+    margin-top: 3%;
     width: 50%;
   }
 
   .image {
     display: block;
-    width: 80px;
-    height: 74px;
+    width: 93px;
+    height: 97px;
     // opacity: 0.5;
   }
 
