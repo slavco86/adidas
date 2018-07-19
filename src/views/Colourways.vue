@@ -1,61 +1,63 @@
 <template>
   <div class="colourwayscontainer">
-    <div class="mainimage">
-      <img
-        class="adidas"
-        src="../assets/adidas_white.svg">
-      <img
-        class="add"
-        src="../assets/add.png">
-      <div class="mainShoeContainer">
+    <div class="box">
+      <div class="mainimage">
         <img
-          :src="mainImage"
-          class="mainshoe">
-      </div>
-      <img
-        id="addafter"
-        class="addafter"
-        src="../assets/add.png"
-        @click="showModal = true">
-      <h3 class="shoppingbagtexttitle">{{ franchise }}</h3>
-      <h4 class="shoppingbagtext">£80.00</h4>
-      <img
-        src="../assets/shoppingbag.png"
-        class="shoppingbagicon">
-    </div>
-    <Carousel
-      ref="carousel"
-      :slides="slides"
-      :options="options"
-      class="carousel-container">
-      <div
-        slot-scope="{slide}"
-        class="image-container">
+          class="adidas"
+          src="../assets/adidas_white.svg">
         <img
-          :src="slide.image"
-          :class="{ isActive : slide.active }"
-          class="image"
-          @click="changeImage(slide.key)">
+          class="add"
+          src="../assets/add.png">
+        <div class="mainShoeContainer">
+          <img
+            :src="mainImage"
+            class="mainshoe">
+        </div>
+        <img
+          id="addafter"
+          class="addafter"
+          src="../assets/add.png"
+          @click="showModal = true">
+        <h3 class="shoppingbagtexttitle">{{ franchise }}</h3>
+        <h4 class="shoppingbagtext">£80.00</h4>
+        <img
+          src="../assets/shoppingbag.png"
+          class="shoppingbagicon">
       </div>
-    </Carousel>
-    <div class="franchise-container">
-      <h1 class="derupt">{{ franchise }}</h1>
-    </div>
-    <modal
-      v-if="showModal"
-      @close="showModal = false" >
-      <h1
-        id="modalh"
-        slot="header">
-        DEERUPT
-      </h1>
-      <h2 slot="body"><span id="modalb">DISRUPTIVELY SIMPLE</span><br><br>
-        <span class="modalc">With Deerupt, a silhouette becomes <br>
-          the unexpected. Comfort becomes <br>
-          the unprecedented. Fit becomes <br>
-          an experience. </span>
-      </h2>
-    </modal>
+      <Carousel
+        ref="carousel"
+        :slides="slides"
+        :options="options"
+        class="carousel-container">
+        <div
+          slot-scope="{slide}"
+          class="image-container">
+          <img
+            :src="slide.image"
+            :class="{ isActive : slide.active }"
+            class="image"
+            @click="changeImage(slide.key)">
+        </div>
+      </Carousel>
+      <div class="franchise-container">
+        <h1 class="derupt">{{ franchise }}</h1>
+      </div>
+      <modal
+        v-if="showModal"
+        @close="showModal = false" >
+        <h1
+          id="modalh"
+          slot="header">
+          DEERUPT
+        </h1>
+        <h2 slot="body"><span id="modalb">DISRUPTIVELY SIMPLE</span><br><br>
+          <span class="modalc">With Deerupt, a silhouette becomes <br>
+            the unexpected. Comfort becomes <br>
+            the unprecedented. Fit becomes <br>
+            an experience. </span>
+        </h2>
+      </modal>
+      </div>
   </div>
 </template>
 
@@ -187,10 +189,18 @@ font-style: normal;
 }
 
 .colourwayscontainer {
-
-  position: relative;
-  background: #222;
+  display: flex;
+  // background: #222;
   height: 100%;
+  width: 100%;
+  // flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.box {
+  height: 100;
+  width: 100%;
 }
 
 .adidas {
@@ -309,262 +319,262 @@ font-style: normal;
 }
 
 
-@media only screen and (min-width: 765px) {
+// @media only screen and (min-width: 765px) {
 
-.colourwayscontainer {
-    position: relative;
-    background: #222;
-    height: 100%
-  }
+// .colourwayscontainer {
+//     position: relative;
+//     background: #222;
+//     height: 100%
+//   }
 
-.mainimage {
-    position: relative;
-  }
-
-
-.adidas {
-    display: inline;
-    position: absolute;
-    width: 100px;
-    top: 4%;
-    left: 7%;
-  }
-
-.close {
-    position: absolute;
-    top: 3%;
-    right: 3%;
-    width: 67px;
-    height: 70px;
-  }
-
-  .add {
-    position: absolute;
-    top: 53%;
-    left: 21%;
-    width: 48px;
-    height: 48px;
-    opacity: 0.55;
-  }
-
-  .mainshoe {
-    width: 61%;
-    z-index: 1;
-  }
-
-  #addafter {
-    position: absolute;
-    top: 73%;
-    left: 58%;
-    width: 48px;
-    height: 48px;
-    opacity: 0.55;
-    z-index: 2;
-  }
-
-.franchise-container {
-    transform: rotate(360deg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    margin-top: -90%;
-    margin-left: -1%;
-    height: 41%;
-  }
-
-  .derupt {
-    font-family: 'HCo Gotham SSm';
-    color:#333333;
-    letter-spacing: -10px;
-    transform: rotate(0deg);
-    font-size: 192px;
-    flex: 1 0 auto;
-  }
+// .mainimage {
+//     position: relative;
+//   }
 
 
-  .shoppingbagtexttitle {
-    position: absolute;
-    top: 59%;
-    right: 11%;
-    color: white;
-    font-size: 23px;
-  }
+// .adidas {
+//     display: inline;
+//     position: absolute;
+//     width: 100px;
+//     top: 4%;
+//     left: 7%;
+//   }
 
-  .shoppingbagtext {
-    position: absolute;
-    top: 64%;
-    right: 11%;
-    color: white;
-    font-size: 21px;
-  }
+// .close {
+//     position: absolute;
+//     top: 3%;
+//     right: 3%;
+//     width: 67px;
+//     height: 70px;
+//   }
 
-  .shoppingbagicon {
-    right: 11%;
-    top: 70%;
-    width: 72px;
-    z-index: 1;
-  }
+//   .add {
+//     position: absolute;
+//     top: 53%;
+//     left: 21%;
+//     width: 48px;
+//     height: 48px;
+//     opacity: 0.55;
+//   }
 
-  .carousel-container {
-    margin-top: 6%;
-    margin-left: 5%;
-  }
+//   .mainshoe {
+//     width: 61%;
+//     z-index: 1;
+//   }
 
-  .image {
-    display: block;
-    width: 155px;
-    height: 154px;
-    opacity: 0.5;
-  }
+//   #addafter {
+//     position: absolute;
+//     top: 73%;
+//     left: 58%;
+//     width: 48px;
+//     height: 48px;
+//     opacity: 0.55;
+//     z-index: 2;
+//   }
 
-  #modalh {
-  font-family: 'HCo Gotham SSm';
-  font-size: 110px;
-  font-weight: 900;
-}
+// .franchise-container {
+//     transform: rotate(360deg);
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     width: 100%;
+//     margin-top: -90%;
+//     margin-left: -1%;
+//     height: 41%;
+//   }
 
-  #modalb {
-  font-family: 'HCo Gotham SSm';
-  font-size: 37px;
-  font-weight: 700;
-}
-
- .modalc {
-  font-family: 'HCo Gotham SSm';
-  font-size: 24px;
-}
-
-}
+//   .derupt {
+//     font-family: 'HCo Gotham SSm';
+//     color:#333333;
+//     letter-spacing: -10px;
+//     transform: rotate(0deg);
+//     font-size: 192px;
+//     flex: 1 0 auto;
+//   }
 
 
-@media only screen and (min-width: 1025px) {
-  .colourwayscontainer {
-    background: #222;
-    height: 100%;
-  }
+//   .shoppingbagtexttitle {
+//     position: absolute;
+//     top: 59%;
+//     right: 11%;
+//     color: white;
+//     font-size: 23px;
+//   }
 
-  .mainimage {
-    position: relative;
-  }
+//   .shoppingbagtext {
+//     position: absolute;
+//     top: 64%;
+//     right: 11%;
+//     color: white;
+//     font-size: 21px;
+//   }
 
-  .mainShoeContainer{
-    padding-top: 5%;
-  }
+//   .shoppingbagicon {
+//     right: 11%;
+//     top: 70%;
+//     width: 72px;
+//     z-index: 1;
+//   }
 
-  .adidas {
-    display: inline;
-    position: absolute;
-    width: 72px;
-    top: 9%;
-    left: 6%;
-  }
+//   .carousel-container {
+//     margin-top: 6%;
+//     margin-left: 5%;
+//   }
 
-  .close {
-    position: absolute;
-    top: 8%;
-    height: 10%;
-    right: 3%;
-  }
+//   .image {
+//     display: block;
+//     width: 155px;
+//     height: 154px;
+//     opacity: 0.5;
+//   }
 
-  .add {
-    position: absolute;
-    top: 48%;
-    left: 35%;
-    width: 48px;
-    height: 48px;
-    opacity: 0.55;
-  }
+//   #modalh {
+//   font-family: 'HCo Gotham SSm';
+//   font-size: 110px;
+//   font-weight: 900;
+// }
 
-  .mainshoe {
-    margin-top: 5%;
-    width: 30%;
-    height: 30%;
-    z-index: 1;
-  }
+//   #modalb {
+//   font-family: 'HCo Gotham SSm';
+//   font-size: 37px;
+//   font-weight: 700;
+// }
 
-#addafter {
-    position: absolute;
-    top: 72%;
-    left: 55%;
-    width: 48px;
-    height: 48px;
-    opacity: 0.55;
-    z-index: 2;
-  }
+//  .modalc {
+//   font-family: 'HCo Gotham SSm';
+//   font-size: 24px;
+// }
 
-  .franchise-container {
-    transform: rotate(360deg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    margin-top: -41%;
-    margin-left: -2%;
-    height: 43%;
-  }
+// }
 
-  .derupt {
-    font-family: 'HCo Gotham SSm';
-    transform: rotate(0deg);
-    font-size: 342px;
-    flex: 1 0 auto;
-  }
 
-  .shoppingbagtexttitle {
-    position: absolute;
-    top: 52%;
-    right: 13%;
-    color: white;
-    font-size: 23px;
-  }
+// @media only screen and (min-width: 1025px) {
+//   .colourwayscontainer {
+//     background: #222;
+//     height: 100%;
+//   }
 
-  .shoppingbagtext {
-    position: absolute;
-    top: 59%;
-    right: 13%;
-    color: white;
-    font-size: 21px;
-  }
+//   .mainimage {
+//     position: relative;
+//   }
 
-  .shoppingbagicon {
-    right: 13%;
-    top: 65%;
-    width: 72px;
-    z-index: 1;
-  }
+//   .mainShoeContainer{
+//     padding-top: 5%;
+//   }
 
-  .carousel-container {
-    margin: 0 auto;
-    margin-top: 3%;
-    width: 50%;
-  }
+//   .adidas {
+//     display: inline;
+//     position: absolute;
+//     width: 72px;
+//     top: 9%;
+//     left: 6%;
+//   }
 
-  .image {
-    display: block;
-    width: 93px;
-    height: 97px;
-    // opacity: 0.5;
-  }
+//   .close {
+//     position: absolute;
+//     top: 8%;
+//     height: 10%;
+//     right: 3%;
+//   }
 
-  #modalh {
-  font-family: 'HCo Gotham SSm';
-  font-size: 53px;
-  font-weight: 900;
-}
+//   .add {
+//     position: absolute;
+//     top: 48%;
+//     left: 35%;
+//     width: 48px;
+//     height: 48px;
+//     opacity: 0.55;
+//   }
 
-  #modalb {
-  font-family: 'HCo Gotham SSm';
-  font-size: 27px;
-  font-weight: 700;
-}
+//   .mainshoe {
+//     margin-top: 5%;
+//     width: 30%;
+//     height: 30%;
+//     z-index: 1;
+//   }
 
- .modalc {
-  font-family: 'HCo Gotham SSm';
-  font-size: 20px;
-}
+// #addafter {
+//     position: absolute;
+//     top: 72%;
+//     left: 55%;
+//     width: 48px;
+//     height: 48px;
+//     opacity: 0.55;
+//     z-index: 2;
+//   }
 
-}
+//   .franchise-container {
+//     transform: rotate(360deg);
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     width: 100%;
+//     margin-top: -41%;
+//     margin-left: -2%;
+//     height: 43%;
+//   }
+
+//   .derupt {
+//     font-family: 'HCo Gotham SSm';
+//     transform: rotate(0deg);
+//     font-size: 342px;
+//     flex: 1 0 auto;
+//   }
+
+//   .shoppingbagtexttitle {
+//     position: absolute;
+//     top: 52%;
+//     right: 13%;
+//     color: white;
+//     font-size: 23px;
+//   }
+
+//   .shoppingbagtext {
+//     position: absolute;
+//     top: 59%;
+//     right: 13%;
+//     color: white;
+//     font-size: 21px;
+//   }
+
+//   .shoppingbagicon {
+//     right: 13%;
+//     top: 65%;
+//     width: 72px;
+//     z-index: 1;
+//   }
+
+//   .carousel-container {
+//     margin: 0 auto;
+//     margin-top: 3%;
+//     width: 50%;
+//   }
+
+//   .image {
+//     display: block;
+//     width: 93px;
+//     height: 97px;
+//     // opacity: 0.5;
+//   }
+
+//   #modalh {
+//   font-family: 'HCo Gotham SSm';
+//   font-size: 53px;
+//   font-weight: 900;
+// }
+
+//   #modalb {
+//   font-family: 'HCo Gotham SSm';
+//   font-size: 27px;
+//   font-weight: 700;
+// }
+
+//  .modalc {
+//   font-family: 'HCo Gotham SSm';
+//   font-size: 20px;
+// }
+
+// }
 
 </style>
 
