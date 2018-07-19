@@ -36,29 +36,29 @@ export default {
 </script>
 
 <style>
-
 @font-face {
-font-family: 'HCo Gotham SSm';
-src:url('../assets/fonts/F4715F49B60D9B144.woff2') format('woff2'),
-url('../assets/fonts/F4715F49B60D9B144.woff') format('woff');
-font-weight: 400;
-font-style: normal;
+  font-family: 'HCo Gotham SSm';
+  src:
+    url('../assets/fonts/F4715F49B60D9B144.woff2') format('woff2'),
+    url('../assets/fonts/F4715F49B60D9B144.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
 }
-
-
-@font-face {
-font-family: 'HCo Gotham SSm';
-src:url('../assets/fonts/725262BC71949F842.woff2') format('woff2'),
-url('../assets/fonts/725262BC71949F842.woff') format('woff');
-font-weight: 500;
-font-style: normal;
-}
-
 
 @font-face {
   font-family: 'HCo Gotham SSm';
-  src: url('../assets/fonts/B5416F0FED9EA9CD2.woff2') format('woff2'),
-  url('../assets/fonts/B5416F0FED9EA9CD2.woff') format('woff');
+  src:
+    url('../assets/fonts/725262BC71949F842.woff2') format('woff2'),
+    url('../assets/fonts/725262BC71949F842.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HCo Gotham SSm';
+  src:
+    url('../assets/fonts/B5416F0FED9EA9CD2.woff2') format('woff2'),
+    url('../assets/fonts/B5416F0FED9EA9CD2.woff') format('woff');
   font-weight: 700;
   font-style: normal;
 }
@@ -80,10 +80,9 @@ font-style: normal;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, .5);
+  background-color: rgba(0, 0, 0, 0.5);
   display: table;
-  transition: opacity .3s ease;
-
+  transition: opacity 0.3s ease;
 }
 
 .modal-wrapper {
@@ -94,12 +93,12 @@ font-style: normal;
 .modal-container {
   width: 375px;
   height: 678px;
-  margin: 0px auto;
+  margin: 0 auto;
   padding: 20px 30px;
   background-color: #fff;
   border-radius: 2px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
-  transition: all .3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
+  transition: all 0.3s ease;
   font-family: Helvetica, Arial, sans-serif;
 }
 

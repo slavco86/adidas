@@ -91,124 +91,116 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .social {
-    background-color: #222;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
+@import '../scss/functions';
 
-    &__text {
-      margin: 1rem 0;
-      text-transform: uppercase;
-    }
+.social {
+  background-color: #222;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
 
-    &__title {
-      font-size: 1.5rem;
-      font-weight: 600;
-      text-transform: uppercase;
-    }
-
-    &__cta {
-      align-self: flex-end;
-      border: 2px solid #fff;
-      color: #fff;
-      margin: 0 1rem;
-      padding: 1rem 1.5rem;
-      text-transform: uppercase;
-    }
+  &__text {
+    margin: 1rem 0;
+    text-transform: uppercase;
   }
 
-  .grid {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    margin: 1rem auto;
-    overflow: hidden;
+  &__title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
 
-    &__product {
-      flex: 0 0 50%;
-      height: auto;
-      max-width: 635px;
-      padding: 0.5rem;
-      transition: transform 1s ease-in-out;
+  &__cta {
+    align-self: flex-end;
+    border: 2px solid #fff;
+    color: #fff;
+    margin: 0 1rem;
+    padding: 1rem 1.5rem;
+    text-transform: uppercase;
+  }
+}
 
-      /deep/ .quickBuy {
-        align-items: center;
-        background-color: #fff;
-        border-radius: 50%;
-        bottom: 4rem;
-        color: transparent;
-        display: flex;
-        height: 50px;
-        position: absolute;
-        right: 1rem;
-        width: 50px;
+.grid {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 1rem auto;
+  overflow: hidden;
 
-        img {
-          display: block;
-          width: 100%;
-          height: auto;
-        }
+  &__product {
+    flex: 0 0 50%;
+    height: auto;
+    max-width: 635px;
+    padding: 0.5rem;
+    transition: transform 1s ease-in-out;
 
-        &--invert {
-          background-color: #fff;
-        }
-      }
-
-      @media only screen and (min-width: 1024px) {
-        flex: 0 0 19%;
-      }
-
-      &:first-child {
-        transform: translate3d(-100%, -100%, 0);
-      }
-
-      &:nth-child(2) {
-        transform: translate3d(100%, -100%, 0);
-      }
-
-      &:nth-child(3) {
-        transform: translate3d(-100%, 100%, 0);
-      }
-
-      &:last-child {
-        transform: translate3d(100%, 100%, 0);
-      }
-
-      &__text {
-        color: #ccc;
-        display: block;
-        margin: 0.75rem 0;
-        text-align: left;
-        font-size: 1rem;
-      }
+    /deep/ .quickBuy {
+      align-items: center;
+      background-color: setBackgroundColor(#fff);
+      border-radius: 50%;
+      bottom: 4rem;
+      color: transparent;
+      display: flex;
+      height: 50px;
+      position: absolute;
+      right: 1rem;
+      width: 50px;
 
       img {
         display: block;
-        height: auto;
         width: 100%;
+        height: auto;
+      }
+    }
+
+    @media only screen and (min-width: 1024px) {
+      flex: 0 0 19%;
+    }
+
+    &:first-child {
+      transform: translate3d(-100%, -100%, 0);
+    }
+
+    &:nth-child(2) {
+      transform: translate3d(100%, -100%, 0);
+    }
+
+    &:nth-child(3) {
+      transform: translate3d(-100%, 100%, 0);
+    }
+
+    &:last-child {
+      transform: translate3d(100%, 100%, 0);
+    }
+
+    &__text {
+      color: #ccc;
+      display: block;
+      margin: 0.75rem 0;
+      text-align: left;
+      font-size: 1rem;
+    }
+  }
+}
+
+.grid--animate {
+  padding: 50px 0;
+
+  .grid__product {
+    transform: translate3d(0, 0, 0);
+
+    @media only screen and (min-width: 1024px) {
+      margin: 0 10px;
+
+      &:nth-child(odd) {
+        transform: translate3d(0, -50px, 0);
+      }
+
+      &:nth-child(even) {
+        transform: translate3d(0, 50px, 0);
       }
     }
   }
-
-  .grid--animate {
-    padding: 50px 0;
-
-    .grid__product {
-      transform: translate3d(0, 0, 0);
-
-      @media only screen and (min-width: 1024px) {
-        margin: 0 10px;
-
-        &:nth-child(odd) {
-          transform: translate3d(0, -50px, 0);
-        }
-
-        &:nth-child(even) {
-          transform: translate3d(0, 50px, 0);
-        }
-      }
-    }
-  }
+}
 </style>
