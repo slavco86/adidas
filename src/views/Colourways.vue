@@ -17,7 +17,7 @@
         id="addafter"
         class="addafter"
         src="../assets/add.png"
-        @click="showModal = true">
+        @click="showModal = true; activeHotspot = 1">
 
       <h3 class="shoppingbagtexttitle">{{ franchise }}</h3>
       <h4 class="shoppingbagtext">£80.00</h4>
@@ -28,14 +28,14 @@
 
     <Carousel
       ref="carousel"
-      :slides="slides"
+      :slides="content.products"
       :options="options"
       class="carousel-container">
       <div
         slot-scope="{slide}"
         class="image-container">
         <img
-          :src="slide.image"
+          :src="slide.image.desktop"
           :class="{ isActive : slide.active }"
           class="image"
           @click="changeImage(slide.key)">
@@ -52,7 +52,7 @@
       <h1
         id="modalh"
         slot="header">
-        DEERUPT
+        {{ content.hotspots }}
       </h1>
       <h2 slot="body">
         <span id="modalb">DISRUPTIVELY SIMPLE</span>
@@ -79,6 +79,12 @@ export default {
   },
 
   props: {
+    data: {
+      type: Object,
+      default() {
+        return {};
+      },
+    },
     active: {
       type: Boolean,
       default: false,
@@ -89,48 +95,17 @@ export default {
     return {
       showModal: false,
       selectedIndex: 0,
-      slides: [
-        {
-          image: 'https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-2-57ac562da9a5af2fbd89974727329a02.png',
-          active: true,
-        },
-        {
-          image: 'https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-0-04670ce96db4cc1da203cc6895aa85e0.png',
-          active: false,
-        },
-        {
-          image: 'https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-1-6e0103d3b8a1653704b09acad135b6a9.png',
-          active: false,
-        },
-        {
-          image: 'https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-3-48065ea7006370f09ba101c518513105.png',
-          active: false,
-        },
-        {
-          image: 'https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-4-0ea11a1bd092bb5eacdc608aac48d64c.png',
-          active: false,
-        },
-        {
-          image: 'https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-5-6fae8c215df40f8eac27d0a2d34c1cf3.png',
-          active: false,
-        },
-        {
-          image: 'https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-6-2001fef6fd965b9b7ff7456d1f103818.png',
-          active: false,
-        },
-      ],
-
+      activeHotspot: 0,
       options: {
-        // responsive: true,
-        slidesPerView: 7,
+        contentPerView: 7,
         breakpoints: {
           764: {
-            slidesPerView: 4.5,
+            contentPerView: 4.5,
             spaceBetween: 10,
 
           },
           1024: {
-            slidesPerView: 5.2,
+            contentPerView: 5.2,
             spaceBetween: 100,
           },
         },
@@ -144,14 +119,17 @@ export default {
     },
 
     mainImage() {
-      return this.slides[this.selectedIndex].image;
+      return this.content.products[this.selectedIndex].image.desktop;
+    },
+    content() {
+      return this.data;
     },
   },
 
   methods: {
     changeImage(selectedSlide) {
-      this.slides[this.selectedIndex].active = false;
-      this.slides[selectedSlide].active = true;
+      this.content[this.selectedIndex].active = false;
+      this.content[selectedSlide].active = true;
 
       this.selectedIndex = selectedSlide;
     },
