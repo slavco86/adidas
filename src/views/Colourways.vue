@@ -18,10 +18,8 @@
       <h3 class="shoppingbagtexttitle">{{ franchise }}</h3>
       <h4 class="shoppingbagtext">£80.00</h4>
       <QuickBuy
-        :position="`${this.$route.params.gender}-${this.$route.name}`"
-        :path="`${this.$route.fullPath}`"
-        :name="`${this.$route.params.gender}-product-add-plu`"
-      >
+        url="/product/black-nike-air-force-1-low/047951"
+        :name="`${this.$route.name}`">
         <img
           src="../assets/shoppingbag.png"
           alt="shopping-basket">
@@ -136,7 +134,7 @@ export default {
 
     mainImage() {
       return this.slides[this.selectedIndex].image;
-    },
+    }
   },
 
   methods: {
@@ -153,18 +151,19 @@ export default {
 <style lang="scss" scoped>
 @font-face {
   font-family: 'HCo Gotham SSm';
-  src:url('../assets/fonts/F4715F49B60D9B144.woff2') format('woff2'),
-  url('../assets/fonts/F4715F49B60D9B144.woff') format('woff');
+  src:
+    url('../assets/fonts/F4715F49B60D9B144.woff2') format('woff2'),
+    url('../assets/fonts/F4715F49B60D9B144.woff') format('woff');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-font-family: 'HCo Gotham SSm';
-src:url('../assets/fonts/725262BC71949F842.woff2') format('woff2'),
-url('../assets/fonts/725262BC71949F842.woff') format('woff');
-font-weight: 500;
-font-style: normal;
+  font-family: 'HCo Gotham SSm';
+  src: url('../assets/fonts/725262BC71949F842.woff2') format('woff2'),
+  url('../assets/fonts/725262BC71949F842.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
 }
 
 @font-face {
@@ -192,6 +191,21 @@ font-style: normal;
 .mainimage {
   position: relative;
   z-index: 1;
+}
+
+.mainimage /deep/ .quickBuy {
+  position: absolute;
+  right: 0.5rem;
+  background: none;
+  bottom: 8rem;
+  max-width: 70px;
+  max-height: 70px;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
 }
 
 .close {
@@ -269,7 +283,6 @@ font-style: normal;
   margin-top: 15%;
 }
 
-
 .image-container {
   position: relative;
 }
@@ -280,7 +293,6 @@ font-style: normal;
   height: 74px;
   opacity: 0.5;
 }
-
 
 #modalh {
   font-family: 'HCo Gotham SSm';
@@ -298,21 +310,18 @@ font-style: normal;
   font-family: 'HCo Gotham SSm';
 }
 
-
 @media only screen and (min-width: 765px) {
-
-.colourwayscontainer {
+  .colourwayscontainer {
     position: relative;
     background: #222;
     height: 98vh;
   }
 
-.mainimage {
+  .mainimage {
     position: relative;
   }
 
-
-.adidas {
+  .adidas {
     display: inline;
     position: absolute;
     width: 100px;
@@ -320,7 +329,7 @@ font-style: normal;
     left: 7%;
   }
 
-.close {
+  .close {
     position: absolute;
     top: 3%;
     right: 3%;
@@ -352,23 +361,22 @@ font-style: normal;
     z-index: 2;
   }
 
-   .franchise-container {
+  .franchise-container {
     transform: rotate(360deg);
     position: absolute;
     top: 35%;
     left: -3%;
     width: 100vh;
-
   }
 
-   .derupt {
+  .derupt {
     font-family: 'HCo Gotham SSm';
     transform: rotate(0deg);
     font-size: 25vw;
     font-weight: 900px;
     letter-spacing: -10px;
     width: 78vh;
-    font-size: 201px;
+    // font-size: 201px;
   }
 
   .shoppingbagtexttitle {
@@ -407,24 +415,22 @@ font-style: normal;
   }
 
   #modalh {
-  font-family: 'HCo Gotham SSm';
-  font-size: 110px;
-  font-weight: 900;
-}
+    font-family: 'HCo Gotham SSm';
+    font-size: 110px;
+    font-weight: 900;
+  }
 
   #modalb {
-  font-family: 'HCo Gotham SSm';
-  font-size: 37px;
-  font-weight: 700;
-}
+    font-family: 'HCo Gotham SSm';
+    font-size: 37px;
+    font-weight: 700;
+  }
 
- .modalc {
-  font-family: 'HCo Gotham SSm';
-  font-size: 24px;
+  .modalc {
+    font-family: 'HCo Gotham SSm';
+    font-size: 24px;
+  }
 }
-
-}
-
 
 @media only screen and (min-width: 1025px) {
   .colourwayscontainer {

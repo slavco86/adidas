@@ -1,8 +1,8 @@
 <template>
   <div class="social">
-    <p class="social__text">{{ content.header.text }}</p>
-    <h2 class="social__title">{{ content.header.title }}</h2>
-    <div
+    <!-- <p class="social__text">{{ content.header.text }}</p>
+    <h2 class="social__title">{{ content.header.title }}</h2> -->
+    <!-- <div
       :class="{'grid--animate': activateAnimation}"
       class="grid">
       <Spot
@@ -11,10 +11,15 @@
         v-bind="slide"
         class="grid__product">
         <span class="grid__product__text">{{ slide.text }}</span>
-        <QuickBuy :text="content.header.text"/>
-      </Spot>
+        <QuickBuy
 
-    </div>
+        >
+          <img
+            src="../assets/shoppingbag.png"
+            alt="shopping-basket">
+        </QuickBuy>
+      </Spot>
+    </div> -->
     <a
       href="#"
       class="social__cta">
@@ -27,7 +32,7 @@
 import inView from 'in-view';
 import Spot from '@/components/Spot.vue';
 import QuickBuy from '@/components/QuickBuy.vue';
-import json from '@/content/social.json';
+// import json from '@/content/social.json';
 
 inView.threshold(0.5);
 
@@ -40,7 +45,6 @@ export default {
   data() {
     return {
       activateAnimation: true,
-      content: json,
     };
   },
   mounted() {
@@ -101,16 +105,13 @@ export default {
     transition: transform 1s ease-in-out;
 
     /deep/ .quickBuy {
-      align-items: center;
-      background-color: setBackgroundColor(#fff);
-      border-radius: 50%;
-      bottom: 4rem;
-      color: transparent;
-      display: flex;
-      height: 50px;
+      background: none;
+      display: block;
+      max-height: 50px;
+      max-width: 50px;
       position: absolute;
       right: 1rem;
-      width: 50px;
+      top: 1rem;
 
       img {
         display: block;

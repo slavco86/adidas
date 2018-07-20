@@ -1,26 +1,23 @@
 <template>
-  <button
-    :data-ip-position="position"
-    :data-quickview-path="path"
-    :data-ip-name="name"
-    class="ga-ip quickBuy quickView">
+  <Button
+    :data-quickview-path="url"
+    :data-product-sku="sku"
+    :name="name"
+    :sku="sku"
+    class="ga-ip quickView">
     <slot/>
-  </button>
+  </Button>
 </template>
 
 <script>
+import Button from '@/components/Button.vue';
+
 export default {
-  // inject: {
-  //   name: {
-  //     default: undefined,
-  //   },
-  // },
+  components: {
+    Button,
+  },
   props: {
-    position: {
-      type: String,
-      default: undefined,
-    },
-    path: {
+    url: {
       type: String,
       default: undefined,
     },
@@ -30,8 +27,8 @@ export default {
     },
   },
   computed: {
-    franchise() {
-      return this.$route.params.franchise;
+    sku() {
+      return this.url.split('/').pop();
     },
   },
 };
