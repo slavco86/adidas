@@ -1,25 +1,26 @@
 <template>
   <div
-    :class="{'home--invert': tab === 'women'}"
+    :class="{'home--invert': gender === 'women'}"
     class="home">
     <nav class="nav">
-      <img
-        v-if="tab === 'women'"
-        class="logo"
-        src="../assets/adidas-logo.svg">
-      <img
-        v-if="tab === 'men'"
-        class="logo"
-        src="../assets/adidas-logo-white.svg">
-      <button
-        :class="{'nav-button--inactive': tab === 'women',
-                 'nav-button--invert': tab === 'men'}"
-        class="nav-button"
-        @click="changeTab('men')">MEN</button>
-      <button
-        :class="{'nav-button--inactive': tab === 'men'}"
-        class="nav-button"
-        @click="changeTab('women')">WOMEN</button>
+      <Logo
+        :color="logoColor"
+        class="logo"/>
+      <router-link
+        :to="'men'"
+        tag="span">
+        <button
+          :class="{'nav-button--inactive': gender === 'women',
+                   'nav-button--invert': gender === 'men'}"
+          class="nav-button">MEN</button>
+      </router-link>
+      <router-link
+        :to="'women'"
+        tag="span">
+        <button
+          :class="{'nav-button--inactive': gender === 'men'}"
+          class="nav-button">WOMEN</button>
+      </router-link>
     </nav>
     <div
       :class="{'grid--animate': grid}"
@@ -29,57 +30,56 @@
         :key="key"
         class="grid-view__product">
         <router-link
-          :to="`${tab}/${slide.franchise}`"
+          :to="`men/${slide.franchise}`"
           tag="div">
           <Spot v-bind="slide">
             <span
-              :class="{'franchise-name--invert': tab === 'men'}"
+              :class="{'franchise-name--invert': gender === 'men'}"
               data-swiper-parallax="-500"
               data-swiper-parallax-duration="600"
               class="franchise-name franchise-name--grid">{{ slide.franchise }}</span>
             <div
-              :class="{'plus--invert' : tab === 'men'}"
+              :class="{'plus--invert' : gender === 'men'}"
               class="plus"/>
           </Spot>
           <Countdown
-            v-if="!slide.expired"
-            :class="{'countdown--invert': tab === 'men'}"
+            v-if="!slide.expired && grid"
+            :class="{'countdown--invert': gender === 'men'}"
             :date="slide.launch"
-            class="countdown--grid"
-            @expired="slide.expired = true"/>
+            class="countdown--grid"/>
         </router-link>
       </div>
     </div>
 
     <Carousel
       ref="carousel"
-      :slides="slides"
+      :slides="pictures"
       :options="swiperOptions"
       :class="{'main-carousel--hidden': grid}"
       class="main-carousel">
       <router-link
         slot-scope="{slide}"
-        :to="`${tab}/${slide.franchise}`"
+        :to="`${gender}/${slide.franchise}`"
         tag="div">
         <Spot v-bind="slide">
           <span
-            :class="{'franchise-name--invert': tab === 'men'}"
+            :class="{'franchise-name--invert': gender === 'men'}"
             data-swiper-parallax="-500"
             data-swiper-parallax-duration="600"
             class="franchise-name">{{ slide.franchise }}</span>
           <div
-            :class="{'plus--invert' : tab === 'men'}"
+            :class="{'plus--invert' : gender === 'men'}"
             class="plus"/>
         </Spot>
         <Countdown
           v-if="!slide.expired"
-          :class="{'countdown--invert': tab === 'men'}"
+          :class="{'countdown--invert': gender === 'men'}"
           :date="slide.launch"
-          @expired="slide.expired = true"/>
+          @expired="countdownExpired(slide.key)"/>
       </router-link>
     </Carousel>
     <div
-      :class="{'button-container--invert': tab === 'men',
+      :class="{'button-container--invert': gender === 'men',
                'button-container--grid' : grid}"
       class="button-container"
       @click="toggleCarousel"
@@ -90,14 +90,14 @@
       <div class="bottom-right"/>
       <div
         :class="{'full--expand': grid,
-                 'full--invert': tab === 'men'}"
+                 'full--invert': gender === 'men'}"
         class="full"/>
     </div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
+import Logo from '@/components/AdidasLogo.vue';
 import Carousel from '@/containers/Carousel.vue';
 import Countdown from '@/components/Countdown.vue';
 import Spot from '@/components/Spot.vue';
@@ -105,6 +105,7 @@ import Spot from '@/components/Spot.vue';
 export default {
   name: 'Home',
   components: {
+    Logo,
     Carousel,
     Spot,
     Countdown,
@@ -119,9 +120,8 @@ export default {
     return {
       carousel: true,
       grid: false,
-      slides: [],
       width: window.innerWidth,
-      tab: 'men',
+      pictures: [],
     };
   },
   computed: {
@@ -137,13 +137,24 @@ export default {
         slidesPerView,
       };
     },
+
+    gender() {
+      return this.$route.params.gender;
+    },
+
+    slides() {
+      const slides = JSON.parse(JSON.stringify(this.franchises));
+      if (slides.length) {
+        this.setExpired(slides);
+      }
+      return slides;
+    },
+
+    logoColor() {
+      return (this.gender === 'men') ? '#fff' : undefined;
+    },
   },
-  mounted() {
-    this.slides = this.franchises;
-    if (this.slides.length) {
-      this.setExpired(this.slides);
-    }
-  },
+
   methods: {
     unhideCarousel() {
       if (!this.carousel && !this.grid) {
@@ -151,7 +162,16 @@ export default {
       }
     },
     setExpired(slides) {
-      slides.map(slide => this.$set(slide, 'expired', false));
+      const newSlides = slides.map((slide) => {
+        const newSlide = slide;
+        newSlide.expired = false;
+        return newSlide;
+      });
+      this.pictures = newSlides;
+      return newSlides;
+    },
+    countdownExpired(index) {
+      this.pictures[index].expired = true;
     },
     toggleCarousel() {
       this.grid = !this.grid;
@@ -159,10 +179,6 @@ export default {
       if (this.carousel) {
         this.carousel = !this.carousel;
       }
-    },
-    changeTab(name) {
-      this.tab = name;
-      this.$refs.carousel.$children[0].$children[0].swiper.slideTo(0);
     },
   },
 };
@@ -366,6 +382,7 @@ export default {
   &--invert {
     left: 12%;
     width: 80%;
+
     & /deep/ .countdown__value {
       &::after,
       &__num i,
@@ -380,7 +397,7 @@ export default {
       &::after,
       &__num i,
       &__label {
-        font-size: .8rem;
+        font-size: 0.8rem;
       }
     }
   }
@@ -499,9 +516,6 @@ export default {
   width: 35px;
   height: 35px;
   color: black;
-
-  @media only screen and (min-width: 765px) {
-  }
 
   &::before,
   &::after {

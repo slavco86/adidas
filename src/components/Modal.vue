@@ -16,9 +16,7 @@
             </slot>
           </div>
           <div class="modal-body">
-            <slot name="body">
-              default body
-            </slot>
+            <slot name="body"/>
           </div>
           <div class="modal-footer">
             <slot name="footer"/>
@@ -35,7 +33,8 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+
 @font-face {
   font-family: 'HCo Gotham SSm';
   src:
@@ -64,7 +63,7 @@ export default {
 }
 
 #modalh {
-  padding-top: 23%;
+  padding-top: 33%;
 }
 
 #closem {
@@ -100,6 +99,8 @@ export default {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
   transition: all 0.3s ease;
   font-family: Helvetica, Arial, sans-serif;
+  background-image: url("../assets/swmobile.png");
+  background-repeat: no-repeat;
 }
 
 .modal-header h3 {
@@ -137,6 +138,9 @@ export default {
     box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
     transition: all .3s ease;
     font-family: Helvetica, Arial, sans-serif;
+    background-image: url("../assets/swtablet.png");
+    background-repeat: no-repeat center center fixed;
+    background-size: cover;
 }
 
 #closem {
@@ -161,6 +165,8 @@ export default {
     box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
     transition: all .3s ease;
     font-family: Helvetica, Arial, sans-serif;
+    /* background-image: url("../assets/swdesktop.png");
+    background-repeat: no-repeat; */
 
   }
 

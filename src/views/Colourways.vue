@@ -6,15 +6,21 @@
         src="../assets/adidas_white.svg">
       <img
         class="add"
-        src="../assets/add.png">
-      <img
-        :src="mainImage"
-        class="mainshoe">
+        src="../assets/add.png"
+        @click="displayModal(0)">
+
+      <div class="mainShoeContainer">
+        <img
+          :src="mainImage"
+          class="mainshoe">
+      </div>
+
       <img
         id="addafter"
         class="addafter"
         src="../assets/add.png"
-        @click="showModal = true">
+        @click="displayModal(1)">
+
       <h3 class="shoppingbagtexttitle">{{ franchise }}</h3>
       <h4 class="shoppingbagtext">£80.00</h4>
       <QuickBuy
@@ -25,105 +31,84 @@
           alt="shopping-basket">
       </QuickBuy>
     </div>
+
     <Carousel
       ref="carousel"
-      :slides="slides"
+      :slides="colourways"
       :options="options"
       class="carousel-container">
       <div
         slot-scope="{slide}"
         class="image-container">
         <img
-          :src="slide.image"
+          :src="slide.image.desktop"
           :class="{ isActive : slide.active }"
           class="image"
-          @click="changeImage(slide.key)">
+          @click="selectColourway(slide.key)">
       </div>
     </Carousel>
+
     <div class="franchise-container">
       <h1 class="derupt">{{ franchise }}</h1>
     </div>
-    <modal
+
+    <Modal
       v-if="showModal"
       @close="showModal = false" >
-      <h1
-        id="modalh"
-        slot="header">
-        DEERUPT
-      </h1>
-      <h2 slot="body"><span id="modalb">DISRUPTIVELY SIMPLE</span><br><br>
-        <span class="modalc">With Deerupt, a silhouette becomes <br>
-          the unexpected. Comfort becomes <br>
-          the unprecedented. Fit becomes <br>
-          an experience. </span>
-      </h2>
-    </modal>
+      <Titles
+        slot="header"
+        :headline="hotspots[activeHotspot].title"
+        :subtext="hotspots[activeHotspot].subtext"/>
+    </Modal>
   </div>
 </template>
 
 <script>
 import Carousel from '@/containers/Carousel.vue';
-import modal from '@/components/Modal.vue';
 import QuickBuy from '@/components/QuickBuy.vue';
+import Modal from '@/components/Modal.vue';
+import Titles from '@/components/Titles.vue';
 
 export default {
   name: 'ColourwaysContainer',
   components: {
     Carousel,
-    modal,
-    QuickBuy,
+    Modal,
+    Titles,
+  },
+
+  props: {
+    data: {
+      type: Object,
+      default() {
+        return {};
+      },
+    },
+    active: {
+      type: Boolean,
+      default: false,
+    },
   },
 
   data() {
     return {
+      activeHotspot: null,
       showModal: false,
       selectedIndex: 0,
-      slides: [
-        {
-          image: 'https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-2-57ac562da9a5af2fbd89974727329a02.png',
-          active: true,
-        },
-        {
-          image: 'https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-0-04670ce96db4cc1da203cc6895aa85e0.png',
-          active: false,
-        },
-        {
-          image: 'https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-1-6e0103d3b8a1653704b09acad135b6a9.png',
-          active: false,
-        },
-        {
-          image: 'https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-3-48065ea7006370f09ba101c518513105.png',
-          active: false,
-        },
-        {
-          image: 'https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-4-0ea11a1bd092bb5eacdc608aac48d64c.png',
-          active: false,
-        },
-        {
-          image: 'https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-5-6fae8c215df40f8eac27d0a2d34c1cf3.png',
-          active: false,
-        },
-        {
-          image: 'https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-6-2001fef6fd965b9b7ff7456d1f103818.png',
-          active: false,
-        },
-      ],
-
       options: {
-        // responsive: true,
-        slidesPerView: 7,
+        contentPerView: 7,
         breakpoints: {
           764: {
-            slidesPerView: 4.5,
+            contentPerView: 4.5,
             spaceBetween: 10,
-
           },
           1024: {
-            slidesPerView: 5.2,
+            contentPerView: 5.2,
             spaceBetween: 100,
           },
         },
       },
+      colourways: JSON.parse(JSON.stringify(this.data.products)),
     };
   },
 
@@ -133,14 +118,33 @@ export default {
     },
 
     mainImage() {
-      return this.slides[this.selectedIndex].image;
-    }
+      return this.colourways[this.selectedIndex].image.desktop;
+    },
+
+    hotspots() {
+      return this.data.hotspots;
+    },
+  },
+
+  mounted() {
+    this.colourways.map((obj) => {
+      const colourway = obj;
+      colourway.active = false;
+      return colourway;
+    });
+
+    this.selectColourway(0);
   },
 
   methods: {
-    changeImage(selectedSlide) {
-      this.slides[this.selectedIndex].active = false;
-      this.slides[selectedSlide].active = true;
+    displayModal(contentIndex) {
+      this.showModal = true;
+      this.activeHotspot = contentIndex;
+    },
+
+    selectColourway(selectedSlide) {
+      this.colourways[this.selectedIndex].active = false;
+      this.colourways[selectedSlide].active = true;
 
       this.selectedIndex = selectedSlide;
     },
@@ -180,8 +184,8 @@ export default {
 
 .colourwayscontainer {
   position: relative;
-  background: #222;
   height: 100%;
+  overflow: hidden;
 }
 
 .adidas {
@@ -217,28 +221,31 @@ export default {
 
 .franchise-container {
   transform: rotate(270deg);
-  bottom: 17%;
-  left: -39%;
-  width: 100vh;
-  height: 64vh;
-  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -109%;
+  width: 40%;
+  height: 44%;
 }
 
 .derupt {
   font-family: 'HCo Gotham SSm';
-  font-size: 162px;
+  color:#333333;
+  letter-spacing: -10px;
+  font-size: 169px;
   font-weight: 900;
   z-index: 0;
-  color:#333;
-  letter-spacing: -10px;
+  flex: 1 0 auto;
 }
 
 .add {
   position: absolute;
-  top: 36%;
-  left: 19%;
+  top: 50%;
+  left: 18%;
   width: 4.5%;
   height: 4%;
+  z-index: 2;
 }
 
 .mainshoe {
@@ -313,7 +320,7 @@ export default {
 @media only screen and (min-width: 765px) {
   .colourwayscontainer {
     position: relative;
-    background: #222;
+
     height: 98vh;
   }
 
@@ -361,23 +368,26 @@ export default {
     z-index: 2;
   }
 
-  .franchise-container {
+.franchise-container {
     transform: rotate(360deg);
-    position: absolute;
-    top: 35%;
-    left: -3%;
-    width: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 139%;
+    margin-top: -90%;
+    margin-left: -20%;
+    height: 41%;
   }
 
   .derupt {
     font-family: 'HCo Gotham SSm';
-    transform: rotate(0deg);
-    font-size: 25vw;
-    font-weight: 900px;
+    color:#333333;
     letter-spacing: -10px;
-    width: 78vh;
-    // font-size: 201px;
+    transform: rotate(0deg);
+    font-size: 192px;
+    flex: 1 0 auto;
   }
+
 
   .shoppingbagtexttitle {
     position: absolute;
@@ -434,7 +444,6 @@ export default {
 
 @media only screen and (min-width: 1025px) {
   .colourwayscontainer {
-    background: #222;
     height: 100%;
   }
 
@@ -442,11 +451,15 @@ export default {
     position: relative;
   }
 
+  .mainShoeContainer{
+    padding-top: 5%;
+  }
+
   .adidas {
     display: inline;
     position: absolute;
     width: 72px;
-    top: 5%;
+    top: 9%;
     left: 6%;
   }
 
@@ -459,7 +472,7 @@ export default {
 
   .add {
     position: absolute;
-    top: 41%;
+    top: 48%;
     left: 35%;
     width: 48px;
     height: 48px;
@@ -475,8 +488,8 @@ export default {
 
 #addafter {
     position: absolute;
-    top: 69%;
-    left: 54%;
+    top: 72%;
+    left: 55%;
     width: 48px;
     height: 48px;
     opacity: 0.55;
@@ -485,56 +498,55 @@ export default {
 
   .franchise-container {
     transform: rotate(360deg);
-    position: absolute;
-    top: 19%;
-    left: -1%;
-    width: 100vh;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 103%;
+    margin-top: -41%;
+    margin-left: -2%;
+    height: 43%;
   }
 
   .derupt {
     font-family: 'HCo Gotham SSm';
     transform: rotate(0deg);
-    font-size: 25vw;
-    font-weight: 900px;
-    letter-spacing: -10px;
-    width: 180vh;
-    font-size: 337px;
+    font-size: 342px;
+    flex: 1 0 auto;
   }
 
   .shoppingbagtexttitle {
     position: absolute;
-    top: 60%;
-    right: 14%;
+    top: 52%;
+    right: 13%;
     color: white;
     font-size: 23px;
   }
 
   .shoppingbagtext {
     position: absolute;
-    top: 66%;
-    right: 14%;
+    top: 59%;
+    right: 13%;
     color: white;
     font-size: 21px;
   }
 
   .shoppingbagicon {
-    right: 14%;
-    top: 73%;
+    right: 13%;
+    top: 65%;
     width: 72px;
     z-index: 1;
   }
 
   .carousel-container {
     margin: 0 auto;
-    margin-top: 6%;
+    margin-top: 3%;
     width: 50%;
   }
 
   .image {
     display: block;
-    width: 80px;
-    height: 74px;
+    width: 93px;
+    height: 97px;
     // opacity: 0.5;
   }
 

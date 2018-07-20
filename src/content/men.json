@@ -8,48 +8,70 @@
     },
     "content": {
       "360": "url",
-      "colourways": [
-        {
-          "image": {
-            "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-0-04670ce96db4cc1da203cc6895aa85e0.png",
-            "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-0-04670ce96db4cc1da203cc6895aa85e0.png"
+      "colourways": {
+        "hotspots": [
+          {
+            "title": "Title 1",
+            "subtext": "Subtitle 1\n\nWith Deerupt, a silhouette becomes the unexpected. Comfort becomes the unprecedented. Fit becomes an experience."
           },
-          "brand": "Nike",
-          "price": "75",
-          "title": "Air Force 1 Low",
-          "url": "/product/black-nike-air-force-1-low/047951",
-          "hotspots": [
-            {
-              "title": "Title 1",
-              "subtext": "Subtitle 1 \n With Deerupt, a silhouette becomes the unexpected. Comfort becomes the unprecedented. Fit becomes an experience."
+          {
+            "title": "Title 2",
+            "subtext": "Subtitle 2\n\nWith Deerupt, a silhouette becomes the unexpected. Comfort becomes the unprecedented. Fit becomes an experience."
+          }
+        ],
+        "products": [
+          {
+            "image": {
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-0-04670ce96db4cc1da203cc6895aa85e0.png",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-0-04670ce96db4cc1da203cc6895aa85e0.png"
             },
-            {
-              "title": "Title 2",
-              "subtext": "Subtitle 2 \n With Deerupt, a silhouette becomes the unexpected. Comfort becomes the unprecedented. Fit becomes an experience."
-            }
-          ]
-        },
-        {
-          "image": {
-            "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-1-6e0103d3b8a1653704b09acad135b6a9.png'",
-            "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-1-6e0103d3b8a1653704b09acad135b6a9.png'"
+            "brand": "Nike",
+            "price": "75",
+            "title": "Air Force 1 Low",
+            "url": "/product/black-nike-air-force-1-low/047951"
           },
-          "brand": "Nike",
-          "price": "75",
-          "title": "Air Force 1 Low",
-          "url": "/product/black-nike-air-force-1-low/047951",
-          "hotspots": [
-            {
-              "title": "Title 1",
-              "subtext": "Subtitle 1 \n With Deerupt, a silhouette becomes the unexpected. Comfort becomes the unprecedented. Fit becomes an experience."
+          {
+            "image": {
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-1-6e0103d3b8a1653704b09acad135b6a9.png",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-1-6e0103d3b8a1653704b09acad135b6a9.png"
             },
-            {
-              "title": "Title 2",
-              "subtext": "Subtitle 2 \n With Deerupt, a silhouette becomes the unexpected. Comfort becomes the unprecedented. Fit becomes an experience."
-            }
-          ]
-        }
-      ],
+            "brand": "Nike",
+            "price": "75",
+            "title": "Air Force 1 Low",
+            "url": "/product/black-nike-air-force-1-low/047951"
+          },
+          {
+            "image": {
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-1-6e0103d3b8a1653704b09acad135b6a9.png",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-1-6e0103d3b8a1653704b09acad135b6a9.png"
+            },
+            "brand": "Nike",
+            "price": "75",
+            "title": "Air Force 1 Low",
+            "url": "/product/black-nike-air-force-1-low/047951"
+          },
+          {
+            "image": {
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-1-6e0103d3b8a1653704b09acad135b6a9.png",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-1-6e0103d3b8a1653704b09acad135b6a9.png"
+            },
+            "brand": "Nike",
+            "price": "75",
+            "title": "Air Force 1 Low",
+            "url": "/product/black-nike-air-force-1-low/047951"
+          },
+          {
+            "image": {
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-1-6e0103d3b8a1653704b09acad135b6a9.png",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-1-6e0103d3b8a1653704b09acad135b6a9.png"
+            },
+            "brand": "Nike",
+            "price": "75",
+            "title": "Air Force 1 Low",
+            "url": "/product/black-nike-air-force-1-low/047951"
+          }
+        ]
+      } ,
       "influencer":
         {
           "name": "Influencer Name",
@@ -128,55 +150,47 @@
   },
   {
     "franchise": "Falcon",
-    "launch": "June 3, 2011",
+    "launch": "August 3, 2018",
     "image": {
-      "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-2-2a8c507c89fd260fa4a231b30922f069.jpg",
-      "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-2-2a8c507c89fd260fa4a231b30922f069.jpg"
+      "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg",
+      "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg"
     },
     "content": {
       "360": "url",
-      "colourways": [
-        {
-          "image": {
-            "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-0-04670ce96db4cc1da203cc6895aa85e0.png",
-            "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-0-04670ce96db4cc1da203cc6895aa85e0.png"
+      "colourways": {
+        "hotspots": [
+          {
+            "title": "Title 1",
+            "subtext": "Subtitle 1\n\nWith Deerupt, a silhouette becomes the unexpected. Comfort becomes the unprecedented. Fit becomes an experience."
           },
-          "brand": "Nike",
-          "price": "75",
-          "title": "Air Force 1 Low",
-          "url": "/product/black-nike-air-force-1-low/047951",
-          "hotspots": [
-            {
-              "title": "Title 1",
-              "subtext": "Subtitle 1 \n With Deerupt, a silhouette becomes the unexpected. Comfort becomes the unprecedented. Fit becomes an experience."
+          {
+            "title": "Title 2",
+            "subtext": "Subtitle 2\n\nWith Deerupt, a silhouette becomes the unexpected. Comfort becomes the unprecedented. Fit becomes an experience."
+          }
+        ],
+        "products": [
+          {
+            "image": {
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-0-04670ce96db4cc1da203cc6895aa85e0.png",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-0-04670ce96db4cc1da203cc6895aa85e0.png"
             },
-            {
-              "title": "Title 2",
-              "subtext": "Subtitle 2 \n With Deerupt, a silhouette becomes the unexpected. Comfort becomes the unprecedented. Fit becomes an experience."
-            }
-          ]
-        },
-        {
-          "image": {
-            "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-1-6e0103d3b8a1653704b09acad135b6a9.png'",
-            "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-1-6e0103d3b8a1653704b09acad135b6a9.png'"
+            "brand": "Nike",
+            "price": "75",
+            "title": "Air Force 1 Low",
+            "url": "/product/black-nike-air-force-1-low/047951"
           },
-          "brand": "Nike",
-          "price": "75",
-          "title": "Air Force 1 Low",
-          "url": "/product/black-nike-air-force-1-low/047951",
-          "hotspots": [
-            {
-              "title": "Title 1",
-              "subtext": "Subtitle 1 \n With Deerupt, a silhouette becomes the unexpected. Comfort becomes the unprecedented. Fit becomes an experience."
+          {
+            "image": {
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-1-6e0103d3b8a1653704b09acad135b6a9.png",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-1-6e0103d3b8a1653704b09acad135b6a9.png"
             },
-            {
-              "title": "Title 2",
-              "subtext": "Subtitle 2 \n With Deerupt, a silhouette becomes the unexpected. Comfort becomes the unprecedented. Fit becomes an experience."
-            }
-          ]
-        }
-      ],
+            "brand": "Nike",
+            "price": "75",
+            "title": "Air Force 1 Low",
+            "url": "/product/black-nike-air-force-1-low/047951"
+          }
+        ]
+      } ,
       "influencer":
         {
           "name": "Influencer Name",
@@ -255,55 +269,47 @@
   },
   {
     "franchise": "Deerupt",
-    "launch": "June 3, 2011",
+    "launch": "August 3, 2018",
     "image": {
-      "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-6-50b84b4438d8fb31729e8399e00b2a39.jpg",
-      "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-6-50b84b4438d8fb31729e8399e00b2a39.jpg"
+      "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg",
+      "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg"
     },
     "content": {
       "360": "url",
-      "colourways": [
-        {
-          "image": {
-            "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-0-04670ce96db4cc1da203cc6895aa85e0.png",
-            "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-0-04670ce96db4cc1da203cc6895aa85e0.png"
+      "colourways": {
+        "hotspots": [
+          {
+            "title": "Title 1",
+            "subtext": "Subtitle 1\n\nWith Deerupt, a silhouette becomes the unexpected. Comfort becomes the unprecedented. Fit becomes an experience."
           },
-          "brand": "Nike",
-          "price": "75",
-          "title": "Air Force 1 Low",
-          "url": "/product/black-nike-air-force-1-low/047951",
-          "hotspots": [
-            {
-              "title": "Title 1",
-              "subtext": "Subtitle 1 \n With Deerupt, a silhouette becomes the unexpected. Comfort becomes the unprecedented. Fit becomes an experience."
+          {
+            "title": "Title 2",
+            "subtext": "Subtitle 2\n\nWith Deerupt, a silhouette becomes the unexpected. Comfort becomes the unprecedented. Fit becomes an experience."
+          }
+        ],
+        "products": [
+          {
+            "image": {
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-0-04670ce96db4cc1da203cc6895aa85e0.png",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-0-04670ce96db4cc1da203cc6895aa85e0.png"
             },
-            {
-              "title": "Title 2",
-              "subtext": "Subtitle 2 \n With Deerupt, a silhouette becomes the unexpected. Comfort becomes the unprecedented. Fit becomes an experience."
-            }
-          ]
-        },
-        {
-          "image": {
-            "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-1-6e0103d3b8a1653704b09acad135b6a9.png'",
-            "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-1-6e0103d3b8a1653704b09acad135b6a9.png'"
+            "brand": "Nike",
+            "price": "75",
+            "title": "Air Force 1 Low",
+            "url": "/product/black-nike-air-force-1-low/047951"
           },
-          "brand": "Nike",
-          "price": "75",
-          "title": "Air Force 1 Low",
-          "url": "/product/black-nike-air-force-1-low/047951",
-          "hotspots": [
-            {
-              "title": "Title 1",
-              "subtext": "Subtitle 1 \n With Deerupt, a silhouette becomes the unexpected. Comfort becomes the unprecedented. Fit becomes an experience."
+          {
+            "image": {
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-1-6e0103d3b8a1653704b09acad135b6a9.png",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-1-6e0103d3b8a1653704b09acad135b6a9.png"
             },
-            {
-              "title": "Title 2",
-              "subtext": "Subtitle 2 \n With Deerupt, a silhouette becomes the unexpected. Comfort becomes the unprecedented. Fit becomes an experience."
-            }
-          ]
-        }
-      ],
+            "brand": "Nike",
+            "price": "75",
+            "title": "Air Force 1 Low",
+            "url": "/product/black-nike-air-force-1-low/047951"
+          }
+        ]
+      } ,
       "influencer":
         {
           "name": "Influencer Name",
@@ -382,55 +388,47 @@
   },
   {
     "franchise": "POD",
-    "launch": "June 3, 2011",
+    "launch": "August 3, 2018",
     "image": {
-      "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-1-bef0009175458060a5c0a0779991feaa.jpg",
-      "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-1-bef0009175458060a5c0a0779991feaa.jpg"
+      "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg",
+      "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg"
     },
     "content": {
       "360": "url",
-      "colourways": [
-        {
-          "image": {
-            "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-0-04670ce96db4cc1da203cc6895aa85e0.png",
-            "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-0-04670ce96db4cc1da203cc6895aa85e0.png"
+      "colourways": {
+        "hotspots": [
+          {
+            "title": "Title 1",
+            "subtext": "Subtitle 1\n\nWith Deerupt, a silhouette becomes the unexpected. Comfort becomes the unprecedented. Fit becomes an experience."
           },
-          "brand": "Nike",
-          "price": "75",
-          "title": "Air Force 1 Low",
-          "url": "/product/black-nike-air-force-1-low/047951",
-          "hotspots": [
-            {
-              "title": "Title 1",
-              "subtext": "Subtitle 1 \n With Deerupt, a silhouette becomes the unexpected. Comfort becomes the unprecedented. Fit becomes an experience."
+          {
+            "title": "Title 2",
+            "subtext": "Subtitle 2\n\nWith Deerupt, a silhouette becomes the unexpected. Comfort becomes the unprecedented. Fit becomes an experience."
+          }
+        ],
+        "products": [
+          {
+            "image": {
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-0-04670ce96db4cc1da203cc6895aa85e0.png",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-0-04670ce96db4cc1da203cc6895aa85e0.png"
             },
-            {
-              "title": "Title 2",
-              "subtext": "Subtitle 2 \n With Deerupt, a silhouette becomes the unexpected. Comfort becomes the unprecedented. Fit becomes an experience."
-            }
-          ]
-        },
-        {
-          "image": {
-            "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-1-6e0103d3b8a1653704b09acad135b6a9.png'",
-            "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-1-6e0103d3b8a1653704b09acad135b6a9.png'"
+            "brand": "Nike",
+            "price": "75",
+            "title": "Air Force 1 Low",
+            "url": "/product/black-nike-air-force-1-low/047951"
           },
-          "brand": "Nike",
-          "price": "75",
-          "title": "Air Force 1 Low",
-          "url": "/product/black-nike-air-force-1-low/047951",
-          "hotspots": [
-            {
-              "title": "Title 1",
-              "subtext": "Subtitle 1 \n With Deerupt, a silhouette becomes the unexpected. Comfort becomes the unprecedented. Fit becomes an experience."
+          {
+            "image": {
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-1-6e0103d3b8a1653704b09acad135b6a9.png",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-1-6e0103d3b8a1653704b09acad135b6a9.png"
             },
-            {
-              "title": "Title 2",
-              "subtext": "Subtitle 2 \n With Deerupt, a silhouette becomes the unexpected. Comfort becomes the unprecedented. Fit becomes an experience."
-            }
-          ]
-        }
-      ],
+            "brand": "Nike",
+            "price": "75",
+            "title": "Air Force 1 Low",
+            "url": "/product/black-nike-air-force-1-low/047951"
+          }
+        ]
+      } ,
       "influencer":
         {
           "name": "Influencer Name",
