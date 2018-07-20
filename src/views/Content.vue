@@ -60,7 +60,7 @@ export default {
       if (newVal === false) {
         // TODO: sort this shit out.
         setTimeout(() => {
-          this.enableFullpage();
+          // this.enableFullpage();
         }, 1);
       }
     });

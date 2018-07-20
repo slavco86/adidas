@@ -1,18 +1,25 @@
 <template>
   <div class="section-colourways">
-    <div class="brand-wrapper">
+    <!-- <div class="brand-wrapper">
       <div class="brand">
         {{ franchise }}
       </div>
+    </div> -->
+    <div class="main-container">
+      <div class="hotspot hotspot--invert"/>
+      <div class="hotspot hotspot--invert hotspot--right"/>
+      <div class="product-info">
+        <span class="title">{{ franchise }}</span>
+        <span class="price">£80.00</span>
+      </div>
+      <div class="main-image">
+        <img :src="mainImage" class="mainshoe">
+      </div>    
+      <!-- <img src="../assets/shoppingbag.png" class="quickbuy-icon"> -->
     </div>
-      <img class="adidas-logo" src="../assets/adidas_white.svg">
-      <img class="add" src="../assets/add.png">
-      <img :src="mainImage" class="mainshoe">
-      <img class="addafter" src="../assets/add.png" @click="showModal = true; activeHotspot = 1">
-      <h3 class="shoppingbagtexttitle">{{ franchise }}</h3>
-      <h4 class="shoppingbagtext">£80.00</h4>
-      <img src="../assets/shoppingbag.png" class="shoppingbagicon">
-        <Carousel
+      <!-- <img class="adidas-logo" src="../assets/adidas_white.svg"> -->
+      
+        <!-- <Carousel
           ref="carousel"
           :slides="content.products"
           :options="options"
@@ -44,7 +51,7 @@
             an experience.
           </span>
         </h2>
-      </modal>
+      </modal> -->
     </div>
 </template>
 
@@ -120,194 +127,277 @@ export default {
 
 </script>
 
-<style lang="scss" scoped>
-
-@font-face {
-font-family: 'HCo Gotham SSm';
-src:url('../assets/fonts/F4715F49B60D9B144.woff2') format('woff2'),
-url('../assets/fonts/F4715F49B60D9B144.woff') format('woff');
-font-weight: 400;
-font-style: normal;
-}
-
-
-@font-face {
-font-family: 'HCo Gotham SSm';
-src:url('../assets/fonts/725262BC71949F842.woff2') format('woff2'),
-url('../assets/fonts/725262BC71949F842.woff') format('woff');
-font-weight: 500;
-font-style: normal;
-}
-
-
-@font-face {
-  font-family: 'HCo Gotham SSm';
-  src: url('../assets/fonts/B5416F0FED9EA9CD2.woff2') format('woff2'),
-  url('../assets/fonts/B5416F0FED9EA9CD2.woff') format('woff');
-  font-weight: 700;
-  font-style: normal;
-}
-
-.image.isActive {
-  opacity: 1;
-}
-
-.section-colourways {
-  position: relative;
-  padding-left: 35px;
-  height: 100%;
-  width: 100%;
-  font-family: 'HCo Gotham SSm';
-}
-
-.brand-wrapper {
-  position: absolute;
-  top: 0;
-  left: 10px;
-  bottom: 0;
-  width: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  @media only screen and (min-width: 765px) {
-    left: 40px;
-  }
-}
-
-.brand {
-  font-family: 'HCo Gotham SSm';
-  transform: rotate(-90deg);
-  font-weight: 900;
-  font-size: 1330%;
-  padding-left: 2%;
-  z-index: 0;
-  color: #333;
-  flex-wrap: wrap;
-
-  @media only screen and (min-width: 765px) {
-    font-size: 2030%;
-  }
-}
-
-.adidas-logo {
+<style lang="scss">
+#content .section:last-of-type {
   display: none;
-  z-index: 1;
+}
+</style>
 
-  @media only screen and (min-width: 765px) {
-    display: inline;
-    position: absolute;
-    top: 4%;
-    left: 8%;
-    width: 125px;
-  }
+<style lang="scss" scoped>
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-.add {
-  position: absolute;
-  top: 33%;
-  left: 19%;
-  width: 29px;
-  z-index: 1;
-  
-  @media only screen and (min-width: 765px) {
-    position: absolute;
-    top: 32%;
-    left: 21%;
-    width: 54px;
-  }
+.main-image {
+  padding: 4rem;
 }
 
 .mainshoe {
-  position: absolute;
-  top: 19%;
-  left: 8%;
-  width: 330px;
-  z-index: 1;
+  width: 100%;
+  height: auto;
+  display: block;
+}
 
-  @media only screen and (min-width: 765px) {
+.product-info {
+  color: white;
+  position: absolute;
+  right: 10%;
+  top: 45%;
+
+  span {
+    font-size: 1rem;
+    display: block;
+    text-align: right;
+  }
+
+  .price {
+    font-weight: bold;
+  }
+}
+
+.hotspot {
+  position: absolute;
+  top: 45%;
+  left: 16%;
+  width: 25px;
+  height: 25px;
+  color: black;
+
+  &::before,
+  &::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid;
+    left: 0;
+    top: -54%;
     position: absolute;
-    top: 16%;
-    left: 11%;
-    width: 604px;
+  }
+
+  &::after {
+    top: 0;
+    left: 48%;
+    border-bottom: none;
+    border-left: 1px solid;
+  }
+
+  &--invert {
+    &::after,
+    &::before {
+      border-color: white;
+    }
+  }
+
+  &--right {
+    left: 60%;
+    top: 58%;
   }
 }
+</style>
 
-.addafter {
-  position: absolute;
-  top: 56%;
-  left: 61%;
-  width: 29px;
-  z-index: 1;
 
-  @media only screen and (min-width: 765px) {
-    width: 54px;
-  }
-}
 
-.shoppingbagtexttitle {
-  font-family: 'HCo Gotham SSm';
-  color: white;
-  position: absolute;
-  top: 44%;
-  right: 5%;
-  font-size: 16px;
-  z-index: 1;
+<style lang="scss" scoped>
 
-  @media only screen and (min-width: 765px) {
-    font-size: 57px;
-  }
-}
+// @font-face {
+// font-family: 'HCo Gotham SSm';
+// src:url('../assets/fonts/F4715F49B60D9B144.woff2') format('woff2'),
+// url('../assets/fonts/F4715F49B60D9B144.woff') format('woff');
+// font-weight: 400;
+// font-style: normal;
+// }
 
-.shoppingbagtext {
-  font-family: 'HCo Gotham SSm';
-  color: white;
-  position: absolute;
-  top: 49%;
-  left: 78%;
-  font-size: 16px;
-  z-index: 1;
-  right: 5%;
 
-  @media only screen and (min-width: 765px) {
-    font-size: 50px;
-    left: 67%;
-    top: 52%;
-  }
-}
+// @font-face {
+// font-family: 'HCo Gotham SSm';
+// src:url('../assets/fonts/725262BC71949F842.woff2') format('woff2'),
+// url('../assets/fonts/725262BC71949F842.woff') format('woff');
+// font-weight: 500;
+// font-style: normal;
+// }
 
-.shoppingbagicon {
-  position: absolute;
-  width: 50px;
-  top: 54%;
-  left: 81%;
-  z-index: 1;
 
-  @media only screen and (min-width: 765px) {
-    width: 111px;
-    left: 79%;
-    top: 61%;
-  }
-}
+// @font-face {
+//   font-family: 'HCo Gotham SSm';
+//   src: url('../assets/fonts/B5416F0FED9EA9CD2.woff2') format('woff2'),
+//   url('../assets/fonts/B5416F0FED9EA9CD2.woff') format('woff');
+//   font-weight: 700;
+//   font-style: normal;
+// }
 
-.carousel-container {
-  position: absolute;
-  top: 83%;
-  left: 0%;
-  z-index: 1;
-}
+// .image.isActive {
+//   opacity: 1;
+// }
 
-.image {
-  width: 100px;
-  height: 81px;
-  opacity: 0.5;
-  z-index: 1;
+// .section-colourways {
+//   position: relative;
+//   padding-left: 35px;
+//   height: 100%;
+//   width: 100%;
+//   font-family: 'HCo Gotham SSm';
+// }
 
-  @media only screen and (min-width: 765px) {
-    width: 139px;
-    height: 142px;
-  }
-}
+// .brand-wrapper {
+//   position: absolute;
+//   top: 0;
+//   left: 10px;
+//   bottom: 0;
+//   width: 100px;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+
+//   @media only screen and (min-width: 765px) {
+//     left: 40px;
+//   }
+// }
+
+// .brand {
+//   font-family: 'HCo Gotham SSm';
+//   transform: rotate(-90deg);
+//   font-weight: 900;
+//   font-size: 1330%;
+//   padding-left: 2%;
+//   z-index: 0;
+//   color: #333;
+//   flex-wrap: wrap;
+
+//   @media only screen and (min-width: 765px) {
+//     font-size: 2030%;
+//   }
+// }
+
+// .adidas-logo {
+//   display: none;
+//   z-index: 1;
+
+//   @media only screen and (min-width: 765px) {
+//     display: inline;
+//     position: absolute;
+//     top: 4%;
+//     left: 8%;
+//     width: 125px;
+//   }
+// }
+
+// .add {
+//   position: absolute;
+//   top: 33%;
+//   left: 19%;
+//   width: 29px;
+//   z-index: 1;
+  
+//   @media only screen and (min-width: 765px) {
+//     position: absolute;
+//     top: 32%;
+//     left: 21%;
+//     width: 54px;
+//   }
+// }
+
+// .mainshoe {
+//   position: absolute;
+//   top: 19%;
+//   left: 8%;
+//   width: 330px;
+//   z-index: 1;
+
+//   @media only screen and (min-width: 765px) {
+//     position: absolute;
+//     top: 16%;
+//     left: 11%;
+//     width: 604px;
+//   }
+// }
+
+// .addafter {
+//   position: absolute;
+//   top: 56%;
+//   left: 61%;
+//   width: 29px;
+//   z-index: 1;
+
+//   @media only screen and (min-width: 765px) {
+//     width: 54px;
+//   }
+// }
+
+// .shoppingbagtexttitle {
+//   font-family: 'HCo Gotham SSm';
+//   color: white;
+//   position: absolute;
+//   top: 44%;
+//   right: 5%;
+//   font-size: 16px;
+//   z-index: 1;
+
+//   @media only screen and (min-width: 765px) {
+//     font-size: 57px;
+//   }
+// }
+
+// .shoppingbagtext {
+//   font-family: 'HCo Gotham SSm';
+//   color: white;
+//   position: absolute;
+//   top: 49%;
+//   left: 78%;
+//   font-size: 16px;
+//   z-index: 1;
+//   right: 5%;
+
+//   @media only screen and (min-width: 765px) {
+//     font-size: 50px;
+//     left: 67%;
+//     top: 52%;
+//   }
+// }
+
+// .shoppingbagicon {
+//   position: absolute;
+//   width: 50px;
+//   top: 54%;
+//   left: 81%;
+//   z-index: 1;
+
+//   @media only screen and (min-width: 765px) {
+//     width: 111px;
+//     left: 79%;
+//     top: 61%;
+//   }
+// }
+
+// .carousel-container {
+//   position: absolute;
+//   top: 83%;
+//   left: 0%;
+//   z-index: 1;
+// }
+
+// .image {
+//   width: 100px;
+//   height: 81px;
+//   opacity: 0.5;
+//   z-index: 1;
+
+//   @media only screen and (min-width: 765px) {
+//     ]width: 139px;
+//     height: 142px;
+//   }
+// }
 
 
 // .mainimage {
