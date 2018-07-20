@@ -4,8 +4,8 @@
       {{ franchise }}
     </div>
     <div class="main-container">
-      <div class="hotspot hotspot--invert"/>
-      <div class="hotspot hotspot--invert hotspot--right"/>
+      <div class="hotspot hotspot--invert" @click="displayModal(0)"/>
+      <div class="hotspot hotspot--invert hotspot--right" @click="displayModal(1)"/>
       <div class="product-info">
         <span class="title">{{ franchise }}</span>
         <span class="price">£80.00</span>
@@ -36,7 +36,7 @@
     <h1
       id="modalh"
       slot="header">
-      {{ content.hotspots }}
+      {{ hotspots[activeHotspot].title }}
     </h1>
     <h2 slot="body">
       <span id="modalb">DISRUPTIVELY SIMPLE</span>
@@ -215,6 +215,7 @@ export default {
   width: 45px;
   height: 45px;
   color: black;
+  z-index: 2;
 
   &::before,
   &::after {
