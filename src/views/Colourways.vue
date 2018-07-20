@@ -17,7 +17,7 @@
     </div>
     <Carousel
       ref="carousel"
-      :slides="content.products"
+      :slides="colourways"
       :options="options"
       class="carousel-container">
       <div
@@ -53,13 +53,15 @@
 
 <script>
 import Carousel from '@/containers/Carousel.vue';
-import modal from '@/components/Modal.vue';
+import Modal from '@/components/Modal.vue';
+import Titles from '@/components/Titles.vue';
 
 export default {
   name: 'ColourwaysContainer',
   components: {
     Carousel,
-    modal,
+    Modal,
+    Titles,
   },
 
   props: {
@@ -77,9 +79,9 @@ export default {
 
   data() {
     return {
+      activeHotspot: null,
       showModal: false,
       selectedIndex: 0,
-      activeHotspot: 0,
       options: {
         slidesPerView: 4,
         breakpoints: {
@@ -88,6 +90,7 @@ export default {
           },
         },
       },
+      colourways: JSON.parse(JSON.stringify(this.data.products)),
     };
   },
 
@@ -97,17 +100,33 @@ export default {
     },
 
     mainImage() {
-      return this.content.products[this.selectedIndex].image.desktop;
+      return this.colourways[this.selectedIndex].image.desktop;
     },
-    content() {
-      return this.data;
+
+    hotspots() {
+      return this.data.hotspots;
     },
   },
 
+  mounted() {
+    this.colourways.map((obj) => {
+      const colourway = obj;
+      colourway.active = false;
+      return colourway;
+    });
+
+    this.selectColourway(0);
+  },
+
   methods: {
-    changeImage(selectedSlide) {
-      this.content[this.selectedIndex].active = false;
-      this.content[selectedSlide].active = true;
+    displayModal(contentIndex) {
+      this.showModal = true;
+      this.activeHotspot = contentIndex;
+    },
+
+    selectColourway(selectedSlide) {
+      this.colourways[this.selectedIndex].active = false;
+      this.colourways[selectedSlide].active = true;
 
       this.selectedIndex = selectedSlide;
     },
