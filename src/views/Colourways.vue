@@ -17,9 +17,15 @@
         @click="showModal = true">
       <h3 class="shoppingbagtexttitle">{{ franchise }}</h3>
       <h4 class="shoppingbagtext">£80.00</h4>
-      <img
-        src="../assets/shoppingbag.png"
-        class="shoppingbagicon">
+      <QuickBuy
+        :position="`${this.$route.params.gender}-${this.$route.name}`"
+        :path="`${this.$route.fullPath}`"
+        :name="`${this.$route.params.gender}-product-add-plu`"
+      >
+        <img
+          src="../assets/shoppingbag.png"
+          alt="shopping-basket">
+      </QuickBuy>
     </div>
     <Carousel
       ref="carousel"
@@ -60,12 +66,14 @@
 <script>
 import Carousel from '@/containers/Carousel.vue';
 import modal from '@/components/Modal.vue';
+import QuickBuy from '@/components/QuickBuy.vue';
 
 export default {
   name: 'ColourwaysContainer',
   components: {
     Carousel,
     modal,
+    QuickBuy,
   },
 
   data() {
@@ -144,11 +152,11 @@ export default {
 
 <style lang="scss" scoped>
 @font-face {
-font-family: 'HCo Gotham SSm';
-src:url('../assets/fonts/F4715F49B60D9B144.woff2') format('woff2'),
-url('../assets/fonts/F4715F49B60D9B144.woff') format('woff');
-font-weight: 400;
-font-style: normal;
+  font-family: 'HCo Gotham SSm';
+  src:url('../assets/fonts/F4715F49B60D9B144.woff2') format('woff2'),
+  url('../assets/fonts/F4715F49B60D9B144.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
 }
 
 @font-face {

@@ -1,21 +1,20 @@
 <template>
   <div class="social">
-    <p class="social__text">{{ header.text }}</p>
-    <h2 class="social__title">{{ header.title }}</h2>
+    <p class="social__text">{{ content.header.text }}</p>
+    <h2 class="social__title">{{ content.header.title }}</h2>
     <div
       :class="{'grid--animate': activateAnimation}"
       class="grid">
       <Spot
-        v-for="(slide,key) in slides"
+        v-for="(slide, key) in content.slides"
         :key="key"
         v-bind="slide"
         class="grid__product">
         <span class="grid__product__text">{{ slide.text }}</span>
-        <QuickBuy :text="header.text"/>
+        <QuickBuy :text="content.header.text"/>
       </Spot>
 
     </div>
-
     <a
       href="#"
       class="social__cta">
@@ -28,6 +27,7 @@
 import inView from 'in-view';
 import Spot from '@/components/Spot.vue';
 import QuickBuy from '@/components/QuickBuy.vue';
+import json from '@/content/social.json';
 
 inView.threshold(0.5);
 
@@ -40,13 +40,9 @@ export default {
   data() {
     return {
       activateAnimation: true,
-      header: {
-        text: 'Get Social',
-        title: '#Creator',
-      },
+      content: json,
     };
   },
-
   mounted() {
     inView('.social')
       .on('enter', () => {

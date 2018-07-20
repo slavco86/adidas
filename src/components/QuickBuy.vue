@@ -1,37 +1,37 @@
 <template>
   <button
-    :data-ip-position="text"
-    :data-ip-name="text"
-    class="ga-ip quickBuy"
-    @click="quickBuy">
-    <!-- <slot/> -->
-    <img
-      src="../assets/basket-icon.svg"
-      alt="quick-buy">Quick Buy
+    :data-ip-position="position"
+    :data-quickview-path="path"
+    :data-ip-name="name"
+    class="ga-ip quickBuy quickView">
+    <slot/>
   </button>
 </template>
 
 <script>
 export default {
-  inject: {
-    name: {
-      default: undefined,
-    },
-  },
+  // inject: {
+  //   name: {
+  //     default: undefined,
+  //   },
+  // },
   props: {
-    url: {
+    position: {
       type: String,
       default: undefined,
     },
-    text: {
+    path: {
+      type: String,
+      default: undefined,
+    },
+    name: {
       type: String,
       default: undefined,
     },
   },
-
-  methods: {
-    quickBuy() {
-      console.log('Clicked!');
+  computed: {
+    franchise() {
+      return this.$route.params.franchise;
     },
   },
 };
