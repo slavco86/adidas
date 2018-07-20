@@ -8,18 +8,8 @@
             class="close"
             src="../assets/close_white.png"
             @click="$emit('close')">
-          <div
-            id="modalh"
-            class="modal-header">
-            <slot name="header" >
-              default header
-            </slot>
-          </div>
           <div class="modal-body">
-            <slot name="body"/>
-          </div>
-          <div class="modal-footer">
-            <slot name="footer"/>
+            <slot/>
           </div>
         </div>
       </div>
