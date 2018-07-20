@@ -3,6 +3,7 @@
     <div class="brand">
       {{ franchise }}
     </div>
+    <Logo color="white" class="logo"/>
     <div class="main-container">
       <div class="hotspot hotspot--invert" @click="displayModal(0)"/>
       <div class="hotspot hotspot--invert hotspot--right" @click="displayModal(1)"/>
@@ -33,20 +34,7 @@
   <modal
     v-if="showModal"
     @close="showModal = false" >
-    <h1
-      id="modalh"
-      slot="header">
-      {{ hotspots[activeHotspot].title }}
-    </h1>
-    <h2 slot="body">
-      <span id="modalb">DISRUPTIVELY SIMPLE</span>
-      <br><br>
-      <span class="modalc">With Deerupt, a silhouette becomes <br>
-        the unexpected. Comfort becomes <br>
-        the unprecedented. Fit becomes <br>
-        an experience.
-      </span>
-    </h2>
+    
   </modal>
 </div>
 </template>
@@ -55,6 +43,7 @@
 import Carousel from '@/containers/Carousel.vue';
 import Modal from '@/components/Modal.vue';
 import Titles from '@/components/Titles.vue';
+import Logo from '@/components/AdidasLogo.vue';
 
 export default {
   name: 'ColourwaysContainer',
@@ -62,6 +51,7 @@ export default {
     Carousel,
     Modal,
     Titles,
+    Logo,
   },
 
   props: {
@@ -145,6 +135,19 @@ export default {
   align-items: center;
   height: 100vh;
   width: 100vw;
+}
+
+.logo {
+  width: 70px;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  opacity: 0;
+  transition: opacity 1s;
+
+  @media screen and (min-width: 765px) {
+    opacity: 1;
+  }
 }
 
 .main-container {
