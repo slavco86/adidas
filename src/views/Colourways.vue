@@ -15,7 +15,6 @@
         <img :src="mainImage" class="mainshoe">
       </div>    
     </div>
-      <!-- <img class="adidas-logo" src="../assets/adidas_white.svg"> -->
     <Carousel
       ref="carousel"
       :slides="content.products"
