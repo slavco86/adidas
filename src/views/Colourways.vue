@@ -34,7 +34,10 @@
   <modal
     v-if="showModal"
     @close="showModal = false" >
-    
+
+    <Titles 
+    :headline="hotspots[activeHotspot].title"
+    :subtext="hotspots[activeHotspot].subtext"/>
   </modal>
 </div>
 </template>
