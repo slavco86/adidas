@@ -7,7 +7,8 @@
       <img
         class="add"
         src="../assets/add.png"
-        @click="showModal = true; activeHotspot = 0">
+        @click="displayModal(0)">
+
       <div class="mainShoeContainer">
         <img
           :src="mainImage"
@@ -18,7 +19,7 @@
         id="addafter"
         class="addafter"
         src="../assets/add.png"
-        @click="showModal = true; activeHotspot = 1">
+        @click="displayModal(1)">
 
       <h3 class="shoppingbagtexttitle">{{ franchise }}</h3>
       <h4 class="shoppingbagtext">£80.00</h4>
@@ -29,7 +30,7 @@
 
     <Carousel
       ref="carousel"
-      :slides="content.products"
+      :slides="colourways"
       :options="options"
       class="carousel-container">
       <div
@@ -39,7 +40,7 @@
           :src="slide.image.desktop"
           :class="{ isActive : slide.active }"
           class="image"
-          @click="changeImage(slide.key)">
+          @click="selectColourway(slide.key)">
       </div>
     </Carousel>
 
@@ -52,8 +53,8 @@
       @close="showModal = false" >
       <Titles
         slot="header"
-        :headline="content.hotspots[activeHotspot].title"
-        :subtext="content.hotspots[activeHotspot].subtext"/>
+        :headline="hotspots[activeHotspot].title"
+        :subtext="hotspots[activeHotspot].subtext"/>
     </Modal>
   </div>
 </template>
@@ -86,16 +87,15 @@ export default {
 
   data() {
     return {
+      activeHotspot: null,
       showModal: false,
       selectedIndex: 0,
-      activeHotspot: 0,
       options: {
         contentPerView: 7,
         breakpoints: {
           764: {
             contentPerView: 4.5,
             spaceBetween: 10,
-
           },
           1024: {
             contentPerView: 5.2,
@@ -103,6 +103,7 @@ export default {
           },
         },
       },
+      colourways: JSON.parse(JSON.stringify(this.data.products)),
     };
   },
 
@@ -112,17 +113,33 @@ export default {
     },
 
     mainImage() {
-      return this.content.products[this.selectedIndex].image.desktop;
+      return this.colourways[this.selectedIndex].image.desktop;
     },
-    content() {
-      return this.data;
+
+    hotspots() {
+      return this.data.hotspots;
     },
   },
 
+  mounted() {
+    this.colourways.map((obj) => {
+      const colourway = obj;
+      colourway.active = false;
+      return colourway;
+    });
+
+    this.selectColourway(0);
+  },
+
   methods: {
-    changeImage(selectedSlide) {
-      this.content[this.selectedIndex].active = false;
-      this.content[selectedSlide].active = true;
+    displayModal(contentIndex) {
+      this.showModal = true;
+      this.activeHotspot = contentIndex;
+    },
+
+    selectColourway(selectedSlide) {
+      this.colourways[this.selectedIndex].active = false;
+      this.colourways[selectedSlide].active = true;
 
       this.selectedIndex = selectedSlide;
     },
