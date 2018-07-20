@@ -28,14 +28,14 @@
         :src="slide.image.desktop"
         :class="{ isActive : slide.active }"
         class="image"
-        @click="changeImage(slide.key)">
+        @click="selectColourway(slide.key)">
     </div>
   </Carousel>
   <modal
     v-if="showModal"
-    @close="showModal = false" >
+    @close="showModal = false">
 
-    <Titles 
+    <Titles
     :headline="hotspots[activeHotspot].title"
     :subtext="hotspots[activeHotspot].subtext"/>
   </modal>
