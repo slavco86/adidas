@@ -3,14 +3,9 @@
     :class="{'home--invert': gender === 'women'}"
     class="home">
     <nav class="nav">
-      <img
-        v-if="gender === 'women'"
-        class="logo"
-        src="../assets/adidas-logo.svg">
-      <img
-        v-if="gender === 'men'"
-        class="logo"
-        src="../assets/adidas-logo-white.svg">
+      <Logo
+        :color="logoColor"
+        class="logo"/>
       <router-link
         :to="'men'"
         tag="span">
@@ -102,7 +97,7 @@
 </template>
 
 <script>
-// @ is an alias to /src
+import Logo from '@/components/AdidasLogo.vue';
 import Carousel from '@/containers/Carousel.vue';
 import Countdown from '@/components/Countdown.vue';
 import Spot from '@/components/Spot.vue';
@@ -110,6 +105,7 @@ import Spot from '@/components/Spot.vue';
 export default {
   name: 'Home',
   components: {
+    Logo,
     Carousel,
     Spot,
     Countdown,
@@ -152,6 +148,10 @@ export default {
         this.setExpired(slides);
       }
       return slides;
+    },
+
+    logoColor() {
+      return (this.gender === 'men') ? '#fff' : undefined;
     },
   },
 
