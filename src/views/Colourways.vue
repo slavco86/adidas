@@ -48,62 +48,6 @@
     </div>
 </template>
 
-
-
-  <!-- <div class="colourwayscontainer">
-    <div class="franchise-container">
-      <h1 class="derupt">{{ franchise }}</h1>
-    </div>
-
-    <img
-      id="addafter"
-      class="addafter"
-      src="../assets/add.png"
-      @click="showModal = true; activeHotspot = 1">
-
-    <h3 class="shoppingbagtexttitle">{{ franchise }}</h3>
-    <h4 class="shoppingbagtext">£80.00</h4>
-    <img
-      src="../assets/shoppingbag.png"
-      class="shoppingbagicon">
-
-    <Carousel
-      ref="carousel"
-      :slides="content.products"
-      :options="options"
-      class="carousel-container">
-      <div
-        slot-scope="{slide}"
-        class="image-container">
-        <img
-          :src="slide.image.desktop"
-          :class="{ isActive : slide.active }"
-          class="image"
-          @click="changeImage(slide.key)">
-      </div>
-    </Carousel>
-
-    <modal
-      v-if="showModal"
-      @close="showModal = false" >
-      <h1
-        id="modalh"
-        slot="header">
-        {{ content.hotspots }}
-      </h1>
-      <h2 slot="body">
-        <span id="modalb">DISRUPTIVELY SIMPLE</span>
-        <br><br>
-        <span class="modalc">With Deerupt, a silhouette becomes <br>
-          the unexpected. Comfort becomes <br>
-          the unprecedented. Fit becomes <br>
-          an experience.
-        </span>
-      </h2>
-    </modal>
-  </div> -->
-
-
 <script>
 import Carousel from '@/containers/Carousel.vue';
 import modal from '@/components/Modal.vue';
@@ -138,7 +82,7 @@ export default {
         breakpoints: {
           764: {
             contentPerView: 2,
-            spaceBetween: -90, //temporary space between while we fix issue with computed properties
+            // spaceBetween: -90, //temporary space between while we fix issue with computed properties
 
           },
           1024: {
@@ -225,7 +169,10 @@ font-style: normal;
   display: flex;
   align-items: center;
   justify-content: center;
-  
+
+  @media only screen and (min-width: 765px) {
+    left: 40px;
+  }
 }
 
 .brand {
@@ -235,14 +182,25 @@ font-style: normal;
   font-size: 1330%;
   padding-left: 2%;
   z-index: 0;
-  color: #333333;
+  color: #333;
   flex-wrap: wrap;
-}
 
+  @media only screen and (min-width: 765px) {
+    font-size: 2030%;
+  }
+}
 
 .adidas-logo {
   display: none;
   z-index: 1;
+
+  @media only screen and (min-width: 765px) {
+    display: inline;
+    position: absolute;
+    top: 4%;
+    left: 8%;
+    width: 125px;
+  }
 }
 
 .add {
@@ -251,6 +209,13 @@ font-style: normal;
   left: 19%;
   width: 29px;
   z-index: 1;
+  
+  @media only screen and (min-width: 765px) {
+    position: absolute;
+    top: 32%;
+    left: 21%;
+    width: 54px;
+  }
 }
 
 .mainshoe {
@@ -259,6 +224,13 @@ font-style: normal;
   left: 8%;
   width: 330px;
   z-index: 1;
+
+  @media only screen and (min-width: 765px) {
+    position: absolute;
+    top: 16%;
+    left: 11%;
+    width: 604px;
+  }
 }
 
 .addafter {
@@ -267,6 +239,10 @@ font-style: normal;
   left: 61%;
   width: 29px;
   z-index: 1;
+
+  @media only screen and (min-width: 765px) {
+    width: 54px;
+  }
 }
 
 .shoppingbagtexttitle {
@@ -277,6 +253,10 @@ font-style: normal;
   right: 5%;
   font-size: 16px;
   z-index: 1;
+
+  @media only screen and (min-width: 765px) {
+    font-size: 57px;
+  }
 }
 
 .shoppingbagtext {
@@ -287,6 +267,13 @@ font-style: normal;
   left: 78%;
   font-size: 16px;
   z-index: 1;
+  right: 5%;
+
+  @media only screen and (min-width: 765px) {
+    font-size: 50px;
+    left: 67%;
+    top: 52%;
+  }
 }
 
 .shoppingbagicon {
@@ -295,6 +282,12 @@ font-style: normal;
   top: 54%;
   left: 81%;
   z-index: 1;
+
+  @media only screen and (min-width: 765px) {
+    width: 111px;
+    left: 79%;
+    top: 61%;
+  }
 }
 
 .carousel-container {
@@ -309,6 +302,11 @@ font-style: normal;
   height: 81px;
   opacity: 0.5;
   z-index: 1;
+
+  @media only screen and (min-width: 765px) {
+    width: 139px;
+    height: 142px;
+  }
 }
 
 
