@@ -6,7 +6,8 @@
         src="../assets/adidas_white.svg">
       <img
         class="add"
-        src="../assets/add.png">
+        src="../assets/add.png"
+        @click="showModal = true; activeHotspot = 0">
       <div class="mainShoeContainer">
         <img
           :src="mainImage"
@@ -46,36 +47,28 @@
       <h1 class="derupt">{{ franchise }}</h1>
     </div>
 
-    <modal
+    <Modal
       v-if="showModal"
       @close="showModal = false" >
-      <h1
-        id="modalh"
-        slot="header">
-        {{ content.hotspots }}
-      </h1>
-      <h2 slot="body">
-        <span id="modalb">DISRUPTIVELY SIMPLE</span>
-        <br><br>
-        <span class="modalc">With Deerupt, a silhouette becomes <br>
-          the unexpected. Comfort becomes <br>
-          the unprecedented. Fit becomes <br>
-          an experience.
-        </span>
-      </h2>
-    </modal>
+      <Titles
+        slot="header"
+        :headline="content.hotspots[activeHotspot].title"
+        :subtext="content.hotspots[activeHotspot].subtext"/>
+    </Modal>
   </div>
 </template>
 
 <script>
 import Carousel from '@/containers/Carousel.vue';
-import modal from '@/components/Modal.vue';
+import Modal from '@/components/Modal.vue';
+import Titles from '@/components/Titles.vue';
 
 export default {
   name: 'ColourwaysContainer',
   components: {
     Carousel,
-    modal,
+    Modal,
+    Titles,
   },
 
   props: {
@@ -220,6 +213,7 @@ font-style: normal;
   left: 18%;
   width: 4.5%;
   height: 4%;
+  z-index: 2;
 }
 
 .mainshoe {
