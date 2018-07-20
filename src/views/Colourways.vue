@@ -11,11 +11,11 @@
       <div class="product-info">
         <span class="title">{{ franchise }}</span>
         <span class="price">£80.00</span>
+        <img src="../assets/basket-icon.svg" class="quickbuy-icon">
       </div>
       <div class="main-image">
         <img :src="mainImage" class="mainshoe">
       </div>    
-      <!-- <img src="../assets/shoppingbag.png" class="quickbuy-icon"> -->
     </div>
       <!-- <img class="adidas-logo" src="../assets/adidas_white.svg"> -->
       
@@ -156,15 +156,24 @@ export default {
   position: absolute;
   right: 10%;
   top: 45%;
+  text-align: right;
 
   span {
     font-size: 1rem;
     display: block;
     text-align: right;
+    margin: 5px;
   }
 
   .price {
     font-weight: bold;
+  }
+
+  .quickbuy-icon {
+    width: 35%;
+    height: auto;
+    filter: invert(100);
+    margin-top: 10px;
   }
 }
 
