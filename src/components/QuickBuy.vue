@@ -2,10 +2,12 @@
   <Button
     :data-quickview-path="url"
     :data-product-sku="sku"
-    :name="name"
+    :position="name"
     :sku="sku"
-    class="ga-ip quickView">
-    <slot/>
+    class="quickView">
+    <img
+      src="../assets/shoppingbag.png"
+      alt="shopping-basket">
   </Button>
 </template>
 

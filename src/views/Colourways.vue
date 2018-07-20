@@ -24,12 +24,8 @@
       <h3 class="shoppingbagtexttitle">{{ franchise }}</h3>
       <h4 class="shoppingbagtext">£80.00</h4>
       <QuickBuy
-        url="/product/black-nike-air-force-1-low/047951"
-        :name="`${this.$route.name}`">
-        <img
-          src="../assets/shoppingbag.png"
-          alt="shopping-basket">
-      </QuickBuy>
+        name="colourways"
+        url="/product/black-nike-air-force-1-low/047951"/>
     </div>
 
     <Carousel
@@ -70,11 +66,12 @@ import Modal from '@/components/Modal.vue';
 import Titles from '@/components/Titles.vue';
 
 export default {
-  name: 'ColourwaysContainer',
+  name: 'Colourways',
   components: {
     Carousel,
     Modal,
     Titles,
+    QuickBuy,
   },
 
   props: {
@@ -164,16 +161,18 @@ export default {
 
 @font-face {
   font-family: 'HCo Gotham SSm';
-  src: url('../assets/fonts/725262BC71949F842.woff2') format('woff2'),
-  url('../assets/fonts/725262BC71949F842.woff') format('woff');
+  src:
+    url('../assets/fonts/725262BC71949F842.woff2') format('woff2'),
+    url('../assets/fonts/725262BC71949F842.woff') format('woff');
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'HCo Gotham SSm';
-  src: url('../assets/fonts/B5416F0FED9EA9CD2.woff2') format('woff2'),
-  url('../assets/fonts/B5416F0FED9EA9CD2.woff') format('woff');
+  src:
+    url('../assets/fonts/B5416F0FED9EA9CD2.woff2') format('woff2'),
+    url('../assets/fonts/B5416F0FED9EA9CD2.woff') format('woff');
   font-weight: 700;
   font-style: normal;
 }
@@ -198,12 +197,12 @@ export default {
 }
 
 .mainimage /deep/ .quickBuy {
-  position: absolute;
-  right: 0.5rem;
   background: none;
   bottom: 8rem;
-  max-width: 70px;
   max-height: 70px;
+  max-width: 70px;
+  position: absolute;
+  right: 0.5rem;
 
   img {
     display: block;

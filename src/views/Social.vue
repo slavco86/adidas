@@ -8,7 +8,7 @@
         :class="{'grid--animate': active}"
         class="grid">
         <Spot
-          v-for="(slide,key) in slides"
+          v-for="(slide,key) in content.slides"
           :key="key"
           v-bind="slide"
           class="grid__product">
@@ -29,7 +29,7 @@
 <script>
 import Spot from '@/components/Spot.vue';
 import QuickBuy from '@/components/QuickBuy.vue';
-// import json from '@/content/social.json';
+import json from '@/content/social.json';
 
 export default {
   name: 'Social',
@@ -49,6 +49,7 @@ export default {
   data() {
     return {
       activateAnimation: true,
+      content: json,
     };
   },
 };
