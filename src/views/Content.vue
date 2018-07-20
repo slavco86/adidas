@@ -51,7 +51,7 @@ export default {
     return {
       anchors: ['colourways', 'social'],
       fullpage: null,
-      section: 'social',
+      section: 'colourways',
     };
   },
 
@@ -60,7 +60,7 @@ export default {
       if (newVal === false) {
         // TODO: sort this shit out.
         setTimeout(() => {
-          // this.enableFullpage();
+          this.enableFullpage();
         }, 1);
       }
     });
@@ -97,7 +97,7 @@ export default {
 <style lang="scss" scoped>
 .content-page {
   background-color: #222;
-  // required to pop over the top of MESH header
+  //required to pop over the top of MESH header
   z-index: 1;
   transform: translate3d(0, -50px, 0);
 
