@@ -12,9 +12,11 @@
           :key="key"
           v-bind="slide"
           class="grid__product">
+          <QuickBuy
+            :section="section"
+            url="/product/black-nike-air-force-1-low/047951"/>
           <span class="grid__product__text">{{ slide.text }}</span>
         </Spot>
-
       </div>
 
       <a
@@ -42,6 +44,10 @@ export default {
     active: {
       type: Boolean,
       default: false,
+    },
+    section: {
+      type: String,
+      default: undefined,
     },
   },
 
@@ -97,7 +103,7 @@ export default {
     padding: 0.5rem;
     transition: transform 1s ease-in-out;
 
-    /deep/ .quickBuy {
+    /deep/ .quickView {
       background: none;
       display: block;
       max-height: 50px;

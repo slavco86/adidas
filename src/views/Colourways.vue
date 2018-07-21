@@ -200,19 +200,9 @@ export default {
   z-index: 1;
 }
 
-.mainimage /deep/ .quickBuy {
-  background: none;
-  bottom: 8rem;
-  max-height: 70px;
-  max-width: 70px;
-  position: absolute;
-  right: 0.5rem;
-
-  img {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
+.mainimage /deep/ .quickView {
+  top: 60%;
+  right: 0.75rem;
 }
 
 .close {

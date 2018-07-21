@@ -3,8 +3,7 @@
     :data-quickview-path="url"
     :data-product-sku="sku"
     :section="section"
-    :sku="sku"
-    class="quickView">
+    :sku="sku">
     <img
       src="../assets/shoppingbag.png"
       alt="shopping-basket">
