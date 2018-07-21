@@ -2,7 +2,7 @@
   <Button
     :data-quickview-path="url"
     :data-product-sku="sku"
-    :position="name"
+    :section="section"
     :sku="sku"
     class="quickView">
     <img
@@ -24,6 +24,10 @@ export default {
       default: undefined,
     },
     name: {
+      type: String,
+      default: undefined,
+    },
+    section: {
       type: String,
       default: undefined,
     },

@@ -12,11 +12,11 @@
 <script>
 export default {
   props: {
-    name: {
+    sku: {
       type: String,
       default: undefined,
     },
-    sku: {
+    section: {
       type: String,
       default: undefined,
     },
@@ -27,7 +27,7 @@ export default {
       return (this.url) ? 'a' : 'button';
     },
     position() {
-      return `${this.$route.params.gender}-${this.$route.params.franchise}-${this.name}`;
+      return `${this.$route.params.gender}-${this.$route.params.franchise}-${this.section}`;
     },
   },
 };

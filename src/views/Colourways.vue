@@ -24,7 +24,7 @@
       <h3 class="shoppingbagtexttitle">{{ franchise }}</h3>
       <h4 class="shoppingbagtext">£80.00</h4>
       <QuickBuy
-        name="colourways"
+        :section="section"
         url="/product/black-nike-air-force-1-low/047951"/>
     </div>
 
@@ -80,6 +80,10 @@ export default {
       default() {
         return {};
       },
+    },
+    section: {
+      type: String,
+      default: undefined,
     },
     active: {
       type: Boolean,
@@ -569,4 +573,3 @@ export default {
 }
 
 </style>
-
