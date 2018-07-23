@@ -3,7 +3,9 @@
     <div class="brand">
       {{ franchise }}
     </div>
-    <Logo color="white logo"/>
+    <Logo
+      color="#ffffff"
+      class="logo"/>
     <div class="main-container">
       <div
         class="hotspot hotspot--invert"
@@ -13,7 +15,7 @@
         @click="displayModal(1)"/>
       <div class="product-info">
         <span class="title">{{ franchise }}</span>
-        <span class="price">£80.00</span>
+        <span class="price">£{{ colourways[selectedIndex].price }}</span>
         <img
           src="../assets/basket-icon.svg"
           class="quickbuy-icon">
@@ -169,10 +171,10 @@ export default {
 
 .main-image {
   padding: 4rem;
-  margin-top: 5rem;
+  margin-top: 0;
 
   @media screen and (min-width: 765px) {
-    margin-top: 0;
+    margin-top: 5rem;
   }
 }
 
@@ -256,7 +258,7 @@ export default {
   &--invert {
     &::after,
     &::before {
-      border-color: white;
+      border-color: #fff;
     }
   }
 
