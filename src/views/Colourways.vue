@@ -39,7 +39,9 @@
       :headline="hotspots[activeHotspot].title"
       :subtext="hotspots[activeHotspot].subtext"
       class="modal-container"
-      :class="{'modal-container--pod': this.$route.params.franchise === 'POD'}"/>
+      :class="{'modal-container--pod': this.$route.params.franchise === 'POD',
+                'modal-container--samba': this.$route.params.franchise === 'Sambarose'
+              }"/>
   </modal>
 </div>
 </template>
@@ -83,6 +85,7 @@ export default {
         breakpoints: {
           764: {
             slidesPerView: 2,
+            spaceBetween: -100,
           },
         },
       },
@@ -218,6 +221,7 @@ export default {
 .carousel-container /deep/ .image {
   width: 100%;
   opacity: 0.5;
+  padding: 26%;
 
   @media screen and (min-width: 765px) {
     width: 70%;
@@ -289,13 +293,17 @@ export default {
 }
 
 .modal-container--pod /deep/ .title1 {
-  color: white;
+  color: pink;
   font-weight: 900;
 }
 
 .modal-container--pod /deep/ .title2 {
   color: white;
   font-weight: 300;
+}
+
+.modal-container--samba /deep/ .title1 {
+  padding-top: 32%;
 }
 
 </style>

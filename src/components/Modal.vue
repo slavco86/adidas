@@ -3,17 +3,24 @@
     <div class="modal-mask">
       <div class="modal-wrapper">
         <div class="modal-container"
-            :class="{ podContainer: pod }">
+            :class="{ podContainer: pod,
+                      srContainer: sambarose
+                     }">
             <img
             class="close"
             src="../assets/close_black.png"
             @click="$emit('close')">
           <div class="modal-body">
             <img
-            :class="{ deeruptLogo: deerupt, podLogo: pod }"
+            :class="{ deeruptLogo: deerupt, 
+                      podLogo: pod, 
+                      sambaroseLogo: sambarose 
+                    }"
             src="../assets/adidas-logo.svg">
-            <div :class="{ franchiseTitle: deerupt, 
-            franchisePOD: pod }">
+            <div :class="{ franchiseDeerupt: deerupt, 
+                          franchisePOD: pod,
+                          franchiseSR: sambarose 
+                        }">
               {{ franchise }}
               {{ franchiseUpdate }}
             </div>
@@ -64,32 +71,6 @@ export default {
 
 <style scoped>
 
-@font-face {
-font-family: 'HCo Gotham SSm';
-src:url('../assets/fonts/F4715F49B60D9B144.woff2') format('woff2'),
-url('../assets/fonts/F4715F49B60D9B144.woff') format('woff');
-font-weight: 400;
-font-style: normal;
-}
-
-
-@font-face {
-font-family: 'HCo Gotham SSm';
-src:url('../assets/fonts/725262BC71949F842.woff2') format('woff2'),
-url('../assets/fonts/725262BC71949F842.woff') format('woff');
-font-weight: 500;
-font-style: normal;
-}
-
-
-@font-face {
-  font-family: 'HCo Gotham SSm';
-  src: url('../assets/fonts/B5416F0FED9EA9CD2.woff2') format('woff2'),
-  url('../assets/fonts/B5416F0FED9EA9CD2.woff') format('woff');
-  font-weight: 700;
-  font-style: normal;
-}
-
 .modal-mask {
   position: fixed;
   z-index: 9998;
@@ -127,6 +108,10 @@ font-style: normal;
   background-color: #3333ff !important;
 }
 
+.srContainer {
+  background-image: none;
+}
+
 .modal-body {
   margin: 55% 0;
 }
@@ -153,31 +138,46 @@ font-style: normal;
 }
 
 .deeruptLogo,
-.podLogo {
+.sambaroseLogo {
   width: 22%;
 }
 
-.podLogo {
+.sambaroseLogo {
   position: absolute;
-  filter: invert(1);
-  bottom: -163%;
-  right: 2%;
-  width: 18%;
+  top: 149%;
+  left: 41%;
 }
 
-.franchiseTitle {
+.podLogo {
+  display: none;
+}
+
+.franchiseDeerupt {
   font-size: 66px;
   font-weight: 600;
   color: #222;
 }
 
 .franchisePOD {
-  color: white;
+  color: #3333ff;
   position: absolute;
-  top: 225%;
-  left: 22%;
-  font-size: 504%;
-  font-weight: 300;
+  top: 238%;
+  left: 10%;
+  background: url(../assets/podpink.svg);
+  background-repeat: no-repeat;
+  width: 85%;
+  height: 100%;
+}
+
+.franchiseSR {
+  color: white;
+  background: url(../assets/sambarosepinklogo.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 17%;
+  left: 0%;
+  height: 24px;
+  width: 314px;
 }
 
 .franchiseInfo {
