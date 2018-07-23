@@ -207,8 +207,12 @@ export default {
 }
 
 .mainimage /deep/ .quickView {
-  top: 60%;
+  top: 58%;
   right: 0.75rem;
+
+  .cls-1 {
+    stroke: #fff;
+  }
 }
 
 .close {
@@ -230,7 +234,7 @@ export default {
 
 .derupt {
   font-family: 'HCo Gotham SSm';
-  color:#333333;
+  color:#333;
   letter-spacing: -10px;
   font-size: 169px;
   font-weight: 900;

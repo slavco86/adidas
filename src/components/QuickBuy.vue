@@ -4,28 +4,27 @@
     :data-product-sku="sku"
     :context="context"
     :sku="sku">
-    <img
+    <!-- <img
       src="../assets/basket-icon.svg"
-      alt="shopping-basket">
+      alt="shopping-basket"> -->
+    <BasketLogo/>
   </Button>
 </template>
 
 <script>
 import Button from '@/components/Button.vue';
+import BasketLogo from '@/components/BasketLogo.vue';
 
 export default {
   components: {
     Button,
+    BasketLogo,
   },
   props: {
     url: {
       type: String,
       default: undefined,
     },
-    // name: {
-    //   type: String,
-    //   default: undefined,
-    // },
     context: {
       type: String,
       default: undefined,

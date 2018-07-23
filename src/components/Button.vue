@@ -33,11 +33,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .cta {
-    cursor: pointer;
-    color: inherit;
-    text-decoration: none;
-  }
+  // .cta {
+  //   cursor: pointer;
+  //   color: inherit;
+  //   text-decoration: none;
+  // }
 
   .quickView {
     background: none;
