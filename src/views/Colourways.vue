@@ -33,8 +33,8 @@
   </Carousel>
   <modal
     v-if="showModal"
-    @close="showModal = false">
-
+    @close="showModal = false"
+    :modalFranchise="modalFranchise">
     <Titles
     :headline="hotspots[activeHotspot].title"
     :subtext="hotspots[activeHotspot].subtext"/>
@@ -72,6 +72,7 @@ export default {
 
   data() {
     return {
+      modalFranchise: '',
       activeHotspot: null,
       showModal: false,
       selectedIndex: 0,
@@ -89,6 +90,7 @@ export default {
 
   computed: {
     franchise() {
+      this.modalFranchise = this.$route.params.franchise;
       return this.$route.params.franchise;
     },
 

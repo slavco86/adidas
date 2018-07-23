@@ -3,13 +3,20 @@
     <div class="modal-mask">
       <div class="modal-wrapper">
         <div class="modal-container">
-          <img
-            id="closem"
+            <img
             class="close"
-            src="../assets/close_white.png"
+            src="../assets/close_black.png"
             @click="$emit('close')">
           <div class="modal-body">
-            <slot/>
+            <img
+            :class="{ deeruptLogo: deerupt }"
+            src="../assets/adidas-logo.svg">
+            <div :class="{ franchiseTitle: deerupt }">
+              {{ franchise }}
+              {{ franchiseUpdate }}
+            </div>
+            <slot :class="{ franchiseInfo: deerupt }">
+            </slot>
           </div>
         </div>
       </div>
@@ -20,6 +27,36 @@
 <script>
 export default {
   name: 'Modal',
+  props: {
+    modalFranchise: {
+      type: String,
+      required: false,
+      default: 'defaultBrand',
+    }
+  },
+  data() {
+    return {
+      franchise: this.modalFranchise,
+      deerupt:   false,
+      sambarose: false,
+      pod:       false,
+      allBrands: false
+    }
+  },
+  computed: {
+    franchiseUpdate() {
+      var lcFranchise = this.franchise.toLowerCase();
+        if  (lcFranchise == 'deerupt') {
+            this.deerupt = true;
+        } else if (lcFranchise == 'sambarose') {
+            this.sambarose = true;
+        } else if (lcFranchise == 'pod') {
+            this.pod = true;
+        } else {
+          this.allBrands = true;
+        }
+    }
+  }
 };
 </script>
 
@@ -49,16 +86,6 @@ font-style: normal;
   url('../assets/fonts/B5416F0FED9EA9CD2.woff') format('woff');
   font-weight: 700;
   font-style: normal;
-}
-
-#modalh {
-  padding-top: 58%;
-}
-
-#closem {
-  position: relative;
-  left: 45%;
-  width: 50px;
 }
 
 .modal-mask {
@@ -93,11 +120,6 @@ font-style: normal;
   background-repeat: no-repeat;
 }
 
-.modal-header h3 {
-  margin-top: 0;
-  color: #42b983;
-}
-
 .modal-body {
   margin: 20px 0;
 }
@@ -116,64 +138,22 @@ font-style: normal;
   transform: scale(1.1);
 }
 
-@media only screen and (min-width: 765px) {
-
-  .modal-container {
-    width: 765px;
-    height: 1024px;
-    margin: 0px auto;
-    padding: 20px 30px;
-    background-color: #fff;
-    border-radius: 2px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
-    transition: all .3s ease;
-    font-family: Helvetica, Arial, sans-serif;
-    background-image: url("../assets/swtablet.png");
-    background-repeat: no-repeat center center fixed;
-    background-size: cover;
+.close {
+  position: absolute;
+  top: 2%;
+  right: 3%;
+  width: 16%;
 }
 
-#closem {
-  position: relative;
-  left: 45%;
-  width: 63px;
+.deeruptLogo {
+  background-color: red;
 }
 
-#modalh {
-  padding-top: 20%;
+.franchiseTitle {
+  background-color: yellow;
 }
 
-@media only screen and (min-width: 1025px) {
-
-.modal-container {
-    width: 718px;
-    height: 529px;
-    margin: 0px auto;
-    padding: 20px 30px;
-    background-color: #fff;
-    border-radius: 2px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
-    transition: all .3s ease;
-    font-family: Helvetica, Arial, sans-serif;
-    /* background-image: url("../assets/swdesktop.png");
-    background-repeat: no-repeat; */
-
-  }
-
-  #closem {
-    position: relative;
-    margin-top: -7%;
-    left: 53%;
-    width: 53px;
-  }
-
-  #modalh {
-    padding-top: 8%;
-  }
-
-  }
-
+.franchiseInfo {
+  background-color: black;
 }
-
-
 </style>
