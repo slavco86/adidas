@@ -1,10 +1,6 @@
 <template>
   <div class="content-page">
-    <router-link
-      to="/"
-      class="close">
-      <img src="../assets/close_white.png">
-    </router-link>
+    <CloseButton/>
     <div id="content">
       <div
         v-for="component in anchors"
@@ -24,6 +20,7 @@
 import Fullpage from 'fullpage.js';
 import 'fullpage.js/dist/fullpage.css';
 
+import CloseButton from '@/components/ButtonClose.vue';
 import Colourways from '@/views/Colourways.vue';
 import Social from '@/views/Social.vue';
 import ShoppableVideo from '@/views/ShoppableVideo.vue';
@@ -32,6 +29,7 @@ import SketchFabModel from '@/views/SketchFabModel.vue';
 export default {
   name: 'ContentContainer',
   components: {
+    CloseButton,
     Colourways,
     Social,
     ShoppableVideo,
@@ -107,18 +105,6 @@ export default {
 
   @media screen and (min-width: 765px) {
     transform: translate3d(0, -202px, 0);
-  }
-}
-
-.close {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  z-index: 5;
-
-  img {
-    width: 59px;
-    height: auto;
   }
 }
 </style>
