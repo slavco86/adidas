@@ -3,7 +3,7 @@
     <div class="brand">
       {{ franchise }}
     </div>
-    <Logo color="white" class="logo"/>
+    <Logo :color="logoColor" class="logo"/>
     <div class="main-container">
       <div class="hotspot hotspot--invert" @click="displayModal(0)"/>
       <div class="hotspot hotspot--invert hotspot--right" @click="displayModal(1)"/>
@@ -14,7 +14,7 @@
       </div>
       <div class="main-image">
         <img :src="mainImage" class="mainshoe">
-      </div>    
+      </div>
     </div>
     <Carousel
       ref="carousel"
@@ -98,6 +98,10 @@ export default {
 
     hotspots() {
       return this.data.hotspots;
+    },
+
+    logoColor() {
+      return (this.$route.params.gender === 'women') ? '#222' : '#fff';
     },
   },
 

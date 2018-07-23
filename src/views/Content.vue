@@ -100,7 +100,7 @@ export default {
 
 <style lang="scss" scoped>
 .content-page {
-  background-color: #222;
+  background-color: inherit;
   //required to pop over the top of MESH header
   z-index: 1;
   transform: translate3d(0, -50px, 0);
