@@ -2,11 +2,9 @@
   <Button
     :data-quickview-path="url"
     :data-product-sku="sku"
-    :section="section"
+    :context="context"
     :sku="sku">
-    <img
-      src="../assets/shoppingbag.png"
-      alt="shopping-basket">
+    <slot/>
   </Button>
 </template>
 
@@ -22,11 +20,11 @@ export default {
       type: String,
       default: undefined,
     },
-    name: {
-      type: String,
-      default: undefined,
-    },
-    section: {
+    // name: {
+    //   type: String,
+    //   default: undefined,
+    // },
+    context: {
       type: String,
       default: undefined,
     },

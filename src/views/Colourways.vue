@@ -24,8 +24,12 @@
       <h3 class="shoppingbagtexttitle">{{ franchise }}</h3>
       <h4 class="shoppingbagtext">£80.00</h4>
       <QuickBuy
-        :section="section"
-        url="/product/black-nike-air-force-1-low/047951"/>
+        :context="context"
+        url="/product/black-nike-air-force-1-low/047951">
+        <img
+          src="../assets/shoppingbag.png"
+          alt="shopping-basket">
+      </QuickBuy>
     </div>
 
     <Carousel
@@ -81,7 +85,7 @@ export default {
         return {};
       },
     },
-    section: {
+    context: {
       type: String,
       default: undefined,
     },
@@ -96,6 +100,7 @@ export default {
       activeHotspot: null,
       showModal: false,
       selectedIndex: 0,
+      name: this.name,
       options: {
         contentPerView: 7,
         breakpoints: {
@@ -124,6 +129,10 @@ export default {
 
     hotspots() {
       return this.data.hotspots;
+    },
+
+    sectionName() {
+      return this.name;
     },
   },
 

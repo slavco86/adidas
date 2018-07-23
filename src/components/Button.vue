@@ -15,7 +15,7 @@ export default {
       type: String,
       default: undefined,
     },
-    section: {
+    context: {
       type: String,
       default: undefined,
     },
@@ -26,7 +26,7 @@ export default {
       return (this.url) ? 'a' : 'button';
     },
     position() {
-      return `${this.$route.params.gender}-${this.$route.params.franchise}-${this.section}`;
+      return `${this.$route.params.gender}-${this.$route.params.franchise}-${this.context}`;
     },
   },
 };

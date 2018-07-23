@@ -13,8 +13,12 @@
           v-bind="slide"
           class="grid__product">
           <QuickBuy
-            :section="section"
-            url="/product/black-nike-air-force-1-low/047951"/>
+            :context="context"
+            url="/product/black-nike-air-force-1-low/047951">
+            <img
+              src="../assets/shoppingbag.png"
+              alt="shopping-basket">
+          </QuickBuy>
           <span class="grid__product__text">{{ slide.text }}</span>
         </Spot>
       </div>
@@ -45,7 +49,7 @@ export default {
       type: Boolean,
       default: false,
     },
-    section: {
+    context: {
       type: String,
       default: undefined,
     },
@@ -62,16 +66,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .social {
-    align-items: center;
-    display: flex;
-    height: 100vh;
-    justify-content: center;
+.social {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
 
-    &__text {
-      margin: 1rem 0;
-      text-transform: uppercase;
-    }
+  &__text {
+    margin: 1rem 0;
+    text-transform: uppercase;
+  }
 
   &__title {
     font-size: 1.5rem;
