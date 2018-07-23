@@ -1,7 +1,5 @@
 <template>
-  <div
-    :class="{'home--invert': gender === 'women'}"
-    class="home">
+  <div class="home">
     <nav class="nav">
       <Logo
         :color="logoColor"
@@ -31,17 +29,13 @@
           tag="div">
           <Spot v-bind="slide">
             <span
-              :class="{'franchise-name--invert': gender === 'men'}"
               data-swiper-parallax="-500"
               data-swiper-parallax-duration="600"
               class="franchise-name franchise-name--grid">{{ slide.franchise }}</span>
-            <div
-              :class="{'plus--invert' : gender === 'men'}"
-              class="plus"/>
+            <div class="plus"/>
           </Spot>
           <Countdown
             v-if="!slide.expired && grid"
-            :class="{'countdown--invert': gender === 'men'}"
             :date="slide.launch"
             class="countdown--grid"/>
         </router-link>
@@ -60,24 +54,20 @@
         tag="div">
         <Spot v-bind="slide">
           <span
-            :class="{'franchise-name--invert': gender === 'men'}"
             data-swiper-parallax="-500"
             data-swiper-parallax-duration="600"
             class="franchise-name">{{ slide.franchise }}</span>
           <div
-            :class="{'plus--invert' : gender === 'men'}"
             class="plus"/>
         </Spot>
         <Countdown
           v-if="!slide.expired"
-          :class="{'countdown--invert': gender === 'men'}"
           :date="slide.launch"
           @expired="countdownExpired(slide.key)"/>
       </router-link>
     </Carousel>
     <div
-      :class="{'button-container--invert': gender === 'men',
-               'button-container--grid' : grid}"
+      :class="{'button-container--grid' : grid}"
       class="button-container"
       @click="toggleCarousel"
       @transitionend="unhideCarousel">
@@ -86,8 +76,7 @@
       <div class="bottom-left"/>
       <div class="bottom-right"/>
       <div
-        :class="{'full--expand': grid,
-                 'full--invert': gender === 'men'}"
+        :class="{'full--expand': grid}"
         class="full"/>
     </div>
   </div>
@@ -334,7 +323,6 @@ export default {
       right: 0;
       top: 0;
       font-size: 2rem;
-      color: black;
 
       @media only screen and (min-width: 765px) {
         font-size: 2rem;
@@ -349,7 +337,6 @@ export default {
 
     &__num i {
       font-size: 2rem;
-      color: black;
 
       @media only screen and (min-width: 765px) {
         font-size: 2rem;
@@ -360,23 +347,9 @@ export default {
       text-transform: uppercase;
       font-size: 1rem;
       margin-top: 5px;
-      color: black;
 
       @media only screen and (min-width: 765px) {
         font-size: 1rem;
-      }
-    }
-  }
-
-  &--invert {
-    left: 12%;
-    width: 80%;
-
-    & /deep/ .countdown__value {
-      &::after,
-      &__num i,
-      &__label {
-        color: white;
       }
     }
   }
@@ -399,13 +372,8 @@ export default {
   left: 20px;
   font-size: 3.5rem;
   font-weight: 900;
-  color: black;
   text-align: left;
   line-height: 45px;
-
-  &--invert {
-    color: white;
-  }
 
   &--grid {
     font-size: 1rem;
@@ -458,16 +426,6 @@ export default {
   border-radius: 0 0 3px 0;
 }
 
-.button-container--invert {
-  .top-left,
-  .top-right,
-  .bottom-left,
-  .bottom-right {
-    border-color: #999;
-    box-shadow: 0 0 2px 0 #999 inset;
-  }
-}
-
 .full {
   height: 0;
   width: 0;
@@ -487,15 +445,6 @@ export default {
     border-color: black;
     border-radius: 3px;
   }
-
-  &--invert {
-    box-shadow: 0 0 3px 0 #999 inset;
-    background-color: rgb(34, 34, 34);
-  }
-}
-
-.full--expand.full--invert {
-  border-color: #999;
 }
 
 .plus {
@@ -504,7 +453,6 @@ export default {
   right: 10px;
   width: 35px;
   height: 35px;
-  color: black;
 
   &::before,
   &::after {
@@ -522,13 +470,6 @@ export default {
     left: 45%;
     border-bottom: none;
     border-left: solid;
-  }
-
-  &--invert {
-    &::after,
-    &::before {
-      border-color: white;
-    }
   }
 }
 </style>
