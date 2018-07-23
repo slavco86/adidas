@@ -3,18 +3,26 @@
     <div class="brand">
       {{ franchise }}
     </div>
-    <Logo color="white" class="logo"/>
+    <Logo color="white logo"/>
     <div class="main-container">
-      <div class="hotspot hotspot--invert" @click="displayModal(0)"/>
-      <div class="hotspot hotspot--invert hotspot--right" @click="displayModal(1)"/>
+      <div
+        class="hotspot hotspot--invert"
+        @click="displayModal(0)"/>
+      <div
+        class="hotspot hotspot--invert hotspot--right"
+        @click="displayModal(1)"/>
       <div class="product-info">
         <span class="title">{{ franchise }}</span>
         <span class="price">£80.00</span>
-        <img src="../assets/basket-icon.svg" class="quickbuy-icon">
+        <img
+          src="../assets/basket-icon.svg"
+          class="quickbuy-icon">
       </div>
       <div class="main-image">
-        <img :src="mainImage" class="mainshoe">
-      </div>    
+        <img
+          :src="mainImage"
+          class="mainshoe">
+      </div>
     </div>
     <Carousel
       ref="carousel"
@@ -24,22 +32,22 @@
       <div
         slot-scope="{slide}"
         class="image-container">
-      <img
-        :src="slide.image.desktop"
-        :class="{ isActive : slide.active }"
-        class="image"
-        @click="selectColourway(slide.key)">
-    </div>
-  </Carousel>
-  <modal
-    v-if="showModal"
-    @close="showModal = false">
+        <img
+          :src="slide.image.desktop"
+          :class="{ isActive : slide.active }"
+          class="image"
+          @click="selectColourway(slide.key)">
+      </div>
+    </Carousel>
+    <modal
+      v-if="showModal"
+      @close="showModal = false">
 
-    <Titles
-    :headline="hotspots[activeHotspot].title"
-    :subtext="hotspots[activeHotspot].subtext"/>
-  </modal>
-</div>
+      <Titles
+        :headline="hotspots[activeHotspot].title"
+        :subtext="hotspots[activeHotspot].subtext"/>
+    </modal>
+  </div>
 </template>
 
 <script>
@@ -162,6 +170,10 @@ export default {
 .main-image {
   padding: 4rem;
   margin-top: 5rem;
+
+  @media screen and (min-width: 765px) {
+    margin-top: 0;
+  }
 }
 
 .mainshoe {
