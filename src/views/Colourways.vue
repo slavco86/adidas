@@ -40,7 +40,8 @@
       :subtext="hotspots[activeHotspot].subtext"
       class="modal-container"
       :class="{'modal-container--pod': this.$route.params.franchise === 'POD',
-                'modal-container--samba': this.$route.params.franchise === 'Sambarose'
+                'modal-container--samba': this.$route.params.franchise === 'Sambarose',
+                'modal-container--deerupt': this.$route.params.franchise === 'Deerupt'
               }"/>
   </modal>
 </div>

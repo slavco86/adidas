@@ -170,7 +170,7 @@ export default {
 }
 
 .franchiseSR {
-  color: white;
+  font-size: 0;
   background: url(../assets/sambarosepinklogo.svg);
   background-repeat: no-repeat;
   position: absolute;
