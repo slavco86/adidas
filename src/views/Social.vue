@@ -105,74 +105,94 @@ export default {
     }
   }
 }
+
 .grid {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    margin: 1rem auto;
-    overflow: hidden;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 1rem auto;
+  overflow: hidden;
 
-    &__product {
-      flex: 0 0 50%;
+  &__product {
+    flex: 0 0 50%;
+    height: auto;
+    max-width: 635px;
+    // min-width: 150px;
+    padding: 0.5rem;
+    transition: transform 1s ease-in-out;
+
+    /deep/ .quickView {
+      fill: transparent;
+      position: absolute;
+      right: 0;
+      stroke: #fff;
+      top: 0;
+      margin: 0.75rem;
+
+      &--women {
+        fill: #fff;
+        stroke: #000;
+
+        circle {
+          stroke: transparent;
+        }
+      }
+    }
+
+    @media only screen and (min-width: 1024px) {
+      flex: 0 0 19%;
+    }
+
+    &:first-child {
+      transform: translate3d(-100%, -100%, 0);
+    }
+
+    &:nth-child(2) {
+      transform: translate3d(100%, -100%, 0);
+    }
+
+    &:nth-child(3) {
+      transform: translate3d(-100%, 100%, 0);
+    }
+
+    &:last-child {
+      transform: translate3d(100%, 100%, 0);
+    }
+
+    &__text {
+      color: #ccc;
+      display: block;
+      margin: 0.75rem 0;
+      text-align: left;
+      font-size: 1rem;
+    }
+
+    img {
+      display: block;
       height: auto;
-      max-width: 635px;
-      // min-width: 150px;
-      padding: 0.5rem;
-      transition: transform 1s ease-in-out;
+      width: 100%;
+    }
+  }
+}
 
-      @media only screen and (min-width: 1024px) {
-        flex: 0 0 19%;
+// Animate
+.grid--animate {
+  padding: 50px 0;
+
+  .grid__product {
+    transform: translate3d(0, 0, 0);
+
+    @media only screen and (min-width: 1024px) {
+      margin: 0 10px;
+
+      &:nth-child(odd) {
+        transform: translate3d(0, -50px, 0);
       }
 
-      &:first-child {
-        transform: translate3d(-100%, -100%, 0);
-      }
-
-      &:nth-child(2) {
-        transform: translate3d(100%, -100%, 0);
-      }
-
-      &:nth-child(3) {
-        transform: translate3d(-100%, 100%, 0);
-      }
-
-      &:last-child {
-        transform: translate3d(100%, 100%, 0);
-      }
-
-      &__text {
-        color: #ccc;
-        display: block;
-        margin: 0.75rem 0;
-        text-align: left;
-        font-size: 1rem;
-      }
-
-      img {
-        display: block;
-        height: auto;
-        width: 100%;
+      &:nth-child(even) {
+        transform: translate3d(0, 50px, 0);
       }
     }
   }
-
-  .grid--animate {
-    padding: 50px 0;
-
-    .grid__product {
-      transform: translate3d(0, 0, 0);
-
-      @media only screen and (min-width: 1024px) {
-        margin: 0 10px;
-
-        &:nth-child(odd) {
-          transform: translate3d(0, -50px, 0);
-        }
-
-        &:nth-child(even) {
-          transform: translate3d(0, 50px, 0);
-        }
-      }
-    }
-  }
+}
 </style>
