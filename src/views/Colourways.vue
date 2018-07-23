@@ -97,7 +97,6 @@ export default {
       activeHotspot: null,
       showModal: false,
       selectedIndex: 0,
-      name: this.name,
       options: {
         contentPerView: 7,
         breakpoints: {
@@ -126,10 +125,6 @@ export default {
 
     hotspots() {
       return this.data.hotspots;
-    },
-
-    sectionName() {
-      return this.name;
     },
   },
 
@@ -212,6 +207,7 @@ export default {
 
   .cls-1 {
     stroke: #fff;
+    fill: transparent;
   }
 }
 

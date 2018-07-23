@@ -8,17 +8,13 @@
         :class="{'grid--animate': active}"
         class="grid">
         <Spot
-          v-for="(slide,key) in content.slides"
+          v-for="(slide,key) in content"
           :key="key"
           v-bind="slide"
           class="grid__product">
           <QuickBuy
             :context="context"
-            url="/product/black-nike-air-force-1-low/047951">
-            <img
-              src="../assets/shoppingbag.png"
-              alt="shopping-basket">
-          </QuickBuy>
+            v-bind="slide"/>
           <span class="grid__product__text">{{ slide.text }}</span>
         </Spot>
       </div>
@@ -35,7 +31,7 @@
 <script>
 import Spot from '@/components/Spot.vue';
 import QuickBuy from '@/components/QuickBuy.vue';
-import json from '@/content/social.json';
+// import json from '@/content/social.json';
 
 export default {
   name: 'Social',
@@ -53,13 +49,18 @@ export default {
       type: String,
       default: undefined,
     },
+    data: {
+      type: Object,
+      default() {
+        return {};
+      },
+    },
   },
-
 
   data() {
     return {
       activateAnimation: true,
-      content: json,
+      content: JSON.parse(JSON.stringify(this.data.products)),
     };
   },
 };
@@ -67,10 +68,11 @@ export default {
 
 <style lang="scss" scoped>
 .social {
-  align-items: center;
+  // align-items: center;
   display: flex;
   height: 100vh;
   justify-content: center;
+  padding: 0 1rem;
 
   &__text {
     margin: 1rem 0;
@@ -91,7 +93,13 @@ export default {
     color: #fff;
     margin: 0 1rem;
     padding: 1rem 1.5rem;
+    position: absolute;
+    right: 0;
     text-transform: uppercase;
+
+    @media only screen and (min-width: 1024px) {
+      position: static;
+    }
   }
 }
 
@@ -100,7 +108,8 @@ export default {
   flex-flow: row wrap;
   justify-content: center;
   margin: 1rem auto;
-  overflow: hidden;
+  min-height: 350px;
+  // overflow: hidden;
 
   &__product {
     flex: 0 0 50%;
@@ -110,13 +119,29 @@ export default {
     transition: transform 1s ease-in-out;
 
     /deep/ .quickView {
-      background: none;
-      display: block;
-      max-height: 50px;
-      max-width: 50px;
+      fill: transparent;
+      margin: 0.75rem;
       position: absolute;
-      right: 1rem;
-      top: 1rem;
+      right: 0;
+      stroke: #fff;
+      top: 0;
+
+      &--women {
+        border-radius: 50%;
+        fill: #fff;
+        stroke: #000;
+
+        circle {
+          stroke: transparent;
+        }
+      }
+    }
+
+    &__text {
+      color: #fff;
+      display: block;
+      margin: 0.5rem 0;
+      font-size: 1rem;
     }
   }
 
@@ -125,18 +150,25 @@ export default {
     color: #fff;
     display: flex;
     flex-direction: column;
+    height: 100%;
     padding: 1rem;
   }
 
   .grid__product {
+    flex: 0 0 50%;
+    height: auto;
+    max-width: 635px;
+    padding: 0.5rem;
+    transition: transform 1s ease-in-out;
     transform: translate3d(0, 0, 0);
 
     @media only screen and (min-width: 1024px) {
       margin: 0 10px;
+      flex: 0 0 19%;
 
-      &:nth-child(odd) {
-        transform: translate3d(0, -50px, 0);
-      }
+      // &:nth-child(odd) {
+      //   transform: translate3d(0, -50px, 0);
+      // }
 
       &:nth-child(even) {
         transform: translate3d(0, 50px, 0);
@@ -144,52 +176,52 @@ export default {
     }
   }
 
-  .grid {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    margin: 1rem auto;
-    overflow: hidden;
+  // .grid {
+  //   display: flex;
+  //   flex-flow: row wrap;
+  //   justify-content: center;
+  //   margin: 1rem auto;
+  //   overflow: hidden;
 
-    &__product {
-      flex: 0 0 50%;
-      height: auto;
-      max-width: 635px;
-      padding: 0.5rem;
-      transition: transform 1s ease-in-out;
+  //   &__product {
+  //     flex: 0 0 50%;
+  //     height: auto;
+  //     max-width: 635px;
+  //     padding: 0.5rem;
+  //     transition: transform 1s ease-in-out;
 
-      @media only screen and (min-width: 1024px) {
-        flex: 0 0 19%;
-      }
-    }
+  //     @media only screen and (min-width: 1024px) {
+  //       flex: 0 0 19%;
+  //     }
+  //   }
 
-    @media only screen and (min-width: 1024px) {
-      flex: 0 0 19%;
-    }
+  //   @media only screen and (min-width: 1024px) {
+  //     flex: 0 0 19%;
+  //   }
 
-    &:first-child {
-      transform: translate3d(-100%, -100%, 0);
-    }
+  //   &:first-child {
+  //     transform: translate3d(-100%, -100%, 0);
+  //   }
 
-    &:nth-child(2) {
-      transform: translate3d(100%, -100%, 0);
-    }
+  //   &:nth-child(2) {
+  //     transform: translate3d(100%, -100%, 0);
+  //   }
 
-    &:nth-child(3) {
-      transform: translate3d(-100%, 100%, 0);
-    }
+  //   &:nth-child(3) {
+  //     transform: translate3d(-100%, 100%, 0);
+  //   }
 
-    &:last-child {
-      transform: translate3d(100%, 100%, 0);
-    }
+  //   &:last-child {
+  //     transform: translate3d(100%, 100%, 0);
+  //   }
 
-    &__text {
-      color: #ccc;
-      display: block;
-      margin: 0.75rem 0;
-      text-align: left;
-      font-size: 1rem;
-    }
-  }
+  //   &__text {
+  //     color: #ccc;
+  //     display: block;
+  //     margin: 0.75rem 0;
+  //     text-align: left;
+  //     font-size: 1rem;
+  //   }
+  // }
 }
 </style>

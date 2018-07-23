@@ -3,10 +3,8 @@
     :data-quickview-path="url"
     :data-product-sku="sku"
     :context="context"
+    :class="{'quickView--women': gender}"
     :sku="sku">
-    <!-- <img
-      src="../assets/basket-icon.svg"
-      alt="shopping-basket"> -->
     <BasketLogo/>
   </Button>
 </template>
@@ -30,10 +28,20 @@ export default {
       default: undefined,
     },
   },
+  data() {
+    return {
+      genderPath: this.$route.params.gender,
+      active: true,
+    };
+  },
   computed: {
     sku() {
       return this.url.split('/').pop();
     },
+    gender() {
+      return (this.genderPath === 'women') ? this.active : '';
+    },
   },
 };
 </script>
+
