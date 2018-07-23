@@ -25,11 +25,8 @@
       <h4 class="shoppingbagtext">£80.00</h4>
       <QuickBuy
         :context="context"
-        url="/product/black-nike-air-force-1-low/047951">
-        <img
-          src="../assets/shoppingbag.png"
-          alt="shopping-basket">
-      </QuickBuy>
+        class="quickBuy"
+        url="/product/black-nike-air-force-1-low/047951"/>
     </div>
 
     <Carousel

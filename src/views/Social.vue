@@ -75,9 +75,11 @@ export default {
   &__text {
     margin: 1rem 0;
     text-transform: uppercase;
+    color: #fff;
   }
 
   &__title {
+    color: #fff;
     font-size: 1.5rem;
     font-weight: 600;
     text-transform: uppercase;

@@ -42,8 +42,8 @@ export default {
   .quickView {
     background: none;
     cursor: pointer;
-    max-height: 70px;
-    max-width: 70px;
+    max-height: 60px;
+    max-width: 60px;
     position: absolute;
 
     img {

@@ -4,7 +4,9 @@
     :data-product-sku="sku"
     :context="context"
     :sku="sku">
-    <slot/>
+    <img
+      src="../assets/basket-icon.svg"
+      alt="shopping-basket">
   </Button>
 </template>
 
