@@ -2,20 +2,22 @@
   <transition name="modal">
     <div class="modal-mask">
       <div class="modal-wrapper">
-        <div class="modal-container">
+        <div class="modal-container"
+            :class="{ podContainer: pod }">
             <img
             class="close"
             src="../assets/close_black.png"
             @click="$emit('close')">
           <div class="modal-body">
             <img
-            :class="{ deeruptLogo: deerupt }"
+            :class="{ deeruptLogo: deerupt, podLogo: pod }"
             src="../assets/adidas-logo.svg">
-            <div :class="{ franchiseTitle: deerupt }">
+            <div :class="{ franchiseTitle: deerupt, 
+            franchisePOD: pod }">
               {{ franchise }}
               {{ franchiseUpdate }}
             </div>
-            <slot :class="{ franchiseInfo: deerupt }">
+            <slot>
             </slot>
           </div>
         </div>
@@ -120,8 +122,13 @@ font-style: normal;
   background-repeat: no-repeat;
 }
 
+.podContainer {
+  background-image: none;
+  background-color: #3333ff !important;
+}
+
 .modal-body {
-  margin: 20px 0;
+  margin: 55% 0;
 }
 
 .modal-enter {
@@ -145,15 +152,36 @@ font-style: normal;
   width: 16%;
 }
 
-.deeruptLogo {
-  background-color: red;
+.deeruptLogo,
+.podLogo {
+  width: 22%;
+}
+
+.podLogo {
+  position: absolute;
+  filter: invert(1);
+  bottom: -163%;
+  right: 2%;
+  width: 18%;
 }
 
 .franchiseTitle {
-  background-color: yellow;
+  font-size: 66px;
+  font-weight: 600;
+  color: #222;
+}
+
+.franchisePOD {
+  color: white;
+  position: absolute;
+  top: 225%;
+  left: 22%;
+  font-size: 504%;
+  font-weight: 300;
 }
 
 .franchiseInfo {
   background-color: black;
 }
+
 </style>

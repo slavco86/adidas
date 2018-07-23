@@ -36,8 +36,10 @@
     @close="showModal = false"
     :modalFranchise="modalFranchise">
     <Titles
-    :headline="hotspots[activeHotspot].title"
-    :subtext="hotspots[activeHotspot].subtext"/>
+      :headline="hotspots[activeHotspot].title"
+      :subtext="hotspots[activeHotspot].subtext"
+      class="modal-container"
+      :class="{'modal-container--pod': this.$route.params.franchise === 'POD'}"/>
   </modal>
 </div>
 </template>
@@ -133,6 +135,11 @@ export default {
 
 
 <style lang="scss" scoped>
+
+.isActive {
+  opacity: 1 !important;
+}
+
 .section-colourways {
   display: flex;
   flex-direction: column;
@@ -210,6 +217,7 @@ export default {
 
 .carousel-container /deep/ .image {
   width: 100%;
+  opacity: 0.5;
 
   @media screen and (min-width: 765px) {
     width: 70%;
@@ -269,4 +277,25 @@ export default {
     transform: rotate(0deg);
   }
 }
+
+.modal-container /deep/ .title1 {
+  font-size: 260%;
+  font-weight: lighter;
+}
+
+.modal-container /deep/ .title2 {
+  font-size: 140%;
+  font-weight: lighter;
+}
+
+.modal-container--pod /deep/ .title1 {
+  color: white;
+  font-weight: 900;
+}
+
+.modal-container--pod /deep/ .title2 {
+  color: white;
+  font-weight: 300;
+}
+
 </style>
