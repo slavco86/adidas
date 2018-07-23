@@ -8,18 +8,15 @@
         class="logo"/>
       <router-link
         :to="'men'"
-        tag="span">
-        <button
-          :class="{'nav-button--inactive': gender === 'women',
-                   'nav-button--invert': gender === 'men'}"
-          class="nav-button">MEN</button>
+        class="nav-button"
+        tag="button">
+        Men
       </router-link>
       <router-link
         :to="'women'"
-        tag="span">
-        <button
-          :class="{'nav-button--inactive': gender === 'men'}"
-          class="nav-button">WOMEN</button>
+        class="nav-button"
+        tag="button">
+        Women
       </router-link>
     </nav>
     <div
@@ -246,16 +243,6 @@ export default {
   transform: translate3d(0, 0, 0);
 }
 
-.home {
-  height: -webkit-fill-available;
-  background-color: rgb(34, 34, 34);
-  transition: background-color 1s, opacity 1s;
-}
-
-.home--invert {
-  background-color: white;
-}
-
 .nav {
   padding: 2rem 0;
   text-align: right;
@@ -275,17 +262,19 @@ export default {
 
 .nav-button {
   background: none;
+  color: #999;
   font-size: 0.9rem;
-  margin: 0 1rem;
   font-weight: 600;
+  margin: 0 1rem;
+  text-transform: uppercase;
 
-  &--inactive {
-    color: #999;
+  &.router-link-active {
+    color: #fff;
   }
+}
 
-  &--invert {
-    color: white;
-  }
+.category--women .nav-button.router-link-active {
+  color: #222;
 }
 
 .main-carousel {
