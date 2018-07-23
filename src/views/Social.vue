@@ -15,7 +15,7 @@
           <QuickBuy
             :context="context"
             v-bind="slide"/>
-          <span class="grid__product__text">{{ slide.text }}</span>
+          <span class="grid__product__text">{{ slide.handle }}</span>
         </Spot>
       </div>
 
@@ -31,7 +31,6 @@
 <script>
 import Spot from '@/components/Spot.vue';
 import QuickBuy from '@/components/QuickBuy.vue';
-// import json from '@/content/social.json';
 
 export default {
   name: 'Social',
@@ -73,6 +72,10 @@ export default {
   height: 100vh;
   justify-content: center;
   padding: 0 1rem;
+
+  @media only screen and (min-width: 1024px) {
+    align-items: center;
+  }
 
   &__text {
     margin: 1rem 0;
@@ -141,7 +144,7 @@ export default {
       color: #fff;
       display: block;
       margin: 0.5rem 0;
-      font-size: 1rem;
+      font-size: 0.75rem;
     }
   }
 
@@ -159,16 +162,20 @@ export default {
     height: auto;
     max-width: 635px;
     padding: 0.5rem;
-    transition: transform 1s ease-in-out;
-    transform: translate3d(0, 0, 0);
+    // transition: transform 1s ease-in-out;
+    // transform: translate3d(0, 0, 0);
+
+    &:first-child {
+      transform: translate3d(0, -50%, -50%);
+    }
 
     @media only screen and (min-width: 1024px) {
       margin: 0 10px;
       flex: 0 0 19%;
 
-      // &:nth-child(odd) {
-      //   transform: translate3d(0, -50px, 0);
-      // }
+      &:nth-child(odd) {
+        transform: translate3d(0, -50px, 0);
+      }
 
       &:nth-child(even) {
         transform: translate3d(0, 50px, 0);
