@@ -3,23 +3,12 @@
     <div class="modal-mask">
       <div class="modal-wrapper">
         <div class="modal-container">
-          <img
-            id="closem"
-            class="close"
-            src="../assets/close_white.png"
-            @click="$emit('close')">
-          <div
-            id="modalh"
-            class="modal-header">
-            <slot name="header" >
-              default header
-            </slot>
-          </div>
+          <ButtonClose
+            :to="$route.path"
+            class="close--modal"
+            @click.native="$emit('close')" />
           <div class="modal-body">
-            <slot name="body"/>
-          </div>
-          <div class="modal-footer">
-            <slot name="footer"/>
+            <slot/>
           </div>
         </div>
       </div>
@@ -28,48 +17,20 @@
 </template>
 
 <script>
+import ButtonClose from '@/components/ButtonClose.vue';
+
 export default {
   name: 'Modal',
+
+  components: {
+    ButtonClose,
+  },
 };
 </script>
 
 <style scoped>
-
-@font-face {
-  font-family: 'HCo Gotham SSm';
-  src:
-    url('../assets/fonts/F4715F49B60D9B144.woff2') format('woff2'),
-    url('../assets/fonts/F4715F49B60D9B144.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'HCo Gotham SSm';
-  src:
-    url('../assets/fonts/725262BC71949F842.woff2') format('woff2'),
-    url('../assets/fonts/725262BC71949F842.woff') format('woff');
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'HCo Gotham SSm';
-  src:
-    url('../assets/fonts/B5416F0FED9EA9CD2.woff2') format('woff2'),
-    url('../assets/fonts/B5416F0FED9EA9CD2.woff') format('woff');
-  font-weight: 700;
-  font-style: normal;
-}
-
 #modalh {
-  padding-top: 33%;
-}
-
-#closem {
-  position: relative;
-  left: 45%;
-  width: 50px;
+  padding-top: 58%;
 }
 
 .modal-mask {
@@ -78,7 +39,7 @@ export default {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
   display: table;
   transition: opacity 0.3s ease;
@@ -98,7 +59,6 @@ export default {
   border-radius: 2px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
   transition: all 0.3s ease;
-  font-family: Helvetica, Arial, sans-serif;
   background-image: url("../assets/swmobile.png");
   background-repeat: no-repeat;
 }
@@ -109,6 +69,7 @@ export default {
 }
 
 .modal-body {
+  color: #222;
   margin: 20px 0;
 }
 
@@ -136,16 +97,9 @@ export default {
     border-radius: 2px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
     transition: all .3s ease;
-    font-family: Helvetica, Arial, sans-serif;
     background-image: url("../assets/swtablet.png");
     background-repeat: no-repeat center center fixed;
     background-size: cover;
-}
-
-#closem {
-  position: relative;
-  left: 45%;
-  width: 63px;
 }
 
 #modalh {
@@ -163,17 +117,6 @@ export default {
     border-radius: 2px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
     transition: all .3s ease;
-    font-family: Helvetica, Arial, sans-serif;
-    /* background-image: url("../assets/swdesktop.png");
-    background-repeat: no-repeat; */
-
-  }
-
-  #closem {
-    position: relative;
-    margin-top: -7%;
-    left: 53%;
-    width: 53px;
   }
 
   #modalh {
@@ -184,5 +127,9 @@ export default {
 
 }
 
-
+.close--modal {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+}
 </style>

@@ -149,8 +149,6 @@ export default {
   }
 
   .social__inner {
-    background-color: #222;
-    color: #fff;
     display: flex;
     flex-direction: column;
     height: 100%;

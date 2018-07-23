@@ -1,10 +1,6 @@
 <template>
   <div class="content-page">
-    <router-link
-      to="/"
-      class="close">
-      <img src="../assets/close_white.png">
-    </router-link>
+    <CloseButton/>
     <div id="content">
       <div
         v-for="component in anchors"
@@ -25,14 +21,20 @@
 import Fullpage from 'fullpage.js';
 import 'fullpage.js/dist/fullpage.css';
 
+import CloseButton from '@/components/ButtonClose.vue';
 import Colourways from '@/views/Colourways.vue';
 import Social from '@/views/Social.vue';
+import ShoppableVideo from '@/views/ShoppableVideo.vue';
+import SketchFabModel from '@/views/SketchFabModel.vue';
 
 export default {
   name: 'ContentContainer',
   components: {
+    CloseButton,
     Colourways,
     Social,
+    ShoppableVideo,
+    SketchFabModel,
   },
 
   props: {
@@ -50,9 +52,9 @@ export default {
 
   data() {
     return {
-      anchors: ['colourways', 'social'],
+      anchors: ['colourways', 'social', 'shoppable-video', 'sketch-fab-model'],
       fullpage: null,
-      section: 'social',
+      section: 'colourways',
     };
   },
 
@@ -97,25 +99,13 @@ export default {
 
 <style lang="scss" scoped>
 .content-page {
-  background-color: #222;
-  // required to pop over the top of MESH header
+  background-color: inherit;
+  //required to pop over the top of MESH header
   z-index: 1;
   transform: translate3d(0, -50px, 0);
 
   @media screen and (min-width: 765px) {
     transform: translate3d(0, -202px, 0);
-  }
-}
-
-.close {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  z-index: 5;
-
-  img {
-    width: 59px;
-    height: auto;
   }
 }
 </style>

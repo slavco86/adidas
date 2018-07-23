@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
+import SketchFabModel from '@/views/SketchFabModel.vue';
 import Home from './views/Home.vue';
 import Men from './content/men.json';
 import Women from './content/women.json';
@@ -36,6 +37,12 @@ export default new Router({
       path: '/:gender/:franchise',
       name: 'content',
       component: Content,
+      props: franchiseContent,
+    },
+    {
+      path: '/:gender/:franchise/3d-view',
+      name: '3d-view',
+      component: SketchFabModel,
       props: franchiseContent,
     },
   ],
