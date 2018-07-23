@@ -3,7 +3,8 @@
     <div class="content-slide__inner">
       <router-link
         v-if="$route.name === 'content'"
-        :to="`/${$route.params.gender}/${$route.params.franchise}/3d-view`">
+        to="3d-view"
+        append>
         Display 3D Content
       </router-link>
       <div
