@@ -26,12 +26,16 @@ import 'fullpage.js/dist/fullpage.css';
 
 import Colourways from '@/views/Colourways.vue';
 import Social from '@/views/Social.vue';
+import ShoppableVideo from '@/views/ShoppableVideo.vue';
+import SketchFabModel from '@/views/SketchFabModel.vue';
 
 export default {
   name: 'ContentContainer',
   components: {
     Colourways,
     Social,
+    ShoppableVideo,
+    SketchFabModel,
   },
 
   props: {
@@ -49,7 +53,7 @@ export default {
 
   data() {
     return {
-      anchors: ['colourways', 'social'],
+      anchors: ['colourways', 'social', 'shoppable-video', 'sketch-fab-model'],
       fullpage: null,
       section: 'colourways',
     };
