@@ -5,13 +5,13 @@
         :color="logoColor"
         class="logo"/>
       <router-link
-        :to="'men'"
+        to="men"
         class="nav-button"
         tag="button">
         Men
       </router-link>
       <router-link
-        :to="'women'"
+        to="women"
         class="nav-button"
         tag="button">
         Women
@@ -25,7 +25,7 @@
         :key="key"
         class="grid-view__product">
         <router-link
-          :to="`men/${slide.franchise}`"
+          :to="`${gender}/${slide.franchise}`"
           tag="div">
           <Spot v-bind="slide">
             <span
@@ -57,8 +57,7 @@
             data-swiper-parallax="-500"
             data-swiper-parallax-duration="600"
             class="franchise-name">{{ slide.franchise }}</span>
-          <div
-            class="plus"/>
+          <div class="plus"/>
         </Spot>
         <Countdown
           v-if="!slide.expired"

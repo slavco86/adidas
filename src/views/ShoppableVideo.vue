@@ -14,7 +14,7 @@ export default {
   props: {
     src: {
       type: String,
-      default: 'https://ssl-dot-player-dot-smartzer-editor.appspot.com/video?video=jpNti3sr7TwPxohDN3tdiVZR&companyId=58331cf19f43139bd4702949'
+      default: 'https://ssl-dot-player-dot-smartzer-editor.appspot.com/video?video=jpNti3sr7TwPxohDN3tdiVZR&companyId=58331cf19f43139bd4702949',
     },
   },
 };
