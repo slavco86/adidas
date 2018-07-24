@@ -15,8 +15,15 @@
           <span
             data-swiper-parallax="-500"
             data-swiper-parallax-duration="600"
+            data-swiper-parallax-opacity="0"
             class="quote">{{ slide.quote }}</span>
-          <span class="name">{{ data.name }}</span>
+          <span
+            data-swiper-parallax-y="-50"
+            data-swiper-parallax-opacity="0"
+            data-swiper-parallax-duration="600"
+            class="name">{{ data.name }}</span>
+          <QuickBuy
+            :url="slide.url"/>
         </Spot>
       </div>
     </Carousel>
@@ -27,6 +34,7 @@
 import Spot from '@/components/Spot.vue';
 import Carousel from '@/containers/Carousel.vue';
 import Titles from '@/components/Titles.vue';
+import QuickBuy from '@/components/QuickBuy.vue';
 
 export default {
   name: 'Influencer',
@@ -34,6 +42,7 @@ export default {
     Carousel,
     Spot,
     Titles,
+    QuickBuy,
   },
   props: {
     data: {
@@ -113,13 +122,14 @@ export default {
 .brand {
   font-size: 8rem;
   position: absolute;
-  color: #333;
-  height: 100%;
+  color: #666;
+  opacity: 0.5;
   height: auto;
   font-weight: 900;
   top: 0;
 
   @media only screen and (min-width: 765px) {
+    color: #333;
     font-size: 18rem;
     height: 100%;
     width: 100%;
@@ -132,12 +142,12 @@ export default {
   margin-top: 3rem;
 
   @media only screen and (min-width: 765px) {
-    margin-top: 10rem;
+    margin-top: calc(10rem - (2rem + 20%));
   }
 }
 
 .influencer-carousel /deep/ .swiper-container {
-  padding-top: 2rem;
+  padding-top: calc(2rem + 20%);
   padding-bottom: 2rem;
 }
 
@@ -175,15 +185,57 @@ export default {
     bottom: 40%;
     right: -220px;
   }
+}
 
-  &--invert {
-    color: black;
+.influencer-carousel /deep/ .quickView {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  @media only screen and (min-width: 765px) {
+    top: initial;
+    bottom: 10px;
   }
 
-  &--grid {
-    font-size: 1rem;
-    bottom: 0;
+  svg circle,
+  svg polygon,
+  svg polyline {
+    transition: stroke 0.5s, fill 0.5s;
   }
+
+  svg {
+    circle {
+      stroke: #fff;
+      fill: #fff;
+    }
+
+    polygon {
+      stroke: black;
+    }
+
+    polyline {
+      stroke: black;
+    }
+  }
+
+  svg:hover {
+    circle {
+      stroke: black;
+      fill: transparent;
+    }
+
+    polygon {
+      fill: white;
+    }
+
+    polyline {
+      fill: white;
+    }
+  }
+}
+
+.category--women .quote {
+  color: black;
 }
 
 .name {
@@ -193,11 +245,15 @@ export default {
     display: block;
     position: absolute;
     transition-timing-function: ease-out;
-    bottom: -40px;
-    right: 20px;
+    top: -40px;
+    left: 20px;
     color: white;
     font-size: 15px;
   }
+}
+
+.category--women .name {
+  color: black;
 }
 </style>
 
