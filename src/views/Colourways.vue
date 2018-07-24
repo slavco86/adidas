@@ -364,11 +364,6 @@ export default {
   }
 }
 
-.modal-container--allBrands /deep/ .title1 {
-  @media screen and (min-width: 1366px) {
-    }
-  }
-
   .modal-container--allBrands /deep/ .title2 p {
     @media screen and (min-width: 1366px) {
     line-height: 1.5;
