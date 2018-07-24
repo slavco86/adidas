@@ -67,12 +67,6 @@ export default {
       womenisActive: true,
     };
   },
-
-  computed: {
-    womenActive() {
-      return (this.$route.params.gender === 'women') ? this.womenisActive : '';
-    }
-  },
 };
 </script>
 
@@ -86,6 +80,15 @@ export default {
     background-color: #000;
     color: #fff;
   }
+}
+
+.category--women .social__text,
+.category--women .social__title {
+  color: #222;
+}
+
+.category--women .grid__product__text {
+  color: #222;
 }
 
 .social {
