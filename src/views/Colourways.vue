@@ -41,7 +41,10 @@
       class="modal-container"
       :class="{'modal-container--pod': this.$route.params.franchise === 'POD',
                 'modal-container--samba': this.$route.params.franchise === 'Sambarose',
-                'modal-container--deerupt': this.$route.params.franchise === 'Deerupt'
+                'modal-container--deerupt': this.$route.params.franchise === 'Deerupt',
+                'modal-container--allBrands': (this.$route.params.franchise !== 'Deerupt' 
+                                            || this.$route.params.franchise !== 'Sambarose'
+                                            || this.$route.params.franchise !== 'POD')
               }"/>
   </modal>
 </div>
@@ -132,11 +135,9 @@ export default {
       this.selectedIndex = selectedSlide;
     },
   },
-
 };
 
 </script>
-
 
 <style lang="scss" scoped>
 
@@ -343,7 +344,6 @@ export default {
   }
 }
 
-
 .modal-container--deerupt /deep/ .title1 {
   display: none;
 }
@@ -363,5 +363,16 @@ export default {
     font-weight: 400;
   }
 }
+
+.modal-container--allBrands /deep/ .title1 {
+  @media screen and (min-width: 1366px) {
+    }
+  }
+
+  .modal-container--allBrands /deep/ .title2 p {
+    @media screen and (min-width: 1366px) {
+    line-height: 1.5;
+    }
+  }
 
 </style>

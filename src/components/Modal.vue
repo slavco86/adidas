@@ -4,7 +4,8 @@
       <div class="modal-wrapper"
         :class="{deWrapper: deerupt,
                  srWrapper: sambarose,
-                 pWrapper: pod
+                 pWrapper: pod,
+                 abWrapper: allBrands
                  }">
         <div class="modal-container"
             :class="{ podContainer: pod,
@@ -16,7 +17,8 @@
             @click="$emit('close')"
             :class="{deeruptCloseB: deerupt,
                      sambaRoseB: sambarose,
-                     podB: pod
+                     podB: pod,
+                     allBrandsB: allBrands
                      }">
             <img
             class="close"
@@ -24,7 +26,8 @@
             @click="$emit('close')"
             :class="{deeruptCloseW: deerupt,
                     sambaRoseW: sambarose,
-                    podW: pod
+                    podW: pod,
+                    allBrandsW: allBrands
                     }">
           <div class="modal-body">
             <img
@@ -37,7 +40,7 @@
             <div :class="{ franchiseDeerupt: deerupt, 
                           franchisePOD: pod,
                           franchiseSR: sambarose,
-                          allBrandsF : allBrands
+                          allBrandsF: allBrands
                         }">
               {{ franchise }}
               {{ franchiseUpdate }}
@@ -249,15 +252,14 @@ export default {
   background-repeat: no-repeat;
   position: absolute;
   top: -5%;
-  left: 0%;
-  height: 24px;
-  width: 314px;
+  right: 0;
+  height: 100%;
+  width: 100%;
   @media screen and (min-width: 765px) {
     top: -15%; 
-    width: 702px;
-    height: 81px;
+    width: 100%;
   }
-  @media screen and (min-width: 765px) {
+  @media screen and (min-width: 1366px) {
     left: 5%;
   }
 }
@@ -271,14 +273,16 @@ export default {
 }
 
 .deeruptCloseB,
-.sambaRoseB {
+.sambaRoseB,
+.allBrandsB {
   @media screen and (min-width: 1366px) { 
     display: none;
   }
 }
 
 .deeruptCloseW,
-.sambaRoseW {
+.sambaRoseW,
+.allBrandsW {
   display: none;
   @media screen and (min-width: 1366px) {
     display: inline;
@@ -304,12 +308,19 @@ export default {
 }
 
 .deWrapper,
-.pWrapper {
+.pWrapper,
+.abWrapper {
   height: 100vh;
 }
 
 .srWrapper {
   background: none;
   height: 100vh;
+}
+
+.allBrandsLogo {
+  @media screen and (min-width: 1366px) {
+    width: 110px;
+  }
 }
 </style>
