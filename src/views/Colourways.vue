@@ -303,11 +303,20 @@ export default {
 .modal-container--pod /deep/ .title1 {
   color: pink;
   font-weight: 900;
+  // @media screen and (min-width: 1366px) {
+  //   position: absolute;
+  //   top: -339%;
+  //   left: 40%;
+  // }
 }
 
 .modal-container--pod /deep/ .title2 {
   color: white;
   font-weight: 300;
+  font-size: 2em;
+  // @media screen and (min-width: 1366px) { 
+  //   position: relative;
+  // }
 }
 
 .modal-container--samba /deep/ .title1 {

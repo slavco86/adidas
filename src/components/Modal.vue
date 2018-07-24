@@ -115,10 +115,16 @@ export default {
   background-image: none;
   background-color: #3333ff !important;
   height: 100vh;
+
+  @media screen and (min-width: 1366px) {
+    height: 65%;
+    width: 60%;
+  }
 }
 
 .srContainer {
   background-image: none;
+  height: 100vh;
 }
 
 .modal-body {
@@ -158,12 +164,19 @@ export default {
   @media screen and (min-width: 765px) { 
     width: 30%;
   }
+
+  @media screen and (min-width: 1366px) { 
+    width: 40%;
+  }
 }
 
 .sambaroseLogo {
   position: absolute;
-  top: 149%;
-  left: 41%;
+  top: 122%;
+  left: 34%;
+  @media screen and (min-width: 765px) { 
+    width: 30%;
+  }
 }
 
 .podLogo {
@@ -179,7 +192,7 @@ export default {
 .franchisePOD {
   color: #3333ff;
   position: absolute;
-  top: 238%;
+  top: 210%;
   left: 10%;
   background: url(../assets/podpink.svg);
   background-repeat: no-repeat;
@@ -187,6 +200,9 @@ export default {
   height: 100%;
   @media screen and (min-width: 765px) { 
     top: 288%;
+  }
+  @media screen and (min-width: 1366px) { 
+    top: 63%;
   }
 }
 
@@ -199,6 +215,10 @@ export default {
   left: 0%;
   height: 24px;
   width: 314px;
+  @media screen and (min-width: 765px) { 
+    width: 702px;
+    height: 81px;
+  }
 }
 
 .franchiseInfo {
