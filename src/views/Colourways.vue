@@ -271,13 +271,14 @@ export default {
 }
 
 .brand {
-  font-size: 8rem;
-  position: absolute;
   color: #666;
-  opacity: 0.5;
+  font-size: 8rem;
   font-weight: 900;
   height: 60%;
+  opacity: 0.5;
+  position: absolute;
   transform: rotate(-90deg);
+  user-select: none;
 
   @media only screen and (min-width: 765px) {
     font-size: 18rem;
