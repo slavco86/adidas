@@ -1,0 +1,11 @@
+// Dynamic Background
+@function setBackgroundColor($color) {
+
+  @if (lightness($color) < 40) {
+    @return #fff;
+  }
+
+  @else {
+    @return transparent;
+  }
+}

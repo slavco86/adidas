@@ -16,9 +16,9 @@
       <div class="product-info">
         <span class="title">{{ franchise }}</span>
         <span class="price">£{{ colourways[selectedIndex].price }}</span>
-        <img
-          src="../assets/basket-icon.svg"
-          class="quickbuy-icon">
+        <QuickBuy
+          :context="context"
+          :url="colourways[selectedIndex].url"/>
       </div>
       <div class="main-image">
         <img
@@ -57,6 +57,7 @@ import Carousel from '@/containers/Carousel.vue';
 import Modal from '@/components/Modal.vue';
 import Titles from '@/components/Titles.vue';
 import Logo from '@/components/AdidasLogo.vue';
+import QuickBuy from '@/components/QuickBuy.vue';
 
 export default {
   name: 'ColourwaysContainer',
@@ -65,6 +66,7 @@ export default {
     Modal,
     Titles,
     Logo,
+    QuickBuy,
   },
 
   props: {
@@ -73,6 +75,10 @@ export default {
       default() {
         return {};
       },
+    },
+    context: {
+      type: String,
+      default: undefined,
     },
     active: {
       type: Boolean,
@@ -211,11 +217,16 @@ export default {
     font-weight: bold;
   }
 
-  .quickbuy-icon {
-    width: 35%;
-    height: auto;
-    filter: invert(100);
-    margin-top: 10px;
+  // .quickbuy-icon {
+  //   width: 35%;
+  //   height: auto;
+  //   filter: invert(100);
+  //   margin-top: 10px;
+  // }
+
+  /deep/ .quickView {
+    fill: transparent;
+    stroke: #fff;
   }
 }
 

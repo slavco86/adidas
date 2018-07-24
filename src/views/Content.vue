@@ -10,6 +10,7 @@
           :is="component"
           :active="section === component"
           :data="content[component]"
+          :context="component"
           class="section__inner"/>
       </div>
     </div>
