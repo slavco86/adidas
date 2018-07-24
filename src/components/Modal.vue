@@ -2,8 +2,9 @@
   <transition name="modal">
     <div class="modal-mask">
       <div class="modal-wrapper"
-        :class="{deWrapper: deerupt}"
-      >
+        :class="{deWrapper: deerupt,
+                 srWrapper: sambarose
+                 }">
         <div class="modal-container"
             :class="{ podContainer: pod,
                       srContainer: sambarose
@@ -12,12 +13,16 @@
             class="close"
             src="../assets/close_black.png"
             @click="$emit('close')"
-            :class="{deeruptCloseB: deerupt}">
+            :class="{deeruptCloseB: deerupt,
+                     sambaRoseB: sambarose
+                     }">
             <img
             class="close"
             src="../assets/close_white.png"
             @click="$emit('close')"
-            :class="{deeruptCloseW: deerupt}">
+            :class="{deeruptCloseW: deerupt,
+                    sambaRoseW: sambarose
+                    }">
           <div class="modal-body">
             <img
             :class="{ deeruptLogo: deerupt, 
@@ -139,11 +144,6 @@ export default {
   }
 }
 
-.srContainer {
-  background-image: none;
-  height: 100vh;
-}
-
 .modal-body {
   margin: 55% 0;
 
@@ -200,9 +200,14 @@ export default {
 .sambaroseLogo {
   position: absolute;
   top: 122%;
-  left: 34%;
+  left: 39%;
   @media screen and (min-width: 765px) { 
     width: 30%;
+  }
+  @media screen and (min-width: 1366px) {
+    position: absolute;
+    top: 314%;
+    width: 20%;
   }
 }
 
@@ -238,11 +243,12 @@ export default {
   background: url(../assets/sambarosepinklogo.svg);
   background-repeat: no-repeat;
   position: absolute;
-  top: 17%;
+  top: -5%;
   left: 0%;
   height: 24px;
   width: 314px;
-  @media screen and (min-width: 765px) { 
+  @media screen and (min-width: 765px) {
+    top: -25%; 
     width: 702px;
     height: 81px;
   }
@@ -256,13 +262,15 @@ export default {
   font-size: 4em;
 }
 
-.deeruptCloseB {
+.deeruptCloseB,
+.sambaRoseB {
   @media screen and (min-width: 1366px) { 
     display: none;
   }
 }
 
-.deeruptCloseW {
+.deeruptCloseW,
+.sambaRoseW {
   display: none;
   @media screen and (min-width: 1366px) {
     display: inline;
@@ -277,4 +285,8 @@ export default {
   height: 100vh;
 }
 
+.srWrapper {
+  background: none;
+  height: 100vh;
+}
 </style>
