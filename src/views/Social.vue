@@ -77,6 +77,11 @@ export default {
     align-items: center;
   }
 
+  &__inner {
+    display: flex;
+    flex-direction: column;
+  }
+
   &__text {
     margin: 1rem 0;
     text-transform: uppercase;
@@ -94,10 +99,10 @@ export default {
     align-self: flex-end;
     border: 2px solid #fff;
     color: #fff;
-    margin: 0 1rem;
+    margin: 1rem;
     padding: 1rem 1.5rem;
-    position: absolute;
-    right: 0;
+    position: relative;
+    top: -0.75rem;
     text-transform: uppercase;
 
     @media only screen and (min-width: 1024px) {
@@ -177,7 +182,7 @@ export default {
 
 // Animate
 .grid--animate {
-  padding: 50px 0;
+  padding: 1rem 0;
 
   .grid__product {
     transform: translate3d(0, 0, 0);
