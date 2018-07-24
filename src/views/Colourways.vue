@@ -13,12 +13,10 @@
       <div
         class="hotspot hotspot--right"
         @click="displayModal(1)"/>
-      <div class="product-info">
-        <span class="title">{{ franchise }}</span>
-        <span class="price">£{{ colourways[selectedIndex].price }}</span>
-        <QuickBuy
-          :url="colourways[selectedIndex].url"/>
-      </div>
+      <ProductInfo
+        :franchise="franchise"
+        :price="colourways[selectedIndex].price"
+        :url="colourways[selectedIndex].url"/>
       <div class="main-image">
         <img
           :src="mainImage"
@@ -57,6 +55,7 @@ import Modal from '@/components/Modal.vue';
 import Titles from '@/components/Titles.vue';
 import Logo from '@/components/AdidasLogo.vue';
 import QuickBuy from '@/components/QuickBuy.vue';
+import ProductInfo from '@/components/ProductInfo.vue';
 
 export default {
   name: 'ColourwaysContainer',
@@ -66,6 +65,7 @@ export default {
     Titles,
     Logo,
     QuickBuy,
+    ProductInfo,
   },
 
   props: {
@@ -205,17 +205,6 @@ export default {
   top: 45%;
   text-align: right;
   z-index: 1;
-
-  span {
-    font-size: 1rem;
-    display: block;
-    text-align: right;
-    margin: 5px;
-  }
-
-  .price {
-    font-weight: bold;
-  }
 }
 
 .carousel-container {
