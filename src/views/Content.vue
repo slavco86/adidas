@@ -10,6 +10,7 @@
           :is="component"
           :active="section === component"
           :data="content[component]"
+          :content="content"
           :context="component"
           class="section__inner"/>
       </div>
@@ -54,9 +55,9 @@ export default {
 
   data() {
     return {
-      anchors: ['colourways', 'social', 'influencer'],
+      anchors: ['sketch-fab-model', 'colourways', 'social', 'influencer', 'shoppable-video'],
       fullpage: null,
-      section: 'colourways',
+      section: 'sketch-fab-model',
     };
   },
 

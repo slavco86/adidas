@@ -106,7 +106,6 @@ export default {
   &__inner-wrapper {
     height: auto;
     max-height: 670px;
-    background: hotpink;
     overflow: hidden;
   }
 
@@ -131,6 +130,7 @@ export default {
     padding: 1rem 1.5rem;
     max-width: 150px;
     position: relative;
+    top: -0.85rem;
     text-transform: uppercase;
 
     @media only screen and (min-width: 1024px) {
