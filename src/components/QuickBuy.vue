@@ -3,7 +3,8 @@
     :data-quickview-path="url"
     :data-product-sku="sku"
     :context="context"
-    :sku="sku">
+    :sku="sku"
+    class="cta quickView">
     <BasketLogo :color="color"/>
   </Button>
 </template>
@@ -21,6 +22,7 @@ export default {
     url: {
       type: String,
       default: undefined,
+      required: true,
     },
     context: {
       type: String,
@@ -40,3 +42,18 @@ export default {
 };
 </script>
 
+<style lang="scss" scoped>
+  .quickView {
+    background: none;
+    cursor: pointer;
+    max-height: 60px;
+    max-width: 60px;
+    position: absolute;
+
+    img {
+      display: block;
+      height: auto;
+      width: 100%;
+    }
+  }
+</style>

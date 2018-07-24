@@ -3,7 +3,8 @@
     :is="aButton"
     :data-ip-position="position"
     :data-ip-name="sku"
-    class="ga-ip cta quickView">
+    :href="href"
+    class="ga-ip">
     <slot/>
   </a>
 </template>
@@ -11,6 +12,10 @@
 <script>
 export default {
   props: {
+    href: {
+      type: String,
+      default: undefined,
+    },
     sku: {
       type: String,
       default: undefined,
@@ -31,25 +36,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss" scoped>
-  // .cta {
-  //   cursor: pointer;
-  //   color: inherit;
-  //   text-decoration: none;
-  // }
-
-  .quickView {
-    background: none;
-    cursor: pointer;
-    max-height: 60px;
-    max-width: 60px;
-    position: absolute;
-
-    img {
-      display: block;
-      height: auto;
-      width: 100%;
-    }
-  }
-</style>
