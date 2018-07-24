@@ -1,6 +1,6 @@
 <template>
   <div class="content-page">
-    <CloseButton/>
+    <CloseButton :to="`/${$route.params.gender}`" />
     <div id="content">
       <div
         v-for="component in anchors"

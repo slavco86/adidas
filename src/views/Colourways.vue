@@ -8,10 +8,10 @@
       class="logo"/>
     <div class="main-container">
       <div
-        class="hotspot hotspot--invert"
+        class="hotspot"
         @click="displayModal(0)"/>
       <div
-        class="hotspot hotspot--invert hotspot--right"
+        class="hotspot hotspot--right"
         @click="displayModal(1)"/>
       <div class="product-info">
         <span class="title">{{ franchise }}</span>
@@ -157,7 +157,8 @@ export default {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
+  overflow: hidden;
 }
 
 .logo {
@@ -200,7 +201,6 @@ export default {
 }
 
 .product-info {
-  color: white;
   position: absolute;
   right: 10%;
   top: 45%;
@@ -249,7 +249,6 @@ export default {
   left: 16%;
   width: 45px;
   height: 45px;
-  color: black;
   z-index: 2;
 
   &::before,
@@ -270,23 +269,24 @@ export default {
     border-left: 1px solid;
   }
 
-  &--invert {
-    &::after,
-    &::before {
-      border-color: #fff;
-    }
-  }
-
   &--right {
     left: 60%;
     top: 58%;
   }
 }
 
+.category--women .hotspot {
+  &::after,
+  &::before {
+    border-color: #222;
+  }
+}
+
 .brand {
   font-size: 8rem;
   position: absolute;
-  color: #333;
+  color: #666;
+  opacity: 0.5;
   font-weight: 900;
   height: 60%;
   transform: rotate(-90deg);
