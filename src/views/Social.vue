@@ -60,14 +60,32 @@ export default {
     return {
       activateAnimation: false,
       content: JSON.parse(JSON.stringify(this.data.products)),
+      womenisActive: true,
     };
+  },
+
+  computed: {
+    womenActive() {
+      return (this.$route.params.gender === 'women') ? this.womenisActive : '';
+    }
   },
 };
 </script>
 
 <style lang="scss" scoped>
+.category--women .social__cta {
+  border: 1px solid #000;
+  color: #000;
+  font-weight: 600;
+
+  &:hover {
+    background-color: #000;
+    color: #fff;
+  }
+}
+
 .social {
-  // align-items: center;
+  align-items: center;
   display: flex;
   height: 100vh;
   justify-content: center;
@@ -123,7 +141,6 @@ export default {
     flex: 0 0 50%;
     height: auto;
     max-width: 635px;
-    // min-width: 150px;
     padding: 0.5rem;
     transition: transform 1s ease-in-out;
 
