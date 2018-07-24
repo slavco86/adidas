@@ -1,6 +1,6 @@
 <template>
   <div class="product-info">
-    <div class="product-info__title">{{ franchise }}</div>
+    <div class="product-info__title">{{ title }}</div>
     <div class="product-info__price">£{{ price }}</div>
     <QuickBuy :url="url"/>
   </div>
@@ -15,7 +15,7 @@ export default {
   },
 
   props: {
-    franchise: {
+    title: {
       type: String,
       default: '',
     },

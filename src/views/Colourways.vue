@@ -13,10 +13,7 @@
       <div
         class="hotspot hotspot--right"
         @click="displayModal(1)"/>
-      <ProductInfo
-        :franchise="franchise"
-        :price="colourways[selectedIndex].price"
-        :url="colourways[selectedIndex].url"/>
+      <ProductInfo v-bind="colourways[selectedIndex]"/>
       <div class="main-image">
         <img
           :src="mainImage"
