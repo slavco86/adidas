@@ -85,6 +85,7 @@ export default {
 .influencer-section /deep/ .titles {
   color: white;
   padding-top: 2rem;
+  line-height: 40px;
 
   .title1,
   .title2 {
@@ -96,9 +97,17 @@ export default {
   }
 
   .title2 {
-    font-size: 4rem;
+    font-size: 2rem;
     font-weight: bold;
+
+    @media only screen and (min-width: 765px) {
+      font-size: 4rem;
+    }
   }
+}
+
+.category--women .influencer-section /deep/ .titles {
+  color: black;
 }
 
 .brand {
