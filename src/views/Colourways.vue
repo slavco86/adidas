@@ -17,7 +17,6 @@
         <span class="title">{{ franchise }}</span>
         <span class="price">£{{ colourways[selectedIndex].price }}</span>
         <QuickBuy
-          :context="context"
           :url="colourways[selectedIndex].url"/>
       </div>
       <div class="main-image">
@@ -205,6 +204,7 @@ export default {
   right: 10%;
   top: 45%;
   text-align: right;
+  z-index: 1;
 
   span {
     font-size: 1rem;
@@ -276,13 +276,14 @@ export default {
 }
 
 .brand {
-  font-size: 8rem;
-  position: absolute;
   color: #666;
-  opacity: 0.5;
+  font-size: 8rem;
   font-weight: 900;
   height: 60%;
+  opacity: 0.5;
+  position: absolute;
   transform: rotate(-90deg);
+  user-select: none;
 
   @media only screen and (min-width: 765px) {
     font-size: 18rem;

@@ -13,8 +13,7 @@
           v-bind="slide"
           class="grid__product">
           <QuickBuy
-            :context="context"
-            v-bind="slide"/>
+            :url="slide.url"/>
           <span class="grid__product__text">{{ slide.handle }}</span>
         </Spot>
       </div>
@@ -34,6 +33,11 @@ import QuickBuy from '@/components/QuickBuy.vue';
 
 export default {
   name: 'Social',
+
+  provide: {
+    trackingName: 'social',
+  },
+
   components: {
     Spot,
     QuickBuy,
@@ -145,21 +149,10 @@ export default {
     transition: transform 1s ease-in-out;
 
     /deep/ .quickView {
-      fill: transparent;
       position: absolute;
       right: 0;
-      stroke: #fff;
       top: 0;
       margin: 0.75rem;
-
-      &--women {
-        fill: #fff;
-        stroke: #000;
-
-        circle {
-          stroke: transparent;
-        }
-      }
     }
 
     @media only screen and (min-width: 1024px) {

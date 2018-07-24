@@ -2,10 +2,9 @@
   <Button
     :data-quickview-path="url"
     :data-product-sku="sku"
-    :context="context"
-    :class="{'quickView--women': gender}"
-    :sku="sku">
-    <BasketLogo/>
+    :data-ip-name="sku"
+    class="cta quickView">
+    <BasketLogo :color="color"/>
   </Button>
 </template>
 
@@ -18,30 +17,39 @@ export default {
     Button,
     BasketLogo,
   },
+
   props: {
     url: {
       type: String,
       default: undefined,
-    },
-    context: {
-      type: String,
-      default: undefined,
+      required: true,
     },
   },
-  data() {
-    return {
-      genderPath: this.$route.params.gender,
-      active: true,
-    };
-  },
+
   computed: {
     sku() {
       return this.url.split('/').pop();
     },
-    gender() {
-      return (this.genderPath === 'women') ? this.active : '';
+
+    color() {
+      return (this.$route.params.gender === 'women') ? '#222' : '#fff';
     },
   },
 };
 </script>
 
+<style lang="scss" scoped>
+  .quickView {
+    fill: transparent;
+    background: none;
+    cursor: pointer;
+    max-height: 60px;
+    max-width: 60px;
+
+    img {
+      display: block;
+      height: auto;
+      width: 100%;
+    }
+  }
+</style>

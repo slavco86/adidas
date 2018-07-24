@@ -78,7 +78,8 @@ export default {
 <style lang="scss" scoped>
 .influencer-section {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
+  overflow: hidden;
 }
 
 .influencer-section /deep/ .titles {
