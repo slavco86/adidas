@@ -99,10 +99,9 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, .5);
+  background-color: rgba(0, 0, 0, 0.5);
   display: table;
-  transition: opacity .3s ease;
-
+  transition: opacity 0.3s ease;
 }
 
 .modal-wrapper {
@@ -113,12 +112,12 @@ export default {
 .modal-container {
   width: 100%;
   height: 100%;
-  margin: 0px auto;
+  margin: 0 auto;
   padding: 20px 30px;
   background-color: #fff;
   border-radius: 2px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
-  transition: all .3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
+  transition: all 0.3s ease;
   font-family: Helvetica, Arial, sans-serif;
   background-image: url("../assets/swmobile.png");
   background-repeat: no-repeat;
@@ -141,17 +140,17 @@ export default {
 
 .podContainer {
   background-image: none;
-  background-color: #3333ff !important;
+  background-color: #33f !important;
 }
 
 .modal-body {
   margin: 55% 0;
 
-  @media screen and (min-width: 765px) { 
+  @media screen and (min-width: 765px) {
     margin: 38% 0;
   }
 
-  @media screen and (min-width: 1366px) { 
+  @media screen and (min-width: 1366px) {
     margin: 14% 0;
   }
 }
@@ -166,7 +165,6 @@ export default {
 
 .modal-enter .modal-container,
 .modal-leave-active .modal-container {
-  -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
 
@@ -182,17 +180,17 @@ export default {
 .allBrandsLogo {
   width: 22%;
 
-  @media screen and (min-width: 765px) { 
+  @media screen and (min-width: 765px) {
     width: 30%;
   }
 
-  @media screen and (min-width: 1366px) { 
+  @media screen and (min-width: 1366px) {
     width: 35%;
   }
 }
 
 .deeruptLogo {
-  @media screen and (min-width: 1366px) { 
+  @media screen and (min-width: 1366px) {
     display: none;
   }
 }
@@ -201,13 +199,15 @@ export default {
   position: absolute;
   top: 190%;
   left: 39%;
-  @media screen and (min-width: 765px) { 
+
+  @media screen and (min-width: 765px) {
     top: 106%;
   }
 
-  @media screen and (min-width: 765px) { 
+  @media screen and (min-width: 765px) {
     width: 30%;
   }
+
   @media screen and (min-width: 1366px) {
     position: absolute;
     bottom: 0%;
@@ -226,11 +226,12 @@ export default {
 }
 
 .srContainer {
-  background-color: white !important;
   background: none;
+  background-color: white !important;
 }
+
 .franchisePOD {
-  color: #3333ff;
+  color: #33f;
   position: absolute;
   top: 186%;
   left: 10%;
@@ -238,10 +239,12 @@ export default {
   background-repeat: no-repeat;
   width: 85%;
   height: 100%;
-  @media screen and (min-width: 765px) { 
+
+  @media screen and (min-width: 765px) {
     top: 138%;
   }
-  @media screen and (min-width: 1366px) { 
+
+  @media screen and (min-width: 1366px) {
     top: 121%;
   }
 }
@@ -255,10 +258,12 @@ export default {
   right: 0;
   height: 100%;
   width: 100%;
+
   @media screen and (min-width: 765px) {
-    top: -15%; 
+    top: -15%;
     width: 100%;
   }
+
   @media screen and (min-width: 1366px) {
     left: 5%;
   }
@@ -275,7 +280,7 @@ export default {
 .deeruptCloseB,
 .sambaRoseB,
 .allBrandsB {
-  @media screen and (min-width: 1366px) { 
+  @media screen and (min-width: 1366px) {
     display: none;
   }
 }
@@ -284,6 +289,7 @@ export default {
 .sambaRoseW,
 .allBrandsW {
   display: none;
+
   @media screen and (min-width: 1366px) {
     display: inline;
     position: absolute;
