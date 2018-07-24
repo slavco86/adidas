@@ -28,22 +28,30 @@
       <div
         slot-scope="{slide}"
         class="image-container">
-        <img
-          :src="slide.image.desktop"
-          :class="{ isActive : slide.active }"
-          class="image"
-          @click="selectColourway(slide.key)">
-      </div>
-    </Carousel>
-    <modal
-      v-if="showModal"
-      @close="showModal = false">
-
-      <Titles
-        :headline="hotspots[activeHotspot].title"
-        :subtext="hotspots[activeHotspot].subtext"/>
-    </modal>
-  </div>
+      <img
+        :src="slide.image.desktop"
+        :class="{ isActive : slide.active }"
+        class="image"
+        @click="selectColourway(slide.key)">
+    </div>
+  </Carousel>
+  <modal
+    v-if="showModal"
+    @close="showModal = false"
+    :modalFranchise="modalFranchise">
+    <Titles
+      :headline="hotspots[activeHotspot].title"
+      :subtext="hotspots[activeHotspot].subtext"
+      class="modal-container"
+      :class="{'modal-container--pod': this.$route.params.franchise === 'POD',
+                'modal-container--samba': this.$route.params.franchise === 'Sambarose',
+                'modal-container--deerupt': this.$route.params.franchise === 'Deerupt',
+                'modal-container--allBrands': (this.$route.params.franchise !== 'Deerupt'
+                                            || this.$route.params.franchise !== 'Sambarose'
+                                            || this.$route.params.franchise !== 'POD')
+              }"/>
+  </modal>
+</div>
 </template>
 
 <script>
@@ -84,6 +92,7 @@ export default {
 
   data() {
     return {
+      modalFranchise: '',
       activeHotspot: null,
       showModal: false,
       selectedIndex: 0,
@@ -92,6 +101,7 @@ export default {
         breakpoints: {
           764: {
             slidesPerView: 2,
+            spaceBetween: -100,
           },
         },
       },
@@ -101,6 +111,7 @@ export default {
 
   computed: {
     franchise() {
+      this.modalFranchise = this.$route.params.franchise;
       return this.$route.params.franchise;
     },
 
@@ -140,13 +151,16 @@ export default {
       this.selectedIndex = selectedSlide;
     },
   },
-
 };
 
 </script>
 
-
 <style lang="scss" scoped>
+
+.isActive {
+  opacity: 1 !important;
+}
+
 .section-colourways {
   display: flex;
   flex-direction: column;
@@ -227,6 +241,8 @@ export default {
 
 .carousel-container /deep/ .image {
   width: 100%;
+  opacity: 0.5;
+  padding: 26%;
 
   @media screen and (min-width: 765px) {
     width: 70%;
@@ -287,4 +303,95 @@ export default {
     transform: rotate(0deg);
   }
 }
+
+.modal-container /deep/ .title1 {
+  font-size: 3em;
+  font-weight: lighter;
+
+  @media screen and (min-width: 765px) {
+    font-size: 4em;
+  }
+}
+
+.modal-container /deep/ .title2 {
+  font-size: 1.5em;
+  font-weight: lighter;
+
+  @media screen and (min-width: 765px) {
+    font-size: 2.5em;
+  }
+}
+
+.modal-container--pod /deep/ .title1 {
+  color: pink;
+  font-weight: 900;
+
+  @media screen and (min-width: 765px) {
+    font-size: 5em;
+  }
+}
+
+.modal-container--pod /deep/ .title2 p {
+  color: white;
+  font-weight: 300;
+  font-size: 24px;
+
+  @media screen and (min-width: 765px) {
+    padding-top: 5%;
+    font-size: 32px;
+    line-height: 1.5;
+  }
+
+  @media screen and (min-width: 1366px) {
+    padding-top: 0%;
+    font-size: 26px;
+  }
+}
+
+.modal-container--samba /deep/ .title1 {
+  display: none;
+}
+
+.modal-container--samba /deep/ .title2 p {
+  padding-top: 15%;
+  color: #222;
+  font-weight: 400;
+
+  @media screen and (min-width: 765px) {
+    font-size: 33px;
+    line-height: 1.5;
+    font-weight: bold;
+  }
+
+  @media screen and (min-width: 1366px) {
+    padding-top: 5%;
+  }
+}
+
+.modal-container--deerupt /deep/ .title1 {
+  display: none;
+}
+
+.modal-container--deerupt /deep/ .title2 p {
+  @media screen and (min-width: 765px) {
+    font-size: 32px;
+    color: #222;
+    line-height: 1.5;
+    font-weight: 400;
+  }
+
+  @media screen and (min-width: 1366px) {
+    font-size: 32px;
+    color: #222;
+    line-height: 1.5;
+    font-weight: 400;
+  }
+}
+
+.modal-container--allBrands /deep/ .title2 p {
+  @media screen and (min-width: 1366px) {
+    line-height: 1.5;
+  }
+}
+
 </style>
