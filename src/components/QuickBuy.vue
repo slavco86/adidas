@@ -2,8 +2,7 @@
   <Button
     :data-quickview-path="url"
     :data-product-sku="sku"
-    :context="context"
-    :sku="sku"
+    :data-ip-name="sku"
     class="cta quickView">
     <BasketLogo :color="color"/>
   </Button>
@@ -18,15 +17,12 @@ export default {
     Button,
     BasketLogo,
   },
+
   props: {
     url: {
       type: String,
       default: undefined,
       required: true,
-    },
-    context: {
-      type: String,
-      default: undefined,
     },
   },
 
