@@ -14,7 +14,8 @@
             <img
             :class="{ deeruptLogo: deerupt, 
                       podLogo: pod, 
-                      sambaroseLogo: sambarose 
+                      sambaroseLogo: sambarose,
+                      allBrandsLogo: allBrands 
                     }"
             src="../assets/adidas-logo.svg">
             <div :class="{ franchiseDeerupt: deerupt, 
@@ -138,7 +139,8 @@ export default {
 }
 
 .deeruptLogo,
-.sambaroseLogo {
+.sambaroseLogo,
+.allBrandsLogo {
   width: 22%;
 }
 

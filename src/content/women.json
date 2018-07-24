@@ -517,12 +517,12 @@
       "colourways": {
         "hotspots": [
           {
-            "title": "",
-            "subtext": "With Deerupt, a silhouette becomes the unexpected. Comfort becomes the unprecedented. Fit becomes an experience."
+            "title": "Title 1",
+            "subtext": "Subtitle 1\n\nWith Deerupt, a silhouette becomes the unexpected. Comfort becomes the unprecedented. Fit becomes an experience."
           },
           {
             "title": "Title 2",
-            "subtext": "Subtitle 2\n\nWith Deerupt, a silhouette becomes the unexpected. Comfort becomes the unprecedented.\n\nFit becomes an experience."
+            "subtext": "Subtitle 2\n\nWith Deerupt, a silhouette becomes the unexpected. Comfort becomes the unprecedented. Fit becomes an experience."
           }
         ],
         "products": [
