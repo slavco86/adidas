@@ -1,7 +1,15 @@
 <template>
-  <div v-if="headline || subtext" class="titles">
-    <div v-if="headline" :is="explictHeadline" class="title1">{{ headline }}</div>
-    <div v-if="subtext" class="title2" v-html="paragraphs"/>
+  <div
+    v-if="headline || subtext"
+    class="titles">
+    <div
+      v-if="headline"
+      :is="explictHeadline"
+      class="title1">{{ headline }}</div>
+    <div
+      v-if="subtext"
+      class="title2"
+      v-html="paragraphs"/>
   </div>
 </template>
 

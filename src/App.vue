@@ -1,5 +1,8 @@
 <template>
-  <div id="app">
+  <div
+    id="app"
+    :class="{'category--women' : isWomen }"
+    class="category">
     <transition
       name="fade"
       @enter="pageTransitionStart"
@@ -17,6 +20,12 @@ export default {
     return {
       routeAnimating: false,
     };
+  },
+
+  computed: {
+    isWomen() {
+      return (this.$route.params.gender === 'women') === true;
+    },
   },
 
   methods: {
@@ -50,11 +59,8 @@ export default {
 }
 
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  height: 100vh;
 }
 
 #nav {
@@ -68,5 +74,16 @@ export default {
       color: #42b983;
     }
   }
+}
+
+.category {
+  background-color: #222;
+  color: #fff;
+  transition: background-color 1s;
+}
+
+.category--women {
+  background-color: #fff;
+  color: #222;
 }
 </style>
