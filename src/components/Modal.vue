@@ -1,7 +1,9 @@
 <template>
   <transition name="modal">
     <div class="modal-mask">
-      <div class="modal-wrapper">
+      <div class="modal-wrapper"
+        :class="{deWrapper: deerupt}"
+      >
         <div class="modal-container"
             :class="{ podContainer: pod,
                       srContainer: sambarose
@@ -9,7 +11,13 @@
             <img
             class="close"
             src="../assets/close_black.png"
-            @click="$emit('close')">
+            @click="$emit('close')"
+            :class="{deeruptCloseB: deerupt}">
+            <img
+            class="close"
+            src="../assets/close_white.png"
+            @click="$emit('close')"
+            :class="{deeruptCloseW: deerupt}">
           <div class="modal-body">
             <img
             :class="{ deeruptLogo: deerupt, 
@@ -103,9 +111,18 @@ export default {
   font-family: Helvetica, Arial, sans-serif;
   background-image: url("../assets/swmobile.png");
   background-repeat: no-repeat;
+  background-size: cover;
 
   @media screen and (min-width: 765px) {
     background-image: url("../assets/swtablet.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  @media screen and (min-width: 1366px) {
+    height: 81%;
+    width: 62%;
+    background-image: url("../assets/swdesktop.png");
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -132,6 +149,10 @@ export default {
 
   @media screen and (min-width: 765px) { 
     margin: 38% 0;
+  }
+
+  @media screen and (min-width: 1366px) { 
+    margin: 14% 0;
   }
 }
 
@@ -166,7 +187,13 @@ export default {
   }
 
   @media screen and (min-width: 1366px) { 
-    width: 40%;
+    width: 35%;
+  }
+}
+
+.deeruptLogo {
+  @media screen and (min-width: 1366px) { 
+    display: none;
   }
 }
 
@@ -227,6 +254,27 @@ export default {
 
 .allBrandsF {
   font-size: 4em;
+}
+
+.deeruptCloseB {
+  @media screen and (min-width: 1366px) { 
+    display: none;
+  }
+}
+
+.deeruptCloseW {
+  display: none;
+  @media screen and (min-width: 1366px) {
+    display: inline;
+    position: absolute;
+    top: -8%;
+    right: -4%;
+    width: 11%;
+  }
+}
+
+.deWrapper {
+  height: 100vh;
 }
 
 </style>
