@@ -283,13 +283,21 @@ export default {
 }
 
 .modal-container /deep/ .title1 {
-  font-size: 260%;
+  font-size: 3em;
   font-weight: lighter;
+
+  @media screen and (min-width: 765px) { 
+    font-size: 4em;
+  }
 }
 
 .modal-container /deep/ .title2 {
-  font-size: 140%;
+  font-size: 1.5em;
   font-weight: lighter;
+
+  @media screen and (min-width: 765px) {
+    font-size: 2.5em;
+  }
 }
 
 .modal-container--pod /deep/ .title1 {

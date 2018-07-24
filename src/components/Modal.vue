@@ -20,7 +20,8 @@
             src="../assets/adidas-logo.svg">
             <div :class="{ franchiseDeerupt: deerupt, 
                           franchisePOD: pod,
-                          franchiseSR: sambarose 
+                          franchiseSR: sambarose,
+                          allBrandsF : allBrands
                         }">
               {{ franchise }}
               {{ franchiseUpdate }}
@@ -70,7 +71,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 
 .modal-mask {
   position: fixed;
@@ -91,8 +92,8 @@ export default {
 }
 
 .modal-container {
-  width: 375px;
-  height: 678px;
+  width: 100%;
+  height: 100%;
   margin: 0px auto;
   padding: 20px 30px;
   background-color: #fff;
@@ -102,11 +103,18 @@ export default {
   font-family: Helvetica, Arial, sans-serif;
   background-image: url("../assets/swmobile.png");
   background-repeat: no-repeat;
+
+  @media screen and (min-width: 765px) {
+    background-image: url("../assets/swtablet.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 
 .podContainer {
   background-image: none;
   background-color: #3333ff !important;
+  height: 100vh;
 }
 
 .srContainer {
@@ -115,6 +123,10 @@ export default {
 
 .modal-body {
   margin: 55% 0;
+
+  @media screen and (min-width: 765px) { 
+    margin: 38% 0;
+  }
 }
 
 .modal-enter {
@@ -142,6 +154,10 @@ export default {
 .sambaroseLogo,
 .allBrandsLogo {
   width: 22%;
+
+  @media screen and (min-width: 765px) { 
+    width: 30%;
+  }
 }
 
 .sambaroseLogo {
@@ -169,6 +185,9 @@ export default {
   background-repeat: no-repeat;
   width: 85%;
   height: 100%;
+  @media screen and (min-width: 765px) { 
+    top: 288%;
+  }
 }
 
 .franchiseSR {
@@ -184,6 +203,10 @@ export default {
 
 .franchiseInfo {
   background-color: black;
+}
+
+.allBrandsF {
+  font-size: 4em;
 }
 
 </style>
