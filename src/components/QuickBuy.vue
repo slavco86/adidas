@@ -40,11 +40,13 @@ export default {
 
 <style lang="scss" scoped>
   .quickView {
-    fill: transparent;
     background: none;
     cursor: pointer;
+    fill: transparent;
+    margin: 0;
     max-height: 60px;
     max-width: 60px;
+    padding: 0;
 
     img {
       display: block;

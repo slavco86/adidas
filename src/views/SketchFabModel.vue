@@ -11,8 +11,12 @@
         v-else
         class="iframe-container">
         <ButtonClose :to="`/${$route.params.gender}/${$route.params.franchise}/`" />
+        <ProductInfo
+          :franchise="content.colourways.products[0].brand"
+          :price="content.colourways.products[0].price"
+          :url="content.colourways.products[0].url"/>
         <iframe
-          :src="src"
+          :src="modelSrc"
           width="640"
           height="480"
           frameborder="0"
@@ -26,20 +30,33 @@
 
 <script>
 import ButtonClose from '@/components/ButtonClose.vue';
+import ProductInfo from '@/components/ProductInfo.vue';
 
 export default {
   components: {
     ButtonClose,
+    ProductInfo,
   },
 
   props: {
-    contentView: {
-      type: Boolean,
-      default: true,
-    },
-    src: {
+    data: {
       type: String,
-      default: 'https://sketchfab.com/models/a06e9aca74b74cb3920123b21baf6140/embed',
+      default: 'a06e9aca74b74cb3920123b21baf6140',
+    },
+
+    content: {
+      type: Object,
+      default: () => {},
+    },
+  },
+
+  computed: {
+    modelId() {
+      return (this.content['sketch-fab-model']) ? this.content['sketch-fab-model'] : this.data;
+    },
+
+    modelSrc() {
+      return `https://sketchfab.com/models/${this.modelId}/embed?autospin=0.2&amp;autostart=1&amp;camera=0&amp;preload=1`;
     },
   },
 };
@@ -70,5 +87,12 @@ iframe {
   display: flex;
   flex-direction: column;
   width: 100%;
+}
+
+.product-info {
+  position: absolute;
+  bottom: 4rem;
+  right: 1rem;
+  z-index: 1;
 }
 </style>
