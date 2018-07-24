@@ -205,6 +205,22 @@ export default {
   top: 45%;
   text-align: right;
   z-index: 1;
+
+  span {
+    font-size: 1rem;
+    display: block;
+    text-align: right;
+    margin: 5px;
+  }
+
+  .price {
+    font-weight: bold;
+  }
+
+  /deep/ .quickView {
+    fill: transparent;
+    stroke: #fff;
+  }
 }
 
 .carousel-container {

@@ -64,14 +64,35 @@ export default {
     return {
       activateAnimation: false,
       content: JSON.parse(JSON.stringify(this.data.products)),
+      womenisActive: true,
     };
   },
 };
 </script>
 
 <style lang="scss" scoped>
+.category--women .social__cta {
+  border: 1px solid #000;
+  color: #000;
+  font-weight: 600;
+
+  &:hover {
+    background-color: #000;
+    color: #fff;
+  }
+}
+
+.category--women .social__text,
+.category--women .social__title {
+  color: #222;
+}
+
+.category--women .grid__product__text {
+  color: #222;
+}
+
 .social {
-  // align-items: center;
+  align-items: center;
   display: flex;
   height: 100vh;
   justify-content: center;
@@ -110,7 +131,8 @@ export default {
     text-transform: uppercase;
 
     @media only screen and (min-width: 1024px) {
-      position: static;
+      align-self: center;
+      top: 5rem;
     }
   }
 }
@@ -126,7 +148,6 @@ export default {
     flex: 0 0 50%;
     height: auto;
     max-width: 635px;
-    // min-width: 150px;
     padding: 0.5rem;
     transition: transform 1s ease-in-out;
 
@@ -175,7 +196,11 @@ export default {
 
 // Animate
 .grid--animate {
-  padding: 1rem 0;
+  padding: 0.5rem 0;
+
+  @media only screen and (min-width: 1024px) {
+    padding: 3rem 0;
+  }
 
   .grid__product {
     transform: translate3d(0, 0, 0);

@@ -113,7 +113,7 @@ export default {
     swiperOptions() {
       const desktop = this.width > 765;
       const slidesPerView = desktop ? 2 : 1.2;
-      const spaceBetween = desktop ? this.width * 0.01 : 15;
+      const spaceBetween = desktop ? this.width * 0.0025 : 15;
       return {
         parallax: true,
         centeredSlides: true,
@@ -121,6 +121,7 @@ export default {
         speed: 500,
         slidesPerView,
         mousewheel: true,
+        loop: true,
       };
     },
 
@@ -243,10 +244,10 @@ export default {
 }
 
 .logo {
-  width: 50px;
+  width: 75px;
   position: absolute;
   left: 10%;
-  top: 25%;
+  top: 15%;
 }
 
 .nav-button {
@@ -296,7 +297,7 @@ export default {
   transition: transform 0.5s ease-in-out;
 
   @media only screen and (min-width: 1024px) {
-    padding: 0 4%;
+    padding: 0 6%;
   }
 }
 
