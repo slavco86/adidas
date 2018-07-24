@@ -60,7 +60,6 @@ export default {
 
 #app {
   text-align: center;
-  height: 100vh;
 }
 
 #nav {
