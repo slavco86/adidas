@@ -304,12 +304,24 @@ export default {
 .modal-container--pod /deep/ .title1 {
   color: pink;
   font-weight: 900;
+  @media screen and (min-width: 765px) {
+    font-size: 5em;
+  }
 }
 
-.modal-container--pod /deep/ .title2 {
+.modal-container--pod /deep/ .title2 p {
   color: white;
   font-weight: 300;
-  font-size: 2em;
+  font-size: 24px;
+  @media screen and (min-width: 765px) {
+    padding-top: 5%;
+    font-size: 32px;
+    line-height: 1.5;
+  }
+  @media screen and (min-width: 1366px) { 
+    padding-top: 0%;
+    font-size: 26px;
+  }
 }
 
 .modal-container--samba /deep/ .title1 {
@@ -317,8 +329,9 @@ export default {
 }
 
 .modal-container--samba /deep/ .title2 p {
-  padding-top: 10%;
+  padding-top: 15%;
   color: #222;
+  font-weight: 400;
 
   @media screen and (min-width: 765px) {
     font-size: 33px;

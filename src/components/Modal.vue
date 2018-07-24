@@ -3,7 +3,8 @@
     <div class="modal-mask">
       <div class="modal-wrapper"
         :class="{deWrapper: deerupt,
-                 srWrapper: sambarose
+                 srWrapper: sambarose,
+                 pWrapper: pod
                  }">
         <div class="modal-container"
             :class="{ podContainer: pod,
@@ -14,14 +15,16 @@
             src="../assets/close_black.png"
             @click="$emit('close')"
             :class="{deeruptCloseB: deerupt,
-                     sambaRoseB: sambarose
+                     sambaRoseB: sambarose,
+                     podB: pod
                      }">
             <img
             class="close"
             src="../assets/close_white.png"
             @click="$emit('close')"
             :class="{deeruptCloseW: deerupt,
-                    sambaRoseW: sambarose
+                    sambaRoseW: sambarose,
+                    podW: pod
                     }">
           <div class="modal-body">
             <img
@@ -136,12 +139,6 @@ export default {
 .podContainer {
   background-image: none;
   background-color: #3333ff !important;
-  height: 100vh;
-
-  @media screen and (min-width: 1366px) {
-    height: 65%;
-    width: 60%;
-  }
 }
 
 .modal-body {
@@ -199,15 +196,19 @@ export default {
 
 .sambaroseLogo {
   position: absolute;
-  top: 122%;
+  top: 190%;
   left: 39%;
+  @media screen and (min-width: 765px) { 
+    top: 106%;
+  }
+
   @media screen and (min-width: 765px) { 
     width: 30%;
   }
   @media screen and (min-width: 1366px) {
     position: absolute;
-    top: 314%;
-    width: 20%;
+    bottom: 0%;
+    width: 17%;
   }
 }
 
@@ -221,20 +222,24 @@ export default {
   color: #222;
 }
 
+.srContainer {
+  background-color: white !important;
+  background: none;
+}
 .franchisePOD {
   color: #3333ff;
   position: absolute;
-  top: 210%;
+  top: 186%;
   left: 10%;
   background: url(../assets/podpink.svg);
   background-repeat: no-repeat;
   width: 85%;
   height: 100%;
   @media screen and (min-width: 765px) { 
-    top: 288%;
+    top: 138%;
   }
   @media screen and (min-width: 1366px) { 
-    top: 63%;
+    top: 121%;
   }
 }
 
@@ -248,9 +253,12 @@ export default {
   height: 24px;
   width: 314px;
   @media screen and (min-width: 765px) {
-    top: -25%; 
+    top: -15%; 
     width: 702px;
     height: 81px;
+  }
+  @media screen and (min-width: 765px) {
+    left: 5%;
   }
 }
 
@@ -281,7 +289,22 @@ export default {
   }
 }
 
-.deWrapper {
+.podB {
+  display: none;
+}
+
+.podW {
+  @media screen and (min-width: 1366px) {
+    display: inline;
+    position: absolute;
+    top: -8%;
+    right: -4%;
+    width: 11%;
+  }
+}
+
+.deWrapper,
+.pWrapper {
   height: 100vh;
 }
 
