@@ -131,21 +131,10 @@ export default {
     transition: transform 1s ease-in-out;
 
     /deep/ .quickView {
-      fill: transparent;
       position: absolute;
       right: 0;
-      stroke: #fff;
       top: 0;
       margin: 0.75rem;
-
-      &--women {
-        fill: #fff;
-        stroke: #000;
-
-        circle {
-          stroke: transparent;
-        }
-      }
     }
 
     @media only screen and (min-width: 1024px) {
