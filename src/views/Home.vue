@@ -23,12 +23,11 @@
     <div
       :class="{'grid--animate': grid}"
       class="grid-view">
-      <div
-        v-for="(slide,key) in franchises"
+      <FranchiseTile
+        v-for="slide in franchises"
         :key="slide.franchise"
-        class="grid-view__product">
-        <FranchiseTile :slide="slide" />
-      </div>
+        :slide="slide"
+        class="grid-view__product" />
     </div>
 
     <Carousel
