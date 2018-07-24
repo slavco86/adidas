@@ -127,14 +127,15 @@ export default {
   computed: {
     swiperOptions() {
       const desktop = this.width > 765;
-      const slidesPerView = desktop ? 1.8 : 1.2;
-      const spaceBetween = desktop ? this.width * 0.1 : 15;
+      const slidesPerView = desktop ? 2 : 1.2;
+      const spaceBetween = desktop ? this.width * 0.01 : 15;
       return {
         parallax: true,
         centeredSlides: true,
         spaceBetween,
         speed: 500,
         slidesPerView,
+        mousewheel: true,
       };
     },
 
@@ -318,7 +319,7 @@ export default {
   transition: transform 0.5s ease-in-out;
 
   @media only screen and (min-width: 1024px) {
-    padding: 0 12.5%;
+    padding: 0 4%;
   }
 }
 

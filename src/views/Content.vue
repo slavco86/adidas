@@ -26,12 +26,14 @@ import 'fullpage.js/dist/fullpage.css';
 
 import Colourways from '@/views/Colourways.vue';
 import Social from '@/views/Social.vue';
+import Influencer from '@/views/Influencer.vue';
 
 export default {
   name: 'ContentContainer',
   components: {
     Colourways,
     Social,
+    Influencer,
   },
 
   props: {
@@ -49,7 +51,7 @@ export default {
 
   data() {
     return {
-      anchors: ['colourways', 'social'],
+      anchors: ['colourways', 'social', 'influencer'],
       fullpage: null,
       section: 'colourways',
     };

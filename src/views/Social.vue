@@ -88,7 +88,7 @@ export default {
 <style lang="scss" scoped>
   .social {
     align-items: center;
-    display: flex;
+    // display: flex;
     height: 100vh;
     justify-content: center;
 

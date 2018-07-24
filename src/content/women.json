@@ -1,6 +1,6 @@
 [
   {
-    "franchise": "EQT",
+    "franchise": "Samba Rose",
     "launch": "August 3, 2018",
     "image": {
       "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg",
@@ -75,9 +75,9 @@
       "influencer":
         {
           "name": "Influencer Name",
-          "quote": "When you play with what’s possible, you define what is.",
           "products": [
             {
+              "quote": "When you play with what’s possible, you define what is.",
               "url": "/product/black-nike-air-force-1-low/047951",
               "image": {
                 "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg",
@@ -86,6 +86,7 @@
             },
             {
               "url": "/product/black-nike-air-force-1-low/047951",
+              "quote": "When you play with what’s possible, you define what is.",
               "image": {
                 "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg",
                 "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg"
@@ -93,6 +94,7 @@
             },
             {
               "url": "/product/black-nike-air-force-1-low/047951",
+              "quote": "When you play with what’s possible, you define what is.",
               "image": {
                 "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg",
                 "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg"
@@ -100,6 +102,7 @@
             },
             {
               "url": "/product/black-nike-air-force-1-low/047951",
+              "quote": "When you play with what’s possible, you define what is.",
               "image": {
                 "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg",
                 "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg"
@@ -149,7 +152,7 @@
     }
   },
   {
-    "franchise": "Samba Rose",
+    "franchise": "Falcon",
     "launch": "August 3, 2018",
     "image": {
       "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg",
@@ -194,9 +197,9 @@
       "influencer":
         {
           "name": "Influencer Name",
-          "quote": "When you play with what’s possible, you define what is.",
           "products": [
             {
+              "quote": "When you play with what’s possible, you define what is.",
               "url": "/product/black-nike-air-force-1-low/047951",
               "image": {
                 "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg",
@@ -205,6 +208,7 @@
             },
             {
               "url": "/product/black-nike-air-force-1-low/047951",
+              "quote": "When you play with what’s possible, you define what is.",
               "image": {
                 "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg",
                 "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg"
@@ -212,6 +216,7 @@
             },
             {
               "url": "/product/black-nike-air-force-1-low/047951",
+              "quote": "When you play with what’s possible, you define what is.",
               "image": {
                 "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg",
                 "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg"
@@ -219,6 +224,7 @@
             },
             {
               "url": "/product/black-nike-air-force-1-low/047951",
+              "quote": "When you play with what’s possible, you define what is.",
               "image": {
                 "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg",
                 "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg"
@@ -313,9 +319,9 @@
       "influencer":
         {
           "name": "Influencer Name",
-          "quote": "When you play with what’s possible, you define what is.",
           "products": [
             {
+              "quote": "When you play with what’s possible, you define what is.",
               "url": "/product/black-nike-air-force-1-low/047951",
               "image": {
                 "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg",
@@ -324,6 +330,7 @@
             },
             {
               "url": "/product/black-nike-air-force-1-low/047951",
+              "quote": "When you play with what’s possible, you define what is.",
               "image": {
                 "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg",
                 "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg"
@@ -331,6 +338,7 @@
             },
             {
               "url": "/product/black-nike-air-force-1-low/047951",
+              "quote": "When you play with what’s possible, you define what is.",
               "image": {
                 "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg",
                 "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg"
@@ -338,6 +346,7 @@
             },
             {
               "url": "/product/black-nike-air-force-1-low/047951",
+              "quote": "When you play with what’s possible, you define what is.",
               "image": {
                 "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg",
                 "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg"
@@ -432,9 +441,9 @@
       "influencer":
         {
           "name": "Influencer Name",
-          "quote": "When you play with what’s possible, you define what is.",
           "products": [
             {
+              "quote": "When you play with what’s possible, you define what is.",
               "url": "/product/black-nike-air-force-1-low/047951",
               "image": {
                 "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg",
@@ -443,6 +452,7 @@
             },
             {
               "url": "/product/black-nike-air-force-1-low/047951",
+              "quote": "When you play with what’s possible, you define what is.",
               "image": {
                 "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg",
                 "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg"
@@ -450,6 +460,7 @@
             },
             {
               "url": "/product/black-nike-air-force-1-low/047951",
+              "quote": "When you play with what’s possible, you define what is.",
               "image": {
                 "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg",
                 "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg"
@@ -457,6 +468,7 @@
             },
             {
               "url": "/product/black-nike-air-force-1-low/047951",
+              "quote": "When you play with what’s possible, you define what is.",
               "image": {
                 "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg",
                 "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg"
