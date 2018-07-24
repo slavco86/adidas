@@ -1,7 +1,6 @@
 <template>
-  <div
-    class="social">
-    <div class="social__inner">
+  <div class="social">
+    <div class="social__inner-wrapper">
       <p class="social__text">Get Social</p>
       <h2 class="social__title">#Creator</h2>
       <div
@@ -17,7 +16,6 @@
           <span class="grid__product__text">{{ slide.handle }}</span>
         </Spot>
       </div>
-
       <a
         href="#"
         class="social__cta">
@@ -64,7 +62,6 @@ export default {
     return {
       activateAnimation: false,
       content: JSON.parse(JSON.stringify(this.data.products)),
-      womenisActive: true,
     };
   },
 };
@@ -94,18 +91,18 @@ export default {
 .social {
   align-items: center;
   display: flex;
-  height: 100vh;
   justify-content: center;
-  padding: 0 1rem;
+  padding: 1rem;
+  height: calc(100vh - 50px);
 
   @media only screen and (min-width: 1024px) {
     align-items: center;
   }
 
-  &__inner {
-    display: flex;
-    flex-direction: column;
-  }
+  // &__inner {
+  //   display: flex;
+  //   flex-direction: column;
+  // }
 
   &__text {
     margin: 1rem 0;
@@ -124,10 +121,9 @@ export default {
     align-self: flex-end;
     border: 2px solid #fff;
     color: #fff;
-    margin: 1rem;
-    padding: 1rem 1.5rem;
     position: relative;
-    top: -0.75rem;
+    top: 1rem;
+    padding: 1rem 1.5rem;
     text-transform: uppercase;
 
     @media only screen and (min-width: 1024px) {
@@ -158,25 +154,25 @@ export default {
       margin: 0.75rem;
     }
 
-    @media only screen and (min-width: 1024px) {
-      flex: 0 0 19%;
-    }
+    // @media only screen and (min-width: 1024px) {
+    //   flex: 0 0 19%;
+    // }
 
-    &:first-child {
-      transform: translate3d(-100%, -100%, 0);
-    }
+    // &:first-child {
+    //   transform: translate3d(-100%, -100%, 0);
+    // }
 
-    &:nth-child(2) {
-      transform: translate3d(100%, -100%, 0);
-    }
+    //     &:nth-child(2) {
+    //       transform: translate3d(100%, -100%, 0);
+    //     }
 
-    &:nth-child(3) {
-      transform: translate3d(-100%, 100%, 0);
-    }
+    //     &:nth-child(3) {
+    //       transform: translate3d(-100%, 100%, 0);
+    //     }
 
-    &:last-child {
-      transform: translate3d(100%, 100%, 0);
-    }
+    //     &:last-child {
+    //       transform: translate3d(100%, 100%, 0);
+    //     }
 
     &__text {
       color: #ccc;
@@ -194,28 +190,28 @@ export default {
   }
 }
 
-// Animate
-.grid--animate {
-  padding: 0.5rem 0;
+// // Animate
+// .grid--animate {
+//   padding: 0.5rem 0;
 
-  @media only screen and (min-width: 1024px) {
-    padding: 3rem 0;
-  }
+//   @media only screen and (min-width: 1024px) {
+//     padding: 3rem 0;
+//   }
 
-  .grid__product {
-    transform: translate3d(0, 0, 0);
+//   .grid__product {
+//     transform: translate3d(0, 0, 0);
 
-    @media only screen and (min-width: 1024px) {
-      margin: 0 10px;
+//     @media only screen and (min-width: 1024px) {
+//       margin: 0 10px;
 
-      &:nth-child(odd) {
-        transform: translate3d(0, -50px, 0);
-      }
+//       &:nth-child(odd) {
+//         transform: translate3d(0, -50px, 0);
+//       }
 
-      &:nth-child(even) {
-        transform: translate3d(0, 50px, 0);
-      }
-    }
-  }
-}
+//       &:nth-child(even) {
+//         transform: translate3d(0, 50px, 0);
+//       }
+//     }
+//   }
+// }
 </style>

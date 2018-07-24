@@ -172,6 +172,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.home {
+  height: 100vh;
+}
+
 .grid-view {
   display: flex;
   flex-flow: row wrap;
