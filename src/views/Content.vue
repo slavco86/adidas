@@ -54,7 +54,7 @@ export default {
 
   data() {
     return {
-      anchors: ['social'],
+      anchors: ['colourways', 'social', 'influencer'],
       fullpage: null,
       section: 'colourways',
     };
@@ -65,7 +65,7 @@ export default {
       if (newVal === false) {
         // TODO: sort this shit out.
         setTimeout(() => {
-          // this.enableFullpage();
+          this.enableFullpage();
         }, 1);
       }
     });

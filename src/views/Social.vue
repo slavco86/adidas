@@ -1,8 +1,9 @@
 <template>
   <div class="social">
+    <p class="social__text">Get Social</p>
+    <h2 class="social__title">#Creator</h2>
+    <!-- Social Grid Section -->
     <div class="social__inner-wrapper">
-      <p class="social__text">Get Social</p>
-      <h2 class="social__title">#Creator</h2>
       <div
         :class="{'grid--animate': active}"
         class="grid">
@@ -16,12 +17,13 @@
           <span class="grid__product__text">{{ slide.handle }}</span>
         </Spot>
       </div>
-      <a
-        href="#"
-        class="social__cta">
-        Follow us
-      </a>
     </div>
+    <!-- Social CTA -->
+    <a
+      href="#"
+      class="social__cta">
+      Follow us
+    </a>
   </div>
 </template>
 
@@ -89,23 +91,27 @@ export default {
 }
 
 .social {
-  align-items: center;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  padding: 1rem;
+  // padding: 1rem;
   height: calc(100vh - 50px);
+  // background: orange;
 
   @media only screen and (min-width: 1024px) {
     align-items: center;
+    height: 100vh;
   }
 
-  // &__inner {
-  //   display: flex;
-  //   flex-direction: column;
-  // }
+  &__inner-wrapper {
+    height: auto;
+    max-height: 670px;
+    background: hotpink;
+    overflow: hidden;
+  }
 
   &__text {
-    margin: 1rem 0;
+    // margin: 1rem 0;
     text-transform: uppercase;
     color: #fff;
   }
@@ -121,14 +127,15 @@ export default {
     align-self: flex-end;
     border: 2px solid #fff;
     color: #fff;
-    position: relative;
-    top: 1rem;
+    margin: 0 1rem;
     padding: 1rem 1.5rem;
+    max-width: 150px;
+    position: relative;
     text-transform: uppercase;
 
     @media only screen and (min-width: 1024px) {
       align-self: center;
-      top: 5rem;
+      position: static;
     }
   }
 }
@@ -138,12 +145,13 @@ export default {
   flex-flow: row wrap;
   justify-content: center;
   margin: 1rem auto;
+  max-height: 670px;
   overflow: hidden;
 
   &__product {
     flex: 0 0 50%;
     height: auto;
-    max-width: 635px;
+    max-width: 25rem;
     padding: 0.5rem;
     transition: transform 1s ease-in-out;
 
@@ -154,32 +162,37 @@ export default {
       margin: 0.75rem;
     }
 
-    // @media only screen and (min-width: 1024px) {
-    //   flex: 0 0 19%;
-    // }
+    @media only screen and (min-width: 1024px) {
+      flex: 0 0 19%;
+    }
 
-    // &:first-child {
-    //   transform: translate3d(-100%, -100%, 0);
-    // }
+    &:first-child {
+      transform: translate3d(-100%, -100%, 0);
+    }
 
-    //     &:nth-child(2) {
-    //       transform: translate3d(100%, -100%, 0);
-    //     }
+    &:nth-child(2) {
+      transform: translate3d(100%, -100%, 0);
+    }
 
-    //     &:nth-child(3) {
-    //       transform: translate3d(-100%, 100%, 0);
-    //     }
+    &:nth-child(3) {
+      transform: translate3d(-100%, 100%, 0);
+    }
 
-    //     &:last-child {
-    //       transform: translate3d(100%, 100%, 0);
-    //     }
+    &:last-child {
+      transform: translate3d(100%, 100%, 0);
+    }
 
     &__text {
       color: #ccc;
       display: block;
-      margin: 0.75rem 0;
+      margin: 0.1rem 0;
       text-align: left;
-      font-size: 1rem;
+      font-size: 0.8rem;
+
+      @media only screen and (min-width: 1024px) {
+        font-size: 1rem;
+        margin: 0.75rem 0;
+      }
     }
 
     img {
@@ -190,28 +203,28 @@ export default {
   }
 }
 
-// // Animate
-// .grid--animate {
-//   padding: 0.5rem 0;
+// Animate
+.grid--animate {
+  padding: 0.5rem 0;
 
-//   @media only screen and (min-width: 1024px) {
-//     padding: 3rem 0;
-//   }
+  @media only screen and (min-width: 1024px) {
+    padding: 3rem 0;
+  }
 
-//   .grid__product {
-//     transform: translate3d(0, 0, 0);
+  .grid__product {
+    transform: translate3d(0, 0, 0);
 
-//     @media only screen and (min-width: 1024px) {
-//       margin: 0 10px;
+    @media only screen and (min-width: 1024px) {
+      margin: 0 10px;
 
-//       &:nth-child(odd) {
-//         transform: translate3d(0, -50px, 0);
-//       }
+      &:nth-child(odd) {
+        transform: translate3d(0, -50px, 0);
+      }
 
-//       &:nth-child(even) {
-//         transform: translate3d(0, 50px, 0);
-//       }
-//     }
-//   }
-// }
+      &:nth-child(even) {
+        transform: translate3d(0, 50px, 0);
+      }
+    }
+  }
+}
 </style>
