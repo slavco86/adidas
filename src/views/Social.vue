@@ -106,7 +106,8 @@ export default {
     text-transform: uppercase;
 
     @media only screen and (min-width: 1024px) {
-      position: static;
+      align-self: center;
+      top: 5rem;
     }
   }
 }
@@ -182,7 +183,11 @@ export default {
 
 // Animate
 .grid--animate {
-  padding: 1rem 0;
+  padding: 0.5rem 0;
+
+  @media only screen and (min-width: 1024px) {
+    padding: 3rem 0;
+  }
 
   .grid__product {
     transform: translate3d(0, 0, 0);

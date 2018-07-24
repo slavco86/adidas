@@ -217,13 +217,6 @@ export default {
     font-weight: bold;
   }
 
-  // .quickbuy-icon {
-  //   width: 35%;
-  //   height: auto;
-  //   filter: invert(100);
-  //   margin-top: 10px;
-  // }
-
   /deep/ .quickView {
     fill: transparent;
     stroke: #fff;
