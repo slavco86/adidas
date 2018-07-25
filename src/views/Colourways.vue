@@ -242,10 +242,14 @@ export default {
   margin-top: 3rem;
 }
 
+.carousel-container /deep/ .image-container:hover .image {
+  opacity: 1;
+}
+
 .carousel-container /deep/ .image {
-  width: 100%;
   opacity: 0.5;
-  padding: 26%;
+  transition: opacity 0.5s;
+  width: 100%;
 
   @media screen and (min-width: 765px) {
     width: 70%;

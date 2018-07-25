@@ -4,7 +4,7 @@
     :data-product-sku="sku"
     :data-ip-name="sku"
     class="cta quickView">
-    <BasketLogo/>
+    <BasketLogo :color="color"/>
   </Button>
 </template>
 
@@ -31,9 +31,9 @@ export default {
       return this.url.split('/').pop();
     },
 
-    // color() {
-    //   return (this.$route.params.gender === 'women') ? '#222' : '#fff';
-    // },
+    color() {
+      return (this.$route.params.gender === 'women') ? '#222' : '#fff';
+    },
   },
 };
 </script>
