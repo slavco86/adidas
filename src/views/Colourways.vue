@@ -1,6 +1,7 @@
 <template>
   <div class="section-colourways">
-    <div class="brand">
+    <div
+      class="brand">
       {{ franchise }}
     </div>
     <Logo
@@ -100,8 +101,7 @@ export default {
         slidesPerView: 4,
         breakpoints: {
           764: {
-            slidesPerView: 2,
-            spaceBetween: -100,
+            slidesPerView: 2
           },
         },
       },
@@ -147,7 +147,6 @@ export default {
     selectColourway(selectedSlide) {
       this.colourways[this.selectedIndex].active = false;
       this.colourways[selectedSlide].active = true;
-
       this.selectedIndex = selectedSlide;
     },
   },
@@ -157,8 +156,8 @@ export default {
 
 <style lang="scss" scoped>
 
-.isActive {
-  opacity: 1 !important;
+.carousel-container /deep/ .image.isActive {
+  opacity: 1;
 }
 
 .section-colourways {
@@ -213,7 +212,7 @@ export default {
 .product-info {
   position: absolute;
   right: 10%;
-  top: 45%;
+  top: 75%;
   text-align: right;
   z-index: 1;
 
@@ -335,6 +334,7 @@ export default {
   color: white;
   font-weight: 300;
   font-size: 24px;
+  line-height: 1;
 
   @media screen and (min-width: 765px) {
     padding-top: 5%;
@@ -346,10 +346,6 @@ export default {
     padding-top: 0%;
     font-size: 26px;
   }
-}
-
-.modal-container--samba /deep/ .title1 {
-  display: none;
 }
 
 .modal-container--samba /deep/ .title2 p {
@@ -366,10 +362,6 @@ export default {
   @media screen and (min-width: 1366px) {
     padding-top: 5%;
   }
-}
-
-.modal-container--deerupt /deep/ .title1 {
-  display: none;
 }
 
 .modal-container--deerupt /deep/ .title2 p {

@@ -191,6 +191,26 @@
             "price": "75",
             "title": "Air Force 1 Low",
             "url": "/product/black-nike-air-force-1-low/047951"
+          },
+          {
+            "image": {
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-0-04670ce96db4cc1da203cc6895aa85e0.png",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-0-04670ce96db4cc1da203cc6895aa85e0.png"
+            },
+            "brand": "Nike",
+            "price": "75",
+            "title": "Air Force 1 Low",
+            "url": "/product/black-nike-air-force-1-low/047951"
+          },
+          {
+            "image": {
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-1-6e0103d3b8a1653704b09acad135b6a9.png",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-1-6e0103d3b8a1653704b09acad135b6a9.png"
+            },
+            "brand": "Nike",
+            "price": "75",
+            "title": "Air Force 1 Low",
+            "url": "/product/black-nike-air-force-1-low/047951"
           }
         ]
       } ,
@@ -518,7 +538,7 @@
     }
   },
   {
-    "franchise": "Sambarose",
+    "franchise": "Samba Rose",
     "launch": "August 3, 2018",
     "image": {
       "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg",

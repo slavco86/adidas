@@ -175,27 +175,28 @@ export default {
 
 .deeruptLogo {
   @media screen and (min-width: 1366px) {
-    display: none;
+    position: absolute;
+    top: -37%;
+    left: 44%;
+    width: 14%;
   }
 }
 
 .sambaroseLogo {
   position: absolute;
-  top: 190%;
+  top: 147%;
   left: 39%;
 
   @media screen and (min-width: 765px) {
-    top: 106%;
-  }
-
-  @media screen and (min-width: 765px) {
-    width: 30%;
+    top: 101%;
+    left: 41%;
+    width: 19%;
   }
 
   @media screen and (min-width: 1366px) {
     position: absolute;
-    bottom: 0%;
-    width: 17%;
+    width: 9%;
+    left: 45%;
   }
 }
 
@@ -217,7 +218,7 @@ export default {
 .franchisePOD {
   color: #33f;
   position: absolute;
-  top: 186%;
+  top: 146%;
   left: 10%;
   background: url(../assets/podpink.svg);
   background-repeat: no-repeat;
@@ -238,14 +239,17 @@ export default {
   background: url(../assets/sambarosepinklogo.svg);
   background-repeat: no-repeat;
   position: absolute;
-  top: -5%;
+  top: -21%;
   right: 0;
   height: 100%;
   width: 100%;
 
   @media screen and (min-width: 765px) {
     top: -15%;
-    width: 100%;
+  }
+
+  @media screen and (min-width: 1366px) {
+    top: -19%;
   }
 }
 
