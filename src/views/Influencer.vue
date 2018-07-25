@@ -44,6 +44,9 @@ export default {
     Titles,
     QuickBuy,
   },
+  provide: {
+    trackingName: 'influencer',
+  },
   props: {
     data: {
       type: Object,
