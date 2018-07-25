@@ -105,18 +105,21 @@ export default {
 .social {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   height: calc(100vh - 50px);
   overflow: hidden;
 
   @media only screen and (min-width: 1024px) {
     align-items: center;
     height: 100vh;
+    justify-content: center;
   }
 
   &__inner-wrapper {
-    height: auto;
-    max-height: 670px;
+    max-height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
     overflow: hidden;
   }
 
@@ -139,7 +142,6 @@ export default {
     margin-bottom: 1rem;
     margin-right: 0.75rem;
     padding: 1rem 1.5rem;
-    // position: absolute;
     bottom: 0;
     right: 0;
     max-width: 150px;

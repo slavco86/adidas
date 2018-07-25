@@ -85,4 +85,14 @@ export default {
   background-color: #fff;
   color: #222;
 }
+
+::selection {
+  background-color: #222;
+  color: #fff;
+}
+
+::-moz-selection {
+  background-color: #222;
+  color: #fff;
+}
 </style>
