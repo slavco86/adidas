@@ -28,30 +28,30 @@
       <div
         slot-scope="{slide}"
         class="image-container">
-      <img
-        :src="slide.image.desktop"
-        :class="{ isActive : slide.active }"
-        class="image"
-        @click="selectColourway(slide.key)">
-    </div>
-  </Carousel>
-  <modal
-    v-if="showModal"
-    @close="showModal = false"
-    :modalFranchise="modalFranchise">
-    <Titles
-      :headline="hotspots[activeHotspot].title"
-      :subtext="hotspots[activeHotspot].subtext"
-      class="modal-container"
-      :class="{'modal-container--pod': this.$route.params.franchise === 'POD',
-                'modal-container--samba': this.$route.params.franchise === 'Sambarose',
-                'modal-container--deerupt': this.$route.params.franchise === 'Deerupt',
-                'modal-container--allBrands': (this.$route.params.franchise !== 'Deerupt'
-                                            || this.$route.params.franchise !== 'Sambarose'
-                                            || this.$route.params.franchise !== 'POD')
-              }"/>
-  </modal>
-</div>
+        <img
+          :src="slide.image.desktop"
+          :class="{ isActive : slide.active }"
+          class="image"
+          @click="selectColourway(slide.key)">
+      </div>
+    </Carousel>
+    <modal
+      v-if="showModal"
+      :modalFranchise="modalFranchise"
+      @close="showModal = false">
+      <Titles
+        :headline="hotspots[activeHotspot].title"
+        :subtext="hotspots[activeHotspot].subtext"
+        :class="{'modal-container--pod': this.$route.params.franchise === 'POD',
+                 'modal-container--samba': this.$route.params.franchise === 'Sambarose',
+                 'modal-container--deerupt': this.$route.params.franchise === 'Deerupt',
+                 'modal-container--allBrands': (this.$route.params.franchise !== 'Deerupt'
+                   || this.$route.params.franchise !== 'Sambarose'
+                   || this.$route.params.franchise !== 'POD')
+        }"
+        class="modal-container"/>
+    </modal>
+  </div>
 </template>
 
 <script>
