@@ -245,7 +245,7 @@ export default {
 }
 
 .main-carousel /deep/ .swiper-container {
-  padding-top: 2rem;
+  padding-top: 4rem;
 }
 
 .main-carousel /deep/ .spot {
