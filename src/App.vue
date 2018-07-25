@@ -1,7 +1,7 @@
 <template>
   <div
     id="app"
-    :class="{'category--women' : isWomen }"
+    :class="{'category--women' : isWomen, 'is-content' : isContentPage }"
     class="category">
     <transition
       name="fade"
@@ -26,6 +26,10 @@ export default {
     isWomen() {
       return (this.$route.params.gender === 'women') === true;
     },
+
+    isContentPage() {
+      return this.$route.name === 'content';
+    }
   },
 
   methods: {
@@ -69,4 +73,10 @@ export default {
   color: #222;
 }
 
+.is-content {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+}
 </style>

@@ -103,12 +103,5 @@ export default {
 <style lang="scss" scoped>
 .content-page {
   background-color: inherit;
-  //required to pop over the top of MESH header
-  z-index: 1;
-  transform: translate3d(0, -50px, 0);
-
-  @media screen and (min-width: 765px) {
-    transform: translate3d(0, -202px, 0);
-  }
 }
 </style>
