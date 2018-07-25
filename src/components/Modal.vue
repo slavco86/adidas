@@ -61,7 +61,7 @@ export default {
       const lcFranchise = this.franchise.toLowerCase();
       if (lcFranchise === 'deerupt') {
         this.deerupt = true;
-      } else if (lcFranchise === 'sambarose') {
+      } else if (lcFranchise === 'samba rose') {
         this.sambarose = true;
       } else if (lcFranchise === 'pod') {
         this.pod = true;
@@ -76,7 +76,7 @@ export default {
 <style lang="scss" scoped>
 
 .modal-mask {
-  position: fixed;
+  position: absolute;
   z-index: 9998;
   top: 0;
   left: 0;
