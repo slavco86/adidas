@@ -13,7 +13,7 @@
       v-for="(slide, key) in slides"
       v-else
       :key="key"
-      class="slide">
+      class="piece">
       <slot :slide="slide"/>
     </div>
   </div>

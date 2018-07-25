@@ -25,6 +25,8 @@
       ref="carousel"
       :slides="colourways"
       :options="options"
+      :responsive="true"
+      :class="{ 'flex-container': desktop }"
       class="carousel-container">
       <div
         slot-scope="{slide}"
@@ -100,11 +102,12 @@ export default {
       activeHotspot: null,
       showModal: false,
       selectedIndex: 0,
+      desktop: window.innerWidth > 765,
       options: {
         slidesPerView: 4,
         breakpoints: {
           764: {
-            slidesPerView: 2,
+            slidesPerView: 2.5,
           },
         },
       },
@@ -157,6 +160,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
 
 .carousel-container /deep/ .image.isActive {
   opacity: 1;
@@ -247,11 +256,8 @@ export default {
 .carousel-container /deep/ .image {
   opacity: 0.5;
   transition: opacity 0.5s;
-  width: 100%;
-
-  @media screen and (min-width: 765px) {
-    width: 70%;
-  }
+  width: 170px;
+  height: auto;
 }
 
 .hotspot {
