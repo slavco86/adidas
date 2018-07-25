@@ -37,7 +37,6 @@
 </template>
 
 <script>
-import ButtonClose from '@/components/ButtonClose.vue';
 
 export default {
   name: 'Modal',
