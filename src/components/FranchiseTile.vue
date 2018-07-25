@@ -1,6 +1,7 @@
 <template>
   <router-link
     :to="href"
+    :class="{ 'spot--odd' : odd }"
     class="ga-ip spot">
 
     <picture v-if="tile.image">
@@ -17,6 +18,7 @@
       data-swiper-parallax="-500"
       data-swiper-parallax-duration="600"
       class="franchise-name">{{ tile.franchise }}</span>
+
     <div class="plus"/>
 
     <Countdown
@@ -64,34 +66,25 @@ export default {
       }
       return false;
     },
+
+    odd() {
+      return this.tile.key % 2;
+    },
   },
 };
 </script>
 
 <style lang="scss" scoped>
-.grid-view {
-  .franchise-name {
-    font-size: 1rem;
-    bottom: 0;
-  }
-
-  .countdown /deep/ .countdown__value {
-    &::after,
-    &__num i,
-    &__label {
-      font-size: 0.8rem;
-    }
-  }
-}
-
 picture,
 img {
   display: block;
 }
 
 img {
-  width: 100%;
+  filter: grayscale(100%);
   height: auto;
+  width: 100%;
+  transition: filter 0.2s ease-in;
 }
 
 .franchise-name {
@@ -103,6 +96,11 @@ img {
   font-weight: 900;
   text-align: left;
   line-height: 45px;
+
+  .spot--odd & {
+    bottom: auto;
+    top: -20px;
+  }
 }
 
 .countdown {
@@ -152,6 +150,64 @@ img {
       @media only screen and (min-width: 765px) {
         font-size: 1rem;
       }
+    }
+  }
+}
+
+.plus {
+  $thickness: 1px;
+
+  height: 35px;
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  width: 35px;
+  transform: scale(0.75) rotate(0);
+  transition: all 0.5s;
+
+  &::before,
+  &::after {
+    border-bottom: $thickness solid;
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: calc(-50% - #{$thickness});
+    width: 100%;
+  }
+
+  &::after {
+    border-bottom: none;
+    border-left: $thickness solid;
+    left: calc(50% - #{$thickness});
+    top: 0;
+  }
+}
+
+.swiper-slide-active,
+.spot:hover {
+  img {
+    filter: grayscale(0);
+  }
+}
+
+.spot:hover {
+  .plus {
+    transform: scale(1) rotate(90deg);
+  }
+}
+
+.grid-view {
+  .franchise-name {
+    font-size: 1rem;
+    bottom: 0;
+  }
+
+  .countdown /deep/ .countdown__value {
+    &::after,
+    &__num i,
+    &__label {
+      font-size: 0.8rem;
     }
   }
 }

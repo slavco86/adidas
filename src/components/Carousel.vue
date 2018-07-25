@@ -80,3 +80,9 @@ export default {
   },
 };
 </script>
+
+<style>
+.swiper-container {
+  overflow: visible;
+}
+</style>

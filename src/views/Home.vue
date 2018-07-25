@@ -183,10 +183,9 @@ export default {
       font-size: 1rem;
     }
 
-    img {
-      display: block;
-      height: auto;
-      width: 100%;
+    /deep/ .plus {
+      right: 1rem;
+      top: 1rem;
     }
   }
 }
@@ -330,32 +329,6 @@ export default {
     width: 83%;
     border-color: black;
     border-radius: 3px;
-  }
-}
-
-.plus {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 35px;
-  height: 35px;
-
-  &::before,
-  &::after {
-    content: '';
-    width: 100%;
-    height: 100%;
-    border-bottom: solid;
-    left: 0;
-    top: -55%;
-    position: absolute;
-  }
-
-  &::after {
-    top: 0;
-    left: 45%;
-    border-bottom: none;
-    border-left: solid;
   }
 }
 </style>
