@@ -24,7 +24,7 @@ import 'fullpage.js/dist/fullpage.css';
 
 import CloseButton from '@/components/ButtonClose.vue';
 import Colourways from '@/views/Colourways.vue';
-import Social from '@/views/Social.vue';
+import GetSocial from '@/views/Social.vue';
 import Influencer from '@/views/Influencer.vue';
 import ShoppableVideo from '@/views/ShoppableVideo.vue';
 import SketchFabModel from '@/views/SketchFabModel.vue';
@@ -34,7 +34,7 @@ export default {
   components: {
     CloseButton,
     Colourways,
-    Social,
+    GetSocial,
     Influencer,
     ShoppableVideo,
     SketchFabModel,
@@ -55,7 +55,7 @@ export default {
 
   data() {
     return {
-      anchors: ['sketch-fab-model', 'colourways', 'social', 'influencer', 'shoppable-video'],
+      anchors: ['sketch-fab-model', 'colourways', 'get-social', 'influencer', 'shoppable-video'],
       fullpage: null,
       section: 'sketch-fab-model',
     };

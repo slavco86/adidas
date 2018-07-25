@@ -1,6 +1,6 @@
 <template>
   <Button
-    :data-quickview-path="url"
+    :data-quickview-path="quickBuyPath"
     :data-product-sku="sku"
     :data-ip-name="sku"
     class="cta quickView">
@@ -29,6 +29,10 @@ export default {
   computed: {
     sku() {
       return this.url.split('/').pop();
+    },
+
+    quickBuyPath() {
+      return `${this.url.slice(1)}/quickview/`;
     },
 
     color() {
