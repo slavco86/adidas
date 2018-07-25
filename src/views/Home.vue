@@ -26,7 +26,7 @@
       <FranchiseTile
         v-for="slide in franchises"
         :key="slide.franchise"
-        :slide="slide"
+        :tile="slide"
         class="grid-view__product" />
     </div>
 
@@ -37,7 +37,7 @@
       :class="{'main-carousel--hidden': grid}"
       class="main-carousel">
       <div slot-scope="{slide}">
-        <FranchiseTile :slide="slide" />
+        <FranchiseTile :tile="slide" />
       </div>
     </Carousel>
 
@@ -97,7 +97,7 @@ export default {
         speed: 500,
         slidesPerView,
         mousewheel: true,
-        loop: true,
+        loop: false,
       };
     },
 
@@ -358,4 +358,3 @@ export default {
   }
 }
 </style>
-

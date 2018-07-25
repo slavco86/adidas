@@ -20,9 +20,9 @@
     <div class="plus"/>
 
     <Countdown
-      v-if="tile.launch"
       :date="tile.launch"
-      @expired="tile.launch = false"/>
+      @active="hasCountdown = true"
+      @expired="hasCountdown = false"/>
   </router-link>
 </template>
 
@@ -37,7 +37,7 @@ export default {
   },
 
   props: {
-    slide: {
+    tile: {
       type: Object,
       default: () => ({
         image: {},
@@ -47,19 +47,19 @@ export default {
 
   data() {
     return {
-      tile: Object.assign({}, this.slide),
+      hasCountdown: false,
     };
   },
 
   computed: {
     href() {
-      return (this.tile.launch) ? this.$route.path : `${this.$route.params.gender}/${this.tile.franchise}`;
+      return (this.hasCountdown) ? this.$route.path : `${this.$route.params.gender}/${this.tile.franchise}`;
     },
 
     responsiveImg() {
-      if (this.slide.image
-      && Object.prototype.hasOwnProperty.call(this.slide.image, 'mobile')
-      && Object.prototype.hasOwnProperty.call(this.slide.image, 'desktop')) {
+      if (this.tile.image
+      && Object.prototype.hasOwnProperty.call(this.tile.image, 'mobile')
+      && Object.prototype.hasOwnProperty.call(this.tile.image, 'desktop')) {
         return true;
       }
       return false;

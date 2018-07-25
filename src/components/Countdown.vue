@@ -1,5 +1,7 @@
 <template>
-  <div class="countdown">
+  <div
+    v-if="!expired"
+    class="countdown">
     <div class="countdown__value">
       <div
         class="countdown__value__num"
@@ -27,7 +29,8 @@ export default {
   name: 'Countdown',
   props: {
     date: {
-      default: 'August 15, 2219',
+      // format '25 July, 2020 09:45'
+      default: undefined,
       type: String,
       validator(value) {
         return new Date(value).toString() !== 'Invalid Date';
@@ -56,7 +59,7 @@ export default {
 
   computed: {
     countdownDate() {
-      return Math.trunc(Date.parse(this.date) / 1000);
+      return Math.trunc(Date.parse(this.date) / 1000) || 0;
     },
 
     seconds() {
@@ -80,14 +83,14 @@ export default {
     },
   },
 
-  mounted() {
-    if (this.expired === false) {
-      this.interval = setInterval(() => {
-        this.now = Math.trunc((new Date()).getTime() / 1000);
-      }, 1000);
-    }
+  watch: {
+    date() {
+      this.init();
+    },
+  },
 
-    this.hasExpired();
+  mounted() {
+    this.init();
   },
 
   updated() {
@@ -95,6 +98,19 @@ export default {
   },
 
   methods: {
+    init() {
+      if (this.expired === false) {
+        this.$emit('active', true);
+        this.interval = setInterval(() => {
+          this.now = Math.trunc((new Date()).getTime() / 1000);
+        }, 1000);
+
+        return true;
+      }
+
+      return this.hasExpired();
+    },
+
     two_digits(value) {
       let str = value;
 
@@ -107,9 +123,11 @@ export default {
 
     hasExpired() {
       if (this.expired === true) {
-        this.$emit('expired', true);
-        clearInterval(this.interval);
+        this.$emit('expired', this.date);
+        return clearInterval(this.interval);
       }
+
+      return false;
     },
   },
 };
