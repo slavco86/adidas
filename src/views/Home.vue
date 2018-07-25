@@ -1,9 +1,11 @@
 <template>
   <div class="home">
+
     <nav class="nav">
       <Logo
         :color="logoColor"
         class="logo"/>
+
       <router-link
         to="men"
         class="nav-button"
@@ -17,54 +19,28 @@
         Women
       </router-link>
     </nav>
+
     <div
       :class="{'grid--animate': grid}"
       class="grid-view">
-      <div
-        v-for="(slide,key) in slides"
-        :key="key"
-        class="grid-view__product">
-        <router-link
-          :to="`${gender}/${slide.franchise}`"
-          tag="div">
-          <Spot v-bind="slide">
-            <span
-              data-swiper-parallax="-500"
-              data-swiper-parallax-duration="600"
-              class="franchise-name franchise-name--grid">{{ slide.franchise }}</span>
-            <div class="plus"/>
-          </Spot>
-          <Countdown
-            v-if="!slide.expired && grid"
-            :date="slide.launch"
-            class="countdown--grid"/>
-        </router-link>
-      </div>
+      <FranchiseTile
+        v-for="slide in franchises"
+        :key="slide.franchise"
+        :tile="slide"
+        class="grid-view__product" />
     </div>
 
     <Carousel
       ref="carousel"
-      :slides="pictures"
+      :slides="franchises"
       :options="swiperOptions"
       :class="{'main-carousel--hidden': grid}"
       class="main-carousel">
-      <router-link
-        slot-scope="{slide}"
-        :to="`${gender}/${slide.franchise}`"
-        tag="div">
-        <Spot v-bind="slide">
-          <span
-            data-swiper-parallax="-500"
-            data-swiper-parallax-duration="600"
-            class="franchise-name">{{ slide.franchise }}</span>
-          <div class="plus"/>
-        </Spot>
-        <Countdown
-          v-if="!slide.expired"
-          :date="slide.launch"
-          @expired="countdownExpired(slide.key)"/>
-      </router-link>
+      <div slot-scope="{slide}">
+        <FranchiseTile :tile="slide" />
+      </div>
     </Carousel>
+
     <div
       :class="{'button-container--grid' : grid}"
       class="button-container"
@@ -84,31 +60,31 @@
 <script>
 import Logo from '@/components/AdidasLogo.vue';
 import Carousel from '@/containers/Carousel.vue';
-import Countdown from '@/components/Countdown.vue';
-import Spot from '@/components/Spot.vue';
+import FranchiseTile from '@/components/FranchiseTile.vue';
 
 export default {
   name: 'Home',
   components: {
     Logo,
     Carousel,
-    Spot,
-    Countdown,
+    FranchiseTile,
   },
+
   props: {
     franchises: {
       type: Array,
       required: true,
     },
   },
+
   data() {
     return {
       carousel: true,
       grid: false,
       width: window.innerWidth,
-      pictures: [],
     };
   },
+
   computed: {
     swiperOptions() {
       const desktop = this.width > 765;
@@ -121,24 +97,12 @@ export default {
         speed: 500,
         slidesPerView,
         mousewheel: true,
-        loop: true,
+        loop: false,
       };
     },
 
-    gender() {
-      return this.$route.params.gender;
-    },
-
-    slides() {
-      const slides = JSON.parse(JSON.stringify(this.franchises));
-      if (slides.length) {
-        this.setExpired(slides);
-      }
-      return slides;
-    },
-
     logoColor() {
-      return (this.gender === 'men') ? '#fff' : undefined;
+      return (this.$route.params.gender === 'men') ? '#fff' : undefined;
     },
   },
 
@@ -148,18 +112,7 @@ export default {
         this.carousel = !this.carousel;
       }
     },
-    setExpired(slides) {
-      const newSlides = slides.map((slide) => {
-        const newSlide = slide;
-        newSlide.expired = false;
-        return newSlide;
-      });
-      this.pictures = newSlides;
-      return newSlides;
-    },
-    countdownExpired(index) {
-      this.pictures[index].expired = true;
-    },
+
     toggleCarousel() {
       this.grid = !this.grid;
       this.border = !this.border;
@@ -313,83 +266,6 @@ export default {
   transform: translate3d(0, -2rem, 0);
 }
 
-.countdown {
-  display: flex;
-  margin: 0 auto;
-  justify-content: space-evenly;
-  position: absolute;
-  top: 35%;
-  left: 0;
-  width: 100%;
-  align-items: center;
-
-  & /deep/ .countdown__value {
-    width: 33%;
-
-    &::after {
-      content: ':';
-      position: absolute;
-      right: 0;
-      top: 0;
-      font-size: 2rem;
-
-      @media only screen and (min-width: 765px) {
-        font-size: 2rem;
-      }
-    }
-
-    &:last-of-type {
-      &::after {
-        display: none;
-      }
-    }
-
-    &__num i {
-      font-size: 2rem;
-
-      @media only screen and (min-width: 765px) {
-        font-size: 2rem;
-      }
-    }
-
-    &__label {
-      text-transform: uppercase;
-      font-size: 1rem;
-      margin-top: 5px;
-
-      @media only screen and (min-width: 765px) {
-        font-size: 1rem;
-      }
-    }
-  }
-
-  &--grid {
-    & /deep/ .countdown__value {
-      &::after,
-      &__num i,
-      &__label {
-        font-size: 0.8rem;
-      }
-    }
-  }
-}
-
-.franchise-name {
-  position: absolute;
-  transition-timing-function: ease-out;
-  bottom: -20px;
-  left: 20px;
-  font-size: 3.5rem;
-  font-weight: 900;
-  text-align: left;
-  line-height: 45px;
-
-  &--grid {
-    font-size: 1rem;
-    bottom: 0;
-  }
-}
-
 .button-container {
   display: inline-flex;
   flex-wrap: wrap;
@@ -482,4 +358,3 @@ export default {
   }
 }
 </style>
-
