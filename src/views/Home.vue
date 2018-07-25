@@ -148,6 +148,7 @@ export default {
     max-width: 635px;
     display: block;
     padding: 0.5rem;
+    transform: translate3d(100%, 100%, 0);
     transition: transform 1s ease-in-out;
 
     /deep/ .spot {
@@ -158,7 +159,7 @@ export default {
       flex: 0 0 19%;
     }
 
-    &:first-child {
+    &:first-child, {
       transform: translate3d(-100%, -100%, 0);
     }
 
