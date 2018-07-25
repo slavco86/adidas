@@ -229,7 +229,6 @@ export default {
 }
 
 .main-carousel {
-  margin-top: 2rem;
   transform: scale3d(1, 1, 1);
   opacity: 1;
   transition: transform 1s, opacity 1s 0.2s;
