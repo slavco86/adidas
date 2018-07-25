@@ -58,6 +58,10 @@ export default {
     };
   },
 
+  updated() {
+    this.$refs.carousel.swiper.update();
+  },
+
   methods: {
     emitReady() {
       this.$emit('ready');
