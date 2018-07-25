@@ -1,12 +1,9 @@
 <template>
   <transition name="modal">
     <div class="modal-mask">
-      <div class="modal-wrapper"
-        :class="{deWrapper: deerupt,
-                 srWrapper: sambarose,
-                 pWrapper: pod,
-                 abWrapper: allBrands
-                 }">
+      <div
+        :class="{deWrapper: deerupt,srWrapper: sambarose,pWrapper: pod,abWrapper: allBrands}"
+        class="modal-wrapper">
         <div class="modal-container"
             :class="{ podContainer: pod,
                       srContainer: sambarose
@@ -262,10 +259,6 @@ export default {
   @media screen and (min-width: 765px) {
     top: -15%;
     width: 100%;
-  }
-
-  @media screen and (min-width: 1366px) {
-    left: 5%;
   }
 }
 
