@@ -40,7 +40,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 1s;
@@ -58,23 +58,6 @@ export default {
   opacity: 0;
 }
 
-#app {
-  text-align: center;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
-
 .category {
   background-color: #222;
   color: #fff;
@@ -86,13 +69,4 @@ export default {
   color: #222;
 }
 
-::selection {
-  background-color: #222;
-  color: #fff;
-}
-
-::-moz-selection {
-  background-color: #222;
-  color: #fff;
-}
 </style>
