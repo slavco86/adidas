@@ -4,46 +4,31 @@
       <div
         :class="{deWrapper: deerupt,srWrapper: sambarose,pWrapper: pod,abWrapper: allBrands}"
         class="modal-wrapper">
-        <div class="modal-container"
-            :class="{ podContainer: pod,
-                      srContainer: sambarose
-                     }">
-            <img
+        <div
+          :class="{podContainer: pod,srContainer: sambarose}"
+          class="modal-container">
+          <img
+            :class="{deeruptCloseB: deerupt,sambaRoseB: sambarose,podB: pod,allBrandsB: allBrands}"
             class="close"
             src="../assets/close_black.png"
-            @click="$emit('close')"
-            :class="{deeruptCloseB: deerupt,
-                     sambaRoseB: sambarose,
-                     podB: pod,
-                     allBrandsB: allBrands
-                     }">
-            <img
+            @click="$emit('close')">
+          <img
+            :class="{deeruptCloseW: deerupt,sambaRoseW: sambarose,podW: pod,allBrandsW: allBrands}"
             class="close"
             src="../assets/close_white.png"
-            @click="$emit('close')"
-            :class="{deeruptCloseW: deerupt,
-                    sambaRoseW: sambarose,
-                    podW: pod,
-                    allBrandsW: allBrands
-                    }">
+            @click="$emit('close')">
           <div class="modal-body">
             <img
-            :class="{ deeruptLogo: deerupt, 
-                      podLogo: pod, 
-                      sambaroseLogo: sambarose,
-                      allBrandsLogo: allBrands 
-                    }"
-            src="../assets/adidas-logo.svg">
-            <div :class="{ franchiseDeerupt: deerupt, 
-                          franchisePOD: pod,
-                          franchiseSR: sambarose,
-                          allBrandsF: allBrands
-                        }">
+              :class="{deeruptLogo: deerupt,podLogo: pod,
+                       sambaroseLogo: sambarose,allBrandsLogo: allBrands}"
+              src="../assets/adidas-logo.svg">
+            <div
+              :class="{franchiseDeerupt: deerupt,franchisePOD: pod,franchiseSR: sambarose,
+                       allBrandsF: allBrands}">
               {{ franchise }}
-              {{ franchiseUpdate }}
+              {{ franchiseUpdate() }}
             </div>
-            <slot>
-            </slot>
+            <slot/>
           </div>
         </div>
       </div>
@@ -59,31 +44,31 @@ export default {
       type: String,
       required: false,
       default: 'defaultBrand',
-    }
+    },
   },
   data() {
     return {
       franchise: this.modalFranchise,
-      deerupt:   false,
+      deerupt: false,
       sambarose: false,
-      pod:       false,
-      allBrands: false
-    }
+      pod: false,
+      allBrands: false,
+    };
   },
-  computed: {
+  methods: {
     franchiseUpdate() {
-      var lcFranchise = this.franchise.toLowerCase();
-        if  (lcFranchise == 'deerupt') {
-            this.deerupt = true;
-        } else if (lcFranchise == 'sambarose') {
-            this.sambarose = true;
-        } else if (lcFranchise == 'pod') {
-            this.pod = true;
-        } else {
-          this.allBrands = true;
-        }
-    }
-  }
+      const lcFranchise = this.franchise.toLowerCase();
+      if (lcFranchise === 'deerupt') {
+        this.deerupt = true;
+      } else if (lcFranchise === 'sambarose') {
+        this.sambarose = true;
+      } else if (lcFranchise === 'pod') {
+        this.pod = true;
+      } else {
+        this.allBrands = true;
+      }
+    },
+  },
 };
 </script>
 
