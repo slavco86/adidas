@@ -32,7 +32,7 @@ export default {
     },
 
     quickBuyPath() {
-      return this.url.slice(1);
+      return `${this.url.slice(1)}/quickview/`;
     },
 
     // color() {
