@@ -34,7 +34,7 @@
               1-2-1.53l-3.22-13.25A39.14 39.14 0 0 1 48.6 89z"
               fill="#fff"
               overflow="visible"
-              style="text-indent:0; text-transform:none; block-progression:tb"/>
+              style="text-indent:0; text-transform:none; block-progression:tb;"/>
           </svg>
 
           <p class="cta">Rotate in 360°</p>
