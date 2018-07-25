@@ -89,7 +89,7 @@ export default {
     swiperOptions() {
       const desktop = this.width > 765;
       const slidesPerView = desktop ? 2 : 1.2;
-      const spaceBetween = desktop ? this.width * 0.0025 : 15;
+      const spaceBetween = desktop ? -120 : 15;
       return {
         parallax: true,
         centeredSlides: true,
@@ -127,6 +127,10 @@ export default {
 <style lang="scss" scoped>
 .home {
   height: 100vh;
+
+  @media only screen and (min-width: 1024px) {
+    height: calc(100vh - 202px);
+  }
 }
 
 .grid-view {
@@ -254,7 +258,7 @@ export default {
   transition: transform 0.5s ease-in-out;
 
   @media only screen and (min-width: 1024px) {
-    padding: 0 6%;
+    padding: 0 15%;
   }
 }
 
