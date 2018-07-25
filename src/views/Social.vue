@@ -71,9 +71,9 @@ export default {
 
 <style lang="scss" scoped>
 .category--women .social__cta {
-  border: 1px solid #000;
-  color: #000;
-  font-weight: 600;
+  border: 2px solid #000;
+  color: #222;
+  font-weight: 900;
 
   &:hover {
     background-color: #000;
@@ -90,27 +90,40 @@ export default {
   color: #222;
 }
 
+.category--women .grid__product /deep/ .quickView {
+  polygon,
+  polyline {
+    stroke: #222;
+  }
+
+  circle {
+    stroke: transparent;
+    fill: #fff;
+  }
+}
+
 .social {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  // padding: 1rem;
+  justify-content: space-around;
   height: calc(100vh - 50px);
-  // background: orange;
+  overflow: hidden;
 
   @media only screen and (min-width: 1024px) {
     align-items: center;
     height: 100vh;
+    justify-content: center;
   }
 
   &__inner-wrapper {
-    height: auto;
-    max-height: 670px;
+    max-height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
     overflow: hidden;
   }
 
   &__text {
-    // margin: 1rem 0;
     text-transform: uppercase;
     color: #fff;
   }
@@ -126,11 +139,12 @@ export default {
     align-self: flex-end;
     border: 2px solid #fff;
     color: #fff;
-    margin: 0 1rem;
+    margin-bottom: 1rem;
+    margin-right: 0.75rem;
     padding: 1rem 1.5rem;
+    bottom: 0;
+    right: 0;
     max-width: 150px;
-    position: relative;
-    top: -0.85rem;
     text-transform: uppercase;
 
     @media only screen and (min-width: 1024px) {

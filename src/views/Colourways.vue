@@ -74,6 +74,10 @@ export default {
     ProductInfo,
   },
 
+  provide: {
+    trackingName: 'colourways',
+  },
+
   props: {
     data: {
       type: Object,
