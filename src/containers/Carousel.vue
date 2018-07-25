@@ -14,7 +14,7 @@
       v-else
       :key="key"
       class="piece">
-      <slot :slide="slide"/>
+      <slot :slide="addKey(slide, key)"/>
     </div>
   </div>
 </template>
@@ -58,6 +58,15 @@ export default {
         return parseInt(this.breakpoint, 10) >= window.innerWidth;
       }
       return true;
+    },
+  },
+
+  methods: {
+    addKey(slide, key) {
+      return {
+        ...slide,
+        key,
+      };
     },
   },
 };
