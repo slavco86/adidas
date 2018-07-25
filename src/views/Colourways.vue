@@ -44,7 +44,7 @@
         :headline="hotspots[activeHotspot].title"
         :subtext="hotspots[activeHotspot].subtext"
         :class="{'modal-container--pod': this.$route.params.franchise === 'POD',
-                 'modal-container--samba': this.$route.params.franchise === 'Sambarose',
+                 'modal-container--samba': this.$route.params.franchise === 'Samba Rose',
                  'modal-container--deerupt': this.$route.params.franchise === 'Deerupt',
                  'modal-container--allBrands': (this.$route.params.franchise !== 'Deerupt'
                    || this.$route.params.franchise !== 'Sambarose'
