@@ -62,23 +62,33 @@ export default {
   opacity: 0;
 }
 
+$desktop-header-height: 150px;
+$mobile-header-height: 50px;
+
+.category {
+  background-color: #222;
+  color: #fff;
+  margin-top: $mobile-header-height;
+  min-height: calc(100vh - #{$mobile-header-height});
+  transition: background-color 1s;
+
+  @media only screen and (min-width: 765px) {
+    min-height: calc(100vh - #{$desktop-header-height});
+    margin-top: $desktop-header-height;
+  }
+}
+
+.category--women {
+  background-color: #fff;
+  color: #222;
+}
+
 .is-content {
   left: 0;
   position: absolute;
   top: 0;
   width: 100%;
   z-index: 1;
-}
-
-.category {
-  background-color: #222;
-  color: #fff;
-  min-height: 100vh;
-  transition: background-color 1s;
-}
-
-.category--women {
-  background-color: #fff;
-  color: #222;
+  margin-top: 0;
 }
 </style>
