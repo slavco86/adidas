@@ -79,7 +79,7 @@ export default {
         centeredSlides: true,
         spaceBetween,
         speed: 500,
-        slidesPerView,
+        slidesPerView: 2,
       };
     },
   },

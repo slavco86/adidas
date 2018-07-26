@@ -104,6 +104,7 @@ export default {
   background-image: url("../assets/swmobile.png");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center center;
 
   @media screen and (min-width: 765px) {
     background-image: url("../assets/swtablet.png");
@@ -123,7 +124,7 @@ export default {
 .dContainer,
 .abContainer {
   @media screen and (min-width: 1366px) {
-    height: 70%;
+    height: 60%;
     width: 49%;
   }
 }
@@ -170,7 +171,7 @@ export default {
   width: 16%;
 }
 
-.deeruptLogo,
+
 .sambaroseLogo,
 .allBrandsLogo {
   width: 22%;
@@ -186,10 +187,7 @@ export default {
 
 .deeruptLogo {
   @media screen and (min-width: 1366px) {
-    position: absolute;
-    top: -30%;
-    left: 44%;
-    width: 14%;
+    display: none;
   }
 }
 
@@ -208,7 +206,7 @@ export default {
     position: absolute;
     width: 9%;
     left: 45%;
-    top: 98%;
+    top: 95%;
   }
 }
 
