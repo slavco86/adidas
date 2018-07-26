@@ -58,7 +58,8 @@ export default {
 
       /deep/ polygon,
       /deep/ polyline {
-        stroke: #222;
+        stroke: #fff;
+        fill: #222;
       }
     }
 
@@ -75,7 +76,8 @@ export default {
 
     & /deep/ polygon,
     & /deep/ polyline {
-      stroke: #fff;
+      stroke: #222;
+      fill: #fff;
     }
   }
 </style>
