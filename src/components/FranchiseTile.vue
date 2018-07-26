@@ -160,7 +160,7 @@ img {
 }
 
 .plus {
-  $thickness: 1px;
+  $thickness: 2px;
 
   height: 35px;
   position: absolute;
