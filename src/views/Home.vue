@@ -217,9 +217,39 @@ export default {
   font-weight: 600;
   margin: 0 1rem;
   text-transform: uppercase;
+  position: relative;
+
+  &::after {
+    background-color: #fff;
+    content: '';
+    height: 0.2rem;
+    left: 0;
+    position: absolute;
+    top: 100%;
+    transition: width 0.5s ease-in-out;
+    margin: 0.5rem 0;
+    width: 0;
+  }
+
+  &:hover {
+    color: #fff;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
 
   &.router-link-active {
     color: #fff;
+  }
+}
+
+// Women
+.category--women .nav-button:hover {
+  color: #222;
+
+  &::after {
+    background-color: #222;
   }
 }
 
