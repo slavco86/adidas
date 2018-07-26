@@ -5,7 +5,7 @@
         :class="{deWrapper: deerupt,srWrapper: sambarose,pWrapper: pod,abWrapper: allBrands}"
         class="modal-wrapper">
         <div
-          :class="{podContainer: pod,srContainer: sambarose}"
+          :class="{podContainer: pod,srContainer: sambarose,dContainer: deerupt,abContainer: allBrands}"
           class="modal-container">
           <img
             :class="{deeruptCloseB: deerupt,sambaRoseB: sambarose,podB: pod,allBrandsB: allBrands}"
@@ -25,7 +25,6 @@
             <div
               :class="{franchiseDeerupt: deerupt,franchisePOD: pod,franchiseSR: sambarose,
                        allBrandsF: allBrands}">
-              <!-- {{ franchise }} -->
               {{ franchiseUpdate() }}
             </div>
             <slot/>
@@ -121,9 +120,22 @@ export default {
   }
 }
 
+.dContainer,
+.abContainer {
+  @media screen and (min-width: 1366px) {
+    height: 70%;
+    width: 49%;
+  }
+}
+
 .podContainer {
   background-image: none;
   background-color: #33f !important;
+
+  @media screen and (min-width: 1366px) {
+    height: 70%;
+    width: 49%;
+  }
 }
 
 .modal-body {
@@ -175,7 +187,7 @@ export default {
 .deeruptLogo {
   @media screen and (min-width: 1366px) {
     position: absolute;
-    top: -37%;
+    top: -30%;
     left: 44%;
     width: 14%;
   }
@@ -196,6 +208,7 @@ export default {
     position: absolute;
     width: 9%;
     left: 45%;
+    top: 98%;
   }
 }
 
@@ -212,6 +225,11 @@ export default {
 .srContainer {
   background: none;
   background-color: white !important;
+
+  @media screen and (min-width: 1366px) {
+    height: 70%;
+    width: 49%;
+  }
 }
 
 .franchisePOD {
@@ -310,6 +328,9 @@ export default {
 .allBrandsLogo {
   @media screen and (min-width: 1366px) {
     width: 110px;
+    position: absolute;
+    top: -32%;
+    left: 42%;
   }
 }
 </style>
