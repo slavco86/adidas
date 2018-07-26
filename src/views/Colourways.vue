@@ -370,6 +370,12 @@ export default {
   }
 }
 
+.modal-container--samba /deep/ .title1 {
+  @media screen and (min-width: 1366px) {
+    font-size: 3em;
+  }
+}
+
 .modal-container--samba /deep/ .title2 p {
   padding-top: 15%;
   color: #222;
@@ -382,21 +388,29 @@ export default {
   }
 
   @media screen and (min-width: 1366px) {
-    padding-top: 5%;
+    padding-top: 0%;
+    font-weight: normal;
+  }
+}
+
+.modal-container--deerupt /deep/ .title1 {
+  color: #222;
+  @media screen and (min-width: 1366px) {
+    font-size: 50px;
+    
   }
 }
 
 .modal-container--deerupt /deep/ .title2 p {
+  color: #222;
   @media screen and (min-width: 765px) {
     font-size: 32px;
-    color: #222;
     line-height: 1.5;
     font-weight: 400;
   }
 
   @media screen and (min-width: 1366px) {
     font-size: 32px;
-    color: #222;
     line-height: 1.5;
     font-weight: 400;
   }
