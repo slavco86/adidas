@@ -103,6 +103,7 @@ export default {
   .title1,
   .title2 {
     text-transform: uppercase;
+    text-align: center;
   }
 
   .title1 {
