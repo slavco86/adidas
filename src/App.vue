@@ -62,21 +62,23 @@ export default {
   opacity: 0;
 }
 
+.is-content {
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
 .category {
   background-color: #222;
   color: #fff;
+  min-height: 100vh;
   transition: background-color 1s;
 }
 
 .category--women {
   background-color: #fff;
   color: #222;
-}
-
-.is-content {
-  position: absolute;
-  top: 0;
-  z-index: 1;
-  width: 100%;
 }
 </style>

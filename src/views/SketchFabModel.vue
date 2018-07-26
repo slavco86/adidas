@@ -6,7 +6,7 @@
         class="transitional-page"
         to="3d-view"
         append>
-        <picture>
+        <picture class="transitional-page__pic">
           <source
             v-if="product.image.mobile"
             :srcset="product.image.mobile"
@@ -121,6 +121,7 @@ iframe {
   display: flex;
   flex-direction: column;
   width: 100%;
+  overflow: hidden;
 }
 
 .product-info {
@@ -137,12 +138,12 @@ iframe {
 }
 
 .transitional-page__img {
-  width: auto;
-  min-height: 100%;
   max-height: 80vh;
+  max-width: 100%;
+  min-height: 100%;
   opacity: 0;
-  transition: opacity 0.2s ease-in, transform 0.3s ease-in;
   transform: translate3d(0, -20%, 0);
+  transition: opacity 0.2s ease-in, transform 0.3s ease-in;
 }
 
 .transitional-page__img.active {
