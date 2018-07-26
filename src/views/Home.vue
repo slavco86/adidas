@@ -207,9 +207,7 @@ export default {
 
 .logo {
   width: 75px;
-  position: absolute;
   left: 10%;
-  top: 15%;
 }
 
 .nav-button {

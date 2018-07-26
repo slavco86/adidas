@@ -182,10 +182,6 @@ export default {
 }
 
 .logo {
-  width: 70px;
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
   opacity: 0;
   transition: opacity 1s;
 
