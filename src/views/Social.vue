@@ -70,38 +70,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.category--women .social__cta {
-  border: 2px solid #000;
-  color: #222;
-  font-weight: 900;
-
-  &:hover {
-    background-color: #000;
-    color: #fff;
-  }
-}
-
-.category--women .social__text,
-.category--women .social__title {
-  color: #222;
-}
-
-.category--women .grid__product__text {
-  color: #222;
-}
-
-.category--women .grid__product /deep/ .quickView {
-  polygon,
-  polyline {
-    stroke: #222;
-  }
-
-  circle {
-    stroke: transparent;
-    fill: #fff;
-  }
-}
-
 .social {
   display: flex;
   flex-direction: column;
@@ -123,6 +91,11 @@ export default {
     overflow: hidden;
   }
 
+  &__title,
+  &__text {
+    text-align: center;
+  }
+
   &__text {
     text-transform: uppercase;
     color: #fff;
@@ -137,19 +110,25 @@ export default {
 
   &__cta {
     align-self: flex-end;
+    background-color: transparent;
     border: 2px solid #fff;
     color: #fff;
-    margin-bottom: 1rem;
+    font-weight: 900;
     margin-right: 0.75rem;
-    padding: 1rem 1.5rem;
-    bottom: 0;
-    right: 0;
-    max-width: 150px;
+    padding: 1rem 0;
+    text-align: center;
     text-transform: uppercase;
+    transition: 0.5s ease-in-out;
+    width: 175px;
+
+    &:hover {
+      background-color: #fff;
+      color: #222;
+    }
 
     @media only screen and (min-width: 1024px) {
       align-self: center;
-      position: static;
+      padding: 1rem 0;
     }
   }
 }
@@ -173,11 +152,15 @@ export default {
       position: absolute;
       right: 0;
       top: 0;
-      margin: 0.75rem;
+      margin: 1rem;
     }
 
     @media only screen and (min-width: 1024px) {
       flex: 0 0 19%;
+    }
+
+    @media only screen and (min-width: 875px) {
+      flex: 0 0 45%;
     }
 
     &:first-child {
@@ -214,6 +197,42 @@ export default {
       height: auto;
       width: 100%;
     }
+  }
+}
+
+// Women Styling
+.category--women .quickView {
+  fill: #fff;
+
+  /deep/ circle {
+    stroke: transparent;
+  }
+
+  &:hover {
+    fill: transparent;
+
+    /deep/ circle {
+      stroke: #222;
+    }
+  }
+}
+
+.category--women .social__text,
+.category--women .social__title {
+  color: #222;
+}
+
+.category--women .grid__product__text {
+  color: #222;
+}
+
+.category--women .social__cta {
+  color: #222;
+  border: 2px solid #222;
+
+  &:hover {
+    color: #fff;
+    background-color: #222;
   }
 }
 
