@@ -226,9 +226,10 @@ export default {
     left: 0;
     position: absolute;
     top: 100%;
-    transition: width 0.5s ease-in-out;
+    transform: scale3d(0, 0, 0);
+    transition: transform 0.5s ease-in-out;
     margin: 0.5rem 0;
-    width: 0;
+    width: 100%;
   }
 
   &:hover {
@@ -236,7 +237,7 @@ export default {
   }
 
   &:hover::after {
-    width: 100%;
+    transform: scale3d(1, 1, 1);
   }
 
   &.router-link-active {

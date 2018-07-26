@@ -167,7 +167,7 @@ img {
   right: 0.5rem;
   top: 0.5rem;
   width: 35px;
-  transform: scale(0.75) rotate(0);
+  transform: rotate(0);
   transition: all 0.5s;
 
   &::before,
@@ -198,7 +198,7 @@ img {
 
 .spot:hover {
   .plus {
-    transform: scale(1) rotate(90deg);
+    transform: rotate(90deg);
   }
 }
 
