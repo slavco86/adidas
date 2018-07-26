@@ -267,6 +267,8 @@ export default {
   width: 30px;
   height: 30px;
   z-index: 2;
+  transition: all 0.5s ease-in-out;
+  transform: scale(0.75) rotate(0);
 
   @media only screen and (min-width: 765px) {
     top: 42%;
@@ -301,13 +303,14 @@ export default {
   }
 
   &:hover {
-    transform: scale(1.01) rotate(90deg);
-    transition: transform 0.5s ease-in-out;
+    transform: rotate(90deg);
   }
 
   &--right {
     left: 56%;
     top: 59%;
+    transition: all 0.5s ease-in-out;
+    transform: scale(0.75) rotate(0);
 
     @media only screen and (min-width: 765px) {
       left: 56%;
@@ -316,8 +319,7 @@ export default {
   }
 
   &--right:hover {
-    transform: scale(1.01) rotate(90deg);
-    transition: transform 0.8s ease-in-out;
+    transform: rotate(90deg);
   }
 }
 
