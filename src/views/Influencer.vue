@@ -213,6 +213,7 @@ export default {
     & /deep/ polygon,
     & /deep/ polyline {
       fill: #fff;
+      stroke: #222;
     }
   }
 
