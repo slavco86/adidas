@@ -1,5 +1,6 @@
 <template>
   <div class="content-slide">
+    <Logo :color="logoColor" />
     <div class="content-slide__inner">
       <router-link
         v-if="$route.name === 'content'"
@@ -61,11 +62,13 @@
 <script>
 import ButtonClose from '@/components/ButtonClose.vue';
 import ProductInfo from '@/components/ProductInfo.vue';
+import Logo from '@/components/AdidasLogo.vue';
 
 export default {
   components: {
     ButtonClose,
     ProductInfo,
+    Logo,
   },
 
   props: {
@@ -90,7 +93,11 @@ export default {
     },
 
     modelSrc() {
-      return `https://sketchfab.com/models/${this.modelId}/embed?autospin=0.2&amp;autostart=1&amp;camera=0&amp;preload=1`;
+      return `https://sketchfab.com/models/${this.modelId}/embed?autospin=0.2&amp;autostart=1&amp;camera=0&amp;preload=1&amp;transparent=1`;
+    },
+
+    logoColor() {
+      return (this.$route.params.gender === 'women') ? '#222' : '#fff';
     },
   },
 };
@@ -127,7 +134,7 @@ iframe {
 .product-info {
   position: absolute;
   bottom: 4rem;
-  right: 1rem;
+  right: 4rem;
   z-index: 1;
 }
 

@@ -28,7 +28,7 @@ export default {
     },
 
     isContentPage() {
-      return this.$route.name === 'content';
+      return this.$route.name === 'content' || this.$route.name === '3d-view';
     },
   },
 
@@ -86,6 +86,7 @@ $mobile-header-height: 50px;
 .is-content {
   left: 0;
   position: absolute;
+  min-height: 100vh;
   top: 0;
   width: 100%;
   z-index: 1;
