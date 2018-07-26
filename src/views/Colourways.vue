@@ -133,13 +133,12 @@ export default {
     },
   },
 
-  mounted() {
+  created() {
     this.colourways.map((obj) => {
       const colourway = obj;
       colourway.active = false;
       return colourway;
     });
-
     this.selectColourway(0);
   },
 
@@ -179,6 +178,7 @@ export default {
   height: 100vh;
   width: 100%;
   overflow: hidden;
+  text-align: center;
 }
 
 .logo {
@@ -249,15 +249,15 @@ export default {
   margin-top: 3rem;
 }
 
-.carousel-container /deep/ .image-container:hover .image {
-  opacity: 1;
-}
-
 .carousel-container /deep/ .image {
   opacity: 0.5;
   transition: opacity 0.5s;
   width: 170px;
   height: auto;
+}
+
+.carousel-container /deep/ .image-container:hover .image {
+  opacity: 1;
 }
 
 .hotspot {
@@ -310,7 +310,7 @@ export default {
   user-select: none;
 
   @media only screen and (min-width: 765px) {
-    font-size: 18rem;
+    font-size: 14rem;
     transform: rotate(0deg);
   }
 }
