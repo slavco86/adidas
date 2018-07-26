@@ -51,11 +51,31 @@ export default {
     max-height: 60px;
     max-width: 60px;
     padding: 0;
+    transition: 0.2s ease-in-out;
+
+    &:hover {
+      fill: #fff;
+
+      /deep/ polygon,
+      /deep/ polyline {
+        stroke: #222;
+      }
+    }
 
     img {
       display: block;
       height: auto;
       width: 100%;
+    }
+  }
+
+  // Women Hover State
+  .category--women .quickView:hover {
+    fill: #222;
+
+    & /deep/ polygon,
+    & /deep/ polyline {
+      stroke: #fff;
     }
   }
 </style>
