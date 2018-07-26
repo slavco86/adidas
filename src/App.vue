@@ -29,7 +29,7 @@ export default {
 
     isContentPage() {
       return this.$route.name === 'content';
-    }
+    },
   },
 
   methods: {

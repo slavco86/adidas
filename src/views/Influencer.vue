@@ -92,6 +92,7 @@ export default {
   height: 100vh;
   width: 100%;
   overflow: hidden;
+  text-align: center;
 }
 
 .influencer-section /deep/ .titles {
@@ -133,7 +134,7 @@ export default {
 
   @media only screen and (min-width: 765px) {
     color: #333;
-    font-size: 18rem;
+    font-size: 14rem;
     height: 100%;
     width: 100%;
     top: 25%;

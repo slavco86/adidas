@@ -127,6 +127,7 @@ export default {
 <style lang="scss" scoped>
 .home {
   height: 100vh;
+  text-align: center;
 
   @media only screen and (min-width: 1024px) {
     height: calc(100vh - 202px);
