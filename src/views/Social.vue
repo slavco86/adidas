@@ -70,38 +70,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.category--women .social__cta {
-  background-color: transparent;
-  border: 2px solid #222;
-  color: #222;
-
-  &:hover {
-    background-color: #000;
-    color: #fff;
-  }
-}
-
-.category--women .social__text,
-.category--women .social__title {
-  color: #222;
-}
-
-.category--women .grid__product__text {
-  color: #222;
-}
-
-.category--women .grid__product /deep/ .quickView {
-  polygon,
-  polyline {
-    stroke: #222;
-  }
-
-  circle {
-    stroke: transparent;
-    fill: #fff;
-  }
-}
-
 .social {
   display: flex;
   flex-direction: column;
@@ -184,11 +152,15 @@ export default {
       position: absolute;
       right: 0;
       top: 0;
-      margin: 0.75rem;
+      margin: 1rem;
     }
 
     @media only screen and (min-width: 1024px) {
       flex: 0 0 19%;
+    }
+
+    @media only screen and (min-width: 875px) {
+      flex: 0 0 45%;
     }
 
     &:first-child {
@@ -226,6 +198,32 @@ export default {
       width: 100%;
     }
   }
+}
+
+// Women Styling
+.category--women .quickView {
+  fill: #fff;
+
+  /deep/ circle {
+    stroke: transparent;
+  }
+
+  &:hover {
+    fill: transparent;
+
+    /deep/ circle {
+      stroke: #222;
+    }
+  }
+}
+
+.category--women .social__text,
+.category--women .social__title {
+  color: #222;
+}
+
+.category--women .grid__product__text {
+  color: #222;
 }
 
 // Animate
