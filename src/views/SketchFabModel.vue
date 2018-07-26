@@ -1,5 +1,7 @@
 <template>
-  <div class="content-slide">
+  <div
+    :style="background"
+    class="content-slide">
     <Logo :color="logoColor" />
     <div class="content-slide__inner">
       <router-link
@@ -89,7 +91,7 @@ export default {
     },
 
     modelId() {
-      return this.content['sketch-fab-model'];
+      return this.content['sketch-fab-model'].id;
     },
 
     modelSrc() {
@@ -98,6 +100,24 @@ export default {
 
     logoColor() {
       return (this.$route.params.gender === 'women') ? '#222' : '#fff';
+    },
+
+    background() {
+      const { background } = this.content['sketch-fab-model'];
+
+      if (background) {
+        if (background.charAt(0) === '#') {
+          return {
+            backgroundColor: background,
+          };
+        }
+
+        return {
+          backgroundImage: `url(${background})`,
+        };
+      }
+
+      return undefined;
     },
   },
 };

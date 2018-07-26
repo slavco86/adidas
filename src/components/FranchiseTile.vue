@@ -22,6 +22,7 @@
     <div class="plus"/>
 
     <Countdown
+      v-show="displayCountDown"
       :date="tile.launch"
       @active="hasCountdown = true"
       @expired="hasCountdown = false"/>
@@ -69,6 +70,10 @@ export default {
 
     odd() {
       return this.tile.key % 2;
+    },
+    displayCountDown() {
+      return ((Math.trunc(Date.parse(this.tile.launch) / 1000) -
+      Math.trunc((new Date()).getTime() / 1000)) < 604800);
     },
   },
 };
