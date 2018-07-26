@@ -182,10 +182,6 @@ export default {
 }
 
 .logo {
-  width: 70px;
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
   opacity: 0;
   transition: opacity 1s;
 
@@ -238,10 +234,10 @@ export default {
     font-weight: bold;
   }
 
-  /deep/ .quickView {
-    fill: transparent;
-    stroke: #fff;
-  }
+  // /deep/ .quickView {
+  //   fill: transparent;
+  //   stroke: #fff;
+  // }
 }
 
 .carousel-container {
@@ -251,9 +247,9 @@ export default {
 
 .carousel-container /deep/ .image {
   opacity: 0.5;
-  transition: opacity 0.5s;
   width: 170px;
-  height: auto;
+  transition: opacity 0.5s;
+  transform: translateZ(0);
 }
 
 .carousel-container /deep/ .image-container:hover .image {
@@ -262,11 +258,25 @@ export default {
 
 .hotspot {
   position: absolute;
-  top: 45%;
-  left: 16%;
-  width: 45px;
-  height: 45px;
+  top: 34%;
+  left: 22%;
+  width: 30px;
+  height: 30px;
   z-index: 2;
+
+  @media only screen and (min-width: 765px) {
+    top: 42%;
+    left: 27%;
+    width: 34px;
+    height: 34px;
+  }
+
+  @media only screen and (min-width: 1366px) {
+    top: 39%;
+    left: 21%;
+    width: 70px;
+    height: 70px;
+  }
 
   &::before,
   &::after {
@@ -286,9 +296,24 @@ export default {
     border-left: 1px solid;
   }
 
+  &:hover {
+    transform: scale(1.01) rotate(90deg);
+    transition: transform 0.5s ease-in-out;
+  }
+
   &--right {
-    left: 60%;
-    top: 58%;
+    left: 56%;
+    top: 59%;
+
+    @media only screen and (min-width: 765px) {
+      left: 56%;
+      top: 66%;
+    }
+  }
+
+  &--right:hover {
+    transform: scale(1.01) rotate(90deg);
+    transition: transform 0.8s ease-in-out;
   }
 }
 
@@ -360,6 +385,12 @@ export default {
   }
 }
 
+.modal-container--samba /deep/ .title1 {
+  @media screen and (min-width: 1366px) {
+    font-size: 3em;
+  }
+}
+
 .modal-container--samba /deep/ .title2 p {
   padding-top: 15%;
   color: #222;
@@ -372,27 +403,47 @@ export default {
   }
 
   @media screen and (min-width: 1366px) {
-    padding-top: 5%;
+    padding-top: 0%;
+    font-weight: normal;
+  }
+}
+
+.modal-container--deerupt /deep/ .title1 {
+  color: #222;
+  @media screen and (min-width: 1366px) {
+    font-size: 50px;
   }
 }
 
 .modal-container--deerupt /deep/ .title2 p {
+  color: #222;
   @media screen and (min-width: 765px) {
     font-size: 32px;
-    color: #222;
     line-height: 1.5;
     font-weight: 400;
   }
 
   @media screen and (min-width: 1366px) {
     font-size: 32px;
-    color: #222;
     line-height: 1.5;
     font-weight: 400;
   }
 }
 
+.modal-container--deerupt /deep/ .title1 {
+  color: #222;
+}
+
+.modal-container--allBrands /deep/ .title1 {
+  color: #222;
+  font-weight: normal;
+  @media screen and (min-width: 1366px) {
+    padding-top: 2%;
+  }
+}
 .modal-container--allBrands /deep/ .title2 p {
+  color: #222;
+
   @media screen and (min-width: 1366px) {
     line-height: 1.5;
   }

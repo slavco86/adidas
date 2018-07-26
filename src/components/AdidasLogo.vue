@@ -42,3 +42,12 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+svg {
+  width: 75px;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+</style>
