@@ -51,7 +51,7 @@ export default {
     max-height: 60px;
     max-width: 60px;
     padding: 0;
-    transition: 0.2s ease-in-out;
+    transition: 0.5s ease-in-out;
 
     &:hover {
       fill: #fff;
