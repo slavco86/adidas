@@ -142,6 +142,9 @@ iframe {
   display: flex;
   height: 100vh;
   justify-content: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 
 .content-slide__inner {

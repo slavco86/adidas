@@ -8,7 +8,7 @@
     "content": {
       "sketch-fab-model": {
         "id": "84519a5bf994409dab3e5b1534a072d9",
-        "background": "#f0f"
+        "background": "#273583"
       },
       "colourways": {
         "hotspots": [
@@ -160,7 +160,10 @@
       "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0726/750x750--0011-142a4684-tw-6ab484ea8f9ef4eac28c5a62de805437.jpg"
     },
     "content": {
-      "sketch-fab-model": "30ed8ce1fc3e45be8b1b8a74b36b1879",
+      "sketch-fab-model": {
+        "id": "30ed8ce1fc3e45be8b1b8a74b36b1879",
+        "background": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0726/deerupt-3d-scan-bg-02-a9d7e2070cac95c2eff022357f53728d.png"
+      },
       "colourways": {
         "hotspots": [
           {
