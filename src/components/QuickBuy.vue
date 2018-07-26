@@ -42,42 +42,22 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-  .quickView {
-    background: none;
-    cursor: pointer;
-    fill: transparent;
-    margin: 0;
-    max-height: 60px;
-    max-width: 60px;
-    padding: 0;
-    transition: 0.5s ease-in-out;
+<style lang="scss">
+.quickView {
+  background-color: transparent;
+  cursor: pointer;
+  margin: 0;
+  max-width: 80px;
+  fill: transparent;
+  stroke: transparent;
 
-    &:hover {
-      fill: #fff;
+  &:hover {
+    fill: #fff;
 
-      /deep/ polygon,
-      /deep/ polyline {
-        stroke: #fff;
-        fill: #222;
-      }
-    }
-
-    img {
-      display: block;
-      height: auto;
-      width: 100%;
+    polygon,
+    polyline {
+      fill: #222;
     }
   }
-
-  // Women Hover State
-  .category--women .quickView:hover {
-    fill: #222;
-
-    & /deep/ polygon,
-    & /deep/ polyline {
-      stroke: #222;
-      fill: #fff;
-    }
-  }
+}
 </style>
