@@ -196,46 +196,29 @@ export default {
   position: absolute;
   top: 10px;
   right: 10px;
+  fill: #fff;
+
+  circle {
+    stroke: transparent;
+  }
+
+  & /deep/ polygon,
+  & /deep/ polyline {
+    stroke: #222;
+  }
+
+  &:hover {
+    fill: #222;
+
+    & /deep/ polygon,
+    & /deep/ polyline {
+      fill: #fff;
+    }
+  }
 
   @media only screen and (min-width: 765px) {
     top: initial;
     bottom: 10px;
-  }
-
-  svg circle,
-  svg polygon,
-  svg polyline {
-    transition: stroke 0.5s, fill 0.5s;
-  }
-
-  svg {
-    circle {
-      stroke: #fff;
-      fill: #fff;
-    }
-
-    polygon {
-      stroke: black;
-    }
-
-    polyline {
-      stroke: black;
-    }
-  }
-
-  svg:hover {
-    circle {
-      stroke: black;
-      fill: transparent;
-    }
-
-    polygon {
-      fill: white;
-    }
-
-    polyline {
-      fill: white;
-    }
   }
 }
 

@@ -71,6 +71,11 @@ export default {
 
   // Women Hover State
   .category--women .quickView:hover {
-    fill: transparent;
+    fill: #222;
+
+    & /deep/ polygon,
+    & /deep/ polyline {
+      stroke: #fff;
+    }
   }
 </style>

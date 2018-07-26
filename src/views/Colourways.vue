@@ -238,10 +238,10 @@ export default {
     font-weight: bold;
   }
 
-  /deep/ .quickView {
-    fill: transparent;
-    stroke: #fff;
-  }
+  // /deep/ .quickView {
+  //   fill: transparent;
+  //   stroke: #fff;
+  // }
 }
 
 .carousel-container {

@@ -207,14 +207,6 @@ export default {
   /deep/ circle {
     stroke: transparent;
   }
-
-  &:hover {
-    fill: transparent;
-
-    /deep/ circle {
-      stroke: #222;
-    }
-  }
 }
 
 .category--women .social__text,
