@@ -362,7 +362,7 @@ export default {
 }
 
 .modal-container--pod /deep/ .title1 {
-  color: pink;
+  color: pink !important;
   font-weight: 900;
 
   @media screen and (min-width: 765px) {
@@ -371,9 +371,9 @@ export default {
 }
 
 .modal-container--pod /deep/ .title2 p {
-  color: white;
-  font-weight: 300;
-  font-size: 24px;
+  color: pink !important;
+  font-weight: 200;
+  font-size: 18px;
   line-height: 1;
 
   @media screen and (min-width: 765px) {
@@ -414,22 +414,25 @@ export default {
 .modal-container--deerupt /deep/ .title1 {
   color: #222;
   @media screen and (min-width: 1366px) {
-    font-size: 50px;
+    font-size: 37px;
+    font-weight: 900;
+    padding-top: 4%;
   }
 }
 
 .modal-container--deerupt /deep/ .title2 p {
   color: #222;
   @media screen and (min-width: 765px) {
-    font-size: 32px;
+    font-size: 21px;
     line-height: 1.5;
-    font-weight: 400;
+    font-weight: 600;
   }
 
   @media screen and (min-width: 1366px) {
-    font-size: 32px;
-    line-height: 1.5;
-    font-weight: 400;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 0.7;
+    padding-top: 1%;
   }
 }
 
@@ -439,16 +442,13 @@ export default {
 
 .modal-container--allBrands /deep/ .title1 {
   color: #222;
-  font-weight: normal;
-  @media screen and (min-width: 1366px) {
-    padding-top: 2%;
-  }
 }
+
 .modal-container--allBrands /deep/ .title2 p {
   color: #222;
 
   @media screen and (min-width: 1366px) {
-    line-height: 1.5;
+    // line-height: 1.5;
   }
 }
 

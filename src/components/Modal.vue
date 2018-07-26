@@ -104,6 +104,7 @@ export default {
   background-image: url("../assets/swmobile.png");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center center;
 
   @media screen and (min-width: 765px) {
     background-image: url("../assets/swtablet.png");
@@ -123,7 +124,7 @@ export default {
 .dContainer,
 .abContainer {
   @media screen and (min-width: 1366px) {
-    height: 70%;
+    height: 60%;
     width: 49%;
   }
 }
@@ -170,7 +171,7 @@ export default {
   width: 16%;
 }
 
-.deeruptLogo,
+
 .sambaroseLogo,
 .allBrandsLogo {
   width: 22%;
@@ -185,11 +186,9 @@ export default {
 }
 
 .deeruptLogo {
+  width: 22%;
   @media screen and (min-width: 1366px) {
-    position: absolute;
-    top: -30%;
-    left: 44%;
-    width: 14%;
+    display: none;
   }
 }
 
@@ -208,7 +207,7 @@ export default {
     position: absolute;
     width: 9%;
     left: 45%;
-    top: 98%;
+    top: 95%;
   }
 }
 
@@ -235,7 +234,7 @@ export default {
 .franchisePOD {
   color: #33f;
   position: absolute;
-  top: 146%;
+  top: 190%;
   left: 10%;
   background: url(../assets/podpink.svg);
   background-repeat: no-repeat;
@@ -311,6 +310,7 @@ export default {
     top: -8%;
     right: -4%;
     width: 11%;
+    color: white;
   }
 }
 

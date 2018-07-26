@@ -144,7 +144,7 @@ export default {
   &__product {
     flex: 0 0 50%;
     height: auto;
-    max-width: 25rem;
+    max-width: 400px;
     padding: 0.5rem;
     transition: transform 1s ease-in-out;
 
@@ -155,13 +155,13 @@ export default {
       margin: 1rem;
     }
 
-    @media only screen and (min-width: 1024px) {
-      flex: 0 0 19%;
-    }
+    // @media only screen and (min-width: 1024px) {
+    //   flex: 0 0 20%;
+    // }
 
-    @media only screen and (min-width: 875px) {
-      flex: 0 0 45%;
-    }
+    // @media only screen and (min-width: 1625px) {
+    //   flex: 0 0 25%;
+    // }
 
     &:first-child {
       transform: translate3d(-100%, -100%, 0);
