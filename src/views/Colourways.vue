@@ -252,7 +252,8 @@ export default {
 .carousel-container /deep/ .image {
   opacity: 0.5;
   width: 170px;
-  height: auto;
+  transition: opacity 0.5s;
+  transform: translateZ(0);
 }
 
 .carousel-container /deep/ .image-container:hover .image {
@@ -300,8 +301,8 @@ export default {
   }
 
   &:hover {
-    transform: scale(1.1) rotate(90deg);
-    transition: transform 0.8s ease-in-out;
+    transform: scale(1.01) rotate(90deg);
+    transition: transform 0.5s ease-in-out;
   }
 
   &--right {
@@ -315,7 +316,7 @@ export default {
   }
 
   &--right:hover {
-    transform: scale(1.1) rotate(90deg);
+    transform: scale(1.01) rotate(90deg);
     transition: transform 0.8s ease-in-out;
   }
 }
