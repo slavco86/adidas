@@ -286,6 +286,11 @@ export default {
     border-left: 1px solid;
   }
 
+  &:hover {
+    transform: scale(1.1) rotate(90deg);
+    transition: transform 0.8s ease-in-out;
+  }
+
   &--right {
     left: 60%;
     top: 58%;
