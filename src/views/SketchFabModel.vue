@@ -1,6 +1,7 @@
 <template>
   <div
     :style="background"
+    :class="{ background : background }"
     class="content-slide">
     <Logo :color="logoColor" />
     <div class="content-slide__inner">
@@ -206,24 +207,55 @@ iframe {
 }
 
 .transitional-page__label .center {
-  margin: 5rem 0 3rem;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 100%;
+  color: #fff;
+  display: flex;
+  font-size: 1.25rem;
+  font-weight: 900;
+  height: 105px;
+  justify-content: center;
+  margin: 3.25rem 0 1.5rem;
+  width: 105px;
 }
 
 .transitional-page__label .cta {
-  text-transform: uppercase;
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 0.25rem;
+  color: #fff;
   font-size: 1rem;
   font-weight: 900;
+  padding: 0.25rem 1rem;
+  text-transform: uppercase;
+}
+
+.background::before {
+  background-color: rgba(0, 0, 0, 0.2);
+  bottom: 0;
+  content: '';
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 .rotate-svg {
   width: 150px;
   height: 150px;
   position: absolute;
-  animation: spin 10s linear infinite reverse;
   opacity: 0.7;
 }
 
+.fp-enabled .rotate-svg {
+  animation: spin 10s linear infinite reverse;
+}
+
 @keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+
   100% {
     transform: rotate(360deg);
   }
