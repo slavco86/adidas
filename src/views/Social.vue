@@ -226,6 +226,16 @@ export default {
   color: #222;
 }
 
+.category--women .social__cta {
+  color: #222;
+  border: 2px solid #222;
+
+  &:hover {
+    color: #fff;
+    background-color: #222;
+  }
+}
+
 // Animate
 .grid--animate {
   padding: 0.5rem 0;
