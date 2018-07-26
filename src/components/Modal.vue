@@ -186,6 +186,7 @@ export default {
 }
 
 .deeruptLogo {
+  width: 22%;
   @media screen and (min-width: 1366px) {
     display: none;
   }
@@ -233,7 +234,7 @@ export default {
 .franchisePOD {
   color: #33f;
   position: absolute;
-  top: 146%;
+  top: 190%;
   left: 10%;
   background: url(../assets/podpink.svg);
   background-repeat: no-repeat;
@@ -309,6 +310,7 @@ export default {
     top: -8%;
     right: -4%;
     width: 11%;
+    color: white;
   }
 }
 

@@ -362,7 +362,7 @@ export default {
 }
 
 .modal-container--pod /deep/ .title1 {
-  color: pink;
+  color: pink !important;
   font-weight: 900;
 
   @media screen and (min-width: 765px) {
@@ -371,9 +371,9 @@ export default {
 }
 
 .modal-container--pod /deep/ .title2 p {
-  color: white;
-  font-weight: 300;
-  font-size: 24px;
+  color: pink !important;
+  font-weight: 200;
+  font-size: 18px;
   line-height: 1;
 
   @media screen and (min-width: 765px) {
