@@ -2,11 +2,11 @@
   {
     "franchise": "Samba Rose",
     "image": {
-      "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg",
-      "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg"
+      "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0726/750x750--0033-final-l1-hailey-door-sambapinkrose-168-r1-v2-b8c788138067bbb657e4df475364ee07.jpg",
+      "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0726/750x750--0033-final-l1-hailey-door-sambapinkrose-168-r1-v2-b8c788138067bbb657e4df475364ee07.jpg"
     },
     "content": {
-      "360": "url",
+      "sketch-fab-model": "url",
       "colourways": {
         "hotspots": [
           {
@@ -151,13 +151,13 @@
     }
   },
   {
-    "franchise": "Falcon",
+    "franchise": "POD",
     "image": {
-      "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg",
-      "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg"
+      "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0726/750x750--0025-27707-art-adidas-jd-pod-facebook-instagram-1500x1500px17-3558d5b61abe92416250206089766e1c.jpg",
+      "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0726/750x750--0025-27707-art-adidas-jd-pod-facebook-instagram-1500x1500px17-3558d5b61abe92416250206089766e1c.jpg"
     },
     "content": {
-      "360": "url",
+      "sketch-fab-model": "url",
       "colourways": {
         "hotspots": [
           {
@@ -274,11 +274,11 @@
   {
     "franchise": "Deerupt",
     "image": {
-      "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg",
-      "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg"
+      "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0726/750x750--0010-27075-art-adidas-jd-deerupt-512x531px-8fefa996ba5ad9e3ef990240f6afa1c1.jpg",
+      "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0726/750x750--0010-27075-art-adidas-jd-deerupt-512x531px-8fefa996ba5ad9e3ef990240f6afa1c1.jpg"
     },
     "content": {
-      "360": "url",
+      "sketch-fab-model": "url",
       "colourways": {
         "hotspots": [
           {
@@ -384,246 +384,6 @@
             "image": {
               "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0723/deerupt-women-3-d16b48f01c427c798ee8c913e2e979bf.jpg",
               "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0723/deerupt-women-3-d16b48f01c427c798ee8c913e2e979bf.jpg"
-            },
-            "url": "/product/black-nike-air-force-1-low/047951",
-            "handle": "@socialhandle"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "franchise": "POD",
-    "image": {
-      "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg",
-      "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg"
-    },
-    "content": {
-      "360": "url",
-      "colourways": {
-        "hotspots": [
-          {
-            "title": "Title 1",
-            "subtext": "Subtitle 1\n\nWith Deerupt, a silhouette becomes the unexpected. Comfort becomes the unprecedented. Fit becomes an experience."
-          },
-          {
-            "title": "Title 2",
-            "subtext": "Subtitle 2\n\nWith Deerupt, a silhouette becomes the unexpected. Comfort becomes the unprecedented. Fit becomes an experience."
-          }
-        ],
-        "products": [
-          {
-            "image": {
-              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-0-04670ce96db4cc1da203cc6895aa85e0.png",
-              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-0-04670ce96db4cc1da203cc6895aa85e0.png"
-            },
-            "brand": "Nike",
-            "price": "75",
-            "title": "Air Force 1 Low",
-            "url": "/product/black-nike-air-force-1-low/047951"
-          },
-          {
-            "image": {
-              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-1-6e0103d3b8a1653704b09acad135b6a9.png",
-              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-1-6e0103d3b8a1653704b09acad135b6a9.png"
-            },
-            "brand": "Nike",
-            "price": "75",
-            "title": "Air Force 1 Low",
-            "url": "/product/black-nike-air-force-1-low/047951"
-          }
-        ]
-      } ,
-      "influencer":
-        {
-          "name": "Influencer Name",
-          "products": [
-            {
-              "quote": "When you play with what’s possible, you define what is.",
-              "url": "/product/black-nike-air-force-1-low/047951",
-              "image": {
-                "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg",
-                "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg"
-              }
-            },
-            {
-              "url": "/product/black-nike-air-force-1-low/047951",
-              "quote": "When you play with what’s possible, you define what is.",
-              "image": {
-                "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg",
-                "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg"
-              }
-            },
-            {
-              "url": "/product/black-nike-air-force-1-low/047951",
-              "quote": "When you play with what’s possible, you define what is.",
-              "image": {
-                "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg",
-                "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg"
-              }
-            },
-            {
-              "url": "/product/black-nike-air-force-1-low/047951",
-              "quote": "When you play with what’s possible, you define what is.",
-              "image": {
-                "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg",
-                "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg"
-              }
-            }
-          ]
-        },
-      "shoppableVide": "url",
-      "influencerVideo": "url",
-      "get-social": {
-        "url": "Follow Us",
-        "products": [
-          {
-            "image": {
-              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0723/pod-women-ab12c0c0ce92d9cce3c4d9938d45d741.jpg",
-              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0723/pod-women-ab12c0c0ce92d9cce3c4d9938d45d741.jpg"
-            },
-            "url": "/product/black-nike-air-force-1-low/047951",
-            "handle": "@socialhandle"
-          },
-          {
-            "image": {
-              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0723/pod-women-2-98d7e37702bd51163823d0d9a7497cac.jpg",
-              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0723/pod-women-2-98d7e37702bd51163823d0d9a7497cac.jpg"
-            },
-            "url": "/product/black-nike-air-force-1-low/047951",
-            "handle": "@socialhandle"
-          },
-          {
-            "image": {
-              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0723/pod-women-3-dd029fe183361ad4a1ab258ca0c45ca2.jpg",
-              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0723/pod-women-3-dd029fe183361ad4a1ab258ca0c45ca2.jpg"
-            },
-            "url": "/product/black-nike-air-force-1-low/047951",
-            "handle": "@socialhandle"
-          },
-          {
-            "image": {
-              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0723/pod-women-4-1b4a01aec546937b519e93efc8c251d2.jpg",
-              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0723/pod-women-4-1b4a01aec546937b519e93efc8c251d2.jpg"
-            },
-            "url": "/product/black-nike-air-force-1-low/047951",
-            "handle": "@socialhandle"
-          }
-        ]
-      }
-    }
-  },
-  {
-    "franchise": "Sambarose",
-    "launch": "August 3, 2018",
-    "image": {
-      "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg",
-      "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg"
-    },
-    "content": {
-      "360": "url",
-      "colourways": {
-        "hotspots": [
-          {
-            "title": "Title 1",
-            "subtext": "Subtitle 1\n\nWith Deerupt, a silhouette becomes the unexpected. Comfort becomes the unprecedented. Fit becomes an experience."
-          },
-          {
-            "title": "Title 2",
-            "subtext": "Subtitle 2\n\nWith Deerupt, a silhouette becomes the unexpected. Comfort becomes the unprecedented. Fit becomes an experience."
-          }
-        ],
-        "products": [
-          {
-            "image": {
-              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-0-04670ce96db4cc1da203cc6895aa85e0.png",
-              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-0-04670ce96db4cc1da203cc6895aa85e0.png"
-            },
-            "brand": "Nike",
-            "price": "75",
-            "title": "Air Force 1 Low",
-            "url": "/product/black-nike-air-force-1-low/047951"
-          },
-          {
-            "image": {
-              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-1-6e0103d3b8a1653704b09acad135b6a9.png",
-              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-1-6e0103d3b8a1653704b09acad135b6a9.png"
-            },
-            "brand": "Nike",
-            "price": "75",
-            "title": "Air Force 1 Low",
-            "url": "/product/black-nike-air-force-1-low/047951"
-          }
-        ]
-      } ,
-      "influencer":
-        {
-          "name": "Influencer Name",
-          "quote": "When you play with what’s possible, you define what is.",
-          "products": [
-            {
-              "url": "/product/black-nike-air-force-1-low/047951",
-              "image": {
-                "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg",
-                "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg"
-              }
-            },
-            {
-              "url": "/product/black-nike-air-force-1-low/047951",
-              "image": {
-                "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg",
-                "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg"
-              }
-            },
-            {
-              "url": "/product/black-nike-air-force-1-low/047951",
-              "image": {
-                "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg",
-                "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg"
-              }
-            },
-            {
-              "url": "/product/black-nike-air-force-1-low/047951",
-              "image": {
-                "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg",
-                "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg"
-              }
-            }
-          ]
-        },
-      "shoppableVide": "url",
-      "influencerVideo": "url",
-      "get-social": {
-        "url": "Follow Us",
-        "products": [
-          {
-            "image": {
-              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-1-6e0103d3b8a1653704b09acad135b6a9.png",
-              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-1-6e0103d3b8a1653704b09acad135b6a9.png"
-            },
-            "url": "/product/black-nike-air-force-1-low/047951",
-            "handle": "@socialhandle"
-          },
-          {
-            "image": {
-              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-1-6e0103d3b8a1653704b09acad135b6a9.png",
-              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-1-6e0103d3b8a1653704b09acad135b6a9.png"
-            },
-            "url": "/product/black-nike-air-force-1-low/047951",
-            "handle": "@socialhandle"
-          },
-          {
-            "image": {
-              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-1-6e0103d3b8a1653704b09acad135b6a9.png",
-              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-1-6e0103d3b8a1653704b09acad135b6a9.png"
-            },
-            "url": "/product/black-nike-air-force-1-low/047951",
-            "handle": "@socialhandle"
-          },
-          {
-            "image": {
-              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-1-6e0103d3b8a1653704b09acad135b6a9.png",
-              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-1-6e0103d3b8a1653704b09acad135b6a9.png"
             },
             "url": "/product/black-nike-air-force-1-low/047951",
             "handle": "@socialhandle"
