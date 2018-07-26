@@ -269,6 +269,7 @@ export default {
   z-index: 2;
   transition: all 0.5s ease-in-out;
   transform: scale(0.75) rotate(0);
+  cursor: pointer;
 
   @media only screen and (min-width: 765px) {
     top: 42%;
