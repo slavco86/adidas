@@ -1,6 +1,7 @@
 <template>
   <div
     :style="background"
+    :class="{ background : background }"
     class="content-slide">
     <Logo :color="logoColor" />
     <div class="content-slide__inner">
@@ -227,6 +228,16 @@ iframe {
   font-weight: 900;
   padding: 0.25rem 1rem;
   text-transform: uppercase;
+}
+
+.background::before {
+  background-color: rgba(0, 0, 0, 0.2);
+  bottom: 0;
+  content: '';
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 .rotate-svg {
