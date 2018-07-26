@@ -290,6 +290,11 @@ export default {
     left: 60%;
     top: 58%;
   }
+
+  &--right:hover {
+    transform: scale(1.1) rotate(90deg);
+    transition: transform 0.8s ease-in-out;
+  }
 }
 
 .category--women .hotspot {
