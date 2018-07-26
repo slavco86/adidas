@@ -7,7 +7,10 @@
       "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg"
     },
     "content": {
-      "sketch-fab-model": "84519a5bf994409dab3e5b1534a072d9",
+      "sketch-fab-model": {
+        "id": "84519a5bf994409dab3e5b1534a072d9",
+        "background": "#f0f"
+      },
       "colourways": {
         "hotspots": [
           {
