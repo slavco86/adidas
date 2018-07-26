@@ -110,8 +110,8 @@ export default {
 
   &__cta {
     align-self: flex-end;
-    background-color: #000;
-    border: 2px solid #383838;
+    background-color: transparent;
+    border: 2px solid #fff;
     color: #fff;
     font-weight: 900;
     margin-right: 0.75rem;
