@@ -1,7 +1,6 @@
 [
   {
     "franchise": "POD",
-    "launch": "1 August 2018",
     "image": {
       "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0726/750x750--0027-27707-art-adidas-jd-pod-facebook-instagram-1500x1500px13-bb468170b12e46e0c943f6aa8a0752b8.jpg",
       "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0726/750x750--0027-27707-art-adidas-jd-pod-facebook-instagram-1500x1500px13-bb468170b12e46e0c943f6aa8a0752b8.jpg"
@@ -14,12 +13,12 @@
       "colourways": {
         "hotspots": [
           {
-            "title": "Title 1",
-            "subtext": "Subtitle 1\n\nWith Deerupt, a silhouette becomes the unexpected. Comfort becomes the unprecedented. Fit becomes an experience."
+            "title": "BOOST HEEL",
+            "subtext": "Leading comfort technology repurposed within a podular heel element, bringing the full BOOST sensation to every step."
           },
           {
-            "title": "Title 2",
-            "subtext": "Subtitle 2\n\nWith Deerupt, a silhouette becomes the unexpected. Comfort becomes the unprecedented. Fit becomes an experience."
+            "title": "POINT OF DEFLECTION BRIDGE",
+            "subtext": "Inspired by our Torsion System technology, the Point of Deflection Bridge brings stability and flex to the podular sole for a natural ride."
           }
         ],
         "products": [
@@ -28,87 +27,47 @@
               "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-0-04670ce96db4cc1da203cc6895aa85e0.png",
               "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-0-04670ce96db4cc1da203cc6895aa85e0.png"
             },
-            "brand": "Nike",
+            "brand": "adidas",
             "price": "75",
-            "title": "Air Force 1 Low",
-            "url": "/product/black-nike-air-force-1-low/047951"
-          },
-          {
-            "image": {
-              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-1-6e0103d3b8a1653704b09acad135b6a9.png",
-              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-1-6e0103d3b8a1653704b09acad135b6a9.png"
-            },
-            "brand": "Nike",
-            "price": "75",
-            "title": "Air Force 1 Low",
-            "url": "/product/black-nike-air-force-1-low/047951"
-          },
-          {
-            "image": {
-              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-1-6e0103d3b8a1653704b09acad135b6a9.png",
-              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-1-6e0103d3b8a1653704b09acad135b6a9.png"
-            },
-            "brand": "Nike",
-            "price": "75",
-            "title": "Air Force 1 Low",
-            "url": "/product/black-nike-air-force-1-low/047951"
-          },
-          {
-            "image": {
-              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-1-6e0103d3b8a1653704b09acad135b6a9.png",
-              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-1-6e0103d3b8a1653704b09acad135b6a9.png"
-            },
-            "brand": "Nike",
-            "price": "75",
-            "title": "Air Force 1 Low",
-            "url": "/product/black-nike-air-force-1-low/047951"
-          },
-          {
-            "image": {
-              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-1-6e0103d3b8a1653704b09acad135b6a9.png",
-              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-1-6e0103d3b8a1653704b09acad135b6a9.png"
-            },
-            "brand": "Nike",
-            "price": "75",
-            "title": "Air Force 1 Low",
+            "title": "POD",
             "url": "/product/black-nike-air-force-1-low/047951"
           }
         ]
       } ,
       "influencer":
         {
-          "name": "Influencer Name",
+          "name": "Ryan Hildew",
           "products": [
             {
-              "quote": "Information about adidas Originals that will make you want to buy it right now. Information about adidas Originals that will make you want to buy it.",
+              "quote": "Quality sneak, the Boost tech is super comfy and they’re easy to pair with any fit!",
               "url": "/product/black-nike-air-force-1-low/047951",
               "image": {
-                "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg",
-                "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg"
+                "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0726/750x750--0028-27707-art-adidas-jd-pod-facebook-instagram-1500x1500px5-a210a1b68984dfde8694a71589a6bb8e.jpg",
+                "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0726/750x750--0028-27707-art-adidas-jd-pod-facebook-instagram-1500x1500px5-a210a1b68984dfde8694a71589a6bb8e.jpg"
               }
             },
             {
               "url": "/product/black-nike-air-force-1-low/047951",
               "quote": "Information about adidas Originals that will make you want to buy it right now. Information about adidas Originals that will make you want to buy it.",
               "image": {
-                "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg",
-                "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg"
+                "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0726/750x750--0030-27707-art-adidas-jd-pod-facebook-instagram-1500x1500px2-1dad4e44c7f036741bc6c80d6411d252.jpg",
+                "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0726/750x750--0030-27707-art-adidas-jd-pod-facebook-instagram-1500x1500px2-1dad4e44c7f036741bc6c80d6411d252.jpg"
               }
             },
             {
               "url": "/product/black-nike-air-force-1-low/047951",
               "quote": "Information about adidas Originals that will make you want to buy it right now. Information about adidas Originals that will make you want to buy it.",
               "image": {
-                "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg",
-                "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg"
+                "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0726/750x750--0029-27707-art-adidas-jd-pod-facebook-instagram-1500x1500px3-98c913d492f6b363227a5aeeceb20e48.jpg",
+                "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0726/750x750--0029-27707-art-adidas-jd-pod-facebook-instagram-1500x1500px3-98c913d492f6b363227a5aeeceb20e48.jpg"
               }
             },
             {
               "url": "/product/black-nike-air-force-1-low/047951",
               "quote": "Information about adidas Originals that will make you want to buy it right now. Information about adidas Originals that will make you want to buy it.",
               "image": {
-                "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg",
-                "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0718/750x750pod-3-41f52c650d9a0ec7dd35daf4111de8ef.jpg"
+                "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0726/750x750--0026-27707-art-adidas-jd-pod-facebook-instagram-1500x1500px15-d3bba127ade2c374094ff71cf50042ef.jpg",
+                "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0726/750x750--0026-27707-art-adidas-jd-pod-facebook-instagram-1500x1500px15-d3bba127ade2c374094ff71cf50042ef.jpg"
               }
             }
           ]
