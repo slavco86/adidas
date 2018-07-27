@@ -1,7 +1,6 @@
 [
   {
     "franchise": "POD",
-    "launch": "1 august 2018",
     "image": {
       "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0726/750x750--0027-27707-art-adidas-jd-pod-facebook-instagram-1500x1500px13-bb468170b12e46e0c943f6aa8a0752b8.jpg",
       "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0726/750x750--0027-27707-art-adidas-jd-pod-facebook-instagram-1500x1500px13-bb468170b12e46e0c943f6aa8a0752b8.jpg"
@@ -13,6 +12,10 @@
       },
       "colourways": {
         "hotspots": [
+          {
+            "title": "DEFLECTION BRIDGE",
+            "subtext": "Inspired by our Torsion System technology, the Point of Deflection Bridge brings stability and flex to the podular sole for a natural ride."
+          },
           {
             "title": "DEFLECTION BRIDGE",
             "subtext": "Inspired by our Torsion System technology, the Point of Deflection Bridge brings stability and flex to the podular sole for a natural ride."
