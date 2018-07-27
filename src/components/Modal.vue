@@ -171,7 +171,6 @@ export default {
   width: 16%;
 }
 
-
 .sambaroseLogo,
 .allBrandsLogo {
   width: 22%;
@@ -205,7 +204,7 @@ export default {
   }
 
   @media screen and (min-width: 1366px) {
-    top: 120%;
+    top: 116%;
   }
 }
 
@@ -265,7 +264,7 @@ export default {
   }
 
   @media screen and (min-width: 1366px) {
-    top: 23%;
+    top: 17%;
   }
 }
 

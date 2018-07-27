@@ -437,7 +437,7 @@ export default {
   @media screen and (min-width: 1366px) {
     font-size: 17px;
     font-weight: 500;
-    line-height: 0.7;
+    line-height: 0.2;
     padding-top: 1%;
   }
 }
