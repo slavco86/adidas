@@ -205,7 +205,7 @@ img {
 
 .grid-view {
   .franchise-name {
-    font-size: 1rem;
+    font-size: 1.7rem;
     bottom: 0;
   }
 
