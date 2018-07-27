@@ -364,6 +364,7 @@ export default {
 .modal-container--pod /deep/ .title1 {
   color: pink;
   font-weight: 900;
+  padding-top: 5%;
 
   @media screen and (min-width: 765px) {
     font-size: 3em;
@@ -391,7 +392,6 @@ export default {
 }
 
 .modal-container--samba /deep/ .title1 {
-  display: none;
 
   @media screen and (min-width: 1366px) {
     font-size: 3em;
@@ -437,8 +437,10 @@ export default {
   @media screen and (min-width: 1366px) {
     font-size: 17px;
     font-weight: 500;
-    line-height: 0.2;
+    line-height: 1.2;
     padding-top: 1%;
+    width: 54%;
+    padding-left: 23%;
   }
 }
 

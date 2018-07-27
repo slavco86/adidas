@@ -216,6 +216,7 @@ export default {
   font-size: 66px;
   font-weight: 600;
   color: #222;
+  padding-top: 4.5%;
 }
 
 .srContainer {
@@ -239,7 +240,7 @@ export default {
   height: 100%;
 
   @media screen and (min-width: 765px) {
-    top: 299%;
+    top: 245%;
   }
 
   @media screen and (min-width: 1366px) {
