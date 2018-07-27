@@ -84,11 +84,12 @@ export default {
   }
 
   &__inner-wrapper {
-    max-height: 100%;
-    width: 100%;
-    display: flex;
     align-items: center;
+    display: flex;
+    height: 500px;
+    max-height: 100%;
     overflow: hidden;
+    width: 100%;
   }
 
   &__title,
