@@ -76,14 +76,13 @@ export default {
     swiperOptions() {
       const desktop = this.width > 765;
       const slidesPerView = desktop ? 1.8 : 1.2;
-      const spaceBetween = desktop ? this.width * 0.1 : 15;
+      const spaceBetween = desktop ? -220 : 15;
       return {
         parallax: true,
         centeredSlides: true,
         spaceBetween,
         speed: 500,
         slidesPerView,
-        mousewheel: true,
       };
     },
   },
