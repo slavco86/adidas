@@ -143,6 +143,10 @@ export default {
   position: absolute;
   width: 100%;
 
+  @media only screen and (min-width: 320px) and (max-width: 875px) {
+    justify-content: flex-start;
+  }
+
   &__product {
     flex: 0 0 50%;
     height: auto;
