@@ -118,7 +118,7 @@ export default {
     padding: 1rem 0;
     text-align: center;
     text-transform: uppercase;
-    transition: 0.5s ease-in-out;
+    transition: 0.35s ease-in-out;
     width: 175px;
 
     &:hover {
@@ -201,14 +201,6 @@ export default {
 }
 
 // Women Styling
-.category--women .quickView {
-  fill: #fff;
-
-  /deep/ circle {
-    stroke: transparent;
-  }
-}
-
 .category--women .social__text,
 .category--women .social__title {
   color: #222;

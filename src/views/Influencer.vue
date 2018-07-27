@@ -196,26 +196,7 @@ export default {
   position: absolute;
   top: 10px;
   right: 10px;
-  fill: #fff;
-
-  circle {
-    stroke: transparent;
-  }
-
-  & /deep/ polygon,
-  & /deep/ polyline {
-    stroke: #222;
-  }
-
-  &:hover {
-    fill: #222;
-
-    & /deep/ polygon,
-    & /deep/ polyline {
-      fill: #fff;
-      stroke: #222;
-    }
-  }
+  fill: transparent;
 
   @media only screen and (min-width: 765px) {
     top: initial;
