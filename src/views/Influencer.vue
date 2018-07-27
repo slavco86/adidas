@@ -23,7 +23,7 @@
             data-swiper-parallax-y="-50"
             data-swiper-parallax-opacity="0"
             data-swiper-parallax-duration="600"
-            class="name">{{ slide.name }}</span>
+            class="name">{{ slide.handle }}</span>
           <QuickBuy
             :url="slide.url"/>
         </Spot>
@@ -76,7 +76,7 @@ export default {
     swiperOptions() {
       const desktop = this.width > 765;
       const slidesPerView = desktop ? 1.8 : 1.2;
-      const spaceBetween = desktop ? this.width * 0.1 : 15;
+      const spaceBetween = desktop ? -220 : 15;
       return {
         parallax: true,
         centeredSlides: true,
