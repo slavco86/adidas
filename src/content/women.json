@@ -1,7 +1,6 @@
 [
   {
     "franchise": "Samba Rose",
-    "launch": "1 August 2018",
     "image": {
       "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0726/750x750--0033-final-l1-hailey-door-sambapinkrose-168-r1-v2-b8c788138067bbb657e4df475364ee07.jpg",
       "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0726/750x750--0033-final-l1-hailey-door-sambapinkrose-168-r1-v2-b8c788138067bbb657e4df475364ee07.jpg"
@@ -12,11 +11,11 @@
         "hotspots": [
           {
             "title": "Title 1",
-            "subtext": "Subtitle 1\n\nWith Deerupt, a silhouette becomes the unexpected. Comfort becomes the unprecedented. Fit becomes an experience."
+            "subtext": "With Deerupt, a silhouette becomes the unexpected. Comfort becomes the unprecedented. Fit becomes an experience."
           },
           {
             "title": "Title 2",
-            "subtext": "Subtitle 2\n\nWith Deerupt, a silhouette becomes the unexpected. Comfort becomes the unprecedented. Fit becomes an experience."
+            "subtext": "With Deerupt, a silhouette becomes the unexpected. Comfort becomes the unprecedented. Fit becomes an experience."
           }
         ],
         "products": [
