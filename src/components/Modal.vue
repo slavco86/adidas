@@ -240,7 +240,7 @@ export default {
   height: 100%;
 
   @media screen and (min-width: 765px) {
-    top: 299%;
+    top: 245%;
   }
 
   @media screen and (min-width: 1366px) {
