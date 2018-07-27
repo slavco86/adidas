@@ -117,6 +117,8 @@ export default {
     font-weight: 900;
     margin-right: 0.75rem;
     padding: 1rem 0;
+    position: relative;
+    top: -0.75rem;
     text-align: center;
     text-transform: uppercase;
     transition: 0.35s ease-in-out;
