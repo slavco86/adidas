@@ -150,9 +150,9 @@
       } ,
       "influencer":
         {
-          "name": "Influencer Name",
           "products": [
             {
+              "name": "Nathan Hopkinson",
               "quote": "Combining 90’s fashion with modern kicks - this pairing is crazy! I find the clean, white colourway a perfect match for any summer fit!",
               "url": "/product/black-nike-air-force-1-low/047951",
               "image": {
@@ -161,6 +161,7 @@
               }
             },
             {
+              "name": "Sam Fenton",
               "url": "/product/black-nike-air-force-1-low/047951",
               "quote": "Lovin’ the Deerupt at the minute! I’ve copped 3 pairs and they go with all of my looks.",
               "image": {
@@ -169,6 +170,7 @@
               }
             },
             {
+              "name": "Sam Fenton",
               "url": "/product/black-nike-air-force-1-low/047951",
               "quote": "Lovin’ the Deerupt at the minute! I’ve copped 3 pairs and they go with all of my looks.",
               "image": {
@@ -177,6 +179,7 @@
               }
             },
             {
+              "name": "Carl Kho",
               "url": "/product/black-nike-air-force-1-low/047951",
               "quote": "Cozy is the vibes with these crazy sneakers and it feels like I’m walking into the future! The style is fresh and the colours pop with any ‘fit.",
               "image": {

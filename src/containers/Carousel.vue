@@ -3,7 +3,8 @@
     <Carousel
       v-if="enableCarousel && slides.length > 1"
       :options="options"
-      :slides="slides">
+      :slides="slides"
+      @change="change">
       <div slot-scope="{slide}">
         <slot :slide="slide"/>
       </div>
@@ -62,6 +63,9 @@ export default {
   },
 
   methods: {
+    change() {
+      this.$emit('change');
+    },
     addKey(slide, key) {
       return {
         ...slide,
