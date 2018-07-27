@@ -159,7 +159,7 @@ export default {
       position: absolute;
       right: 0;
       top: 0;
-      margin: 1rem;
+      margin: 0.75rem;
     }
 
     &:first-child {
