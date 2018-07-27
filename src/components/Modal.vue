@@ -216,6 +216,7 @@ export default {
   font-size: 66px;
   font-weight: 600;
   color: #222;
+  padding-top: 4.5%;
 }
 
 .srContainer {
