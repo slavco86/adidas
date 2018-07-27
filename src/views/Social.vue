@@ -148,20 +148,16 @@ export default {
     padding: 0.5rem;
     transition: transform 1s ease-in-out;
 
+    @media only screen and (min-width: 765px) {
+      flex: 0 0 20%;
+    }
+
     /deep/ .quickView {
       position: absolute;
       right: 0;
       top: 0;
       margin: 1rem;
     }
-
-    // @media only screen and (min-width: 1024px) {
-    //   flex: 0 0 20%;
-    // }
-
-    // @media only screen and (min-width: 1625px) {
-    //   flex: 0 0 25%;
-    // }
 
     &:first-child {
       transform: translate3d(-100%, -100%, 0);

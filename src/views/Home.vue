@@ -219,25 +219,8 @@ export default {
   text-transform: uppercase;
   position: relative;
 
-  &::after {
-    background-color: #fff;
-    content: '';
-    height: 0.2rem;
-    left: 0;
-    position: absolute;
-    top: 100%;
-    transform: scale3d(0, 0, 0);
-    transition: transform 0.5s ease-in-out;
-    margin: 0.5rem 0;
-    width: 100%;
-  }
-
   &:hover {
     color: #fff;
-  }
-
-  &:hover::after {
-    transform: scale3d(1, 1, 1);
   }
 
   &.router-link-active {
@@ -248,10 +231,6 @@ export default {
 // Women
 .category--women .nav-button:hover {
   color: #222;
-
-  &::after {
-    background-color: #222;
-  }
 }
 
 .category--women .nav-button.router-link-active {
