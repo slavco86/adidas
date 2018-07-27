@@ -48,12 +48,22 @@ export default {
   cursor: pointer;
   margin: 0;
   max-width: 80px;
-  fill: transparent;
-  stroke: transparent;
-  transition: fill 0.35s ease-in-out;
+
+  circle {
+    fill: transparent;
+    transition: fill 0.35s ease-in-out;
+  }
+
+  polygon,
+  polyline {
+    fill: transparent;
+    transition: fill 0.35s ease-in-out, stroke 0.35s ease-in-out;
+  }
 
   &:hover {
-    fill: #fff;
+    circle {
+      fill: #fff;
+    }
 
     polygon,
     polyline {
@@ -65,34 +75,40 @@ export default {
 
 .influencer-carousel /deep/ .quickView {
   circle {
-    fill: transparent;
-    transition: fill 0.35s ease-in-out;
+    fill: white;
+    stroke: #222;
+    transition: fill 0.35s ease-in-out, stroke 0.35s ease-in-out;
+  }
 
-    &:hover {
-      fill: #fff;
-    }
+  polygon,
+  polyline {
+    fill: #fff;
+    stroke: #222;
+    transition: fill 0.35s ease-in-out, stroke 0.35s ease-in-out;
+  }
 
+  &:hover {
+    circle,
     polygon,
     polyline {
       fill: #222;
       stroke: #fff;
     }
   }
+}
+
+.category--women .quickView {
+  circle {
+    fill: #fff;
+    stroke: #222;
+    transition: fill 0.35s ease-in-out, stroke 0.35s ease-in-out;
+  }
 
   &:hover {
     circle {
-      fill: #fff;
+      fill: #222;
+      stroke: #fff;
     }
-  }
-}
-
-// Women
-.category--women .quickView {
-  fill: #fff;
-  transition: fill 0.35s ease-in-out;
-
-  &:hover {
-    fill: #222;
 
     & /deep/ polygon,
     & /deep/ polyline {
@@ -100,11 +116,27 @@ export default {
       stroke: #222;
     }
   }
+}
 
-  /deep/ circle {
-    stroke: transparent;
+.category--women .section-colourways /deep/ .quickView {
+  circle {
+    fill: transparent;
+  }
+
+  &:hover {
+    circle {
+      stroke: #222;
+      fill: #222;
+    }
+
+    polygon,
+    polyline {
+      fill: white;
+      stroke: #222;
+    }
   }
 }
+
 
 // Women Influencer
 .category--women .influencer-carousel /deep/ .quickView {
@@ -124,8 +156,4 @@ export default {
     }
   }
 }
-
-// .category--women .influencer-carousel /deep/ .quickView:hover {
-//   fill: #222;
-// }
 </style>
