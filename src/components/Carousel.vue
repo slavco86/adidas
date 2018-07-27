@@ -4,7 +4,8 @@
     :options="options"
     :global-options="globalOptions"
     @images-ready="emitReady"
-    @transition-end="transitionEnd">
+    @transition-end="transitionEnd"
+    @slideChange="slideChange">
 
     <swiper-slide
       v-for="(slide, key) in slides"
@@ -63,6 +64,9 @@ export default {
   },
 
   methods: {
+    slideChange() {
+      this.$emit('change');
+    },
     emitReady() {
       this.$emit('ready');
     },

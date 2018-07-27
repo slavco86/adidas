@@ -5,11 +5,13 @@
     </div>
     <Titles
       :subtext="franchise"
-      :headline="data.name + ' wears'"/>
+      :headline="name + ' wears'"/>
     <Carousel
+      ref="carousel"
       :slides="data.products"
       :options="swiperOptions"
-      class="influencer-carousel">
+      class="influencer-carousel"
+      @change="change">
       <div slot-scope="{slide}">
         <Spot v-bind="slide">
           <span
@@ -21,7 +23,7 @@
             data-swiper-parallax-y="-50"
             data-swiper-parallax-opacity="0"
             data-swiper-parallax-duration="600"
-            class="name">{{ data.name }}</span>
+            class="name">{{ slide.name }}</span>
           <QuickBuy
             :url="slide.url"/>
         </Spot>
@@ -63,6 +65,7 @@ export default {
   data() {
     return {
       width: window.innerWidth,
+      name: this.data.products[0].name,
     };
   },
 
@@ -79,8 +82,14 @@ export default {
         centeredSlides: true,
         spaceBetween,
         speed: 500,
-        slidesPerView: 2,
+        slidesPerView,
       };
+    },
+  },
+  methods: {
+    change() {
+      this.name = this.data.products[this.$refs.carousel.$children[0].$children[0].swiper.realIndex]
+        .name;
     },
   },
 };
@@ -196,26 +205,7 @@ export default {
   position: absolute;
   top: 10px;
   right: 10px;
-  fill: #fff;
-
-  circle {
-    stroke: transparent;
-  }
-
-  & /deep/ polygon,
-  & /deep/ polyline {
-    stroke: #222;
-  }
-
-  &:hover {
-    fill: #222;
-
-    & /deep/ polygon,
-    & /deep/ polyline {
-      fill: #fff;
-      stroke: #222;
-    }
-  }
+  fill: transparent;
 
   @media only screen and (min-width: 765px) {
     top: initial;

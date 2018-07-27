@@ -118,7 +118,7 @@ export default {
     padding: 1rem 0;
     text-align: center;
     text-transform: uppercase;
-    transition: 0.5s ease-in-out;
+    transition: 0.35s ease-in-out;
     width: 175px;
 
     &:hover {
@@ -148,20 +148,16 @@ export default {
     padding: 0.5rem;
     transition: transform 1s ease-in-out;
 
+    @media only screen and (min-width: 765px) {
+      flex: 0 0 20%;
+    }
+
     /deep/ .quickView {
       position: absolute;
       right: 0;
       top: 0;
       margin: 1rem;
     }
-
-    // @media only screen and (min-width: 1024px) {
-    //   flex: 0 0 20%;
-    // }
-
-    // @media only screen and (min-width: 1625px) {
-    //   flex: 0 0 25%;
-    // }
 
     &:first-child {
       transform: translate3d(-100%, -100%, 0);
@@ -201,14 +197,6 @@ export default {
 }
 
 // Women Styling
-.category--women .quickView {
-  fill: #fff;
-
-  /deep/ circle {
-    stroke: transparent;
-  }
-}
-
 .category--women .social__text,
 .category--women .social__title {
   color: #222;

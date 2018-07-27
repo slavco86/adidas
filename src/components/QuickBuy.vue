@@ -50,6 +50,7 @@ export default {
   max-width: 80px;
   fill: transparent;
   stroke: transparent;
+  transition: fill 0.35s ease-in-out;
 
   &:hover {
     fill: #fff;
@@ -57,7 +58,74 @@ export default {
     polygon,
     polyline {
       fill: #222;
+      stroke: #fff;
     }
   }
 }
+
+.influencer-carousel /deep/ .quickView {
+  circle {
+    fill: transparent;
+    transition: fill 0.35s ease-in-out;
+
+    &:hover {
+      fill: #fff;
+    }
+
+    polygon,
+    polyline {
+      fill: #222;
+      stroke: #fff;
+    }
+  }
+
+  &:hover {
+    circle {
+      fill: #fff;
+    }
+  }
+}
+
+// Women
+.category--women .quickView {
+  fill: #fff;
+  transition: fill 0.35s ease-in-out;
+
+  &:hover {
+    fill: #222;
+
+    & /deep/ polygon,
+    & /deep/ polyline {
+      fill: #fff;
+      stroke: #222;
+    }
+  }
+
+  /deep/ circle {
+    stroke: transparent;
+  }
+}
+
+// Women Influencer
+.category--women .influencer-carousel /deep/ .quickView {
+  circle {
+    fill: #fff;
+  }
+
+  &:hover {
+    circle {
+      fill: #222;
+
+      polygon,
+      polyline {
+        fill: #fff;
+        stroke: #222;
+      }
+    }
+  }
+}
+
+// .category--women .influencer-carousel /deep/ .quickView:hover {
+//   fill: #222;
+// }
 </style>
