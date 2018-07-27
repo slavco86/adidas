@@ -137,7 +137,7 @@ export default {
 .grid-view {
   display: flex;
   flex-flow: row wrap;
-  justify-content: flex-start;
+  justify-content: center;
   margin: 1rem auto;
   overflow: hidden;
   position: absolute;
