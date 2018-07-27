@@ -134,7 +134,7 @@ export default {
   background-color: #33f !important;
 
   @media screen and (min-width: 1366px) {
-    height: 70%;
+    height: 60%;
     width: 49%;
   }
 }
@@ -171,7 +171,6 @@ export default {
   width: 16%;
 }
 
-
 .sambaroseLogo,
 .allBrandsLogo {
   width: 22%;
@@ -187,6 +186,7 @@ export default {
 
 .deeruptLogo {
   width: 22%;
+
   @media screen and (min-width: 1366px) {
     display: none;
   }
@@ -194,20 +194,17 @@ export default {
 
 .sambaroseLogo {
   position: absolute;
-  top: 147%;
+  top: 186%;
   left: 39%;
 
   @media screen and (min-width: 765px) {
-    top: 101%;
+    top: 165%;
     left: 41%;
     width: 19%;
   }
 
   @media screen and (min-width: 1366px) {
-    position: absolute;
-    width: 9%;
-    left: 45%;
-    top: 95%;
+    top: 116%;
   }
 }
 
@@ -226,7 +223,7 @@ export default {
   background-color: white !important;
 
   @media screen and (min-width: 1366px) {
-    height: 70%;
+    height: 60%;
     width: 49%;
   }
 }
@@ -234,7 +231,7 @@ export default {
 .franchisePOD {
   color: #33f;
   position: absolute;
-  top: 190%;
+  top: 216%;
   left: 10%;
   background: url(../assets/podpink.svg);
   background-repeat: no-repeat;
@@ -242,11 +239,13 @@ export default {
   height: 100%;
 
   @media screen and (min-width: 765px) {
-    top: 138%;
+    top: 299%;
   }
 
   @media screen and (min-width: 1366px) {
-    top: 121%;
+    top: 164%;
+    left: 27%;
+    width: 50%;
   }
 }
 
@@ -255,17 +254,17 @@ export default {
   background: url(../assets/sambarosepinklogo.svg);
   background-repeat: no-repeat;
   position: absolute;
-  top: -21%;
+  top: 16%;
   right: 0;
   height: 100%;
   width: 100%;
 
   @media screen and (min-width: 765px) {
-    top: -15%;
+    top: 26%;
   }
 
   @media screen and (min-width: 1366px) {
-    top: -19%;
+    top: 17%;
   }
 }
 

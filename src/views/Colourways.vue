@@ -362,52 +362,58 @@ export default {
 }
 
 .modal-container--pod /deep/ .title1 {
-  color: pink !important;
+  color: pink;
   font-weight: 900;
 
   @media screen and (min-width: 765px) {
-    font-size: 5em;
+    font-size: 3em;
   }
 }
 
+.modal-container--pod /deep/ .title2,
 .modal-container--pod /deep/ .title2 p {
-  color: pink !important;
+  color: pink;
   font-weight: 200;
-  font-size: 18px;
-  line-height: 1;
+  font-size: 15px;
+  padding-top: 4%;
+  line-height: 1.5;
 
   @media screen and (min-width: 765px) {
     padding-top: 5%;
-    font-size: 32px;
+    font-size: 28px;
     line-height: 1.5;
   }
 
   @media screen and (min-width: 1366px) {
-    padding-top: 0%;
-    font-size: 26px;
+    padding-top: 2%;
+    font-size: 21px;
   }
 }
 
 .modal-container--samba /deep/ .title1 {
+  display: none;
+
   @media screen and (min-width: 1366px) {
     font-size: 3em;
   }
 }
 
-.modal-container--samba /deep/ .title2 p {
-  padding-top: 15%;
-  color: #222;
-  font-weight: 400;
+.modal-container--samba /deep/ .title2 p,
+.modal-container--samba /deep/ .title2 {
+  font-size: 1.5em;
+  font-weight: normal;
+  padding-top: 34%;
+  line-height: 1.5;
 
   @media screen and (min-width: 765px) {
-    font-size: 33px;
-    line-height: 1.5;
-    font-weight: bold;
+    font-size: 2.5em;
+    line-height: 1.3;
   }
 
   @media screen and (min-width: 1366px) {
-    padding-top: 0%;
+    padding-top: 18%;
     font-weight: normal;
+    font-size: 2.2em;
   }
 }
 
@@ -431,25 +437,13 @@ export default {
   @media screen and (min-width: 1366px) {
     font-size: 17px;
     font-weight: 500;
-    line-height: 0.7;
+    line-height: 0.2;
     padding-top: 1%;
   }
 }
 
 .modal-container--deerupt /deep/ .title1 {
   color: #222;
-}
-
-.modal-container--allBrands /deep/ .title1 {
-  color: #222;
-}
-
-.modal-container--allBrands /deep/ .title2 p {
-  color: #222;
-
-  @media screen and (min-width: 1366px) {
-    // line-height: 1.5;
-  }
 }
 
 </style>
