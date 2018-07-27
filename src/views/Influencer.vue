@@ -23,7 +23,7 @@
             data-swiper-parallax-y="-50"
             data-swiper-parallax-opacity="0"
             data-swiper-parallax-duration="600"
-            class="name">{{ slide.name }}</span>
+            class="name">{{ slide.handle }}</span>
           <QuickBuy
             :url="slide.url"/>
         </Spot>
@@ -83,6 +83,7 @@ export default {
         spaceBetween,
         speed: 500,
         slidesPerView,
+        mousewheel: true,
       };
     },
   },
