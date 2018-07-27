@@ -113,8 +113,9 @@ img {
   margin: 0 auto;
   justify-content: space-evenly;
   position: absolute;
-  top: 35%;
+  top: 50%;
   left: 0;
+  transform: translate3d(0, -50%, 0);
   width: 100%;
   align-items: center;
 
