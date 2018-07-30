@@ -54,4 +54,5 @@ export default {
 .product-info__price {
   font-weight: 700;
 }
+
 </style>
