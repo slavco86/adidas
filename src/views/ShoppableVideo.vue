@@ -2,20 +2,37 @@
   <div class="content-slide">
     <div class="content-slide__inner">
       <iframe
-        :src="src"
+        v-if="data.shoppable"
+        :src="width > 765 ? data.shoppable.desktop : data.shoppable.mobile"
         allowfullscreen
         frameborder="0"/>
+      <Video
+        v-else
+        :url="data.normal.url"/>
     </div>
   </div>
 </template>
 
 <script>
+import Video from '@/components/Video.vue';
+
 export default {
+  name: 'ShoppableVideo',
+  components: {
+    Video,
+  },
   props: {
-    src: {
-      type: String,
-      default: 'https://ssl-dot-player-dot-smartzer-editor.appspot.com/video?video=jpNti3sr7TwPxohDN3tdiVZR&companyId=58331cf19f43139bd4702949',
+    data: {
+      type: Object,
+      default() {
+        return {};
+      },
     },
+  },
+  data() {
+    return {
+      width: window.innerWidth,
+    };
   },
 };
 </script>
