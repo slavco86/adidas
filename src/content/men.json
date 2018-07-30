@@ -7,25 +7,25 @@
     },
     "content": {
       "sketch-fab-model": {
-        "id": "84519a5bf994409dab3e5b1534a072d9",
+        "id": "0b2f8731a36e4057a423ead0f23b7e99",
         "background": "#273583"
       },
       "colourways": {
         "hotspots": [
           {
-            "title": "DEFLECTION BRIDGE",
-            "subtext": "Inspired by our Torsion System technology, the Point of Deflection Bridge brings stability and flex to the podular sole for a natural ride."
+            "title": "BOOST HEEL",
+            "subtext": "Leading comfort technology repurposed within a podular heel element, bringing the full BOOST sensation to every step."
           },
           {
-            "title": "DEFLECTION BRIDGE",
+            "title": "POINT OF DEFLECTION BRIDGE",
             "subtext": "Inspired by our Torsion System technology, the Point of Deflection Bridge brings stability and flex to the podular sole for a natural ride."
           }
         ],
         "products": [
           {
             "image": {
-              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-0-04670ce96db4cc1da203cc6895aa85e0.png",
-              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-0-04670ce96db4cc1da203cc6895aa85e0.png"
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0727/adi-hub0299-1dabf0b61ad219ec9f07531ec657f406.png",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0727/adi-hub0299-1dabf0b61ad219ec9f07531ec657f406.png"
             },
             "brand": "adidas",
             "price": "75",
@@ -75,12 +75,21 @@
               "quote": "Quality sneak, the Boost tech is super comfy and they’re easy to pair with any fit!",
               "image": {
                 "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0726/750x750--0026-27707-art-adidas-jd-pod-facebook-instagram-1500x1500px15-d3bba127ade2c374094ff71cf50042ef.jpg",
-                "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0726/750x750--0026-27707-art-adidas-jd-pod-facebook-instagram-1500x1500px15-d3bba127ade2c374094ff71cf50042ef.j  pg"
+                "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0726/750x750--0026-27707-art-adidas-jd-pod-facebook-instagram-1500x1500px15-d3bba127ade2c374094ff71cf50042ef.jpg"
               }
             }
           ]
         },
-      "shoppableVide": "url",
+      "shoppable-video": {
+        "shoppable": {
+          "mobile": "https://ssl-dot-player-dot-smartzer-editor.appspot.com/video?video=CfUOIahc3aCEvZwtrPp8DIjx&companyId=58331cf19f43139bd4702949",
+          "desktop": "https://ssl-dot-player-dot-smartzer-editor.appspot.com/video?video=F1wi2ZfyiB1DSO7ZTtGxcG4i&companyId=58331cf19f43139bd4702949"
+        },
+        "normal": {
+          "placeholder": "",
+          "url": "http://i1.adis.ws/v/jpl/ADI_MAIN/webm_720p"
+        }
+      },
       "influencerVideo": "url",
       "get-social": {
         "url": "Follow Us",
@@ -128,7 +137,7 @@
     },
     "content": {
       "sketch-fab-model": {
-        "id": "30ed8ce1fc3e45be8b1b8a74b36b1879",
+        "id": "20bee0a0de014f3b951a192bb5172fd6",
         "background": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0726/deerupt-3d-scan-bg-02-a9d7e2070cac95c2eff022357f53728d.png"
       },
       "colourways": {
@@ -145,13 +154,13 @@
         "products": [
           {
             "image": {
-              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0727/shoe-desktop-2-green-adidas-originals-deerupt-051500-57ac562da9a5af2fbd89974727329a02.png",
-              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0727/shoe-desktop-2-green-adidas-originals-deerupt-051500-57ac562da9a5af2fbd89974727329a02.png"
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0727/adi-hub0426-adidas-originals-deerupt-1181786-15d2ba1efc0e47c3566c26002797cec6.png",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0727/adi-hub0426-adidas-originals-deerupt-1181786-15d2ba1efc0e47c3566c26002797cec6.png"
             },
             "brand": "Adidas",
             "price": "80",
             "title": "Deerupt",
-            "url": "/product/green-adidas-originals-deerupt/051500"
+            "url": "/product/adidas-originals-deerupt/1181786"
           },
           {
             "image": {
@@ -165,16 +174,6 @@
           },
           {
             "image": {
-              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0727/adi-hub0426-adidas-originals-deerupt-1181786-15d2ba1efc0e47c3566c26002797cec6.png",
-              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0727/adi-hub0426-adidas-originals-deerupt-1181786-15d2ba1efc0e47c3566c26002797cec6.png"
-            },
-            "brand": "Adidas",
-            "price": "80",
-            "title": "Deerupt",
-            "url": "/product/adidas-originals-deerupt/1181786"
-          },
-          {
-            "image": {
               "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0727/shoe-desktop-0-adidas-originals-deerupt-1179341-04670ce96db4cc1da203cc6895aa85e0.png",
               "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0727/shoe-desktop-0-adidas-originals-deerupt-1179341-04670ce96db4cc1da203cc6895aa85e0.png"
             },
@@ -182,6 +181,16 @@
             "price": "80",
             "title": "Deerupt",
             "url": "/product/adidas-originals-deerupt/1179341"
+          },
+          {
+            "image": {
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0727/shoe-desktop-2-green-adidas-originals-deerupt-051500-57ac562da9a5af2fbd89974727329a02.png",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0727/shoe-desktop-2-green-adidas-originals-deerupt-051500-57ac562da9a5af2fbd89974727329a02.png"
+            },
+            "brand": "Adidas",
+            "price": "80",
+            "title": "Deerupt",
+            "url": "/product/green-adidas-originals-deerupt/051500"
           }
         ]
       } ,
@@ -229,7 +238,12 @@
             }
           ]
         },
-      "shoppableVide": "url",
+        "shoppable-video": {
+          "normal": {
+            "placeholder": "",
+            "url": "http://i1.adis.ws/v/jpl/DEERUPT MASTER2/webm_720p"
+          }
+        },
       "influencerVideo": "url",
       "get-social": {
         "url": "Follow Us",
