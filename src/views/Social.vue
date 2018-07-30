@@ -23,7 +23,7 @@
     </div>
     <!-- Social CTA -->
     <a
-      href="#"
+      href="https://www.instagram.com/jdofficial/"
       class="social__cta">
       Follow us
     </a>

@@ -14,7 +14,7 @@
       <div
         class="hotspot hotspot--right"
         @click="displayModal(1)"/>
-      <div 
+      <div
         v-if="hotspots.length >= 3"
         class="hotspot hotspot--special"
         @click="displayModal(2)"/>
@@ -30,7 +30,8 @@
       :slides="colourways"
       :options="options"
       :responsive="true"
-      :class="{ 'flex-container': desktop }"
+      :breakpoint="breakpoint"
+      :class="{ 'flex-container': desktop || breakpoint === 0 }"
       class="carousel-container">
       <div
         slot-scope="{slide}"
@@ -111,7 +112,7 @@ export default {
         slidesPerView: 4,
         breakpoints: {
           764: {
-            slidesPerView: 2.5,
+            slidesPerView: 3.5,
           },
         },
       },
@@ -134,6 +135,9 @@ export default {
 
     logoColor() {
       return (this.$route.params.gender === 'women') ? '#222' : '#fff';
+    },
+    breakpoint() {
+      return this.colourways.length > 3 ? 765 : 0;
     },
   },
 
@@ -169,7 +173,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .carousel-container /deep/ .image.isActive {
@@ -203,8 +207,8 @@ export default {
 }
 
 .main-image {
-  padding: 4rem;
-  margin-top: 0;
+  padding: 1rem;
+  margin-top: 94px;
 
   @media screen and (min-width: 765px) {
     margin-top: 5rem;
@@ -217,7 +221,7 @@ export default {
   display: block;
 
   @media screen and (min-width: 765px) {
-    width: 70%;
+    width: 77%;
     margin: 0 auto;
   }
 }
@@ -225,9 +229,10 @@ export default {
 .product-info {
   position: absolute;
   right: 10%;
-  top: 46%;
+  top: 70%;
   text-align: right;
   z-index: 1;
+  width: 30%;
 
   @media screen and (min-width: 765px) {
     top: 50%;
@@ -251,9 +256,18 @@ export default {
   }
 }
 
+.product-info /deep/ .product-info__title,
+.product-info /deep/ .product-info__price {
+  font-size: 18px;
+}
+
+.product-info /deep/ .quickView {
+  max-width: 50px;
+}
+
 .carousel-container {
   width: 100%;
-  margin-top: 3rem;
+  margin: 3rem 0;
 }
 
 .carousel-container /deep/ .image {
@@ -269,10 +283,10 @@ export default {
 
 .hotspot {
   position: absolute;
-  top: 34%;
-  left: 22%;
-  width: 30px;
-  height: 30px;
+  top: 37%;
+  left: 12%;
+  width: 40px;
+  height: 40px;
   z-index: 2;
   transition: all 0.5s ease-in-out;
   transform: scale(0.75) rotate(0);
@@ -315,14 +329,14 @@ export default {
   }
 
   &--right {
-    left: 56%;
-    top: 59%;
+    left: 76%;
+    top: 24%;
     transition: all 0.5s ease-in-out;
     transform: scale(0.75) rotate(0);
 
     @media only screen and (min-width: 765px) {
-      left: 56%;
-      top: 66%;
+      left: 62%;
+      top: 10%;
     }
   }
 
@@ -374,6 +388,17 @@ export default {
   }
 }
 
+.category--women--samba .brand {
+  font-size: 6.5rem;
+  white-space: nowrap;
+  opacity: 0.05;
+
+  @media only screen and (min-width: 765px) {
+    font-size: 14rem;
+    display: flex;
+    align-items: center;
+  }
+}
 
 .modal-container /deep/ .title1 {
   font-size: 3em;
@@ -428,7 +453,7 @@ export default {
 .modal-container--samba /deep/ .title1 {
   font-size: 2.2em;
   font-weight: bold;
-  
+
   @media screen and (min-width: 1366px) {
     font-size: 3em;
     margin-top: -5%;

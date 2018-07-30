@@ -1,7 +1,7 @@
 <template>
   <div
     id="app"
-    :class="{'category--women' : isWomen, 'is-content' : isContentPage }"
+    :class="{'category--women' : isWomen, 'is-content' : isContentPage, 'category--women--samba': this.$route.params.franchise === 'Samba Rose'}"
     class="category">
     <transition
       name="fade"
