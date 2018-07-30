@@ -355,7 +355,13 @@ export default {
     font-size: 14rem;
     transform: rotate(0deg);
   }
+
+  @media only screen and (min-width: 1366px) {
+    font-size: 19rem;
+    transform: rotate(0deg);
+  }
 }
+
 
 .modal-container /deep/ .title1 {
   font-size: 3em;
