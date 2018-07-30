@@ -204,7 +204,9 @@ export default {
   }
 
   @media screen and (min-width: 1366px) {
-    top: 116%;
+    top: 91%;
+    width: 10%;
+    left: 46%;
   }
 }
 
@@ -255,17 +257,17 @@ export default {
   background: url(../assets/sambarosepinklogo.svg);
   background-repeat: no-repeat;
   position: absolute;
-  top: 16%;
+  top: -26%;
   right: 0;
   height: 100%;
   width: 100%;
 
   @media screen and (min-width: 765px) {
-    top: 26%;
+    top: -37%;
   }
 
   @media screen and (min-width: 1366px) {
-    top: 17%;
+    top: 40%;
   }
 }
 

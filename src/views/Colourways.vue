@@ -412,28 +412,40 @@ export default {
 }
 
 .modal-container--samba /deep/ .title1 {
-
+  font-size: 2.2em;
+  font-weight: bold;
   @media screen and (min-width: 1366px) {
     font-size: 3em;
+    margin-top: -5%;
   }
 }
 
-.modal-container--samba /deep/ .title2 p,
 .modal-container--samba /deep/ .title2 {
+  font-size: 1em;
+  margin-top: -4%;
+
+  @media screen and (min-width: 1366px) {
+    margin-top: -17%;
+  }
+}
+
+.modal-container--samba /deep/ .title2 p {
   font-size: 1.5em;
   font-weight: normal;
-  padding-top: 34%;
+  padding-top: 6%;
   line-height: 1.5;
 
   @media screen and (min-width: 765px) {
     font-size: 2.5em;
     line-height: 1.3;
+    margin-top: -6%;
   }
 
   @media screen and (min-width: 1366px) {
-    padding-top: 18%;
+    padding-top: 5em;
+    padding-bottom: 5%;
     font-weight: normal;
-    font-size: 2.2em;
+    font-size: 1.8em;
   }
 }
 
