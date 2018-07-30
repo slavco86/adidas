@@ -321,6 +321,16 @@ export default {
   &--special {
     top: 83%;
     left: 35%;
+
+    @media only screen and (min-width: 765px) {
+      left: 22%;
+      top: 87%;
+    }
+
+    @media only screen and (min-width: 1366px) {
+      left: 16%;
+      top: 89%;
+    }
   }
 }
 
