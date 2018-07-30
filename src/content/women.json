@@ -53,9 +53,9 @@
       } ,
       "influencer":
         {
-          "name": "Influencer Name",
           "products": [
             {
+              "name": "Nathan Hopkinson",
               "quote": "When you play with what’s possible, you define what is.",
               "url": "/product/black-nike-air-force-1-low/047951",
               "image": {
