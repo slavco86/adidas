@@ -15,6 +15,7 @@
           v-bind="slide"
           class="grid__product">
           <QuickBuy
+            v-if="slide.url"
             :url="slide.url"/>
           <span class="grid__product__text">{{ slide.handle }}</span>
         </Spot>

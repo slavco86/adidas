@@ -25,6 +25,7 @@
             data-swiper-parallax-duration="600"
             class="name">{{ slide.handle }}</span>
           <QuickBuy
+            v-if="slide.url"
             :url="slide.url"/>
         </Spot>
       </div>
