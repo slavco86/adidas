@@ -51,6 +51,7 @@ export default {
 
   @media only screen and (min-width: 1024px) {
     max-width: 80px;
+    padding-right: 0%;
   }
 
   circle {

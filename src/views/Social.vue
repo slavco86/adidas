@@ -74,12 +74,21 @@ export default {
 <style lang="scss" scoped>
 
 .creatorsocial {
-
-  @media only screen and (min-width: 1024px) {
   position: absolute;
-  top: 5%;
-  left: 33%;
   z-index: 0;
+  top: 0%;
+  left: 0%;
+  width: 130px;
+  height: 130px;
+  @media only screen and (min-width: 765px) {
+    top: 0%;
+    left: 26%;
+  }
+  @media only screen and (min-width: 1024px) {
+    top: 3%;
+    left: 33%;
+    width: 200px;
+    height: 200px;
   }
 }
 
@@ -106,10 +115,16 @@ export default {
   &__inner-wrapper {
     align-items: center;
     display: flex;
-    height: 500px;
     max-height: 100%;
     overflow: hidden;
     width: 100%;
+    padding-top: 28%;
+    @media only screen and (min-width: 765px) { 
+      padding-top: 14%;
+    }
+    @media only screen and (min-width: 1024px) { 
+      padding-top: 0%;
+    }
   }
 
   &__title,
@@ -161,8 +176,11 @@ export default {
   flex-flow: row wrap;
   justify-content: center;
   margin: 1rem auto;
-  max-height: 670px;
-  overflow: hidden;
+  
+   @media only screen and (min-width: 1024px) { 
+     max-height: 670px;
+     overflow: hidden;
+   }
 
   &__product {
     flex: 0 0 50%;
@@ -171,7 +189,7 @@ export default {
     padding: 0.5rem;
     transition: transform 1s ease-in-out;
 
-    @media only screen and (min-width: 765px) {
+    @media only screen and (min-width: 1024px) {
       flex: 0 0 20%;
     }
 
@@ -221,21 +239,43 @@ export default {
 
 // Women Styling
 .social__title {
+  font-size: 2.8em;
+  font-weight: bold;
+  position: absolute;
+  top: 10%;
+  left: 22%;
+  z-index: 1;
+
+@media only screen and (min-width: 765px) {
+  top: 7%;
+  left: 37%;
+  font-size: 3em;
+}
+
  @media only screen and (min-width: 1024px) {
     font-size: 4.4em;
-    position: absolute;
     top: 14%;
     left: 39%;
-    z-index: 1;
   }
 }
 
 .social__text {
+  font-size: 1.15em;
+  position: absolute;
+  top: 4%;
+  left: 36%;
+  z-index: 1;
+
+  @media only screen and (min-width: 765px) { 
+    font-size: 1.3em;
+    top: 3%;
+    left: 43%;
+  }
+
   @media only screen and (min-width: 1024px) {
-    font-size: 1.6em;
-    position: absolute;
-    top: 9%;
-    z-index: 1;
+    top: 8%;
+    font-size: 1.7em;
+    left: 45%;
   }
 }
 
