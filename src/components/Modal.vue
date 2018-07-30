@@ -234,7 +234,7 @@ export default {
 .franchisePOD {
   color: #33f;
   position: absolute;
-  top: 216%;
+  top: 144%;
   left: 10%;
   background: url(../assets/podpink.svg);
   background-repeat: no-repeat;
@@ -242,12 +242,12 @@ export default {
   height: 100%;
 
   @media screen and (min-width: 765px) {
-    top: 245%;
+    top: 140%;
   }
 
   @media screen and (min-width: 1366px) {
-    top: 164%;
-    left: 27%;
+    top: 116%;
+    left: 31%;
     width: 50%;
   }
 }
