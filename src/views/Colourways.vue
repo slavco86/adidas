@@ -14,6 +14,10 @@
       <div
         class="hotspot hotspot--right"
         @click="displayModal(1)"/>
+      <div 
+        v-if="hotspots.length >= 3"
+        class="hotspot hotspot--special"
+        @click="displayModal(2)"/>
       <ProductInfo v-bind="colourways[selectedIndex]"/>
       <div class="main-image">
         <img
@@ -233,11 +237,6 @@ export default {
   .price {
     font-weight: bold;
   }
-
-  // /deep/ .quickView {
-  //   fill: transparent;
-  //   stroke: #fff;
-  // }
 }
 
 .carousel-container {
@@ -247,7 +246,7 @@ export default {
 
 .carousel-container /deep/ .image {
   opacity: 0.5;
-  width: 170px;
+  width: 100px;
   transition: opacity 0.5s;
   transform: translateZ(0);
 }
@@ -317,6 +316,21 @@ export default {
 
   &--right:hover {
     transform: rotate(90deg);
+  }
+
+  &--special {
+    top: 83%;
+    left: 35%;
+
+    @media only screen and (min-width: 765px) {
+      left: 22%;
+      top: 87%;
+    }
+
+    @media only screen and (min-width: 1366px) {
+      left: 16%;
+      top: 89%;
+    }
   }
 }
 
