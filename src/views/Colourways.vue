@@ -163,6 +163,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+
 .flex-container {
   display: flex;
   align-items: center;
@@ -223,9 +225,19 @@ export default {
 .product-info {
   position: absolute;
   right: 10%;
-  top: 75%;
+  top: 46%;
   text-align: right;
   z-index: 1;
+
+  @media screen and (min-width: 765px) {
+    top: 50%;
+    right: 8%;
+  }
+
+  @media screen and (min-width: 1366px) {
+    top: 54%;
+    right: -12%;
+  }
 
   span {
     font-size: 1rem;
@@ -343,10 +355,10 @@ export default {
 
 .brand {
   color: #666;
-  font-size: 8rem;
+  font-size: 9rem;
   font-weight: 900;
   height: 60%;
-  opacity: 0.5;
+  opacity: 0.1;
   position: absolute;
   transform: rotate(-90deg);
   user-select: none;
