@@ -374,7 +374,6 @@ export default {
   }
 }
 
-
 .modal-container /deep/ .title1 {
   font-size: 3em;
   font-weight: lighter;
@@ -428,7 +427,7 @@ export default {
 .modal-container--samba /deep/ .title1 {
   font-size: 2.2em;
   font-weight: bold;
-  
+
   @media screen and (min-width: 1366px) {
     font-size: 3em;
     margin-top: -5%;
@@ -466,6 +465,7 @@ export default {
 
 .modal-container--deerupt /deep/ .title1 {
   color: #222;
+
   @media screen and (min-width: 1366px) {
     font-size: 37px;
     font-weight: 900;
@@ -475,6 +475,7 @@ export default {
 
 .modal-container--deerupt /deep/ .title2 p {
   color: #222;
+
   @media screen and (min-width: 765px) {
     font-size: 21px;
     line-height: 1.5;
@@ -489,10 +490,6 @@ export default {
     width: 54%;
     padding-left: 23%;
   }
-}
-
-.modal-container--deerupt /deep/ .title1 {
-  color: #222;
 }
 
 </style>
