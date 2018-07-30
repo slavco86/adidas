@@ -2,7 +2,9 @@
   <div class="social">
     <p class="social__text">Get Social</p>
     <h2 class="social__title">#Creator</h2>
-    <!-- Social Grid Section -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200" class="creatorsocial">
+    <path class="instasocial" d="M57.743,0h84.514A57.743,57.743,0,0,1,200,57.743v84.514A57.742,57.742,0,0,1,142.257,200H57.743A57.743,57.743,0,0,1,0,142.257V57.743A57.743,57.743,0,0,1,57.743,0Zm-2.1,18.373s23.185-1.05,46.544-1.05c20.856,0,42.17,1.05,42.17,1.05A36.745,36.745,0,0,1,181.1,55.118s1.05,23.782,1.05,46.719c0,21.364-1.05,41.995-1.05,41.995a36.745,36.745,0,0,1-36.745,36.745s-21.427,1.05-43.22,1.05c-22.551,0-45.494-1.05-45.494-1.05A36.745,36.745,0,0,1,18.9,143.832s-0.525-20.631-.525-41.995c0-22.937.525-46.719,0.525-46.719A36.745,36.745,0,0,1,55.643,18.373Zm97.638,15.748a12.074,12.074,0,1,1-12.074,12.074A12.073,12.073,0,0,1,153.281,34.121ZM100,48.294A51.706,51.706,0,1,1,48.294,100,51.706,51.706,0,0,1,100,48.294Zm0,17.848A33.333,33.333,0,1,1,66.667,99.475,33.333,33.333,0,0,1,100,66.142Z"></path>
+    </svg>
     <div class="social__inner-wrapper">
       <div
         :class="{'grid--animate': active}"
@@ -70,6 +72,24 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+.creatorsocial {
+
+  @media only screen and (min-width: 1024px) {
+  position: absolute;
+  top: 5%;
+  left: 33%;
+  z-index: 0;
+  }
+}
+
+
+.instasocial {
+  fill-rule: evenodd;
+  fill: white;
+  fill-opacity: 0.05;
+}
+
 .social {
   display: flex;
   flex-direction: column;
@@ -201,13 +221,22 @@ export default {
 
 // Women Styling
 .social__title {
-  font-size: 4.5em;
+ @media only screen and (min-width: 1024px) {
+    font-size: 4.4em;
+    position: absolute;
+    top: 14%;
+    left: 39%;
+    z-index: 1;
+  }
 }
 
 .social__text {
-  font-size: 1.6em;
-  position: absolute;
-  top: 5%;
+  @media only screen and (min-width: 1024px) {
+    font-size: 1.6em;
+    position: absolute;
+    top: 9%;
+    z-index: 1;
+  }
 }
 
 .category--women .social__text,
