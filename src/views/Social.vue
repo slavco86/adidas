@@ -201,6 +201,16 @@ export default {
 }
 
 // Women Styling
+.social__title {
+  font-size: 4.5em;
+}
+
+.social__text {
+  font-size: 1.6em;
+  position: absolute;
+  top: 5%;
+}
+
 .category--women .social__text,
 .category--women .social__title {
   color: #222;
