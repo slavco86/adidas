@@ -246,7 +246,7 @@ export default {
 
 .carousel-container /deep/ .image {
   opacity: 0.5;
-  width: 170px;
+  width: 100px;
   transition: opacity 0.5s;
   transform: translateZ(0);
 }
