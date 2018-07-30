@@ -58,14 +58,14 @@
               "name": "Abbi Holden",
               "handle": "@abbiholden_",
               "quote": "Comin' though with the freshest kicks for summer! Loving the Samba Rose for some old-school street style.",
-              "url": "/product/black-nike-air-force-1-low/047951",
+              "url": "/product/white-adidas-originals-samba-rose-womens/062032",
               "image": {
                 "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0729/750x750--0037-2-abbiholden--32312ef8e40f19ad507a55f0d233b529.jpg",
                 "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0729/750x750--0037-2-abbiholden--32312ef8e40f19ad507a55f0d233b529.jpg"
               }
             },
             {
-              "url": "/product/black-nike-air-force-1-low/047951",
+              "url": "/product/white-adidas-originals-samba-rose-womens/062032",
               "name": "Abbi Holden",
               "handle": "@abbiholden_",
               "quote": "Comin' though with the freshest kicks for summer! Loving the Samba Rose for some old-school street style.",
@@ -75,7 +75,7 @@
               }
             },
             {
-              "url": "/product/black-nike-air-force-1-low/047951",
+              "url": "/product/white-adidas-originals-samba-rose-womens/062032",
               "name": "Amy Fuchia",
               "handle": "@amyfuchsia",
               "quote": "In love with the adidas Samba Rose sneaks, simple but with a chunky sole!",
@@ -85,7 +85,7 @@
               }
             },
             {
-              "url": "/product/black-nike-air-force-1-low/047951",
+              "url": "/product/white-adidas-originals-samba-rose-womens/062032",
               "name": "Amy Fuchia",
               "handle": "@amyfuchsia",
               "quote": "In love with the adidas Samba Rose sneaks, simple but with a chunky sole!",
@@ -111,28 +111,28 @@
               "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0730/750x750--0036-142a6226-108-insta-e0c59568b23335aad5725ee9ade71c7f.jpg",
               "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0730/750x750--0036-142a6226-108-insta-e0c59568b23335aad5725ee9ade71c7f.jpg"
             },
-            "url": "/product/black-nike-air-force-1-low/047951"
+            "url": "/product/white-adidas-originals-samba-rose-womens/062032"
           },
           {
             "image": {
               "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0730/750x750--0035-142a6236-110-insta-45a38d0d5e74659d5dfd5f0c09d431e2.jpg",
               "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0730/750x750--0035-142a6236-110-insta-45a38d0d5e74659d5dfd5f0c09d431e2.jpg"
             },
-            "url": "/product/black-nike-air-force-1-low/047951"
+            "url": "/product/white-adidas-originals-samba-rose-womens/062032"
           },
           {
             "image": {
-              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0730/750x750--0032-final-l1-hailey-door-sambapinkrose-202-1500x1500-2ae0a4ae65e71cec5fc03ce3937874c6.jpg",
-              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0730/750x750--0032-final-l1-hailey-door-sambapinkrose-202-1500x1500-2ae0a4ae65e71cec5fc03ce3937874c6.jpg"
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0730/750x750--0040--a8a4804-1-ig-95024b65a22b8336cdb893f1e891ae7a.jpg",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0730/750x750--0040--a8a4804-1-ig-95024b65a22b8336cdb893f1e891ae7a.jpg"
             },
-            "url": "/product/black-nike-air-force-1-low/047951"
+            "url": "/product/adidas-originals-samba-rose-womens/1178158"
           },
           {
             "image": {
               "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0730/750x750--0031-final-l1-hailey-door-sambapinkrose-224-r1-v2-3defc4689229d80188b807bed12fe4b8.jpg",
               "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0730/750x750--0031-final-l1-hailey-door-sambapinkrose-224-r1-v2-3defc4689229d80188b807bed12fe4b8.jpg"
             },
-            "url": "/product/black-nike-air-force-1-low/047951"
+            "url": "/product/adidas-originals-samba-rose-womens/1178158"
           }
         ]
       }
@@ -262,7 +262,10 @@
       "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0726/750x750--0010-27075-art-adidas-jd-deerupt-512x531px-8fefa996ba5ad9e3ef990240f6afa1c1.jpg"
     },
     "content": {
-      "sketch-fab-model": "url",
+      "sketch-fab-model": {
+        "id": "20bee0a0de014f3b951a192bb5172fd6",
+        "background": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0726/deerupt-3d-scan-bg-02-a9d7e2070cac95c2eff022357f53728d.png"
+      },
       "colourways": {
         "hotspots": [
           {
@@ -291,17 +294,17 @@
         {
           "products": [
             {
-              "quote": "Gym flex with these new diva trainers – a hint of pink is always needed! Thanks adidas for keepin’ me feeling good while working out!",
-              "handle": "@nicola_mimnagh",
+              "quote": "These are trainers you can’t live without!",
+              "handle": "@hauteonlife",
               "name": "Nicola Mimnagh",
-              "url": "/product/black-nike-air-force-1-low/047951",
+              "url": "/women/womens-footwear/collection/adidas-originals-deerupt",
               "image": {
-                "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0730/750-0006-nicola-mimnagh--b23c565f7b3fca2f232252b7afb651a1.jpg",
-                "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0730/750-0006-nicola-mimnagh--b23c565f7b3fca2f232252b7afb651a1.jpg"
+                "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0730/1-hauteonlife-532fb9aabe5244fe1a9d71da06b3dd06.jpg",
+                "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0730/1-hauteonlife-532fb9aabe5244fe1a9d71da06b3dd06.jpg"
               }
             },
             {
-              "url": "/product/black-nike-air-force-1-low/047951",
+              "url": "/product/pink-adidas-originals-deerupt-womens/011739",
               "quote": "Summer vibes! A hint of pink I can’t live without. Feels like I’m staring into the future, these kicks give me the vacation feels.",
               "handle": "@natwinter_",
               "name": "Nat Winters",
@@ -311,7 +314,7 @@
               }
             },
             {
-              "url": "/product/black-nike-air-force-1-low/047951",
+              "url": "/women/womens-footwear/collection/adidas-originals-deerupt/",
               "quote": "On-trend design and perf’ for summer. I love my mint and white Deerupts!",
               "handle": "@i.am.rachel",
               "name": "Rachel",
@@ -321,13 +324,13 @@
               }
             },
             {
-              "url": "/product/black-nike-air-force-1-low/047951",
+              "url": "/women/womens-footwear/collection/adidas-originals-deerupt",
               "quote": "The details matter. These trainers are perfect for lounging around as well as going out! My ultimate faves...",
-              "name": "Leearnerr",
-              "handle": "@leearnar",
+              "name": "Kerreal Shakira",
+              "handle": "@kerrealshaki",
               "image": {
-                "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0730/750-0004-leearnar--a5efb3f50a4820c9616e4c3b6cc787b8.jpg",
-                "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0730/750-0004-leearnar--a5efb3f50a4820c9616e4c3b6cc787b8.jpg"
+                "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0730/1-kerrealshakira-358c982211a7da4a9100ff431cb5df0c.jpg",
+                "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0730/1-kerrealshakira-358c982211a7da4a9100ff431cb5df0c.jpg"
               }
             }
           ]
@@ -347,28 +350,28 @@
               "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0723/deerupt-women-f84a55e56a4fed9c05fac23e903cb6a5.jpg",
               "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0723/deerupt-women-f84a55e56a4fed9c05fac23e903cb6a5.jpg"
             },
-            "url": "/product/black-nike-air-force-1-low/047951"
+            "url": "/women/womens-footwear/collection/adidas-originals-deerupt"
           },
           {
             "image": {
               "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0723/deerupt-women-4-b3106b464efc0308b1bdee3bd34cbda6.jpg",
               "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0723/deerupt-women-4-b3106b464efc0308b1bdee3bd34cbda6.jpg"
             },
-            "url": "/product/black-nike-air-force-1-low/047951"
+            "url": "/women/womens-footwear/collection/adidas-originals-deerupt"
           },
           {
             "image": {
               "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0723/deerupt-women-2-de6be66e4b954ce8dd67ec0948c0d18f.jpg",
               "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0723/deerupt-women-2-de6be66e4b954ce8dd67ec0948c0d18f.jpg"
             },
-            "url": "/product/black-nike-air-force-1-low/047951"
+            "url": "/women/womens-footwear/collection/adidas-originals-deerupt"
           },
           {
             "image": {
               "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0723/deerupt-women-3-d16b48f01c427c798ee8c913e2e979bf.jpg",
               "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0723/deerupt-women-3-d16b48f01c427c798ee8c913e2e979bf.jpg"
             },
-            "url": "/product/black-nike-air-force-1-low/047951"
+            "url": "/women/womens-footwear/collection/adidas-originals-deerupt"
           }
         ]
       }
