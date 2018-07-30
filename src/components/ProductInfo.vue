@@ -37,6 +37,7 @@ export default {
 .product-info {
   display: inline-block;
   text-align: right;
+  text-transform: uppercase;
 }
 
 .product-info__title,
