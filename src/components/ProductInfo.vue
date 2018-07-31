@@ -37,12 +37,13 @@ export default {
 .product-info {
   display: inline-block;
   text-align: right;
+  text-transform: uppercase;
+  width: 40%;
 }
 
 .product-info__title,
 .product-info__price {
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
+  font-size: 22px;
 }
 
 .product-info__title {
@@ -52,5 +53,7 @@ export default {
 
 .product-info__price {
   font-weight: 700;
+  margin-bottom: 0.5rem;
 }
+
 </style>

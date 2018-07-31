@@ -14,7 +14,7 @@
       <div
         class="hotspot hotspot--right"
         @click="displayModal(1)"/>
-      <div 
+      <div
         v-if="hotspots.length >= 3"
         class="hotspot hotspot--special"
         @click="displayModal(2)"/>
@@ -30,7 +30,8 @@
       :slides="colourways"
       :options="options"
       :responsive="true"
-      :class="{ 'flex-container': desktop }"
+      :breakpoint="breakpoint"
+      :class="{ 'flex-container': desktop || breakpoint === 0 }"
       class="carousel-container">
       <div
         slot-scope="{slide}"
@@ -111,7 +112,7 @@ export default {
         slidesPerView: 4,
         breakpoints: {
           764: {
-            slidesPerView: 2.5,
+            slidesPerView: 3.5,
           },
         },
       },
@@ -121,7 +122,8 @@ export default {
 
   computed: {
     franchise() {
-      return this.$route.params.franchise;
+      return (this.$route.params.franchise === 'POD') ? `${this.$route.params.franchise}-S3.1` :
+        this.$route.params.franchise;
     },
 
     mainImage() {
@@ -134,6 +136,9 @@ export default {
 
     logoColor() {
       return (this.$route.params.gender === 'women') ? '#222' : '#fff';
+    },
+    breakpoint() {
+      return this.colourways.length > 3 ? 765 : 0;
     },
   },
 
@@ -163,11 +168,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+
 .flex-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .carousel-container /deep/ .image.isActive {
@@ -201,8 +208,8 @@ export default {
 }
 
 .main-image {
-  padding: 4rem;
-  margin-top: 0;
+  padding: 1rem;
+  margin-top: 94px;
 
   @media screen and (min-width: 765px) {
     margin-top: 5rem;
@@ -215,7 +222,7 @@ export default {
   display: block;
 
   @media screen and (min-width: 765px) {
-    width: 70%;
+    width: 77%;
     margin: 0 auto;
   }
 }
@@ -223,9 +230,20 @@ export default {
 .product-info {
   position: absolute;
   right: 10%;
-  top: 75%;
+  top: 70%;
   text-align: right;
   z-index: 1;
+  width: 30%;
+
+  @media screen and (min-width: 765px) {
+    top: 50%;
+    right: 8%;
+  }
+
+  @media screen and (min-width: 1366px) {
+    top: 54%;
+    right: -12%;
+  }
 
   span {
     font-size: 1rem;
@@ -239,14 +257,23 @@ export default {
   }
 }
 
+.product-info /deep/ .product-info__title,
+.product-info /deep/ .product-info__price {
+  font-size: 18px;
+}
+
+.product-info /deep/ .quickView {
+  max-width: 50px;
+}
+
 .carousel-container {
   width: 100%;
-  margin-top: 3rem;
+  margin: 3rem 0;
 }
 
 .carousel-container /deep/ .image {
   opacity: 0.5;
-  width: 170px;
+  width: 100px;
   transition: opacity 0.5s;
   transform: translateZ(0);
 }
@@ -257,10 +284,10 @@ export default {
 
 .hotspot {
   position: absolute;
-  top: 34%;
-  left: 22%;
-  width: 30px;
-  height: 30px;
+  top: 37%;
+  left: 12%;
+  width: 40px;
+  height: 40px;
   z-index: 2;
   transition: all 0.5s ease-in-out;
   transform: scale(0.75) rotate(0);
@@ -275,7 +302,7 @@ export default {
 
   @media only screen and (min-width: 1366px) {
     top: 39%;
-    left: 21%;
+    left: 15%;
     width: 70px;
     height: 70px;
   }
@@ -303,14 +330,14 @@ export default {
   }
 
   &--right {
-    left: 56%;
-    top: 59%;
+    left: 76%;
+    top: 24%;
     transition: all 0.5s ease-in-out;
     transform: scale(0.75) rotate(0);
 
     @media only screen and (min-width: 765px) {
-      left: 56%;
-      top: 66%;
+      left: 72%;
+      top: 10%;
     }
   }
 
@@ -319,8 +346,24 @@ export default {
   }
 
   &--special {
-    top: 83%;
+    top: 93%;
     left: 35%;
+
+    @media only screen and (min-width: 765px) {
+      left: 22%;
+      top: 87%;
+    }
+
+    @media only screen and (min-width: 1366px) {
+      left: 16%;
+      top: 89%;
+    }
+  }
+}
+
+.category--women--deerupt .hotspot--right {
+  @media only screen and (max-width: 765px) {
+    top: 20%;
   }
 }
 
@@ -333,17 +376,43 @@ export default {
 
 .brand {
   color: #666;
-  font-size: 8rem;
+  font-size: 9rem;
   font-weight: 900;
   height: 60%;
-  opacity: 0.5;
+  opacity: 0.05;
   position: absolute;
   transform: rotate(-90deg);
   user-select: none;
+  white-space: nowrap;
 
   @media only screen and (min-width: 765px) {
     font-size: 14rem;
     transform: rotate(0deg);
+  }
+
+  @media only screen and (min-width: 1366px) {
+    font-size: 19rem;
+    transform: rotate(0deg);
+  }
+}
+
+.category--women--samba .brand {
+  font-size: 6.5rem;
+  white-space: nowrap;
+
+  @media only screen and (min-width: 765px) {
+    font-size: 14rem;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.category--women--deerupt .brand {
+  height: 67%;
+  font-size: 10rem;
+
+  @media only screen and (min-width: 765px) {
+    font-size: 20rem;
   }
 }
 
@@ -368,10 +437,12 @@ export default {
 .modal-container--pod /deep/ .title1 {
   color: pink;
   font-weight: 900;
-  padding-top: 5%;
+  font-size: 2.5em;
+  margin-top: -35%;
 
   @media screen and (min-width: 765px) {
     font-size: 3em;
+    margin-top: 0%;
   }
 }
 
@@ -396,33 +467,47 @@ export default {
 }
 
 .modal-container--samba /deep/ .title1 {
+  font-size: 2.2em;
+  font-weight: bold;
 
   @media screen and (min-width: 1366px) {
     font-size: 3em;
+    margin-top: -5%;
   }
 }
 
-.modal-container--samba /deep/ .title2 p,
 .modal-container--samba /deep/ .title2 {
+  font-size: 1em;
+  margin-top: -4%;
+
+  @media screen and (min-width: 1366px) {
+    margin-top: -17%;
+  }
+}
+
+.modal-container--samba /deep/ .title2 p {
   font-size: 1.5em;
   font-weight: normal;
-  padding-top: 34%;
+  padding-top: 6%;
   line-height: 1.5;
 
   @media screen and (min-width: 765px) {
     font-size: 2.5em;
     line-height: 1.3;
+    margin-top: -6%;
   }
 
   @media screen and (min-width: 1366px) {
-    padding-top: 18%;
+    padding-top: 5em;
+    padding-bottom: 5%;
     font-weight: normal;
-    font-size: 2.2em;
+    font-size: 1.8em;
   }
 }
 
 .modal-container--deerupt /deep/ .title1 {
   color: #222;
+
   @media screen and (min-width: 1366px) {
     font-size: 37px;
     font-weight: 900;
@@ -432,6 +517,7 @@ export default {
 
 .modal-container--deerupt /deep/ .title2 p {
   color: #222;
+
   @media screen and (min-width: 765px) {
     font-size: 21px;
     line-height: 1.5;
@@ -446,10 +532,6 @@ export default {
     width: 54%;
     padding-left: 23%;
   }
-}
-
-.modal-container--deerupt /deep/ .title1 {
-  color: #222;
 }
 
 </style>

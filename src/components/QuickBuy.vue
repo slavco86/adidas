@@ -47,10 +47,12 @@ export default {
   background-color: transparent;
   cursor: pointer;
   margin: 0;
+  padding: 0;
   max-width: 60px;
 
   @media only screen and (min-width: 1024px) {
     max-width: 80px;
+    padding-right: 0%;
   }
 
   circle {

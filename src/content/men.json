@@ -7,32 +7,32 @@
     },
     "content": {
       "sketch-fab-model": {
-        "id": "84519a5bf994409dab3e5b1534a072d9",
+        "id": "0b2f8731a36e4057a423ead0f23b7e99",
         "background": "#273583"
       },
       "colourways": {
         "hotspots": [
           {
-            "title": "DEFLECTION BRIDGE",
+            "title": "BOOST HEEL",
+            "subtext": "Subtitle\n\nLeading comfort technology repurposed within a podular heel element, bringing the full BOOST sensation to every step."
+          },
+          {
+            "title": "POINT OF DEFLECTION BRIDGE",
             "subtext": "Inspired by our Torsion System technology, the Point of Deflection Bridge brings stability and flex to the podular sole for a natural ride."
           },
           {
-            "title": "DEFLECTION BRIDGE",
-            "subtext": "Inspired by our Torsion System technology, the Point of Deflection Bridge brings stability and flex to the podular sole for a natural ride."
-          },
-          {
-            "title": "DEFLECTION BRIDGE",
-            "subtext": "Inspired by our Torsion System technology, the Point of Deflection Bridge brings stability and flex to the podular sole for a natural ride."
+            "title": "HIGH REBOUND EVA FOREFOOT",
+            "subtext": "High Rebound EVA finish brings soft + responsive cushioning to the front, means supreme comfort for your whole foot."
           }
         ],
         "products": [
           {
             "image": {
-              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-0-04670ce96db4cc1da203cc6895aa85e0.png",
-              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0712/shoe-desktop-0-04670ce96db4cc1da203cc6895aa85e0.png"
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0727/adi-hub0299-1dabf0b61ad219ec9f07531ec657f406.png",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0727/adi-hub0299-1dabf0b61ad219ec9f07531ec657f406.png"
             },
             "brand": "adidas",
-            "price": "75",
+            "price": "75.00",
             "title": "POD",
             "url": "/product/black-nike-air-force-1-low/047951"
           }
@@ -79,12 +79,21 @@
               "quote": "Quality sneak, the Boost tech is super comfy and they’re easy to pair with any fit!",
               "image": {
                 "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0726/750x750--0026-27707-art-adidas-jd-pod-facebook-instagram-1500x1500px15-d3bba127ade2c374094ff71cf50042ef.jpg",
-                "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0726/750x750--0026-27707-art-adidas-jd-pod-facebook-instagram-1500x1500px15-d3bba127ade2c374094ff71cf50042ef.j  pg"
+                "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0726/750x750--0026-27707-art-adidas-jd-pod-facebook-instagram-1500x1500px15-d3bba127ade2c374094ff71cf50042ef.jpg"
               }
             }
           ]
         },
-      "shoppableVide": "url",
+      "shoppable-video": {
+        "shoppable": {
+          "mobile": "https://ssl-dot-player-dot-smartzer-editor.appspot.com/video?video=CfUOIahc3aCEvZwtrPp8DIjx&companyId=58331cf19f43139bd4702949",
+          "desktop": "https://ssl-dot-player-dot-smartzer-editor.appspot.com/video?video=F1wi2ZfyiB1DSO7ZTtGxcG4i&companyId=58331cf19f43139bd4702949"
+        },
+        "normal": {
+          "placeholder": "",
+          "url": "http://i1.adis.ws/v/jpl/JD_CAMPAIGN_30s_CUT_DB3292_DB3293_DB3766_16X9/webm_720p"
+        }
+      },
       "influencerVideo": "url",
       "get-social": {
         "url": "Follow Us",
@@ -132,7 +141,7 @@
     },
     "content": {
       "sketch-fab-model": {
-        "id": "30ed8ce1fc3e45be8b1b8a74b36b1879",
+        "id": "20bee0a0de014f3b951a192bb5172fd6",
         "background": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0726/deerupt-3d-scan-bg-02-a9d7e2070cac95c2eff022357f53728d.png"
       },
       "colourways": {
@@ -149,13 +158,13 @@
         "products": [
           {
             "image": {
-              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0727/shoe-desktop-2-green-adidas-originals-deerupt-051500-57ac562da9a5af2fbd89974727329a02.png",
-              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0727/shoe-desktop-2-green-adidas-originals-deerupt-051500-57ac562da9a5af2fbd89974727329a02.png"
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0727/adi-hub0426-adidas-originals-deerupt-1181786-15d2ba1efc0e47c3566c26002797cec6.png",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0727/adi-hub0426-adidas-originals-deerupt-1181786-15d2ba1efc0e47c3566c26002797cec6.png"
             },
             "brand": "Adidas",
-            "price": "80",
+            "price": "80.00",
             "title": "Deerupt",
-            "url": "/product/green-adidas-originals-deerupt/051500"
+            "url": "/product/adidas-originals-deerupt/1181786"
           },
           {
             "image": {
@@ -163,19 +172,9 @@
               "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0727/adi-hub0429-adidas-originals-deerupt-1181785-df4bae64292bbeed4b2553ed51626097.png"
             },
             "brand": "Adidas",
-            "price": "80",
+            "price": "80.00",
             "title": "Deerupt",
             "url": "/product/adidas-originals-deerupt/1181785"
-          },
-          {
-            "image": {
-              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0727/adi-hub0426-adidas-originals-deerupt-1181786-15d2ba1efc0e47c3566c26002797cec6.png",
-              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0727/adi-hub0426-adidas-originals-deerupt-1181786-15d2ba1efc0e47c3566c26002797cec6.png"
-            },
-            "brand": "Adidas",
-            "price": "80",
-            "title": "Deerupt",
-            "url": "/product/adidas-originals-deerupt/1181786"
           },
           {
             "image": {
@@ -183,9 +182,19 @@
               "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0727/shoe-desktop-0-adidas-originals-deerupt-1179341-04670ce96db4cc1da203cc6895aa85e0.png"
             },
             "brand": "Adidas",
-            "price": "80",
+            "price": "80.00",
             "title": "Deerupt",
             "url": "/product/adidas-originals-deerupt/1179341"
+          },
+          {
+            "image": {
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0727/shoe-desktop-2-green-adidas-originals-deerupt-051500-57ac562da9a5af2fbd89974727329a02.png",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0727/shoe-desktop-2-green-adidas-originals-deerupt-051500-57ac562da9a5af2fbd89974727329a02.png"
+            },
+            "brand": "Adidas",
+            "price": "80.00",
+            "title": "Deerupt",
+            "url": "/product/green-adidas-originals-deerupt/051500"
           }
         ]
       } ,
@@ -195,7 +204,7 @@
               "name": "Nathan Hopkinson",
               "handle": "@curlyfrysfeed",
               "quote": "Combining 90’s fashion with modern kicks - this pairing is crazy! I find the clean, white colourway a perfect match for any summer fit!",
-              "url": "/product/black-nike-air-force-1-low/047951",
+              "url": "/product/white-adidas-originals-deerupt/011238",
               "image": {
                 "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0727/750-0002-curlyfrysfeed--913c35abaff60cd4786bef68b60798c0.jpg",
                 "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0727/750-0002-curlyfrysfeed--913c35abaff60cd4786bef68b60798c0.jpg"
@@ -204,7 +213,7 @@
             {
               "name": "Sam Fenton",
               "handle": "@samfenton_",
-              "url": "/product/black-nike-air-force-1-low/047951",
+              "url": "/men/collection/adidas-originals-deerupt",
               "quote": "Lovin’ the Deerupt at the minute! I’ve copped 3 pairs and they go with all of my looks.",
               "image": {
                 "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0727/750x750--0001-samfenton-191b7f6bdda8a54a7796d252291c0eb7.jpg",
@@ -214,7 +223,7 @@
             {
               "name": "Sam Fenton",
               "handle": "@samfenton_",
-              "url": "/product/black-nike-air-force-1-low/047951",
+              "url": "/men/collection/adidas-originals-deerupt",
               "quote": "Lovin’ the Deerupt at the minute! I’ve copped 3 pairs and they go with all of my looks.",
               "image": {
                 "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0727/750x750--0000-samfenton4-cc522e1a0066719039cea24eccb8465a.jpg",
@@ -224,7 +233,7 @@
             {
               "name": "Carl Kho",
               "handle": "@carlkho_",
-              "url": "/product/black-nike-air-force-1-low/047951",
+              "url": "/product/blue-adidas-originals-deerupt/052225/",
               "quote": "Cozy is the vibes with these crazy sneakers and it feels like I’m walking into the future! The style is fresh and the colours pop with any ‘fit.",
               "image": {
                 "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0727/750x750--0003-carl-kho-6bcd6317a1fc63dc73c6ee15a1389dbf.jpg",
@@ -233,7 +242,12 @@
             }
           ]
         },
-      "shoppableVide": "url",
+        "shoppable-video": {
+          "normal": {
+            "placeholder": "",
+            "url": "http://i1.adis.ws/v/jpl/DEERUPT MASTER2/webm_720p"
+          }
+        },
       "influencerVideo": "url",
       "get-social": {
         "url": "Follow Us",
@@ -243,28 +257,28 @@
               "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0726/750x750--0011-142a4684-tw-6ab484ea8f9ef4eac28c5a62de805437.jpg",
               "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0726/750x750--0011-142a4684-tw-6ab484ea8f9ef4eac28c5a62de805437.jpg"
             },
-            "url": "/product/black-nike-air-force-1-low/047951"
+            "url": "/product/adidas-originals-deerupt/1181786"
           },
           {
             "image": {
               "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0723/deerupt-3-1d35b0074ee64ace4b6b37351d1ab50d.jpg",
               "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0723/deerupt-3-1d35b0074ee64ace4b6b37351d1ab50d.jpg"
             },
-            "url": "/product/black-nike-air-force-1-low/047951"
+            "url": "/men/collection/adidas-originals-deerupt"
           },
           {
             "image": {
               "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0723/deerupt-2-966e8024660de59cf8d429744d80d11f.jpg",
               "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0723/deerupt-2-966e8024660de59cf8d429744d80d11f.jpg"
             },
-            "url": "/product/black-nike-air-force-1-low/047951"
+            "url": "/product/adidas-originals-deerupt/1181785"
           },
           {
             "image": {
               "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0723/deerupt-4-9f17f072b0d99bf8dfea2cd59454e2fd.jpg",
               "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0723/deerupt-4-9f17f072b0d99bf8dfea2cd59454e2fd.jpg"
             },
-            "url": "/product/black-nike-air-force-1-low/047951"
+            "url": "/product/blue-adidas-originals-deerupt/052225"
           }
         ]
       }

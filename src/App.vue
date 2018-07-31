@@ -1,7 +1,10 @@
 <template>
   <div
     id="app"
-    :class="{'category--women' : isWomen, 'is-content' : isContentPage }"
+    :class="{'category--women' : isWomen, 'is-content' : isContentPage,
+             'category--women--samba': this.$route.params.franchise === 'Samba Rose',
+             'category--women--pod': this.$route.params.franchise === 'POD',
+             'category--women--deerupt': this.$route.params.franchise === 'Deerupt' }"
     class="category">
     <transition
       name="fade"

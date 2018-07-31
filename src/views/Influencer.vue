@@ -25,6 +25,7 @@
             data-swiper-parallax-duration="600"
             class="name">{{ slide.handle }}</span>
           <QuickBuy
+            v-if="slide.url"
             :url="slide.url"/>
         </Spot>
       </div>
@@ -76,7 +77,7 @@ export default {
     swiperOptions() {
       const desktop = this.width > 765;
       const slidesPerView = desktop ? 1.8 : 1.2;
-      const spaceBetween = desktop ? -220 : 15;
+      const spaceBetween = desktop ? -120 : 15;
       return {
         parallax: true,
         centeredSlides: true,
@@ -161,7 +162,7 @@ export default {
 }
 
 .influencer-carousel /deep/ .swiper-container {
-  padding-top: calc(2rem + 20%);
+  padding-top: calc(2rem + 16%);
   padding-bottom: 2rem;
 }
 

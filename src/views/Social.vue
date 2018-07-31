@@ -2,7 +2,9 @@
   <div class="social">
     <p class="social__text">Get Social</p>
     <h2 class="social__title">#Creator</h2>
-    <!-- Social Grid Section -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200" class="creatorsocial">
+    <path class="instasocial" d="M57.743,0h84.514A57.743,57.743,0,0,1,200,57.743v84.514A57.742,57.742,0,0,1,142.257,200H57.743A57.743,57.743,0,0,1,0,142.257V57.743A57.743,57.743,0,0,1,57.743,0Zm-2.1,18.373s23.185-1.05,46.544-1.05c20.856,0,42.17,1.05,42.17,1.05A36.745,36.745,0,0,1,181.1,55.118s1.05,23.782,1.05,46.719c0,21.364-1.05,41.995-1.05,41.995a36.745,36.745,0,0,1-36.745,36.745s-21.427,1.05-43.22,1.05c-22.551,0-45.494-1.05-45.494-1.05A36.745,36.745,0,0,1,18.9,143.832s-0.525-20.631-.525-41.995c0-22.937.525-46.719,0.525-46.719A36.745,36.745,0,0,1,55.643,18.373Zm97.638,15.748a12.074,12.074,0,1,1-12.074,12.074A12.073,12.073,0,0,1,153.281,34.121ZM100,48.294A51.706,51.706,0,1,1,48.294,100,51.706,51.706,0,0,1,100,48.294Zm0,17.848A33.333,33.333,0,1,1,66.667,99.475,33.333,33.333,0,0,1,100,66.142Z"></path>
+    </svg>
     <div class="social__inner-wrapper">
       <div
         :class="{'grid--animate': active}"
@@ -13,6 +15,7 @@
           v-bind="slide"
           class="grid__product">
           <QuickBuy
+            v-if="slide.url"
             :url="slide.url"/>
           <span class="grid__product__text">{{ slide.handle }}</span>
         </Spot>
@@ -20,7 +23,7 @@
     </div>
     <!-- Social CTA -->
     <a
-      href="#"
+      href="https://www.instagram.com/jdofficial/"
       class="social__cta">
       Follow us
     </a>
@@ -70,6 +73,34 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+.creatorsocial {
+  position: absolute;
+  z-index: 0;
+  top: 0%;
+  left: 0%;
+  width: 130px;
+  height: 130px;
+
+  @media only screen and (min-width: 765px) {
+    top: 0%;
+    left: 26%;
+  }
+
+  @media only screen and (min-width: 1024px) {
+    top: 3%;
+    left: 33%;
+    width: 200px;
+    height: 200px;
+  }
+}
+
+.instasocial {
+  fill-rule: evenodd;
+  fill: white;
+  fill-opacity: 0.05;
+}
+
 .social {
   display: flex;
   flex-direction: column;
@@ -85,11 +116,19 @@ export default {
   &__inner-wrapper {
     align-items: center;
     display: flex;
-    height: 500px;
     max-height: 100%;
     overflow: hidden;
     margin: 2rem 0;
     width: 100%;
+    padding-top: 28%;
+
+    @media only screen and (min-width: 765px) {
+      padding-top: 14%;
+    }
+
+    @media only screen and (min-width: 1024px) {
+      padding-top: 0%;
+    }
   }
 
   &__title,
@@ -100,13 +139,46 @@ export default {
   &__text {
     text-transform: uppercase;
     color: #fff;
+    font-size: 1.15em;
+    position: absolute;
+    top: 4%;
+    left: 36%;
+    z-index: 1;
+
+    @media only screen and (min-width: 765px) {
+      font-size: 1.3em;
+      top: 3%;
+      left: 43%;
+    }
+
+    @media only screen and (min-width: 1024px) {
+      top: 8%;
+      font-size: 1.7em;
+      left: 45%;
+    }
   }
 
   &__title {
     color: #fff;
-    font-size: 1.5rem;
-    font-weight: 600;
     text-transform: uppercase;
+    font-size: 2.8em;
+    font-weight: bold;
+    position: absolute;
+    top: 10%;
+    left: 22%;
+    z-index: 1;
+
+    @media only screen and (min-width: 765px) {
+      top: 7%;
+      left: 37%;
+      font-size: 3em;
+    }
+
+    @media only screen and (min-width: 1024px) {
+      font-size: 4.4em;
+      top: 14%;
+      left: 39%;
+    }
   }
 
   &__cta {
@@ -141,8 +213,11 @@ export default {
   flex-flow: row wrap;
   justify-content: center;
   margin: 1rem auto;
-  max-height: 670px;
-  overflow: hidden;
+
+  @media only screen and (min-width: 1024px) {
+    max-height: 670px;
+    overflow: hidden;
+  }
 
   &__product {
     flex: 0 0 50%;
@@ -151,7 +226,7 @@ export default {
     padding: 0.5rem;
     transition: transform 1s ease-in-out;
 
-    @media only screen and (min-width: 765px) {
+    @media only screen and (min-width: 1024px) {
       flex: 0 0 20%;
     }
 
@@ -199,7 +274,6 @@ export default {
   }
 }
 
-// Women Styling
 .category--women .social__text,
 .category--women .social__title {
   color: #222;
