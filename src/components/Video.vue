@@ -6,8 +6,8 @@
                @click.native="showVideo(videoRef)"/>
       <video ref="videoRef" :autoplay="autoplay" :class="{ 'video__video--displayed ' : videoShow || !image }"
              class="video__video" controls @click="playPauseVideo(videoRef)">
-        <source :src="`${url}/mp4_720p`" type="video/mp4">
-        <source :src="`${url}/webm_720p`" type="video/webm">
+        <source :src="`${videoUrl}/mp4_720p`" type="video/mp4">
+        <source :src="`${videoUrl}/webm_720p`" type="video/webm">
       </video>
     </div>
   </div>
@@ -26,8 +26,8 @@ export default {
       type: [Object, String],
       default: '',
     },
-    url: {
-      type: String,
+    video: {
+      type: [String, Object],
       default: '#',
     },
     autoplay: {
@@ -45,6 +45,14 @@ export default {
   computed: {
     imageShouldDisplay() {
       return !this.autoplay && (!this.videoShow && this.image);
+    },
+
+    videoUrl() {
+      if (typeof this.video === 'object') {
+        return window.innerWidth >= 765 ? this.video.desktop : this.video.mobile;
+      }
+
+      return this.video;
     },
 
     videoRef: {

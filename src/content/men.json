@@ -244,7 +244,10 @@
         },
         "shoppable-video": {
           "normal": {
-            "url": "http://i1.adis.ws/v/jpl/DEERUPT MASTER2/webm_720p",
+            "video": {
+              "desktop": "http://i1.adis.ws/v/jpl/JD_LOOK_03_6S_CUT_DB3766_FEMALE_16X9/webm_720p",
+              "mobile": "http://i1.adis.ws/v/jpl/JD_LOOK_03_6S_CUT_DB3766_FEMALE_9X16/webm_720p"
+            },
             "image": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0731/desktop-top-and-bottom-banner-a0bccf03d7af5f6c15d10c01883581f3.jpg"
           }
         },
