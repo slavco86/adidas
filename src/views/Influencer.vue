@@ -208,6 +208,14 @@ export default {
   }
 }
 
+.influencer-section /deep/ .chevron-arrows {
+  bottom: -25%;
+}
+
+.category--women .influencer-section /deep/ .chevron-arrows {
+  bottom: -22%;
+}
+
 .influencer-carousel /deep/ .swiper-container {
   position: relative;
   top: 5rem;
