@@ -1,11 +1,11 @@
 <template>
   <!-- Custom Arrows -->
   <div class="chevron-arrows">
-    <div class="chevron-arrow-wrap">
+    <div class="chevron-arrow-wrap--left">
       <div class="chevron-arrow--left"/>
     </div>
     <slot/>
-    <div class="chevron-arrow-wrap">
+    <div class="chevron-arrow-wrap--right">
       <div class="chevron-arrow--right"/>
     </div>
   </div>
@@ -51,15 +51,16 @@
   border-color: rgba(#222, 0.6);
 }
 
-.category--women .chevron-arrow-wrap:hover .chevron-arrow--left {
+.category--women .chevron-arrow-wrap--left:hover .chevron-arrow--left {
   border-color: #222;
 }
 
-.category--women .chevron-arrow-wrap:hover .chevron-arrow--right {
+.category--women .chevron-arrow-wrap--right:hover .chevron-arrow--right {
   border-color: #222;
 }
 
-.chevron-arrow-wrap {
+.chevron-arrow-wrap--left,
+.chevron-arrow-wrap--right {
   width: 78px;
   height: 78px;
   display: flex;
