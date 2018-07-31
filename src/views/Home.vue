@@ -108,8 +108,8 @@ export default {
         mousewheel: true,
         loop: false,
         navigation: {
-          prevEl: '.chevron-arrow-left',
-          nextEl: '.chevron-arrow-right',
+          prevEl: '.chevron-arrow-wrap--left',
+          nextEl: '.chevron-arrow-wrap--right',
         },
       };
     },
