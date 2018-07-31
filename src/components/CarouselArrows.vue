@@ -18,14 +18,15 @@
 .chevron-arrow-right {
   border-bottom: 2px solid rgba(#fff, 0.6);
   border-right: 2px solid rgba(#fff, 0.6);
+  bottom: 7.65rem;
   cursor: pointer;
   display: inline-block;
   height: 15px;
   margin: 0 2rem;
   position: absolute;
-  bottom: 7.65rem;
   transition: border 0.5s ease-in-out;
   width: 15px;
+  z-index: 9999;
 }
 
 .chevron-arrow-left {
@@ -50,6 +51,7 @@
 .category--women .chevron-arrow-left,
 .category--women .chevron-arrow-right {
   border-color: rgba(#222, 0.6);
+  bottom: 10rem;
 }
 
 .category--women .chevron-arrow-left:hover {

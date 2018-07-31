@@ -29,8 +29,8 @@
             :url="slide.url"/>
         </Spot>
       </div>
-      <CarouselArrows/>
     </Carousel>
+    <CarouselArrows/>
   </div>
 </template>
 
