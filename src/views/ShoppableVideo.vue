@@ -1,15 +1,31 @@
 <template>
   <div class="content-slide">
     <div class="content-slide__inner">
-      <iframe
-        v-if="data.shoppable"
-        :src="width > 765 ? data.shoppable.desktop : data.shoppable.mobile"
-        allowfullscreen
-        frameborder="0"/>
-      <Video
-        v-else
+      <div v-if="this.$route.params.franchise === 'Deerupt' & width <= 375">
+        <Video
         :url="data.normal.url"/>
-    </div>
+      </div>
+      <div v-else-if="this.$route.params.franchise === 'Deerupt' & width >= 376">
+        <Video
+        :url="data.normal.url"/>
+      </div>
+      <div v-else-if="this.$route.params.franchise === 'POD' & width <= 375">
+        <Video
+        :url="data.normal.url"/>
+      </div>
+      <div v-else-if="this.$route.params.franchise === 'POD' & width >= 376">
+        <Video
+        :url="data.normal.url"/>
+      </div>
+      <div v-else-if="this.$route.params.franchise === 'Samba Rose' & width <= 375">
+        <Video
+        :url="data.normal.url"/>
+      </div>
+      <div v-else-if="this.$route.params.franchise === 'Samba Rose' & width >= 376">
+        <Video
+        :url="data.normal.url"/>
+      </div>
+   </div>
   </div>
 </template>
 
@@ -38,10 +54,6 @@ export default {
 </script>
 
 <style scoped>
-iframe {
-  width: 100%;
-  height: 90vh;
-}
 
 .content-slide {
   align-items: center;
