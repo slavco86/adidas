@@ -9,13 +9,15 @@
       <router-link
         to="men"
         class="nav-button"
-        tag="button">
+        tag="button"
+        @click.native="rewindCarousel">
         Men
       </router-link>
       <router-link
         to="women"
         class="nav-button"
-        tag="button">
+        tag="button"
+        @click.native="rewindCarousel">
         Women
       </router-link>
     </nav>
@@ -126,6 +128,10 @@ export default {
       if (this.carousel) {
         this.carousel = !this.carousel;
       }
+    },
+
+    rewindCarousel() {
+      this.$refs.carousel.$children[0].$children[0].swiper.slideTo(0);
     },
   },
 };
