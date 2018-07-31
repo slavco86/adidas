@@ -105,14 +105,14 @@ export default {
 .category--women .quickView {
   circle {
     fill: #fff;
-    stroke: #222;
+    stroke: #fff;
     transition: fill 0.35s ease-in-out, stroke 0.35s ease-in-out;
   }
 
   &:hover {
     circle {
       fill: #222;
-      stroke: #fff;
+      stroke: #222;
     }
 
     & /deep/ polygon,
@@ -126,6 +126,7 @@ export default {
 .category--women .section-colourways /deep/ .quickView {
   circle {
     fill: transparent;
+    stroke: #222;
   }
 
   &:hover {

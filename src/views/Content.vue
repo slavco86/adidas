@@ -104,4 +104,37 @@ export default {
 .content-page {
   background-color: inherit;
 }
+
+.influencer-section /deep/ .titles,
+.social /deep/ .titles {
+  color: white;
+  line-height: 30px;
+  position: relative;
+  top: 4.7rem;
+  letter-spacing: 2px;
+
+  @media only screen and (min-width: 765px) {
+    line-height: 42px;
+    top: 4rem;
+  }
+
+  .title1,
+  .title2 {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .title1 {
+    font-size: 0.8rem;
+  }
+
+  .title2 {
+    font-size: 2rem;
+
+    @media only screen and (min-width: 765px) {
+      font-size: 3.5rem;
+    }
+  }
+}
 </style>
