@@ -26,22 +26,28 @@
           class="transitional-page__label">
           <p class="center">360°</p>
           <svg
-            viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 29.8 27"
             class="rotate-svg">
-            <path
-              fill-rule="evenodd"
-              d="M48.6 89A39.06 39.06 0 0 1 9.52 50c0-21.52 17.51-39 39.06-39a39.09 39.09 0 0 1
-              38.94 35.31 2 2 0 0 1-4 .38A35.03 35.03 0 0 0 48.6 15a35 35 0 1 0 0 70 35.1 35.1 0 0
-              0 31.82-20.19l-14.79 4.31a2 2 0 1 1-1.12-3.84l18.72-5.47a2 2 0 0 1 .81-.06 2 2 0 0 1
-              .56.16 2 2 0 0 1 .2.1 2 2 0 0 1 .46.37 2 2 0 0 1 .25.3 2 2 0 0 1 .03.04 2 2 0 0 1
-              .13.31 2 2 0 0 1 .03.03 2 2 0 0 1 .1.44l4.62 18.84a2 2 0 0 1-1.91 2.5 2 2 0 0
-              1-2-1.53l-3.22-13.25A39.14 39.14 0 0 1 48.6 89z"
-              fill="#fff"
-              overflow="visible"
-              style="text-indent:0; text-transform:none; block-progression:tb;"/>
-          </svg>
-
-          <p class="cta">Rotate in 360°</p>
+            <defs/>
+            <g
+              id="Layer_2"
+              data-name="Layer 2">
+              <g
+                id="Layer_1-2"
+                data-name="Layer 1">
+                <path
+                  d="M16.3 27a13.6 13.6 0 0 1-5.2-1l.8-1.9a11.4 11.4 0 1 0-7-10.5H3A13.5 13.5 0 1 1 16.3 27z"
+                  class="cls-1"/>
+                <path
+                  d="M2.5 12.4h5.8v2H2.5z"
+                  class="cls-1"
+                  transform="rotate(-45.2 5.4 13.4)"/>
+                <path
+                  d="M1.7 10.5h2v5.7h-2z"
+                  class="cls-1"
+                  transform="rotate(-44.9 2.7 13.4)"/></g></g></svg>
+          <p class="cta">click to rotate in 360°</p>
         </div>
       </router-link>
       <div
@@ -208,7 +214,6 @@ iframe {
 
 .transitional-page__label .center {
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.25);
   border-radius: 100%;
   color: #fff;
   display: flex;
@@ -216,22 +221,22 @@ iframe {
   font-weight: 900;
   height: 105px;
   justify-content: center;
-  margin: 3.25rem 0 1.5rem;
+  margin: 2.5rem 0 0.5rem;
   width: 105px;
+  position: relative;
+  left: 10px;
 }
 
 .transitional-page__label .cta {
-  background-color: rgba(0, 0, 0, 0.25);
   border-radius: 0.25rem;
   color: #fff;
   font-size: 1rem;
   font-weight: 900;
-  padding: 0.25rem 1rem;
   text-transform: uppercase;
 }
 
 .background::before {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.6);
   bottom: 0;
   content: '';
   left: 0;
@@ -240,15 +245,20 @@ iframe {
   top: 0;
 }
 
+.samba .background::before,
+.pod .background::before {
+  background-color: transparent;
+}
+
 .rotate-svg {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   position: absolute;
-  opacity: 0.7;
+  fill: #fff;
 }
 
 .fp-enabled .rotate-svg {
-  animation: spin 10s linear infinite reverse;
+  /* animation: spin 1s linear reverse; */
 }
 
 @keyframes spin {
