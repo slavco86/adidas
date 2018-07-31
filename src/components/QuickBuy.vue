@@ -51,12 +51,7 @@ export default {
   max-width: 60px;
 
   @media only screen and (min-width: 1024px) {
-<<<<<<< HEAD
     max-width: 50px;
-=======
-    max-width: 80px;
-    padding-right: 0%;
->>>>>>> 953514117cc82e47b396c09d98767fcf000d8280
   }
 
   circle {
