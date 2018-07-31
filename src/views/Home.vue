@@ -37,9 +37,12 @@
       :slides="franchises"
       :options="swiperOptions"
       :class="{'main-carousel--hidden': grid}"
-      class="main-carousel">
+      class="main-carousel"
+      @destroy="destroyCarousel">
       <div slot-scope="{slide}">
-        <FranchiseTile :tile="slide" />
+        <FranchiseTile
+          :tile="slide"
+          @click.native="destroyCarousel"/>
       </div>
     </Carousel>
 
@@ -132,6 +135,10 @@ export default {
 
     rewindCarousel() {
       this.$refs.carousel.$children[0].$children[0].swiper.slideTo(0);
+    },
+
+    destroyCarousel() {
+      this.$refs.carousel.$children[0].$children[0].swiper.destroy(false, false);
     },
   },
 };
