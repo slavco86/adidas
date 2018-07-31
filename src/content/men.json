@@ -244,8 +244,8 @@
         },
         "shoppable-video": {
           "normal": {
-            "placeholder": "",
-            "url": "http://i1.adis.ws/v/jpl/DEERUPT MASTER2/webm_720p"
+            "url": "http://i1.adis.ws/v/jpl/DEERUPT MASTER2/webm_720p",
+            "image": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0731/desktop-top-and-bottom-banner-a0bccf03d7af5f6c15d10c01883581f3.jpg"
           }
         },
       "influencerVideo": "url",

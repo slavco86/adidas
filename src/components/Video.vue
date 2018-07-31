@@ -4,7 +4,7 @@
     <div class="video">
       <Picture v-if="imageShouldDisplay" :image="image" class="video__picture"
                @click.native="showVideo(videoRef)"/>
-      <video ref="videoRef" :autoplay="autoplay" :class="{ 'video__video--displayed ' : videoShow }"
+      <video ref="videoRef" :autoplay="autoplay" :class="{ 'video__video--displayed ' : videoShow || !image }"
              class="video__video" controls @click="playPauseVideo(videoRef)">
         <source :src="`${url}/mp4_720p`" type="video/mp4">
         <source :src="`${url}/webm_720p`" type="video/webm">
@@ -87,10 +87,12 @@ export default {
 
 .video__video {
   width: 100%;
+  display: none;
 }
 
 .video__video--displayed {
   position: relative;
+  display: block;
 }
 </style>
 

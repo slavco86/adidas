@@ -8,7 +8,7 @@
         frameborder="0"/>
       <Video
         v-else
-        :url="data.normal.url"/>
+        v-bind="data.normal"/>
     </div>
   </div>
 </template>
