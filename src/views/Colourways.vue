@@ -54,8 +54,8 @@
                  'modal-container--samba': this.$route.params.franchise === 'Samba Rose',
                  'modal-container--deerupt': this.$route.params.franchise === 'Deerupt',
                  'modal-container--allBrands': (this.$route.params.franchise !== 'Deerupt'
-                   || this.$route.params.franchise !== 'Samba rose'
-                   || this.$route.params.franchise !== 'POD')
+                   || this.$route.params.franchise !== 'Samba Rose'
+                   || this.$route.params.franchise !== 'POD-S3.1')
         }"
         class="modal-container"/>
     </modal>
