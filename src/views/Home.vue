@@ -43,20 +43,21 @@
       </div>
     </Carousel>
 
-    <div
-      :class="{'button-container--grid' : grid}"
-      class="button-container"
-      @click="toggleCarousel"
-      @transitionend="unhideCarousel">
-      <div class="top-left"/>
-      <div class="top-right"/>
-      <div class="bottom-left"/>
-      <div class="bottom-right"/>
+    <CarouselArrows>
       <div
-        :class="{'full--expand': grid}"
-        class="full"/>
-    </div>
-    <CarouselArrows/>
+        :class="{'button-container--grid' : grid}"
+        class="button-container"
+        @click="toggleCarousel"
+        @transitionend="unhideCarousel">
+        <div class="top-left"/>
+        <div class="top-right"/>
+        <div class="bottom-left"/>
+        <div class="bottom-right"/>
+        <div
+          :class="{'full--expand': grid}"
+          class="full"/>
+      </div>
+    </CarouselArrows>
   </div>
 </template>
 
@@ -303,7 +304,7 @@ export default {
   height: auto;
   width: auto;
   padding: 2px;
-  margin-top: 2rem;
+  // margin-top: 2rem;
   transition: margin-top 1s;
 
   &--grid {
