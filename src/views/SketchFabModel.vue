@@ -256,18 +256,4 @@ iframe {
   position: absolute;
   fill: #fff;
 }
-
-.fp-enabled .rotate-svg {
-  /* animation: spin 1s linear reverse; */
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
 </style>
