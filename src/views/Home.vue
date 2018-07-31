@@ -212,8 +212,12 @@ export default {
 }
 
 .logo {
-  width: 75px;
-  left: 10%;
+  width: 60px;
+  left: 4%;
+
+  @media only screen and (min-width: 765px) {
+    left: 3%;
+  }
 }
 
 .nav-button {
