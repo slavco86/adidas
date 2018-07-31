@@ -163,6 +163,7 @@ export default {
   overflow: hidden;
   position: absolute;
   width: 100%;
+  padding: 0 0.5rem;
 
   @media only screen and (min-width: 320px) and (max-width: 875px) {
     justify-content: flex-start;
@@ -177,12 +178,29 @@ export default {
     transform: translate3d(100%, 100%, 0);
     transition: transform 1s ease-in-out;
 
+    &:hover {
+      /deep/ .overlay {
+        background-color: transparent;
+      }
+    }
+
+    /deep/ .overlay {
+      background-color: rgba(34, 34, 34, 0.2);
+      transition: background-color 0.5s ease-in-out;
+      z-index: 1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
     /deep/ .spot {
       display: block;
     }
 
     @media only screen and (min-width: 1024px) {
-      flex: 0 0 19%;
+      flex: 0 0 28%;
     }
 
     &:first-child, {
@@ -201,17 +219,21 @@ export default {
       transform: translate3d(100%, 100%, 0);
     }
 
-    &__text {
-      color: #ccc;
-      display: block;
-      margin: 0.75rem 0;
-      text-align: left;
-      font-size: 1rem;
+    /deep/ .franchise-name {
+      color: white;
+      margin: 0.5rem 0;
+      font-size: 1.25rem;
+      z-index: 2;
+
+      @media only screen and (min-width: 765px) {
+        font-size: 3rem;
+      }
     }
 
     /deep/ .plus {
       right: 1rem;
       top: 1rem;
+      z-index: 2;
     }
   }
 }
@@ -266,6 +288,10 @@ export default {
   color: #222;
 }
 
+.category--women .grid-view /deep/ .plus {
+  color: white;
+}
+
 .main-carousel {
   transform: scale3d(1, 1, 1);
   opacity: 1;
@@ -311,7 +337,6 @@ export default {
   height: auto;
   width: auto;
   padding: 2px;
-  // margin-top: 2rem;
   transition: margin-top 1s;
 
   &--grid {

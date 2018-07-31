@@ -4,15 +4,19 @@
     :class="{ 'spot--odd' : odd }"
     class="ga-ip spot">
 
-    <picture v-if="tile.image">
-      <source
-        v-if="responsiveImg"
-        :srcset="tile.image.mobile"
-        media="(max-width: 765px)">
-      <img
-        :src="tile.image.desktop"
-        alt="">
-    </picture>
+    <div class="overlay-container">
+      <div class="overlay"/>
+      <picture v-if="tile.image">
+        <source
+          v-if="responsiveImg"
+          :srcset="tile.image.mobile"
+          media="(max-width: 765px)">
+        <img
+          :src="tile.image.desktop"
+          alt="">
+      </picture>
+    </div>
+
 
     <span
       data-swiper-parallax="-500"
@@ -86,10 +90,8 @@ img {
 }
 
 img {
-  filter: grayscale(100%);
   height: auto;
   width: 100%;
-  transition: filter 0.2s ease-in;
 }
 
 .franchise-name {
@@ -187,13 +189,6 @@ img {
     border-left: $thickness solid;
     left: calc(50% - #{$thickness});
     top: 0;
-  }
-}
-
-.swiper-slide-active,
-.spot:hover {
-  img {
-    filter: grayscale(0);
   }
 }
 
