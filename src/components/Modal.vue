@@ -62,7 +62,7 @@ export default {
         this.deerupt = true;
       } else if (lcFranchise === 'samba rose') {
         this.sambarose = true;
-      } else if (lcFranchise === 'pod') {
+      } else if (lcFranchise === 'pod-s3.1') {
         this.pod = true;
       } else {
         this.allBrands = true;

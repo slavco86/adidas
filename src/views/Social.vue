@@ -162,7 +162,7 @@ export default {
     color: #fff;
     text-transform: uppercase;
     font-size: 2.8em;
-    font-weight: bold;
+    font-weight: 700;
     position: absolute;
     top: 10%;
     left: 22%;
@@ -232,9 +232,18 @@ export default {
 
     /deep/ .quickView {
       position: absolute;
-      right: 0;
-      top: 0;
+      right: 3%;
+      top: 1%;
       margin: 0.75rem;
+      max-width: 40px;
+
+      @media only screen and (min-width: 765px) {
+        max-width: 60px;
+      }
+
+      @media only screen and (min-width: 1366px) {
+        max-width: 50px;
+      }
     }
 
     &:first-child {
@@ -259,6 +268,7 @@ export default {
       margin: 0.1rem 0;
       text-align: left;
       font-size: 0.8rem;
+      font-weight: 500;
 
       @media only screen and (min-width: 1024px) {
         font-size: 1rem;
