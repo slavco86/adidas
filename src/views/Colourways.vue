@@ -356,12 +356,12 @@ export default {
 
     @media only screen and (min-width: 1366px) {
       left: 16%;
-      top: 89%;
+      top: 99%;
     }
   }
 }
 
-.category--women--deerupt .hotspot--right {
+.category--women.deerupt .hotspot--right {
   @media only screen and (max-width: 765px) {
     top: 20%;
   }
@@ -378,8 +378,8 @@ export default {
   color: #666;
   font-size: 9rem;
   font-weight: 900;
+  opacity: 0.2;
   height: 60%;
-  opacity: 0.05;
   position: absolute;
   transform: rotate(-90deg);
   user-select: none;
@@ -396,7 +396,11 @@ export default {
   }
 }
 
-.category--women--samba .brand {
+.category--women .brand {
+  opacity: 0.05;
+}
+
+.category--women.samba .brand {
   font-size: 6.5rem;
   white-space: nowrap;
 
@@ -407,7 +411,7 @@ export default {
   }
 }
 
-.category--women--deerupt .brand {
+.is-content.deerupt .brand {
   height: 67%;
   font-size: 10rem;
 
