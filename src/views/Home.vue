@@ -54,6 +54,7 @@
         :class="{'full--expand': grid}"
         class="full"/>
     </div>
+    <CarouselArrows/>
   </div>
 </template>
 
@@ -61,6 +62,7 @@
 import Logo from '@/components/AdidasLogo.vue';
 import Carousel from '@/containers/Carousel.vue';
 import FranchiseTile from '@/components/FranchiseTile.vue';
+import CarouselArrows from '@/components/CarouselArrows.vue';
 
 export default {
   name: 'Home',
@@ -68,6 +70,7 @@ export default {
     Logo,
     Carousel,
     FranchiseTile,
+    CarouselArrows,
   },
 
   props: {
@@ -98,6 +101,10 @@ export default {
         slidesPerView,
         mousewheel: true,
         loop: false,
+        navigation: {
+          prevEl: '.chevron-arrow-left',
+          nextEl: '.chevron-arrow-right',
+        },
       };
     },
 
