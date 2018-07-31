@@ -122,7 +122,8 @@ export default {
 
   computed: {
     franchise() {
-      return this.$route.params.franchise;
+      return (this.$route.params.franchise === 'POD') ? `${this.$route.params.franchise}-S3.1` :
+        this.$route.params.franchise;
     },
 
     mainImage() {
@@ -301,7 +302,7 @@ export default {
 
   @media only screen and (min-width: 1366px) {
     top: 39%;
-    left: 21%;
+    left: 15%;
     width: 70px;
     height: 70px;
   }
@@ -335,7 +336,7 @@ export default {
     transform: scale(0.75) rotate(0);
 
     @media only screen and (min-width: 765px) {
-      left: 62%;
+      left: 72%;
       top: 10%;
     }
   }
@@ -345,7 +346,7 @@ export default {
   }
 
   &--special {
-    top: 83%;
+    top: 93%;
     left: 35%;
 
     @media only screen and (min-width: 765px) {
@@ -357,6 +358,12 @@ export default {
       left: 16%;
       top: 89%;
     }
+  }
+}
+
+.category--women--deerupt .hotspot--right {
+  @media only screen and (max-width: 765px) {
+    top: 20%;
   }
 }
 
@@ -372,10 +379,11 @@ export default {
   font-size: 9rem;
   font-weight: 900;
   height: 60%;
-  opacity: 0.1;
+  opacity: 0.05;
   position: absolute;
   transform: rotate(-90deg);
   user-select: none;
+  white-space: nowrap;
 
   @media only screen and (min-width: 765px) {
     font-size: 14rem;
@@ -391,12 +399,20 @@ export default {
 .category--women--samba .brand {
   font-size: 6.5rem;
   white-space: nowrap;
-  opacity: 0.05;
 
   @media only screen and (min-width: 765px) {
     font-size: 14rem;
     display: flex;
     align-items: center;
+  }
+}
+
+.category--women--deerupt .brand {
+  height: 67%;
+  font-size: 10rem;
+
+  @media only screen and (min-width: 765px) {
+    font-size: 20rem;
   }
 }
 
