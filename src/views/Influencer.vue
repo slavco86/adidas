@@ -30,6 +30,7 @@
         </Spot>
       </div>
     </Carousel>
+    <CarouselArrows/>
   </div>
 </template>
 
@@ -38,6 +39,7 @@ import Spot from '@/components/Spot.vue';
 import Carousel from '@/containers/Carousel.vue';
 import Titles from '@/components/Titles.vue';
 import QuickBuy from '@/components/QuickBuy.vue';
+import CarouselArrows from '@/components/CarouselArrows.vue';
 
 export default {
   name: 'Influencer',
@@ -46,6 +48,7 @@ export default {
     Spot,
     Titles,
     QuickBuy,
+    CarouselArrows,
   },
   provide: {
     trackingName: 'influencer',
@@ -85,6 +88,10 @@ export default {
         spaceBetween,
         speed: 500,
         slidesPerView,
+        navigation: {
+          prevEl: '.chevron-arrow-left',
+          nextEl: '.chevron-arrow-right',
+        },
       };
     },
   },
@@ -126,7 +133,7 @@ export default {
   }
 
   .title1 {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 
   .title2 {

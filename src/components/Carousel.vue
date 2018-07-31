@@ -1,33 +1,35 @@
 <template>
-  <swiper
-    ref="carousel"
-    :options="options"
-    :global-options="globalOptions"
-    @images-ready="emitReady"
-    @transition-end="transitionEnd"
-    @slideChange="slideChange">
+  <div class="swiper-cont">
+    <swiper
+      ref="carousel"
+      :options="options"
+      :global-options="globalOptions"
+      @images-ready="emitReady"
+      @transition-end="transitionEnd"
+      @slideChange="slideChange">
 
-    <swiper-slide
-      v-for="(slide, key) in slides"
-      :key="key">
-      <slot :slide="addKey(slide, key)" />
-    </swiper-slide>
+      <swiper-slide
+        v-for="(slide, key) in slides"
+        :key="key">
+        <slot :slide="addKey(slide, key)" />
+      </swiper-slide>
 
-    <div
-      v-if="options.pagination || globalOptions.pagination"
-      slot="pagination"
-      class="swiper-pagination"/>
+      <div
+        v-if="options.pagination || globalOptions.pagination"
+        slot="pagination"
+        class="swiper-pagination"/>
 
-    <div
-      v-if="options.navigation || globalOptions.navigation"
-      slot="button-prev"
-      class="swiper-button-prev"/>
+      <div
+        v-if="(options.navigation || globalOptions.navigation) ? '' : ''"
+        slot="button-prev"
+        class="swiper-button-prev"/>
 
-    <div
-      v-if="options.navigation || globalOptions.navigation"
-      slot="button-next"
-      class="swiper-button-next"/>
-  </swiper>
+      <div
+        v-if="(options.navigation || globalOptions.navigation) ? '' : ''"
+        slot="button-next"
+        class="swiper-button-next"/>
+    </swiper>
+  </div>
 </template>
 
 <script>
