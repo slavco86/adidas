@@ -48,11 +48,7 @@ export default {
   cursor: pointer;
   margin: 0;
   padding: 0;
-  max-width: 60px;
-
-  @media only screen and (min-width: 1024px) {
-    max-width: 50px;
-  }
+  max-width: 45px;
 
   circle {
     fill: transparent;
@@ -81,7 +77,7 @@ export default {
 .influencer-carousel /deep/ .quickView {
   circle {
     fill: white;
-    stroke: #222;
+    stroke: #fff;
     transition: fill 0.35s ease-in-out, stroke 0.35s ease-in-out;
   }
 
@@ -93,11 +89,15 @@ export default {
   }
 
   &:hover {
-    circle,
     polygon,
     polyline {
       fill: #222;
       stroke: #fff;
+    }
+
+    circle {
+      fill: #222;
+      stroke: #222;
     }
   }
 }
@@ -147,11 +147,13 @@ export default {
 .category--women .influencer-carousel /deep/ .quickView {
   circle {
     fill: #fff;
+    stroke: #fff;
   }
 
   &:hover {
     circle {
       fill: #222;
+      stroke: #222;
 
       polygon,
       polyline {
