@@ -5,7 +5,7 @@
     </div>
     <Titles
       :subtext="franchise"
-      :headline="name + ' wears'"/>
+      :headline="name ? `${name} wears` : ''"/>
     <Carousel
       ref="carousel"
       :slides="data.products"
@@ -14,19 +14,19 @@
       @change="change">
       <div slot-scope="{slide}">
         <Spot v-bind="slide">
-          <span
-            data-swiper-parallax="-500"
-            data-swiper-parallax-duration="600"
-            data-swiper-parallax-opacity="0"
-            class="quote">{{ slide.quote }}</span>
+          <QuickBuy
+            v-if="slide.url"
+            :url="slide.url"/>
           <span
             data-swiper-parallax-y="-50"
             data-swiper-parallax-opacity="0"
             data-swiper-parallax-duration="600"
             class="name">{{ slide.handle }}</span>
-          <QuickBuy
-            v-if="slide.url"
-            :url="slide.url"/>
+          <span
+            data-swiper-parallax="-500"
+            data-swiper-parallax-duration="600"
+            data-swiper-parallax-opacity="0"
+            class="quote">{{ slide.quote }}</span>
         </Spot>
       </div>
     </Carousel>
@@ -72,12 +72,13 @@ export default {
 
   computed: {
     franchise() {
-      return this.$route.params.franchise;
+      return (this.$route.params.franchise === 'POD') ? `${this.$route.params.franchise}-S3.1` :
+        this.$route.params.franchise;
     },
     swiperOptions() {
       const desktop = this.width > 765;
       const slidesPerView = desktop ? 1.8 : 1.2;
-      const spaceBetween = desktop ? -120 : 15;
+      const spaceBetween = desktop ? 0 : 15;
       return {
         parallax: true,
         centeredSlides: true,
@@ -107,13 +108,21 @@ export default {
 
 .influencer-section /deep/ .titles {
   color: white;
-  padding-top: 2rem;
-  line-height: 40px;
+  line-height: 30px;
+  position: relative;
+  top: 4.7rem;
+  letter-spacing: 2px;
+
+  @media only screen and (min-width: 765px) {
+    line-height: 42px;
+    top: 4rem;
+  }
 
   .title1,
   .title2 {
     text-transform: uppercase;
     text-align: center;
+    font-weight: bold;
   }
 
   .title1 {
@@ -122,10 +131,9 @@ export default {
 
   .title2 {
     font-size: 2rem;
-    font-weight: bold;
 
     @media only screen and (min-width: 765px) {
-      font-size: 4rem;
+      font-size: 3.5rem;
     }
   }
 }
@@ -138,18 +146,50 @@ export default {
   font-size: 8rem;
   position: absolute;
   color: #666;
-  opacity: 0.5;
+  opacity: 0.2;
   height: auto;
   font-weight: 900;
-  top: 0;
+  top: 60px;
+  white-space: nowrap;
+  user-select: none;
+  left: -5px;
+  text-align: center;
 
   @media only screen and (min-width: 765px) {
-    color: #333;
-    font-size: 14rem;
+    font-size: 16rem;
     height: 100%;
     width: 100%;
-    top: 25%;
+    top: 15rem;
+    left: -25px;
     text-align: center;
+  }
+}
+
+.category--women .brand {
+  opacity: 0.05;
+}
+
+.is-content.pod .brand {
+  font-size: 5rem;
+
+  @media only screen and (min-width: 765px) {
+    font-size: 18rem;
+  }
+}
+
+.is-content.deerupt .brand {
+  font-size: 5.5rem;
+
+  @media only screen and (min-width: 765px) {
+    font-size: 20rem;
+  }
+}
+
+.is-content.samba .brand {
+  font-size: 3.75rem;
+
+  @media only screen and (min-width: 765px) {
+    font-size: 13rem;
   }
 }
 
@@ -162,12 +202,23 @@ export default {
 }
 
 .influencer-carousel /deep/ .swiper-container {
-  padding-top: calc(2rem + 16%);
-  padding-bottom: 2rem;
+  position: relative;
+  top: 5rem;
+  padding-top: 2rem;
+  padding-bottom: 7rem;
+
+  @media only screen and (min-width: 765px) {
+    top: 18rem;
+  }
 }
 
 .influencer-carousel /deep/ .spot {
   display: block;
+  margin: 0 auto;
+
+  @media only screen and (min-width: 1024px) {
+    width: 50%;
+  }
 }
 
 .influencer-carousel /deep/ .swiper-slide {
@@ -176,7 +227,7 @@ export default {
   transition: transform 0.5s ease-in-out;
 
   @media only screen and (min-width: 1024px) {
-    padding: 0 12.5%;
+    // padding: 0 12.5%;
   }
 }
 
@@ -187,31 +238,30 @@ export default {
 .quote {
   position: absolute;
   transition-timing-function: ease-out;
-  bottom: -20%;
+  top: 100%;
   right: 0;
   padding: 1rem;
+  padding-left: 0;
   width: 100%;
   color: white;
   text-align: left;
-  font-size: 15px;
-  line-height: 20px;
+  font-size: 16px;
+  line-height: 24px;
 
   @media only screen and (min-width: 765px) {
-    bottom: 40%;
-    right: -220px;
+    padding: 1rem;
+    top: 35%;
+    right: -300px;
+    width: 300px;
+    font-size: 18px;
   }
 }
 
 .influencer-carousel /deep/ .quickView {
   position: absolute;
-  top: 10px;
+  bottom: 10px;
   right: 10px;
   fill: transparent;
-
-  @media only screen and (min-width: 765px) {
-    top: initial;
-    bottom: 10px;
-  }
 }
 
 .category--women .quote {
@@ -225,10 +275,11 @@ export default {
     display: block;
     position: absolute;
     transition-timing-function: ease-out;
-    top: -40px;
-    left: 20px;
+    bottom: -40px;
+    left: 0;
     color: white;
-    font-size: 15px;
+    font-weight: bold;
+    font-size: 18px;
   }
 }
 
