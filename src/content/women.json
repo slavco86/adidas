@@ -6,7 +6,10 @@
       "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0726/750x750--0033-final-l1-hailey-door-sambapinkrose-168-r1-v2-b8c788138067bbb657e4df475364ee07.jpg"
     },
     "content": {
-      "sketch-fab-model": "url",
+      "sketch-fab-model": {
+        "id": "",
+        "background": "#f3d8c3"
+      },
       "colourways": {
         "hotspots": [
           {
@@ -146,7 +149,8 @@
     },
     "content": {
       "sketch-fab-model": {
-        "id": "0b2f8731a36e4057a423ead0f23b7e99"
+        "id": "0b2f8731a36e4057a423ead0f23b7e99",
+        "background": "#f5b2cf"
       },
       "colourways": {
         "hotspots": [
