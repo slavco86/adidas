@@ -46,7 +46,7 @@
       </div>
     </Carousel>
 
-    <CarouselArrows>
+    <CarouselArrows :class="{'hide': grid}">
       <div
         :class="{'button-container--grid' : grid}"
         class="button-container"
@@ -391,6 +391,21 @@ export default {
     width: 83%;
     border-color: black;
     border-radius: 3px;
+  }
+}
+
+.chevron-arrows /deep/ {
+  .chevron-arrow-wrap--left,
+  .chevron-arrow-wrap--right {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+  }
+}
+
+.chevron-arrows.hide /deep/ {
+  .chevron-arrow-wrap--left,
+  .chevron-arrow-wrap--right {
+    opacity: 0;
   }
 }
 </style>
