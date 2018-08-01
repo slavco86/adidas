@@ -252,12 +252,15 @@
         },
         "shoppable-video": {
           "normal": {
-            "video": {
-              "desktop": "http://i1.adis.ws/v/jpl/JD_LOOK_03_6S_CUT_DB3766_FEMALE_16X9/webm_720p",
-              "mobile": "http://i1.adis.ws/v/jpl/JD_LOOK_03_6S_CUT_DB3766_FEMALE_9X16/webm_720p"
+            "image": {
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/video-placeholders1920x1080-deerupt-men-desktop-84a656a60f4f009e7d7b5a8e92a2dbb8.jpg",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/video-placeholders750x1334-deerupt-men-mobile-80b7d4320813fb55179946f453edc8aa.jpg"
             },
-            "image": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0731/desktop-top-and-bottom-banner-a0bccf03d7af5f6c15d10c01883581f3.jpg"
+          "video": {
+            "desktop": "http://i1.adis.ws/v/jpl/ADI_MAIN/mp4_720p",
+            "mobile": "http://i1.adis.ws/v/jpl/ADI_STORY_1/webm_720p"
           }
+        }
         },
         "influencerVideo": "url",
       "get-social": {
