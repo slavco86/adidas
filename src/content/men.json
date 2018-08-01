@@ -97,6 +97,10 @@
       "influencerVideo": "url",
       "get-social": {
         "url": "Follow Us",
+        "titles": {
+          "headline": "Get Social",
+          "subtext": "#Creator"
+        },
         "products": [
           {
             "image": {
@@ -203,7 +207,7 @@
             {
               "name": "Nathan Hopkinson",
               "handle": "@curlyfrysfeed",
-              "quote": "Combining 90’s fashion with modern kicks - this pairing is crazy! I find the clean, white colourway a perfect match for any summer fit!",
+              "quote": "Combining 90’s fashion with modern kicks - this pairing is crazy!",
               "url": "/product/white-adidas-originals-deerupt/011238",
               "image": {
                 "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0727/750-0002-curlyfrysfeed--913c35abaff60cd4786bef68b60798c0.jpg",
@@ -234,7 +238,7 @@
               "name": "Carl Kho",
               "handle": "@carlkho_",
               "url": "/product/blue-adidas-originals-deerupt/052225/",
-              "quote": "Cozy is the vibes with these crazy sneakers and it feels like I’m walking into the future! The style is fresh and the colours pop with any ‘fit.",
+              "quote": "Cozy is the vibes with these crazy sneakers and it feels like I’m walking into the future!",
               "image": {
                 "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0727/750x750--0003-carl-kho-6bcd6317a1fc63dc73c6ee15a1389dbf.jpg",
                 "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0727/750x750--0003-carl-kho-6bcd6317a1fc63dc73c6ee15a1389dbf.jpg"
@@ -254,6 +258,10 @@
       "influencerVideo": "url",
       "get-social": {
         "url": "Follow Us",
+        "titles": {
+          "headline": "Get Social",
+          "subtext": "#Creator"
+        },
         "products": [
           {
             "image": {
