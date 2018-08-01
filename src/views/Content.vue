@@ -158,7 +158,7 @@ export default {
 }
 
 .influencer-section /deep/ .titles {
-  top: 4.7rem;
+  // top: 4.7rem;
 
   @media only screen and (min-width: 765px) {
     top: 4rem;
