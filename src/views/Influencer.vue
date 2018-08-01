@@ -109,10 +109,14 @@ export default {
 
 <style lang="scss" scoped>
 .influencer-section {
-  height: 100vh;
+  height: calc(100vh - 90px);
   width: 100%;
   overflow: hidden;
   text-align: center;
+
+  /deep/ .titles {
+    top: 1rem;
+  }
 }
 
 .brand {
@@ -167,21 +171,21 @@ export default {
 }
 
 .influencer-carousel {
-  margin-top: 3rem;
+  // margin-top: 3rem;
 
   @media only screen and (min-width: 765px) {
-    margin-top: calc(10rem - (2rem + 20%));
+    margin-top: calc(15rem - (2rem + 20%));
   }
 }
 
 .influencer-section /deep/ .chevron-arrows {
   position: absolute;
-  bottom: 50px;
+  bottom: 0;
 }
 
 .influencer-carousel /deep/ .swiper-container {
   position: relative;
-  top: 5rem;
+  top: 3rem;
   padding-top: 2rem;
   padding-bottom: 7rem;
 

@@ -1,7 +1,7 @@
 <template>
   <div
     :style="background"
-    :class="{ background : background }"
+    :class="{ background : background, 'hide-tint': $route.name === '3d-view' }"
     class="content-slide">
     <Logo :color="logoColor" />
     <div class="content-slide__inner">
@@ -294,6 +294,7 @@ iframe {
   position: absolute;
   right: 0;
   top: 0;
+  transition: background-color 0.4s;
 }
 
 .samba .background::before,
@@ -301,10 +302,38 @@ iframe {
   background-color: transparent;
 }
 
+.background.hide-tint::before {
+  background-color: transparent;
+}
+
+.is-content.deerupt .content-slide /deep/ .product-info {
+  color: black;
+}
+
+.is-content.deerupt .content-slide /deep/ .product-info .cta svg circle,
+.is-content.deerupt .content-slide /deep/ .product-info .cta svg polygon,
+.is-content.deerupt .content-slide /deep/ .product-info .cta svg polyline {
+  stroke: black;
+}
+
+.is-content.deerupt .content-slide /deep/ .product-info .cta:hover svg polygon,
+.is-content.deerupt .content-slide /deep/ .product-info .cta:hover svg polyline {
+  stroke: white;
+}
+
 .rotate-svg {
   width: 100px;
   height: 100px;
   position: absolute;
   fill: #fff;
+}
+
+.is-content.deerupt .content-slide /deep/ .close circle {
+  fill: black;
+  stroke: black;
+}
+
+.is-content.deerupt .content-slide /deep/ .close path {
+  stroke: white;
 }
 </style>

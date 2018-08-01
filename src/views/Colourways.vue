@@ -355,8 +355,8 @@ export default {
     }
 
     @media only screen and (min-width: 1366px) {
-      left: 16%;
-      top: 99%;
+      left: 12%;
+      top: 79%;
     }
   }
 }
@@ -450,7 +450,7 @@ export default {
     margin-top: 0%;
   }
 
-  @media screen and (min-width: 1366px) { 
+  @media screen and (min-width: 1366px) {
     font-size: 2em;
     margin-top: -9%;
   }

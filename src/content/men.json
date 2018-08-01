@@ -32,7 +32,7 @@
               "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/adi-hub-074450-afc931cfcc2eb3550b548da72fe4c036.png"
             },
             "brand": "adidas",
-            "price": "75.00",
+            "price": "110",
             "title": "POD",
             "url": "/product/blue-adidas-originals-pod/1188720"
           },
@@ -42,7 +42,7 @@
               "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/adi-hub-074451-243ff8a3fcd7bc8645781d946e4e3be8.png"
             },
             "brand": "adidas",
-            "price": "75.00",
+            "price": "110",
             "title": "POD",
             "url": "/product/clay-adidas-originals-pod/1188721"
           },
@@ -52,7 +52,7 @@
               "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/adi-hub-066721-0125c3e3451588faad06f7f229e32010.png"
             },
             "brand": "adidas",
-            "price": "75.00",
+            "price": "110",
             "title": "POD",
             "url": "product/grey-adidas-originals-pod/1189079"
           },
@@ -62,7 +62,7 @@
               "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/adi-hub-066719-578b612f788b48778b65d55755e98acc.png"
             },
             "brand": "adidas",
-            "price": "75.00",
+            "price": "110",
             "title": "POD",
             "url": "product/black-adidas-originals-pod-womens/1189124"
           }
@@ -113,6 +113,10 @@
           "video": {
             "desktop": "http://i1.adis.ws/v/jpl/ADIDAS_HUB_POD_CREATIVE_1920x1080_02/webm_720p",
             "mobile": "http://i1.adis.ws/v/jpl/ADIDAS_HUB_POD_CREATIVE_1080x1920/webm_720p"
+          },
+          "image": {
+            "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/video-placeholders1920x1080-pod-extra-0888f682cfc8ac793d1f7c7c0e37c886.jpg",
+            "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/video-placeholders750x1334-pod-extra-4838d82995123a11c8514c3e4637e175.jpg"
           }
         }
       },
