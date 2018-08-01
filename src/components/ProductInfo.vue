@@ -25,7 +25,7 @@ export default {
 
     was: {
       type: String,
-      default: '0',
+      default: undefined,
     },
 
     price: {
@@ -61,7 +61,7 @@ export default {
 
 .product-info__price {
   font-weight: 700;
-  margin-bottom: 0.5rem;
+  margin: 0.5rem 0;
 }
 
 .product-info__price--was {
