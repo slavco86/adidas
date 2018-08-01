@@ -113,6 +113,10 @@
           "video": {
             "desktop": "http://i1.adis.ws/v/jpl/ADIDAS_HUB_POD_CREATIVE_1920x1080_02/webm_720p",
             "mobile": "http://i1.adis.ws/v/jpl/ADIDAS_HUB_POD_CREATIVE_1080x1920/webm_720p"
+          },
+          "image": {
+            "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/video-placeholders1920x1080-pod-extra-0888f682cfc8ac793d1f7c7c0e37c886.jpg",
+            "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/video-placeholders750x1334-pod-extra-4838d82995123a11c8514c3e4637e175.jpg"
           }
         }
       },
