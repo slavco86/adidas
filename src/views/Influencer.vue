@@ -177,10 +177,6 @@ export default {
 .influencer-section /deep/ .chevron-arrows {
   position: absolute;
   bottom: 50px;
-
-  @media only screen and (min-width: 765px) {
-    bottom: 80px;
-  }
 }
 
 .influencer-carousel /deep/ .swiper-container {

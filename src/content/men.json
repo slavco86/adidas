@@ -7,7 +7,7 @@
     },
     "content": {
       "sketch-fab-model": {
-        "id": "0b2f8731a36e4057a423ead0f23b7e99",
+        "id": "658ef1b171d7414884da95465879389b",
         "background": "#273583"
       },
       "colourways": {
@@ -120,6 +120,14 @@
           "desktop": "https://ssl-dot-player-dot-smartzer-editor.appspot.com/video?video=F1wi2ZfyiB1DSO7ZTtGxcG4i&companyId=58331cf19f43139bd4702949"
         }
       },
+      "extra-video": {
+        "normal": {
+          "video": {
+            "desktop": "http://i1.adis.ws/v/jpl/JD_CAMPAIGN_30s_CUT_DB3292_DB3293_DB3766_16X9/webm_720p",
+            "mobile": ""
+          }
+        }
+      },
       "influencerVideo": "url",
       "get-social": {
         "url": "Follow Us",
@@ -171,7 +179,7 @@
     },
     "content": {
       "sketch-fab-model": {
-        "id": "20bee0a0de014f3b951a192bb5172fd6",
+        "id": "1a32199ae7d741c19403baee4216e15c",
         "background": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0726/deerupt-3d-scan-bg-02-a9d7e2070cac95c2eff022357f53728d.png"
       },
       "colourways": {
@@ -284,7 +292,7 @@
           }
         }
         },
-      "influencerVideo": "url",
+        "influencerVideo": "url",
       "get-social": {
         "url": "Follow Us",
         "titles": {
