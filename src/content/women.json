@@ -298,9 +298,21 @@
               "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0730/shoe-desktop-4-white-adidas-originals-deerupt-womens-045994-0ea11a1bd092bb5eacdc608aac48d64c.png"
             },
             "brand": "Adidas",
+            "was": "80",
             "price": "60",
             "title": "Deerupt",
             "url": "/product/white-adidas-originals-deerupt-womens/045994"
+          },
+          {
+            "image": {
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/adi-hub-011739-0de9a935bdef04eb837d097e394034c7.png",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/adi-hub-011739-0de9a935bdef04eb837d097e394034c7.png"
+            },
+            "brand": "Adidas",
+            "was": "80",
+            "price": "55",
+            "title": "Deerupt",
+            "url": "/product/pink-adidas-originals-deerupt-womens/011739"
           }
         ]
       } ,
