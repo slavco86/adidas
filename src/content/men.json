@@ -34,7 +34,17 @@
             "brand": "adidas",
             "price": "75.00",
             "title": "POD",
-            "url": "/product/black-nike-air-force-1-low/047951"
+            "url": "/product/blue-adidas-originals-pod/1188720/"
+          },
+          {
+            "image": {
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/adi-hub-074451-243ff8a3fcd7bc8645781d946e4e3be8.png",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/adi-hub-074451-243ff8a3fcd7bc8645781d946e4e3be8.png"
+            },
+            "brand": "adidas",
+            "price": "75.00",
+            "title": "POD",
+            "url": "/product/clay-adidas-originals-pod/1188721/"
           }
         ]
       } ,
@@ -164,7 +174,7 @@
             "brand": "Adidas",
             "price": "80.00",
             "title": "Deerupt",
-            "url": "/product/adidas-originals-deerupt/052225"
+            "url": "/product/blue-adidas-originals-deerupt/052225"
           },
           {
             "image": {
@@ -174,7 +184,7 @@
             "brand": "Adidas",
             "price": "80.00",
             "title": "Deerupt",
-            "url": "/product/adidas-originals-deerupt/066634"
+            "url": "/product/white-adidas-originals-deerupt/066634/"
           },
           {
             "image": {
@@ -184,7 +194,7 @@
             "brand": "Adidas",
             "price": "80.00",
             "title": "Deerupt",
-            "url": "/product/adidas-originals-deerupt/066629"
+            "url": "/product/black-adidas-originals-deerupt/1181786/"
           },
           {
             "image": {
@@ -194,17 +204,7 @@
             "brand": "Adidas",
             "price": "80.00",
             "title": "Deerupt",
-            "url": "/product/adidas-originals-deerupt/073028"
-          },
-          {
-            "image": {
-              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0727/shoe-desktop-2-green-adidas-originals-deerupt-051500-57ac562da9a5af2fbd89974727329a02.png",
-              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0727/shoe-desktop-2-green-adidas-originals-deerupt-051500-57ac562da9a5af2fbd89974727329a02.png"
-            },
-            "brand": "Adidas",
-            "price": "80.00",
-            "title": "Deerupt",
-            "url": "/product/green-adidas-originals-deerupt/051500"
+            "url": "/product/green-adidas-originals-deerupt/1179341/"
           }
         ]
       } ,
