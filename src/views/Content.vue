@@ -105,17 +105,15 @@ export default {
   background-color: inherit;
 }
 
-.influencer-section /deep/ .titles,
-.social /deep/ .titles {
+.social /deep/ .titles,
+.influencer-section /deep/ .titles {
   color: white;
   line-height: 30px;
   position: relative;
-  top: 4.7rem;
   letter-spacing: 2px;
 
   @media only screen and (min-width: 765px) {
-    line-height: 42px;
-    top: 4rem;
+    line-height: 35px;
   }
 
   .title1,
@@ -127,14 +125,39 @@ export default {
 
   .title1 {
     font-size: 0.8rem;
+
+    @media only screen and (min-width: 765px) {
+      font-size: 1rem;
+    }
   }
 
   .title2 {
     font-size: 2rem;
 
     @media only screen and (min-width: 765px) {
-      font-size: 3.5rem;
+      font-size: 2.5rem;
     }
   }
+}
+
+.social /deep/ .titles {
+  top: 1rem;
+
+  @media only screen and (min-width: 765px) {
+    top: 0;
+  }
+}
+
+.influencer-section /deep/ .titles {
+  top: 4.7rem;
+
+  @media only screen and (min-width: 765px) {
+    top: 4rem;
+  }
+}
+
+.category--women .social /deep/ .titles,
+.category--women .influencer-section /deep/ .titles {
+  color: black;
 }
 </style>

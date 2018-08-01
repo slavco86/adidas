@@ -18,11 +18,13 @@
             v-if="slide.url"
             :url="slide.url"/>
           <span
+            v-if="slide.handle"
             data-swiper-parallax-y="-50"
             data-swiper-parallax-opacity="0"
             data-swiper-parallax-duration="600"
             class="name">{{ slide.handle }}</span>
           <span
+            v-if="slide.quote"
             data-swiper-parallax="-500"
             data-swiper-parallax-duration="600"
             data-swiper-parallax-opacity="0"
@@ -113,42 +115,6 @@ export default {
   text-align: center;
 }
 
-.influencer-section /deep/ .titles {
-  color: white;
-  line-height: 30px;
-  position: relative;
-  top: 4.7rem;
-  letter-spacing: 2px;
-
-  @media only screen and (min-width: 765px) {
-    line-height: 42px;
-    top: 4rem;
-  }
-
-  .title1,
-  .title2 {
-    text-transform: uppercase;
-    text-align: center;
-    font-weight: bold;
-  }
-
-  .title1 {
-    font-size: 0.8rem;
-  }
-
-  .title2 {
-    font-size: 2rem;
-
-    @media only screen and (min-width: 765px) {
-      font-size: 3.5rem;
-    }
-  }
-}
-
-.category--women .influencer-section /deep/ .titles {
-  color: black;
-}
-
 .brand {
   font-size: 8rem;
   position: absolute;
@@ -209,11 +175,12 @@ export default {
 }
 
 .influencer-section /deep/ .chevron-arrows {
-  bottom: -25%;
-}
+  position: absolute;
+  bottom: 50px;
 
-.category--women .influencer-section /deep/ .chevron-arrows {
-  bottom: -22%;
+  @media only screen and (min-width: 765px) {
+    bottom: 80px;
+  }
 }
 
 .influencer-carousel /deep/ .swiper-container {
@@ -262,6 +229,7 @@ export default {
   text-align: left;
   font-size: 16px;
   line-height: 24px;
+  z-index: -1;
 
   @media only screen and (min-width: 765px) {
     padding: 1rem;
@@ -295,6 +263,7 @@ export default {
     color: white;
     font-weight: bold;
     font-size: 18px;
+    z-index: -1;
   }
 }
 

@@ -1,7 +1,6 @@
 <template>
   <div class="social">
-    <p class="social__text">Get Social</p>
-    <h2 class="social__title">#Creator</h2>
+    <Titles v-bind="data.titles"/>
     <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200" class="creatorsocial">
     <path class="instasocial" d="M57.743,0h84.514A57.743,57.743,0,0,1,200,57.743v84.514A57.742,57.742,0,0,1,142.257,200H57.743A57.743,57.743,0,0,1,0,142.257V57.743A57.743,57.743,0,0,1,57.743,0Zm-2.1,18.373s23.185-1.05,46.544-1.05c20.856,0,42.17,1.05,42.17,1.05A36.745,36.745,0,0,1,181.1,55.118s1.05,23.782,1.05,46.719c0,21.364-1.05,41.995-1.05,41.995a36.745,36.745,0,0,1-36.745,36.745s-21.427,1.05-43.22,1.05c-22.551,0-45.494-1.05-45.494-1.05A36.745,36.745,0,0,1,18.9,143.832s-0.525-20.631-.525-41.995c0-22.937.525-46.719,0.525-46.719A36.745,36.745,0,0,1,55.643,18.373Zm97.638,15.748a12.074,12.074,0,1,1-12.074,12.074A12.073,12.073,0,0,1,153.281,34.121ZM100,48.294A51.706,51.706,0,1,1,48.294,100,51.706,51.706,0,0,1,100,48.294Zm0,17.848A33.333,33.333,0,1,1,66.667,99.475,33.333,33.333,0,0,1,100,66.142Z"></path>
     </svg>
@@ -33,6 +32,7 @@
 <script>
 import Spot from '@/components/Spot.vue';
 import QuickBuy from '@/components/QuickBuy.vue';
+import Titles from '@/components/Titles.vue';
 
 export default {
   name: 'Social',
@@ -44,6 +44,7 @@ export default {
   components: {
     Spot,
     QuickBuy,
+    Titles,
   },
 
   props: {
@@ -97,7 +98,7 @@ export default {
 
 .instasocial {
   fill-rule: evenodd;
-  fill: white;
+  fill: #666;
   fill-opacity: 0.05;
 }
 
@@ -120,7 +121,6 @@ export default {
     overflow: hidden;
     margin: 2rem 0;
     width: 100%;
-    padding-top: 28%;
 
     @media only screen and (min-width: 765px) {
       padding-top: 14%;
@@ -131,58 +131,8 @@ export default {
     }
   }
 
-  &__title,
-  &__text {
-    text-align: center;
-  }
-
-  &__text {
-    text-transform: uppercase;
-    color: #fff;
-    font-size: 1.15em;
-    position: absolute;
-    top: 4%;
-    left: 36%;
-    z-index: 1;
-
-    @media only screen and (min-width: 765px) {
-      font-size: 1.3em;
-      top: 3%;
-      left: 43%;
-    }
-
-    @media only screen and (min-width: 1024px) {
-      top: 8%;
-      font-size: 1.7em;
-      left: 45%;
-    }
-  }
-
-  &__title {
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 2.8em;
-    font-weight: 700;
-    position: absolute;
-    top: 10%;
-    left: 22%;
-    z-index: 1;
-
-    @media only screen and (min-width: 765px) {
-      top: 7%;
-      left: 37%;
-      font-size: 3em;
-    }
-
-    @media only screen and (min-width: 1024px) {
-      font-size: 4.4em;
-      top: 14%;
-      left: 39%;
-    }
-  }
-
   &__cta {
-    align-self: flex-end;
+    align-self: center;
     background-color: transparent;
     border: 2px solid #fff;
     color: #fff;
@@ -213,10 +163,12 @@ export default {
   flex-flow: row wrap;
   justify-content: center;
   margin: 1rem auto;
+  padding: 0 0.5rem;
 
   @media only screen and (min-width: 1024px) {
     max-height: 670px;
     overflow: hidden;
+    padding: 3rem 0;
   }
 
   &__product {
@@ -295,7 +247,8 @@ export default {
 
 .category--women .social__cta {
   color: #222;
-  border: 2px solid #222;
+  border: 1px solid #222;
+  font-size: 12px;
 
   &:hover {
     color: #fff;
@@ -305,12 +258,6 @@ export default {
 
 // Animate
 .grid--animate {
-  padding: 0.5rem 0;
-
-  @media only screen and (min-width: 1024px) {
-    padding: 3rem 0;
-  }
-
   .grid__product {
     transform: translate3d(0, 0, 0);
 

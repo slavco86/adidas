@@ -101,13 +101,23 @@
         },
       "shoppable-video": {
         "normal": {
-          "placeholder": "",
-          "url": "http://i1.adis.ws/v/jpl/SAMBA_MAIN"
+          "image": {
+            "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/video-placeholders1920x1080-samba-desktop-ea14c9993de822f3a8f021897b17904a.jpg",
+            "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/video-placeholders750x1334-samba-rose-mobile-59846e24f6cbc5e7a4dff37959f52be9.jpg"
+          },
+        "video": {
+          "desktop": "http://i1.adis.ws/v/jpl/SAMBA_MAIN/webm_720p",
+          "mobile": "http://i1.adis.ws/v/jpl/SAMBA_STORY/webm_720p"
         }
+      }
       },
       "influencerVideo": "url",
       "get-social": {
         "url": "Follow Us",
+        "titles": {
+          "headline": "Get Social",
+          "subtext": "#Creator"
+        },
         "products": [
           {
             "image": {
@@ -194,7 +204,7 @@
         {
           "products": [
             {
-              "quote": "When you play with what’s possible, you define what is.",
+              "quote": "",
               "url": "/product/black-nike-air-force-1-low/047951",
               "image": {
                 "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0730/750x750--0022-27707-art-adidas-jd-pod-facebook-instagram-1500x1500px22-58fec2d3006faafbd4877234d14d9d60.jpg",
@@ -203,7 +213,7 @@
             },
             {
               "url": "/product/black-nike-air-force-1-low/047951",
-              "quote": "When you play with what’s possible, you define what is.",
+              "quote": "",
               "image": {
                 "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0730/750x750--0024-27707-art-adidas-jd-pod-facebook-instagram-1500x1500px19-65c74d108d0ab0a0d39c73d7b1493977.jpg",
                 "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0730/750x750--0024-27707-art-adidas-jd-pod-facebook-instagram-1500x1500px19-65c74d108d0ab0a0d39c73d7b1493977.jpg"
@@ -211,7 +221,7 @@
             },
             {
               "url": "/product/black-nike-air-force-1-low/047951",
-              "quote": "When you play with what’s possible, you define what is.",
+              "quote": "",
               "image": {
                 "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0730/750x750--0021-27707-art-adidas-jd-pod-facebook-instagram-1500x1500px23-a7af724c1f2e46cdd0134bbecdf77e4d.jpg",
                 "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0730/750x750--0021-27707-art-adidas-jd-pod-facebook-instagram-1500x1500px23-a7af724c1f2e46cdd0134bbecdf77e4d.jpg"
@@ -219,7 +229,7 @@
             },
             {
               "url": "/product/black-nike-air-force-1-low/047951",
-              "quote": "When you play with what’s possible, you define what is.",
+              "quote": "",
               "image": {
                 "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0730/750x750--0023-27707-art-adidas-jd-pod-facebook-instagram-1500x1500px20-ea1d53391cf93be340f1fec6b214c191.jpg",
                 "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0730/750x750--0023-27707-art-adidas-jd-pod-facebook-instagram-1500x1500px20-ea1d53391cf93be340f1fec6b214c191.jpg"
@@ -235,6 +245,10 @@
         },
       "influencerVideo": "url",
       "get-social": {
+        "titles": {
+          "headline": "Get Social",
+          "subtext": "#Creator"
+        },
         "url": "Follow Us",
         "products": [
           {
@@ -363,13 +377,23 @@
         },
         "shoppable-video": {
           "normal": {
-            "placeholder": "",
-            "url": "http://i1.adis.ws/v/jpl/DEERUPT MASTER2"
+            "image": {
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/video-placeholders1920x1080-deerupt-women-desktop-b03aace67de10c19a117a3d64ae5956d.jpg",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/video-placeholders750x1334-deerupt-women-mobile-d0a9542b7377f118061a19bd674f2832.jpg"
+            },
+          "video": {
+            "desktop": "",
+            "mobile": ""
           }
+        }
         },
       "influencerVideo": "url",
       "get-social": {
         "url": "Follow Us",
+        "titles": {
+          "headline": "Get Social",
+          "subtext": "#Creator"
+        },
         "products": [
           {
             "image": {

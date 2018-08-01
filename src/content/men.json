@@ -118,15 +118,15 @@
         "shoppable": {
           "mobile": "https://ssl-dot-player-dot-smartzer-editor.appspot.com/video?video=CfUOIahc3aCEvZwtrPp8DIjx&companyId=58331cf19f43139bd4702949",
           "desktop": "https://ssl-dot-player-dot-smartzer-editor.appspot.com/video?video=F1wi2ZfyiB1DSO7ZTtGxcG4i&companyId=58331cf19f43139bd4702949"
-        },
-        "normal": {
-          "placeholder": "",
-          "url": "http://i1.adis.ws/v/jpl/JD_CAMPAIGN_30s_CUT_DB3292_DB3293_DB3766_16X9/webm_720p"
         }
       },
       "influencerVideo": "url",
       "get-social": {
         "url": "Follow Us",
+        "titles": {
+          "headline": "Get Social",
+          "subtext": "#Creator"
+        },
         "products": [
           {
             "image": {
@@ -233,7 +233,7 @@
             {
               "name": "Nathan Hopkinson",
               "handle": "@curlyfrysfeed",
-              "quote": "Combining 90’s fashion with modern kicks - this pairing is crazy! I find the clean, white colourway a perfect match for any summer fit!",
+              "quote": "Combining 90’s fashion with modern kicks - this pairing is crazy!",
               "url": "/product/white-adidas-originals-deerupt/011238",
               "image": {
                 "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0727/750-0002-curlyfrysfeed--913c35abaff60cd4786bef68b60798c0.jpg",
@@ -264,7 +264,7 @@
               "name": "Carl Kho",
               "handle": "@carlkho_",
               "url": "/product/blue-adidas-originals-deerupt/052225/",
-              "quote": "Cozy is the vibes with these crazy sneakers and it feels like I’m walking into the future! The style is fresh and the colours pop with any ‘fit.",
+              "quote": "Cozy is the vibes with these crazy sneakers and it feels like I’m walking into the future!",
               "image": {
                 "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0727/750x750--0003-carl-kho-6bcd6317a1fc63dc73c6ee15a1389dbf.jpg",
                 "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0727/750x750--0003-carl-kho-6bcd6317a1fc63dc73c6ee15a1389dbf.jpg"
@@ -274,16 +274,23 @@
         },
         "shoppable-video": {
           "normal": {
-            "video": {
-              "desktop": "http://i1.adis.ws/v/jpl/JD_LOOK_03_6S_CUT_DB3766_FEMALE_16X9/webm_720p",
-              "mobile": "http://i1.adis.ws/v/jpl/JD_LOOK_03_6S_CUT_DB3766_FEMALE_9X16/webm_720p"
+            "image": {
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/video-placeholders1920x1080-deerupt-men-desktop-84a656a60f4f009e7d7b5a8e92a2dbb8.jpg",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/video-placeholders750x1334-deerupt-men-mobile-80b7d4320813fb55179946f453edc8aa.jpg"
             },
-            "image": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0731/desktop-top-and-bottom-banner-a0bccf03d7af5f6c15d10c01883581f3.jpg"
+          "video": {
+            "desktop": "http://i1.adis.ws/v/jpl/ADI_MAIN/mp4_720p",
+            "mobile": "http://i1.adis.ws/v/jpl/ADI_STORY_1/webm_720p"
           }
+        }
         },
       "influencerVideo": "url",
       "get-social": {
         "url": "Follow Us",
+        "titles": {
+          "headline": "Get Social",
+          "subtext": "#Creator"
+        },
         "products": [
           {
             "image": {
