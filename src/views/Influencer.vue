@@ -174,7 +174,7 @@ export default {
   // margin-top: 3rem;
 
   @media only screen and (min-width: 765px) {
-    margin-top: calc(10rem - (2rem + 20%));
+    margin-top: calc(15rem - (2rem + 20%));
   }
 }
 
