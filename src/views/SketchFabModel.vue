@@ -65,6 +65,14 @@
           webkitallowfullscreen="true"/>
       </div>
     </div>
+    <div class="scroll">
+      <!-- <img src="../assets/MOUSE_ICON_WHITE.svg" class="scrollWhite"> -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29.12 45.43" width="35px" height="50px">
+        <g id="Layer_2" data-name="Layer 2"><g id="Layer_3" data-name="Layer 3">
+          <rect class="cls-1" x="0.5" y="0.5" width="28.12" height="44.43" rx="14.06" ry="14.06"/>
+          <rect class="cls-2" x="12.45" y="9.21" width="4.23" height="6.68" rx="2.11" ry="2.11"/></g></g></svg>
+    </div>
+      <p class="scrolltext">SCROLL TO VIEW MORE</p>
   </div>
 </template>
 
@@ -130,7 +138,50 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+.samba .content-slide .scroll {
+  svg {
+    stroke: black;
+    .cls-2 {
+      fill: black;
+    }
+  }
+}
+
+.samba .content-slide .scrolltext {
+  color: black;
+}
+
+.scrolltext {
+  position: absolute;
+  top: 92%;
+  color: white;
+  left: 44%;
+}
+
+.scroll {
+  position: absolute;
+  bottom: 7%;
+}
+
+.scroll svg {
+  fill: transparent;
+  stroke: white;
+}
+
+.scroll svg .cls-2 {
+  fill: white;
+}
+
+
+
+.scrollWhite {
+  position: absolute;
+  width: 28px;
+  bottom: 0%;
+  right: 50%;
+}
+
 iframe {
   width: 100%;
   height: 100vh;
