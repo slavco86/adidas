@@ -158,33 +158,43 @@
         "products": [
           {
             "image": {
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/adi-hub-052225-be38aa62c0ff33a8a0779621bd7633ba.png",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/adi-hub-052225-be38aa62c0ff33a8a0779621bd7633ba.png"
+            },
+            "brand": "Adidas",
+            "price": "80.00",
+            "title": "Deerupt",
+            "url": "/product/adidas-originals-deerupt/052225"
+          },
+          {
+            "image": {
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/adi-hub-066634-4facff479ac9c3c6f9ab5fab0ad9fad4.png",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/adi-hub-066634-4facff479ac9c3c6f9ab5fab0ad9fad4.png"
+            },
+            "brand": "Adidas",
+            "price": "80.00",
+            "title": "Deerupt",
+            "url": "/product/adidas-originals-deerupt/066634"
+          },
+          {
+            "image": {
               "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0727/adi-hub0426-adidas-originals-deerupt-1181786-15d2ba1efc0e47c3566c26002797cec6.png",
               "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0727/adi-hub0426-adidas-originals-deerupt-1181786-15d2ba1efc0e47c3566c26002797cec6.png"
             },
             "brand": "Adidas",
             "price": "80.00",
             "title": "Deerupt",
-            "url": "/product/adidas-originals-deerupt/1181786"
+            "url": "/product/adidas-originals-deerupt/066629"
           },
           {
             "image": {
-              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0727/adi-hub0429-adidas-originals-deerupt-1181785-df4bae64292bbeed4b2553ed51626097.png",
-              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0727/adi-hub0429-adidas-originals-deerupt-1181785-df4bae64292bbeed4b2553ed51626097.png"
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/adi-hub-073028-f5a55dd3f4ecc6b24c5b62e7c0973826.png",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/adi-hub-073028-f5a55dd3f4ecc6b24c5b62e7c0973826.png"
             },
             "brand": "Adidas",
             "price": "80.00",
             "title": "Deerupt",
-            "url": "/product/adidas-originals-deerupt/1181785"
-          },
-          {
-            "image": {
-              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0727/shoe-desktop-0-adidas-originals-deerupt-1179341-04670ce96db4cc1da203cc6895aa85e0.png",
-              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0727/shoe-desktop-0-adidas-originals-deerupt-1179341-04670ce96db4cc1da203cc6895aa85e0.png"
-            },
-            "brand": "Adidas",
-            "price": "80.00",
-            "title": "Deerupt",
-            "url": "/product/adidas-originals-deerupt/1179341"
+            "url": "/product/adidas-originals-deerupt/073028"
           },
           {
             "image": {
