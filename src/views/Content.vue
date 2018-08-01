@@ -3,10 +3,11 @@
     <CloseButton :to="`/${$route.params.gender}`" />
     <div id="content">
       <div
-        v-for="component in anchors"
+        v-for="component in fullpageAnchors"
         :key="component"
         class="section">
         <component
+          v-if="content[component]"
           :is="component"
           :active="section === component"
           :data="content[component]"
@@ -28,6 +29,7 @@ import GetSocial from '@/views/Social.vue';
 import Influencer from '@/views/Influencer.vue';
 import ShoppableVideo from '@/views/ShoppableVideo.vue';
 import SketchFabModel from '@/views/SketchFabModel.vue';
+import ExtraVideo from '@/views/ExtraVideo.vue';
 
 export default {
   name: 'ContentContainer',
@@ -38,6 +40,7 @@ export default {
     Influencer,
     ShoppableVideo,
     SketchFabModel,
+    ExtraVideo,
   },
 
   props: {
@@ -55,10 +58,16 @@ export default {
 
   data() {
     return {
-      anchors: ['sketch-fab-model', 'colourways', 'get-social', 'influencer', 'shoppable-video'],
+      anchors: ['extra-video', 'sketch-fab-model', 'colourways', 'influencer', 'get-social', 'shoppable-video'],
       fullpage: null,
       section: 'sketch-fab-model',
     };
+  },
+
+  computed: {
+    fullpageAnchors() {
+      return this.anchors.filter(anchor => this.content[anchor]);
+    },
   },
 
   mounted() {
@@ -82,7 +91,7 @@ export default {
 
   methods: {
     enableFullpage() {
-      const { anchors } = this;
+      const anchors = this.fullpageAnchors;
 
       this.fullpage = new Fullpage('#content', {
         licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
