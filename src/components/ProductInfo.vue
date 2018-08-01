@@ -1,6 +1,9 @@
 <template>
   <div class="product-info">
     <div class="product-info__title">{{ title }}</div>
+    <div
+      v-if="was"
+      class="product-info__price--was">£{{ was }}</div>
     <div class="product-info__price">£{{ price }}</div>
     <QuickBuy :url="url"/>
   </div>
@@ -18,6 +21,11 @@ export default {
     title: {
       type: String,
       default: '',
+    },
+
+    was: {
+      type: String,
+      default: undefined,
     },
 
     price: {
@@ -53,7 +61,13 @@ export default {
 
 .product-info__price {
   font-weight: 700;
-  margin-bottom: 0.5rem;
+  margin: 0.5rem 0;
+}
+
+.product-info__price--was {
+  margin: 0.5rem 0;
+  text-decoration: line-through;
+  font-size: 0.8rem;
 }
 
 </style>
