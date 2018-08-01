@@ -46,7 +46,7 @@
       </div>
     </Carousel>
 
-    <CarouselArrows>
+    <CarouselArrows :class="{'hide': grid}">
       <div
         :class="{'button-container--grid' : grid}"
         class="button-container"
@@ -200,7 +200,7 @@ export default {
     }
 
     @media only screen and (min-width: 1024px) {
-      flex: 0 0 28%;
+      flex: 0 0 24%;
     }
 
     &:first-child, {
@@ -221,7 +221,7 @@ export default {
 
     /deep/ .franchise-name {
       color: white;
-      margin: 0.5rem 0;
+      margin: 1rem 0;
       font-size: 1.25rem;
       z-index: 2;
 
@@ -391,6 +391,21 @@ export default {
     width: 83%;
     border-color: black;
     border-radius: 3px;
+  }
+}
+
+.chevron-arrows /deep/ {
+  .chevron-arrow-wrap--left,
+  .chevron-arrow-wrap--right {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+  }
+}
+
+.chevron-arrows.hide /deep/ {
+  .chevron-arrow-wrap--left,
+  .chevron-arrow-wrap--right {
+    opacity: 0;
   }
 }
 </style>

@@ -204,7 +204,7 @@ export default {
   }
 
   @media screen and (min-width: 1366px) {
-    top: 91%;
+    top: 102%;
     width: 10%;
     left: 46%;
   }
@@ -234,7 +234,7 @@ export default {
 .franchisePOD {
   color: #33f;
   position: absolute;
-  top: 144%;
+  top: 196%;
   left: 10%;
   background: url(../assets/podpink.svg);
   background-repeat: no-repeat;
@@ -247,7 +247,7 @@ export default {
 
   @media screen and (min-width: 1366px) {
     top: 116%;
-    left: 31%;
+    left: 29%;
     width: 50%;
   }
 }
@@ -257,7 +257,7 @@ export default {
   background: url(../assets/sambarosepinklogo.svg);
   background-repeat: no-repeat;
   position: absolute;
-  top: -26%;
+  top: 28%;
   right: 0;
   height: 100%;
   width: 100%;
@@ -267,7 +267,9 @@ export default {
   }
 
   @media screen and (min-width: 1366px) {
-    top: 40%;
+    top: 20%;
+    left: 20%;
+    width: 64%;
   }
 }
 
@@ -279,25 +281,47 @@ export default {
   font-size: 4em;
 }
 
+.sambaRoseB {
+  width: 45px;
+  @media screen and (min-width: 1366px) { 
+    display: none;
+  }
+}
+
+
+.deeruptCloseB {
+  width: 45px;
+}
+
 .deeruptCloseB,
-.sambaRoseB,
 .allBrandsB {
   @media screen and (min-width: 1366px) {
     display: none;
   }
 }
 
+.sambaRoseW {
+  display: none;
+
+  @media screen and (min-width: 1366px) {
+    display: inline;
+    position: absolute;
+    top: -5%;
+    right: -3%;
+    width: 45px;
+  }
+}
+
 .deeruptCloseW,
-.sambaRoseW,
 .allBrandsW {
   display: none;
 
   @media screen and (min-width: 1366px) {
     display: inline;
     position: absolute;
-    top: -8%;
+    top: -5%;
     right: -4%;
-    width: 11%;
+    width: 45px;
   }
 }
 
@@ -306,12 +330,14 @@ export default {
 }
 
 .podW {
+  width: 45px;
+
   @media screen and (min-width: 1366px) {
     display: inline;
     position: absolute;
-    top: -8%;
+    top: -5%;
     right: -4%;
-    width: 11%;
+    width: 45px;
     color: white;
   }
 }
