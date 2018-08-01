@@ -156,7 +156,11 @@ export default {
   position: absolute;
   top: 92%;
   color: white;
-  left: 44%;
+  left: 32%;
+  
+  @media screen and (min-width: 1366px) { 
+    left: 45%;
+  }
 }
 
 .scroll {
