@@ -200,7 +200,7 @@ export default {
     }
 
     @media only screen and (min-width: 1024px) {
-      flex: 0 0 28%;
+      flex: 0 0 24%;
     }
 
     &:first-child, {
@@ -221,7 +221,7 @@ export default {
 
     /deep/ .franchise-name {
       color: white;
-      margin: 0.5rem 0;
+      margin: 1rem 0;
       font-size: 1.25rem;
       z-index: 2;
 
