@@ -170,13 +170,23 @@
         "products": [
           {
             "image": {
-              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0727/adi-hub0299-1dabf0b61ad219ec9f07531ec657f406.png",
-              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0727/adi-hub0299-1dabf0b61ad219ec9f07531ec657f406.png"
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/adi-hub-068297-f4965ecbd9f0651a9304d38bf63f63b1.png",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/adi-hub-068297-f4965ecbd9f0651a9304d38bf63f63b1.png"
             },
             "brand": "adidas",
             "price": "75",
             "title": "POD",
-            "url": "/product/black-nike-air-force-1-low/047951"
+            "url": "/product/black-adidas-originals-pod-womens/1189078"
+          },
+          {
+            "image": {
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/adi-hub-068299-71bd7c6cbb1e1f2b398c35e80f7f9356.png",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/adi-hub-068299-71bd7c6cbb1e1f2b398c35e80f7f9356.png"
+            },
+            "brand": "adidas",
+            "price": "75",
+            "title": "POD",
+            "url": "/product/grey-adidas-originals-pod-womens/1189081"
           }
         ]
       },
