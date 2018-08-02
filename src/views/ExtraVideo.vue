@@ -10,16 +10,28 @@
         v-else
         v-bind="data.normal"/>
     </div>
+
+      <MouseDown
+        class="scroll" 
+        :height=50 
+        :width=35 
+        :fill="'transparent'" 
+        :stroke="'white'" 
+        :fillButton="'white'" 
+        :strokeButton="'white'">
+      </MouseDown>
   </div>
 </template>
 
 <script>
 import Video from '@/components/Video.vue';
+import MouseDown from '../components/MouseDown.vue';
 
 export default {
   name: 'ShoppableVideo',
   components: {
     Video,
+    MouseDown,
   },
   props: {
     data: {
@@ -37,7 +49,15 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+
+.scroll {
+  position: absolute;
+  bottom: 2%;
+  text-align: center;
+}
+
+
 iframe {
   width: 100%;
   height: 90vh;
