@@ -72,7 +72,9 @@
           <rect class="cls-1" x="0.5" y="0.5" width="28.12" height="44.43" rx="14.06" ry="14.06"/>
           <rect class="cls-2" x="12.45" y="9.21" width="4.23" height="6.68" rx="2.11" ry="2.11"/></g></g></svg>
     </div>
-      <p class="scrolltext">SCROLL TO VIEW MORE</p>
+    <div class="scrolltext">
+      <p>SCROLL TO VIEW MORE</p>
+    </div>
   </div>
 </template>
 
@@ -156,15 +158,6 @@ export default {
   position: absolute;
   top: 92%;
   color: white;
-  left: 32%;
-
-  @media screen and (min-width: 765px) {
-    left: 40%;
-  }
-  
-  @media screen and (min-width: 1366px) {
-    left: 45%;
-  }
 }
 
 .scroll {
