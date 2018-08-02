@@ -66,7 +66,6 @@
       </div>
     </div>
     <div class="scroll">
-      <!-- <img src="../assets/MOUSE_ICON_WHITE.svg" class="scrollWhite"> -->
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29.12 45.43" width="35px" height="50px">
         <g id="Layer_2" data-name="Layer 2"><g id="Layer_3" data-name="Layer 3">
           <rect class="cls-1" x="0.5" y="0.5" width="28.12" height="44.43" rx="14.06" ry="14.06"/>
@@ -82,6 +81,7 @@
 import ButtonClose from '@/components/ButtonClose.vue';
 import ProductInfo from '@/components/ProductInfo.vue';
 import Logo from '@/components/AdidasLogo.vue';
+
 
 export default {
   components: {
