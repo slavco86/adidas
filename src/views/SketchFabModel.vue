@@ -3,8 +3,8 @@
     :style="background"
     :class="{ background : background, 'hide-tint': $route.name === '3d-view' }"
     class="content-slide">
-    <Logo :color="logoColor" />
     <div class="content-slide__inner">
+      <Logo :color="logoColor" />
       <router-link
         v-if="$route.name === 'content'"
         class="transitional-page"
@@ -171,7 +171,9 @@ iframe {
   display: flex;
   flex-direction: column;
   width: 100%;
+  height: 100%;
   align-items: center;
+  justify-content: center;
   overflow: hidden;
 }
 
