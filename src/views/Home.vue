@@ -321,7 +321,7 @@ export default {
   transition: transform 0.5s ease-in-out;
 
   @media only screen and (min-width: 1024px) {
-    padding: 0 15%;
+    padding: 0 18%;
   }
 }
 

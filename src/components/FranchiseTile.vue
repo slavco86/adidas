@@ -99,7 +99,7 @@ img {
   transition-timing-function: ease-out;
   bottom: -20px;
   left: 20px;
-  font-size: 3.5rem;
+  font-size: 3.2rem;
   font-weight: 900;
   text-align: left;
   line-height: 45px;
