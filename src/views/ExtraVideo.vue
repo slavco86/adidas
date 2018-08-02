@@ -9,17 +9,16 @@
       <Video
         v-else
         v-bind="data.normal"/>
-    </div>
-
-      <MouseDown
-        class="scroll" 
-        :height=50 
-        :width=35 
-        :fill="'transparent'" 
-        :stroke="'white'" 
-        :fillButton="'white'" 
+        <MouseDown
+        class="scroll"
+        :height=50
+        :width=35
+        :fill="'transparent'"
+        :stroke="'white'"
+        :fillButton="'white'"
         :strokeButton="'white'">
       </MouseDown>
+    </div>
   </div>
 </template>
 
@@ -53,7 +52,7 @@ export default {
 
 .scroll {
   position: absolute;
-  bottom: 2%;
+  bottom: 10%;
   text-align: center;
 }
 
@@ -75,5 +74,6 @@ iframe {
   flex-direction: column;
   padding: 1rem;
   width: 100%;
+  align-items: center;
 }
 </style>

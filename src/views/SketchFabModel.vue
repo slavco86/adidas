@@ -64,15 +64,15 @@
           mozallowfullscreen="true"
           webkitallowfullscreen="true"/>
       </div>
-    </div>
-    <div class="scroll">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29.12 45.43" width="35px" height="50px">
-        <g id="Layer_2" data-name="Layer 2"><g id="Layer_3" data-name="Layer 3">
-          <rect class="cls-1" x="0.5" y="0.5" width="28.12" height="44.43" rx="14.06" ry="14.06"/>
-          <rect class="cls-2" x="12.45" y="9.21" width="4.23" height="6.68" rx="2.11" ry="2.11"/></g></g></svg>
-    </div>
-    <div class="scrolltext">
-      <p>SCROLL TO VIEW MORE</p>
+      <MouseDown
+        class="scroll"
+        :height=50
+        :width=35
+        :fill="'transparent'"
+        :stroke="'white'"
+        :fillButton="'white'"
+        :strokeButton="'white'">
+      </MouseDown>
     </div>
   </div>
 </template>
@@ -81,6 +81,7 @@
 import ButtonClose from '@/components/ButtonClose.vue';
 import ProductInfo from '@/components/ProductInfo.vue';
 import Logo from '@/components/AdidasLogo.vue';
+import MouseDown from '../components/MouseDown.vue';
 
 
 export default {
@@ -88,6 +89,7 @@ export default {
     ButtonClose,
     ProductInfo,
     Logo,
+    MouseDown,
   },
 
   props: {
@@ -141,47 +143,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.samba .content-slide .scroll {
-  svg {
-    stroke: black;
-    .cls-2 {
-      fill: black;
-    }
-  }
-}
-
-.samba .content-slide .scrolltext {
-  color: black;
-}
-
-.scrolltext {
-  position: absolute;
-  top: 92%;
-  color: white;
-}
-
-.scroll {
-  position: absolute;
-  bottom: 7%;
-}
-
-.scroll svg {
-  fill: transparent;
-  stroke: white;
-}
-
-.scroll svg .cls-2 {
-  fill: white;
-}
-
-
-
-.scrollWhite {
-  position: absolute;
-  width: 28px;
-  bottom: 0%;
-  right: 50%;
-}
 
 iframe {
   width: 100%;
@@ -210,6 +171,7 @@ iframe {
   display: flex;
   flex-direction: column;
   width: 100%;
+  align-items: center;
   overflow: hidden;
 }
 
@@ -336,5 +298,13 @@ iframe {
 
 .is-content.deerupt .content-slide /deep/ .close path {
   stroke: white;
+}
+
+.scroll {
+  text-align: center;
+}
+
+.samba .scroll /deep/ .scrolltext {
+  color: black;
 }
 </style>
