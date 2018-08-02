@@ -109,10 +109,14 @@ export default {
 
 <style lang="scss" scoped>
 .influencer-section {
-  height: calc(100vh - 90px);
+  height: 90vh;
   width: 100%;
   overflow: hidden;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  // align-items: center;
+  justify-content: space-around;
 
   /deep/ .titles {
     top: 1rem;
@@ -124,21 +128,17 @@ export default {
   position: absolute;
   color: #666;
   opacity: 0.2;
-  height: auto;
+  height: 100%;
+  width: 100%;
   font-weight: 900;
-  top: 60px;
   white-space: nowrap;
   user-select: none;
-  left: -5px;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   @media only screen and (min-width: 765px) {
     font-size: 16rem;
-    height: 100%;
-    width: 100%;
-    top: 15rem;
-    left: -25px;
-    text-align: center;
   }
 }
 
@@ -170,27 +170,13 @@ export default {
   }
 }
 
-.influencer-carousel {
-  // margin-top: 3rem;
-
-  @media only screen and (min-width: 765px) {
-    margin-top: calc(15rem - (2rem + 20%));
-  }
-}
-
-.influencer-section /deep/ .chevron-arrows {
-  position: absolute;
-  bottom: 0;
-}
-
 .influencer-carousel /deep/ .swiper-container {
   position: relative;
-  top: 3rem;
   padding-top: 2rem;
-  padding-bottom: 7rem;
+  padding-bottom: 1rem;
+  overflow: visible;
 
   @media only screen and (min-width: 765px) {
-    top: 18rem;
   }
 }
 
