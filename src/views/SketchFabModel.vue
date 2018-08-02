@@ -65,6 +65,7 @@
           webkitallowfullscreen="true"/>
       </div>
       <MouseDown
+        v-if="this.$route.name !== '3d-view'"
         class="scroll"
         :height=50
         :width=35
