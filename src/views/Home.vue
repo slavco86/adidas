@@ -98,7 +98,8 @@ export default {
     swiperOptions() {
       const desktop = this.width > 765;
       const slidesPerView = desktop ? 2 : 1.2;
-      const spaceBetween = desktop ? -220 : 15;
+      const spaceBetween = this.spaceBetween;
+
       return {
         parallax: true,
         centeredSlides: true,
@@ -112,6 +113,16 @@ export default {
           nextEl: '.chevron-arrow-wrap--right',
         },
       };
+    },
+
+    spaceBetween() {
+      if (this.width < 1024) {
+        if (this.width < 765) {
+          return 15;
+        }
+        return 55;
+      }
+      return -220;
     },
 
     logoColor() {
@@ -147,19 +158,14 @@ export default {
 
 <style lang="scss" scoped>
 .home {
-  height: 100vh;
+  margin-top: 50px;
+  min-height: calc(100vh - 50px);
   text-align: center;
 
-  @media only screen and (min-width: 1024px) {
+  @media only screen and (min-width: 765px) {
     height: calc(100vh - 202px);
+    margin-top: 0;
   }
-}
-
-@media screen and (-webkit-min-device-pixel-ratio:0) { 
-  .home {
-    margin-top: 50px; 
-    min-height: calc(100vh - 50px);
-  } 
 }
 
 .grid-view {
@@ -305,7 +311,7 @@ export default {
   transition: transform 1s, opacity 1s 0.2s;
 
   @media only screen and (min-width: 765px) and (max-width: 1024px) {
-    margin-top: 10rem;
+    margin-top: 5rem;
   }
 
   &--hidden {

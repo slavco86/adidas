@@ -83,7 +83,7 @@ export default {
     swiperOptions() {
       const desktop = this.width > 765;
       const slidesPerView = desktop ? 1.8 : 1.2;
-      const spaceBetween = desktop ? 0 : 15;
+      const spaceBetween = this.spaceBetween;
       return {
         parallax: true,
         centeredSlides: true,
@@ -95,6 +95,16 @@ export default {
           nextEl: '.chevron-arrow-wrap--right',
         },
       };
+    },
+
+    spaceBetween() {
+      if (this.width < 1024) {
+        if (this.width < 765) {
+          return 15;
+        }
+        return 55;
+      }
+      return 0;
     },
   },
   methods: {
