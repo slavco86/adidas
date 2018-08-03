@@ -222,7 +222,7 @@ export default {
   line-height: 24px;
   z-index: -1;
 
-  @media only screen and (min-width: 765px) {
+  @media only screen and (min-width: 1024px) {
     padding: 1rem;
     top: 35%;
     right: -300px;
@@ -245,7 +245,7 @@ export default {
 .name {
   display: none;
 
-  @media only screen and (min-width: 765px) {
+  @media only screen and (min-width: 1024px) {
     display: block;
     position: absolute;
     transition-timing-function: ease-out;
