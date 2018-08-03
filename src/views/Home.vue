@@ -155,6 +155,12 @@ export default {
   }
 }
 
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+  .home { 
+    min-height: calc(100vh - 50px);
+  } 
+}
+
 .grid-view {
   display: flex;
   flex-flow: row wrap;
