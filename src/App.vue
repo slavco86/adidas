@@ -71,13 +71,13 @@ $mobile-header-height: 50px;
 .category {
   background-color: #222;
   color: #fff;
-  margin-top: $mobile-header-height;
+  // top: $mobile-header-height;
   min-height: calc(100vh - #{$mobile-header-height});
   transition: background-color 1s;
 
   @media only screen and (min-width: 765px) {
     min-height: calc(100vh - #{$desktop-header-height});
-    margin-top: $desktop-header-height;
+    top: $desktop-header-height;
   }
 }
 
@@ -90,9 +90,13 @@ $mobile-header-height: 50px;
   left: 0;
   position: absolute;
   min-height: 100vh;
-  top: 0;
+  top: -34px;
   width: 100%;
   z-index: 1;
   margin-top: 0;
+
+  @media only screen and (min-width: 765px) {
+    top: 0;
+  }
 }
 </style>
