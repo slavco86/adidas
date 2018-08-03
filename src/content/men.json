@@ -70,34 +70,41 @@
       } ,
       "influencer":
         {
-          "name": "Ryan Hildew",
           "products": [
             {
+              "handle": "@ryxn_dh",
+              "quote": "Every day camo and POD",
               "url": "/product/blue-adidas-originals-pod/1188720",
               "image": {
-                "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0726/750x750--0028-27707-art-adidas-jd-pod-facebook-instagram-1500x1500px5-a210a1b68984dfde8694a71589a6bb8e.jpg",
-                "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0726/750x750--0028-27707-art-adidas-jd-pod-facebook-instagram-1500x1500px5-a210a1b68984dfde8694a71589a6bb8e.jpg"
+                "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0803/ryan-hildrew-568ee84599451a3d9c1d5d72e7ee6525.jpg",
+                "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0803/ryan-hildrew-568ee84599451a3d9c1d5d72e7ee6525.jpg"
               }
             },
             {
+              "handle": "@cedric_castex",
+              "quote": "All the vibes",
               "url": "/product/clay-adidas-originals-pod/1188721",
               "image": {
-                "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0726/750x750--0030-27707-art-adidas-jd-pod-facebook-instagram-1500x1500px2-1dad4e44c7f036741bc6c80d6411d252.jpg",
-                "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0726/750x750--0030-27707-art-adidas-jd-pod-facebook-instagram-1500x1500px2-1dad4e44c7f036741bc6c80d6411d252.jpg"
+                "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0803/cedric-castex-1543d47117da3fc7fce3bc5e1ddb99f1.jpg",
+                "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0803/cedric-castex-1543d47117da3fc7fce3bc5e1ddb99f1.jpg"
               }
             },
             {
+              "handle": "@lixmheeley",
+              "quote": "The comfiest shoes I own",
               "url": "/product/clay-adidas-originals-pod/1188721",
               "image": {
-                "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0726/750x750--0029-27707-art-adidas-jd-pod-facebook-instagram-1500x1500px3-98c913d492f6b363227a5aeeceb20e48.jpg",
-                "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0726/750x750--0029-27707-art-adidas-jd-pod-facebook-instagram-1500x1500px3-98c913d492f6b363227a5aeeceb20e48.jpg"
+                "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0803/liam-heeley-f8f9383e87fd7665b1e3820aef8a6ee6.jpg",
+                "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0803/liam-heeley-f8f9383e87fd7665b1e3820aef8a6ee6.jpg"
               }
             },
             {
+              "handle": "@kidkaram123",
+              "quote": "Great alone, better together",
               "url": "product/black-adidas-originals-pod-womens/1189124",
               "image": {
-                "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0726/750x750--0026-27707-art-adidas-jd-pod-facebook-instagram-1500x1500px15-d3bba127ade2c374094ff71cf50042ef.jpg",
-                "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0726/750x750--0026-27707-art-adidas-jd-pod-facebook-instagram-1500x1500px15-d3bba127ade2c374094ff71cf50042ef.jpg"
+                "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0803/kid-karam-6cd5bbb2a7bcad034917040ad426accd.jpg",
+                "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0803/kid-karam-6cd5bbb2a7bcad034917040ad426accd.jpg"
               }
             }
           ]
