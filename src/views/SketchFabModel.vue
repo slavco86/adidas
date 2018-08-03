@@ -115,7 +115,7 @@ export default {
     },
 
     modelSrc() {
-      return `https://sketchfab.com/models/${this.modelId}/embed?autospin=0.2&amp;autostart=1&amp;camera=0&amp;preload=1&amp;transparent=1`;
+      return `https://sketchfab.com/models/${this.modelId}/embed?autospin=0.2&amp;autostart=1&amp;camera=0&amp;preload=1&amp;transparent=1;ui_infos=0`;
     },
 
     logoColor() {
