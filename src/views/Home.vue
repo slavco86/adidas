@@ -156,7 +156,8 @@ export default {
 }
 
 @media screen and (-webkit-min-device-pixel-ratio:0) { 
-  .home { 
+  .home {
+    margin-top: 50px; 
     min-height: calc(100vh - 50px);
   } 
 }
