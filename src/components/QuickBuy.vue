@@ -1,9 +1,9 @@
 <template>
   <Button
     :data-quickview-path="quickBuyPath"
-    :data-product-sku="sku"
+    :data-productsku="sku"
     :data-ip-name="sku"
-    class="cta quickView">
+    class="cta quickView quickBuy">
     <BasketLogo :color="color"/>
   </Button>
 </template>

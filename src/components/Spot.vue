@@ -1,5 +1,5 @@
 <template>
-  <a
+  <div
     :href="url"
     class="ga-ip spot">
     <picture v-if="image">
@@ -12,7 +12,7 @@
         alt="">
     </picture>
     <slot/>
-  </a>
+  </div>
 </template>
 
 <script>
