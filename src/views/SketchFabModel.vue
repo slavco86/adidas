@@ -194,7 +194,6 @@ iframe {
 .transitional-page__img {
   max-height: 80vh;
   max-width: 100%;
-  min-height: 100%;
   opacity: 0;
   transform: translate3d(0, -20%, 0);
   transition: opacity 0.2s ease-in, transform 0.3s ease-in;

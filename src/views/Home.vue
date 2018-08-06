@@ -29,7 +29,7 @@
         v-for="slide in franchises"
         :key="slide.franchise"
         :tile="slide"
-        class="grid-view__product" />
+        class="grid-view__product"/>
     </div>
 
     <Carousel
@@ -37,12 +37,11 @@
       :slides="franchises"
       :options="swiperOptions"
       :class="{'main-carousel--hidden': grid}"
-      class="main-carousel"
-      @destroy="destroyCarousel">
+      class="main-carousel">
       <div slot-scope="{slide}">
         <FranchiseTile
           :tile="slide"
-          @click.native="destroyCarousel"/>
+          @destroy="destroyCarousel($event)"/>
       </div>
     </Carousel>
 
@@ -149,8 +148,11 @@ export default {
       this.$refs.carousel.$children[0].$children[0].swiper.slideTo(0);
     },
 
-    destroyCarousel() {
-      this.$refs.carousel.$children[0].$children[0].swiper.destroy(false, false);
+    destroyCarousel(e) {
+      if (!e) {
+        this.$refs.carousel.$children[0].$children[0].swiper.destroy(false, false);
+      }
+      return false;
     },
   },
 };

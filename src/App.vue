@@ -94,6 +94,7 @@ $mobile-header-height: 50px;
   width: 100%;
   z-index: 1;
   margin-top: 0;
+  transition: top 1s;
 
   @media only screen and (min-width: 765px) {
     top: 0;

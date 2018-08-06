@@ -198,10 +198,6 @@ export default {
   margin-top: 0;
   transform: translate3d(0, 0, 0);
   transition: transform 0.5s ease-in-out;
-
-  @media only screen and (min-width: 1024px) {
-    // padding: 0 12.5%;
-  }
 }
 
 .influencer-carousel /deep/ .swiper-slide-active {

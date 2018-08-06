@@ -2,7 +2,8 @@
   <router-link
     :to="href"
     :class="{ 'spot--odd' : odd }"
-    class="ga-ip spot">
+    class="ga-ip spot"
+    @click.native="destroyCarousel">
 
     <div class="overlay-container">
       <div class="overlay"/>
@@ -78,6 +79,12 @@ export default {
     displayCountDown() {
       return ((Math.trunc(Date.parse(this.tile.launch) / 1000) -
       Math.trunc((new Date()).getTime() / 1000)) < 604800);
+    },
+  },
+
+  methods: {
+    destroyCarousel() {
+      this.$emit('destroy', this.hasCountdown);
     },
   },
 };
