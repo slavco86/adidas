@@ -34,7 +34,7 @@
     "babel-core": "7.0.0-bridge.0",
     "babel-jest": "^23.0.1",
     "node-sass": "^4.9.0",
-    "s3-vue-deploy": "0.0.5",
+    "s3-vue-deploy": "0.0.6",
     "sass-loader": "^7.0.1",
     "stylelint": "9.2.1",
     "stylelint-config-standard": "18.2.0",
