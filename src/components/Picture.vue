@@ -18,6 +18,7 @@ Vue.use(VueLazyload, {
 });
 
 export default {
+  name: 'Picture',
   props: {
     image: {
       type: [Object, String],

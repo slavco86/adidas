@@ -1,18 +1,60 @@
 <template>
-  <transition name="modal">
+  <transition
+    v-if="display"
+    name="modal">
     <div class="modal-mask">
-      <div class="modal-container">
-        Hello World
+      <div class="close" />
+      <div
+        :style="backgroundStyle"
+        class="modal-container">
+        <component
+          v-for="(item, key) in content"
+          :key="key"
+          :is="item.component"
+          v-bind="item.content"/>
       </div>
     </div>
   </transition>
 </template>
 
 <script>
+import Picture from '@/components/Picture.vue';
+import Titles from '@/components/Titles.vue';
 
 export default {
   name: 'Modal',
+
+  components: {
+    Picture,
+    Titles,
+
+  },
+
+  props: {
+    background: {
+      type: String,
+      default: '#fff',
+    },
+    content: {
+      type: Array,
+      default: () => [],
+    },
+    display: {
+      type: Boolean,
+      default: false,
+    },
+  },
+
+  computed: {
+    backgroundStyle() {
+      return (this.background[0] === '#')
+        ? { backgroundColor: this.background }
+        : { backgroundImage: `url(${this.background})` };
+    },
+  },
 };
+
+
 </script>
 
 <style lang="scss" scoped>
@@ -45,5 +87,15 @@ export default {
   background-size: cover;
   background-position: center center;
   text-align: center;
+}
+
+.close {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: blue;
 }
 </style>
