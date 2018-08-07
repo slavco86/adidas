@@ -8,7 +8,7 @@ const factory = (data = {}, props = {}) =>
   });
 
 describe('Modal', () => {
-  it('should have a div with class og modal-mask', () => {
+  it('should change background color of modal-container when provided via props', () => {
     const wrapper = factory();
     expect(wrapper.find('.modal-mask').exists()).toBe(true);
   });
