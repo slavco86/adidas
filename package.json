@@ -3,11 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "test:unit": "vue-cli-service test:unit --coverage",
+    "test:watch": "vue-cli-service test:unit --watch",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint && npm run lint:css",
     "lint:css": "stylelint \"**/*.vue\" --fix",
-    "test:unit": "vue-cli-service test:unit",
     "publish:uat": "release uat",
     "publish:live": "release live",
     "print:code": "release code"

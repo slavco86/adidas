@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import SketchFabModel from '@/views/SketchFabModel.vue';
+import Modal from '@/components/Modal.vue';
 import Home from './views/Home.vue';
 import Men from './content/men.json';
 import Women from './content/women.json';
@@ -26,6 +27,11 @@ export default new Router({
     {
       path: '/',
       redirect: '/men',
+    },
+    {
+      path: '/modal',
+      name: 'modal',
+      component: Modal,
     },
     {
       path: '/:gender',
