@@ -71,9 +71,9 @@ $mobile-header-height: 50px;
 .category {
   background-color: #222;
   color: #fff;
-  // top: $mobile-header-height;
+  top: 0;
   min-height: calc(100vh - #{$mobile-header-height});
-  transition: background-color 1s;
+  transition: background-color 1s, top 1s;
 
   @media only screen and (min-width: 765px) {
     min-height: calc(100vh - #{$desktop-header-height});
