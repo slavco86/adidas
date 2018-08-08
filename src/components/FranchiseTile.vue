@@ -119,6 +119,7 @@ img {
 
 .countdown {
   display: flex;
+  color: white;
   margin: 0 auto;
   justify-content: space-evenly;
   position: absolute;

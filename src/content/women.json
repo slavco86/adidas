@@ -1,15 +1,27 @@
 [
   {
     "franchise": "Falcon",
-    "launch": "04:29 PM 8 August 2018",
+    "launch": "11:00 PM 8 August 2018",
     "image": {
       "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0808/750x750-0003-142a1375-ig-4f33da95459e0eee4014c38255096a91.jpg",
       "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0808/750x750-0003-142a1375-ig-4f33da95459e0eee4014c38255096a91.jpg"
     },
     "content": {
       "sketch-fab-model": {
-        "id": "db5648cd0ea94121a1517e8ff8efddda",
+        "id": "2c1c8bfad2fa4daf9eb4134ad05c3b19",
         "background": "#dab2b8"
+      },
+      "shoppable-video": {
+        "normal": {
+          "image": {
+            "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0808/1920x1080-falconjpg-1266b08550f54b880da4558b87027aa2.jpg",
+            "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0808/750x1334-falcon-da6f1fd6431c53e99a61cb36a7cec3d3.jpg"
+          },
+        "video": {
+          "desktop": "http://i1.adis.ws/v/jpl/Adidas_Falcon_wide",
+          "mobile": "http://i1.adis.ws/v/jpl/Adidas_Falcon_Story_1"
+          }
+        }
       },
       "colourways": {
         "hotspots": [
@@ -229,8 +241,8 @@
         "video": {
           "desktop": "http://i1.adis.ws/v/jpl/SAMBA_MAIN",
           "mobile": "http://i1.adis.ws/v/jpl/SAMBA_STORY"
+          }
         }
-      }
       },
       "influencerVideo": "url",
       "get-social": {
