@@ -11,16 +11,33 @@
         "background": "#f3d8c3"
       },
       "colourways": {
-        "hotspots": [
-          {
-            "title": "",
-            "subtext": "Takes the defiant attitude of the original Samba and reimagines it in an all-new silhouette. Inspired by its terrace origin."
-          },
-          {
-            "title": "",
-            "subtext": "Reimagines adidas Originals D.N.A. with a new gum platform sole and intricate t-toe detailing."
-          }
-        ],
+        "modal": {
+          "template": [
+            {
+              "component": "Picture",
+              "content": {
+                "image": "//jdsports-client-resources.co.uk/jdsports-client-resources/page/adidas-hub/img/sambarosepinklogo.6ccc78ac.svg"
+              }
+            },
+            {
+              "component": "titles"
+            },
+            {
+              "component": "Picture",
+              "content": {
+                "image": "//jdsports-client-resources.co.uk/jdsports-client-resources/page/adidas-hub/img/adidas-logo.fe4abdae.svg"
+              }
+            }
+          ],
+          "content": [
+            {
+              "subtext": "Takes the defiant attitude of the original Samba and reimagines it in an all-new silhouette. Inspired by its terrace origin."
+            },
+            {
+              "subtext": "Reimagines adidas Originals D.N.A. with a new gum platform sole and intricate t-toe detailing."
+            }
+          ]
+        },
         "products": [
           {
             "image": {
@@ -163,20 +180,35 @@
         "background": "#f5b2cf"
       },
       "colourways": {
-        "hotspots": [
-          {
-            "title": "BOOST HEEL",
-            "subtext": "Leading comfort technology repurposed within a podular heel element, bringing the full BOOST sensation to every step."
-          },
-          {
-            "title": "POINT OF DEFLECTION BRIDGE",
-            "subtext": "Inspired by our Torsion System technology, the Point of Deflection Bridge brings stability and flex to the podular sole for a natural ride."
-          },
-          {
-            "title": "HIGH REBOUND EVA FOREFOOT",
-            "subtext": "High Rebound EVA finish brings soft + responsive cushioning to the front, means supreme comfort for your whole foot."
-          }
-        ],
+        "modal": {
+          "background": "#33f",
+          "textColor": "#ffc0cb",
+          "template": [
+              {
+                "component": "titles"
+              },
+              {
+                "component": "Picture",
+                "content": {
+                  "image": "//jdsports-client-resources.co.uk/jdsports-client-resources/page/adidas-hub/img/podpink.291af0aa.svg"
+                }
+              }
+          ],
+          "content": [
+            {
+              "headline": "Boost Heel",
+              "subtext": "Leading comfort technology repurposed within a podular heel element, bringing the full BOOST sensation to every step."
+            },
+            {
+              "headline": "Point of Deflection Bridge",
+              "subtext": "Inspired by our Torsion System technology, the Point of Deflection Bridge brings stability and flex to the podular sole for a natural ride."
+            },
+            {
+              "headline": "High Rebound EVA Forefoot",
+              "subtext": "High Rebound EVA finish brings soft + responsive cushioning to the front, means supreme comfort for your whole foot."
+            }
+          ]
+        },
         "products": [
           {
             "image": {
@@ -305,16 +337,25 @@
         "background": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0726/deerupt-3d-scan-bg-02-a9d7e2070cac95c2eff022357f53728d.png"
       },
       "colourways": {
-        "hotspots": [
-          {
-            "title": "DEERUPT",
-            "subtext": "DISRUPTIVELY SIMPLE\n\nA singular design philosophy from the adidas archives becomes wearable art as adidas Originals progressesthe grid to its most fashionable form."
-          },
-          {
-            "title": "DEERUPT",
-            "subtext": "DISRUPTIVELY SIMPLE\n\nA silhouette becomes the unexpected. Comfort becomes the unprecedented. Fit becomes an experience."
-          }
-        ],
+        "modal": {
+          "background": "//jdsports-client-resources.co.uk/jdsports-client-resources/page/adidas-hub/img/swdesktop.d74f091c.png",
+          "textColor": "#000",
+          "template": [
+              {
+                "component": "titles"
+              }
+          ],
+          "content": [
+            {
+              "headline": "DEERUPT",
+              "subtext": "DISRUPTIVELY SIMPLE\n\nA singular design philosophy from the adidas archives becomes wearable art."
+            },
+            {
+              "headline": "DEERUPT",
+              "subtext": "DISRUPTIVELY SIMPLE\n\nA silhouette becomes the unexpected. Comfort becomes the unprecedented. Fit becomes an experience.A silhouette becomes the unexpected. Comfort becomes the unprecedented. Fit becomes an experience."
+            }
+          ]
+        },
         "products": [
           {
             "image": {

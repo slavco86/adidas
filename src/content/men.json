@@ -197,16 +197,25 @@
         "background": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0726/deerupt-3d-scan-bg-02-a9d7e2070cac95c2eff022357f53728d.png"
       },
       "colourways": {
-        "hotspots": [
-          {
-            "title": "DEERUPT",
-            "subtext": "DISRUPTIVELY SIMPLE\n\nA singular design philosophy from the adidas archives becomes wearable art."
-          },
-          {
-            "title": "DEERUPT",
-            "subtext": "DISRUPTIVELY SIMPLE\n\nA silhouette becomes the unexpected. Comfort becomes the unprecedented. Fit becomes an experience."
-          }
-        ],
+        "modal": {
+          "background": "//jdsports-client-resources.co.uk/jdsports-client-resources/page/adidas-hub/img/swdesktop.d74f091c.png",
+          "textColor": "#000",
+          "template": [
+              {
+                "component": "titles"
+              }
+          ],
+          "content": [
+            {
+              "headline": "DEERUPT",
+              "subtext": "DISRUPTIVELY SIMPLE\n\nA singular design philosophy from the adidas archives becomes wearable art."
+            },
+            {
+              "headline": "DEERUPT",
+              "subtext": "DISRUPTIVELY SIMPLE\n\nA silhouette becomes the unexpected. Comfort becomes the unprecedented. Fit becomes an experience.A silhouette becomes the unexpected. Comfort becomes the unprecedented. Fit becomes an experience."
+            }
+          ]
+        },
         "products": [
           {
             "image": {
