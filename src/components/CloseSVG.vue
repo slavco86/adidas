@@ -1,0 +1,7 @@
+<template>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 45"><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><circle cx="22.5" cy="22.5" r="22" fill="#fff" stroke="#fff" stroke-miterlimit="10"/><path d="M16.46 28.54l12.08-12.08M28.54 28.54L16.46 16.46" class="cls-2"/></g></g>
+  </svg>
+</template>
+
+<style>.cls-2{stroke-miterlimit:10;fill:none;stroke:#000}</style>
+

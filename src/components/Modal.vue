@@ -3,9 +3,9 @@
     v-if="display"
     name="modal">
     <div class="modal-mask">
-      <div
+      <CloseSVG
         class="close"
-        @click="closeModal"/>
+        @click.native="closeModal"/>
       <div
         :style="inlineStyles"
         class="modal-container">
@@ -22,6 +22,7 @@
 <script>
 import Picture from '@/components/Picture.vue';
 import Titles from '@/components/Titles.vue';
+import CloseSVG from '@/components/CloseSVG.vue';
 
 export default {
   name: 'Modal',
@@ -29,6 +30,7 @@ export default {
   components: {
     Picture,
     Titles,
+    CloseSVG,
 
   },
 
