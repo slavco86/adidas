@@ -15,19 +15,19 @@ const factory = (data = {}, props = {}) =>
 describe('Modal', () => {
   it('should display when display prop set to true', () => {
     const wrapper = factory();
-    expect(wrapper.find('.modal-mask').exists()).toBe(true);
+    expect(wrapper.find('.modal').exists()).toBe(true);
     wrapper.setProps({
       display: false,
     });
     expect(wrapper.isEmpty()).toBe(true);
   });
 
-  it('should change background color of modal-container when provided via props', () => {
+  it('should change background color of modal__content when provided via props', () => {
     const wrapper = factory({}, {
       background: '#f00',
     });
 
-    expect(wrapper.find('.modal-container').attributes().style).toContain('background: rgb(255, 0, 0);');
+    expect(wrapper.find('.modal__content').attributes().style).toContain('background: rgb(255, 0, 0);');
   });
 
   it('should set backgournd image instead of colour if provide via props', () => {
@@ -35,7 +35,7 @@ describe('Modal', () => {
       background: '/test.jpg',
     });
 
-    expect(wrapper.find('.modal-container').attributes().style).toContain('background: url(/test.jpg);');
+    expect(wrapper.find('.modal__content').attributes().style).toContain('background: url(/test.jpg);');
   });
 
   it('should accept array of objects and render content', () => {
@@ -56,7 +56,7 @@ describe('Modal', () => {
 
     expect(wrapper.vm.content.length).toBe(2);
 
-    const content = wrapper.findAll('.modal-container > *:not(.close)');
+    const content = wrapper.findAll('.modal__content > *:not(.close)');
 
     expect(content.length).toBe(2);
     expect(content.at(0).contains(Picture)).toBe(true);
@@ -81,7 +81,7 @@ describe('Modal', () => {
 
     expect(wrapper.vm.content.length).toBe(2);
 
-    const content = wrapper.findAll('.modal-container > *:not(.close)');
+    const content = wrapper.findAll('.modal__content > *:not(.close)');
 
     expect(content.length).toBe(2);
     expect(content.at(0).contains(Titles)).toBe(true);
@@ -90,7 +90,7 @@ describe('Modal', () => {
 
   it('close button should emit a close event on click', () => {
     const wrapper = factory();
-    const closeBtn = wrapper.findAll('.close');
+    const closeBtn = wrapper.findAll('.modal__wrapper__close');
     closeBtn.trigger('click');
 
     expect(closeBtn.exists()).toBe(true);
@@ -102,6 +102,6 @@ describe('Modal', () => {
       textColor: '#f00',
     });
 
-    expect(wrapper.find('.modal-container').attributes().style).toContain('color: rgb(255, 0, 0)');
+    expect(wrapper.find('.modal__content').attributes().style).toContain('color: rgb(255, 0, 0)');
   });
 });

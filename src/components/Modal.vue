@@ -2,19 +2,21 @@
   <transition
     v-if="display"
     name="modal">
-    <div class="modal-mask">
-      <div
-        :style="inlineStyles"
-        class="modal-container">
+    <div class="modal">
+      <div class="modal__wrapper">
         <CloseBtn
           :invert="true"
-          class="close"
+          class="modal__wrapper__close"
           @click.native="closeModal"/>
-        <component
-          v-for="(item, key) in content"
-          :key="key"
-          :is="item.component"
-          v-bind="item.content"/>
+        <div
+          :style="inlineStyles"
+          class="modal__content">
+          <component
+            v-for="(item, key) in content"
+            :key="key"
+            :is="item.component"
+            v-bind="item.content"/>
+        </div>
       </div>
     </div>
   </transition>
@@ -77,26 +79,29 @@ export default {
     },
   },
 };
-
-
 </script>
 
 <style lang="scss" scoped>
-
-.modal-mask {
-  position: absolute;
-  z-index: 9998;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+.modal {
+  align-items: center;
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
+  height: 100%;
   justify-content: center;
-  align-items: center;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: opacity 0.3s ease;
+  width: 100%;
+  z-index: 9998;
 }
 
-.modal-container {
+.modal__wrapper {
+  max-height: 530px;
+  max-width: 710px;
+}
+
+.modal__content {
   -webkit-overflow-scrolling: touch;
   align-items: center;
   background-color: #fff;
@@ -108,19 +113,34 @@ export default {
   color: #000;
   display: flex;
   flex-direction: column;
-  height: 100%;
-  justify-content: flex-start;
   margin: 0 auto;
-  max-height: 580px;
-  max-width: 830px;
   overflow-y: auto;
-  padding: 1rem;
+  padding: 3rem 1rem;
   text-align: center;
+  transition: transform 0.3s ease;
+  transform: scale(1);
   width: 100%;
+}
+
+.modal__wrapper__close {
+  border-radius: 50%;
+  cursor: pointer;
+  height: 50px;
+  position: absolute;
+  right: 5%;
+  top: 5%;
+  width: 50px;
+  z-index: 2;
+
+  @media screen and (min-width: 765px) {
+    right: -25px;
+    top: -25px;
+  }
 }
 
 .titles /deep/ {
   max-width: 550px;
+  margin: 2rem 0;
 
   .title1 {
     font-size: 2rem;
@@ -128,9 +148,12 @@ export default {
 
   .title2,
   .title2 p {
+    font-size: 1rem;
+  }
+
+  .title2 p {
     width: 100%;
     word-break: break-word;
-    font-size: 1.25rem;
     line-height: 1.5;
 
     &:first-child {
@@ -140,12 +163,16 @@ export default {
   }
 }
 
-.close {
-  position: absolute;
-  top: 5%;
-  right: 5%;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
+.modal-enter {
+  opacity: 0;
+}
+
+.modal-leave-active {
+  opacity: 0;
+}
+
+.modal-enter .modal__content,
+.modal-leave-active .modal__content {
+  transform: scale(1.1);
 }
 </style>
