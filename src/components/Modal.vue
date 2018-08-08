@@ -5,26 +5,31 @@
         :class="{deWrapper: deerupt,srWrapper: sambarose,pWrapper: pod,abWrapper: allBrands}"
         class="modal-wrapper">
         <div
-          :class="{podContainer: pod,srContainer: sambarose,dContainer: deerupt,abContainer: allBrands}"
+          :class="{podContainer: pod,srContainer: sambarose,dContainer: deerupt,abContainer: allBrands, falContainer: fal}"
           class="modal-container">
           <img
-            :class="{deeruptCloseB: deerupt,sambaRoseB: sambarose,podB: pod,allBrandsB: allBrands}"
+            :class="{deeruptCloseB: deerupt,sambaRoseB: sambarose,podB: pod,allBrandsB: allBrands, falB: fal}"
             class="close"
             src="../assets/close_black.png"
             @click="$emit('close')">
           <img
-            :class="{deeruptCloseW: deerupt,sambaRoseW: sambarose,podW: pod,allBrandsW: allBrands}"
+            :class="{deeruptCloseW: deerupt,sambaRoseW: sambarose,podW: pod,allBrandsW: allBrands,falW: fal}"
             class="close"
             src="../assets/close_white.png"
             @click="$emit('close')">
           <div class="modal-body">
             <img
+              v-if="!fal"
               :class="{deeruptLogo: deerupt,podLogo: pod,
                        sambaroseLogo: sambarose,allBrandsLogo: allBrands}"
               src="../assets/adidas-logo.svg">
+            <img
+              v-if="fal"
+              :class="{falconLogo: fal}"
+              src="../assets/adi-falcon-logo.png">
             <div
               :class="{franchiseDeerupt: deerupt,franchisePOD: pod,franchiseSR: sambarose,
-                       allBrandsF: allBrands}">
+                       allBrandsF: allBrands, franchiseFL: fal}">
               {{ franchiseUpdate() }}
             </div>
             <slot/>
@@ -52,6 +57,7 @@ export default {
       deerupt: false,
       sambarose: false,
       pod: false,
+      fal: false,
       allBrands: false,
     };
   },
@@ -64,6 +70,8 @@ export default {
         this.sambarose = true;
       } else if (lcFranchise === 'pod-s3.1') {
         this.pod = true;
+      } else if (lcFranchise === 'falcon') {
+        this.fal = true;
       } else {
         this.allBrands = true;
       }
@@ -139,6 +147,11 @@ export default {
   }
 }
 
+.falContainer {
+  background-image: none;
+  background-color: #dab2b8;
+}
+
 .modal-body {
   margin: 55% 0;
 
@@ -172,7 +185,8 @@ export default {
 }
 
 .sambaroseLogo,
-.allBrandsLogo {
+.allBrandsLogo,
+.falconLogo {
   width: 22%;
 
   @media screen and (min-width: 765px) {
@@ -192,7 +206,8 @@ export default {
   }
 }
 
-.sambaroseLogo {
+.sambaroseLogo,
+.falconLogo {
   position: absolute;
   top: 186%;
   left: 39%;
@@ -207,6 +222,18 @@ export default {
     top: 102%;
     width: 10%;
     left: 46%;
+  }
+}
+
+.falconLogo {
+  top: 100%;
+  left: 24%;
+  width: 52%;
+
+  @media screen and (min-width: 1366px) {
+    top: 83%;
+    width: 25%;
+    left: 39%;
   }
 }
 
@@ -252,7 +279,8 @@ export default {
   }
 }
 
-.franchiseSR {
+.franchiseSR,
+.franchiseFL {
   font-size: 0;
   background: url(../assets/sambarosepinklogo.svg);
   background-repeat: no-repeat;
@@ -273,6 +301,19 @@ export default {
   }
 }
 
+.franchiseFL {
+  background: url(../assets/falcon-logo.png);
+  background-position-x: 50%;
+  background-repeat: no-repeat;
+  top: -30px;
+  background-size: 70%;
+
+  @media screen and (min-width: 1366px) {
+    top: -10px;
+    background-size: 40%;
+  }
+}
+
 .franchiseInfo {
   background-color: black;
 }
@@ -281,13 +322,13 @@ export default {
   font-size: 4em;
 }
 
-.sambaRoseB {
+.sambaRoseB,
+.falB {
   width: 45px;
-  @media screen and (min-width: 1366px) { 
+  @media screen and (min-width: 1366px) {
     display: none;
   }
 }
-
 
 .deeruptCloseB {
   width: 45px;
@@ -300,7 +341,8 @@ export default {
   }
 }
 
-.sambaRoseW {
+.sambaRoseW,
+.falW {
   display: none;
 
   @media screen and (min-width: 1366px) {
