@@ -3,12 +3,13 @@
     v-if="display"
     name="modal">
     <div class="modal-mask">
-      <CloseSVG
-        class="close"
-        @click.native="closeModal"/>
       <div
         :style="inlineStyles"
         class="modal-container">
+        <CloseBtn
+          :invert="true"
+          class="close"
+          @click.native="closeModal"/>
         <component
           v-for="(item, key) in content"
           :key="key"
@@ -22,7 +23,7 @@
 <script>
 import Picture from '@/components/Picture.vue';
 import Titles from '@/components/Titles.vue';
-import CloseSVG from '@/components/CloseSVG.vue';
+import CloseBtn from '@/components/CloseSVG.vue';
 
 export default {
   name: 'Modal',
@@ -30,7 +31,7 @@ export default {
   components: {
     Picture,
     Titles,
-    CloseSVG,
+    CloseBtn,
 
   },
 
@@ -145,6 +146,5 @@ export default {
   border-radius: 50%;
   width: 50px;
   height: 50px;
-  background-color: blue;
 }
 </style>

@@ -56,7 +56,7 @@ describe('Modal', () => {
 
     expect(wrapper.vm.content.length).toBe(2);
 
-    const content = wrapper.findAll('.modal-container > *');
+    const content = wrapper.findAll('.modal-container > *:not(.close)');
 
     expect(content.length).toBe(2);
     expect(content.at(0).contains(Picture)).toBe(true);
@@ -81,7 +81,7 @@ describe('Modal', () => {
 
     expect(wrapper.vm.content.length).toBe(2);
 
-    const content = wrapper.findAll('.modal-container > *');
+    const content = wrapper.findAll('.modal-container > *:not(.close)');
 
     expect(content.length).toBe(2);
     expect(content.at(0).contains(Titles)).toBe(true);

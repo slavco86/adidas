@@ -32,6 +32,26 @@ export default new Router({
       path: '/modal',
       name: 'modal',
       component: Modal,
+      props: {
+        display: true,
+        background: '#f00',
+        textColor: '#fff',
+        content: [
+          {
+            component: 'titles',
+            content: {
+              headline: 'Hello World',
+              subtext: 'lorems dfglkjdfhg\n\nlksdjfgh lkdsjfgh lsdkfgh ldfkjgh lksdfjgh kjdfgh',
+            },
+          },
+          {
+            component: 'Picture',
+            content: {
+              image: '/test.jpg',
+            },
+          },
+        ],
+      },
     },
     {
       path: '/:gender',
