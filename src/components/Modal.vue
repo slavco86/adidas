@@ -126,6 +126,7 @@ export default {
     font-size: 2rem;
   }
 
+  .title2,
   .title2 p {
     width: 100%;
     word-break: break-word;

@@ -11,20 +11,35 @@
         "background": "#273583"
       },
       "colourways": {
-        "hotspots": [
-          {
-            "title": "BOOST HEEL",
-            "subtext": "Leading comfort technology repurposed within a podular heel element, bringing the full BOOST sensation to every step."
-          },
-          {
-            "title": "POINT OF DEFLECTION BRIDGE",
-            "subtext": "Inspired by our Torsion System technology, the Point of Deflection Bridge brings stability and flex to the podular sole for a natural ride."
-          },
-          {
-            "title": "HIGH REBOUND EVA FOREFOOT",
-            "subtext": "High Rebound EVA finish brings soft + responsive cushioning to the front, means supreme comfort for your whole foot."
-          }
-        ],
+        "modal": {
+          "background": "#33f",
+          "textColor": "#ffc0cb",
+          "template": [
+              {
+                "component": "titles"
+              },
+              {
+                "component": "Picture",
+                "content": {
+                  "image": "//jdsports-client-resources.co.uk/jdsports-client-resources/page/adidas-hub/img/podpink.291af0aa.svg"
+                }
+              }
+          ],
+          "content": [
+            {
+              "headline": "Boost Heel",
+              "subtext": "Leading comfort technology repurposed within a podular heel element, bringing the full BOOST sensation to every step."
+            },
+            {
+              "headline": "Point of Deflection Bridge",
+              "subtext": "Inspired by our Torsion System technology, the Point of Deflection Bridge brings stability and flex to the podular sole for a natural ride."
+            },
+            {
+              "headline": "High Rebound EVA Forefoot",
+              "subtext": "High Rebound EVA finish brings soft + responsive cushioning to the front, means supreme comfort for your whole foot."
+            }
+          ]
+        },
         "products": [
           {
             "image": {

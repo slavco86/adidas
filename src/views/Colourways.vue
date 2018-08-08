@@ -15,7 +15,7 @@
         class="hotspot hotspot--right"
         @click="displayModal(1)"/>
       <div
-        v-if="hotspots.length >= 3"
+        v-if="data.modal.content.length >= 3"
         class="hotspot hotspot--special"
         @click="displayModal(2)"/>
       <ProductInfo v-bind="colourways[selectedIndex]"/>
@@ -43,22 +43,10 @@
           @click="selectColourway(slide.key)">
       </div>
     </Carousel>
-    <modal
-      v-if="showModal"
-      :modal-franchise="franchise"
-      @close="showModal = false">
-      <Titles
-        :headline="hotspots[activeHotspot].title"
-        :subtext="hotspots[activeHotspot].subtext"
-        :class="{'modal-container--pod': this.$route.params.franchise === 'POD',
-                 'modal-container--samba': this.$route.params.franchise === 'Samba Rose',
-                 'modal-container--deerupt': this.$route.params.franchise === 'Deerupt',
-                 'modal-container--allBrands': (this.$route.params.franchise !== 'Deerupt'
-                   || this.$route.params.franchise !== 'Samba Rose'
-                   || this.$route.params.franchise !== 'POD')
-        }"
-        class="modal-container"/>
-    </modal>
+    <Modal
+      :display="showModal"
+      v-bind="currentModal"
+      @close="showModal = false"/>
   </div>
 </template>
 
@@ -104,7 +92,7 @@ export default {
 
   data() {
     return {
-      activeHotspot: null,
+      currentModal: {},
       showModal: false,
       selectedIndex: 0,
       desktop: window.innerWidth > 765,
@@ -137,6 +125,7 @@ export default {
     logoColor() {
       return (this.$route.params.gender === 'women') ? '#222' : '#fff';
     },
+
     breakpoint() {
       return this.colourways.length > 3 ? 765 : 0;
     },
@@ -153,8 +142,21 @@ export default {
 
   methods: {
     displayModal(contentIndex) {
+
+      const modal = {
+        background: this.data.modal.background,
+        textColor: this.data.modal.textColor,
+        content: this.data.modal.template,
+      };
+
+      modal.content.forEach((content) => {
+        if (content.component === 'titles') {
+          content.content = this.data.modal.content[contentIndex];
+        }
+      });
+
+      this.currentModal = modal;
       this.showModal = true;
-      this.activeHotspot = contentIndex;
     },
 
     selectColourway(selectedSlide) {
