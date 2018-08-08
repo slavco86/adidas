@@ -111,10 +111,10 @@ img {
   text-align: left;
   line-height: 45px;
 
-  .spot--odd & {
-    bottom: auto;
-    top: -20px;
-  }
+  // .spot--odd & {
+  //   bottom: auto;
+  //   top: -20px;
+  // }
 }
 
 .countdown {

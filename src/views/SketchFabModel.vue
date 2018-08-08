@@ -4,7 +4,9 @@
     :class="{ background : background, 'hide-tint': $route.name === '3d-view' }"
     class="content-slide">
     <div class="content-slide__inner">
-      <Logo :color="logoColor" />
+      <Logo
+        :color="logoColor"
+        style="z-index: 5;"/>
       <router-link
         v-if="$route.name === 'content'"
         class="transitional-page"
@@ -62,18 +64,18 @@
           frameborder="0"
           allow="autoplay; fullscreen; vr"
           mozallowfullscreen="true"
-          webkitallowfullscreen="true"/>
+          webkitallowfullscreen="true"
+          class="iframe"/>
       </div>
       <MouseDown
         v-if="this.$route.name !== '3d-view'"
-        class="scroll"
-        :height=50
-        :width=35
+        :height="50"
+        :width="35"
         :fill="'transparent'"
         :stroke="'white'"
         :fillButton="'white'"
-        :strokeButton="'white'">
-      </MouseDown>
+        :strokeButton="'white'"
+        class="scroll"/>
     </div>
   </div>
 </template>
@@ -156,6 +158,7 @@ iframe {
   left: 0;
   width: 100%;
   height: 100vh;
+  z-index: 2;
 }
 
 .content-slide {
@@ -182,7 +185,6 @@ iframe {
   position: absolute;
   bottom: 4rem;
   right: 4rem;
-  z-index: 1;
 }
 
 .transitional-page {
@@ -197,6 +199,10 @@ iframe {
   opacity: 0;
   transform: translate3d(0, -20%, 0);
   transition: opacity 0.2s ease-in, transform 0.3s ease-in;
+}
+
+.transitional-page__pic {
+  z-index: 0;
 }
 
 .transitional-page__img.active {
@@ -241,6 +247,7 @@ iframe {
   width: 105px;
   position: relative;
   left: 10px;
+  z-index: 1;
 }
 
 .transitional-page__label .cta {
@@ -249,6 +256,7 @@ iframe {
   font-size: 1rem;
   font-weight: 900;
   text-transform: uppercase;
+  z-index: 1;
 }
 
 .background::before {
@@ -260,6 +268,7 @@ iframe {
   right: 0;
   top: 0;
   transition: background-color 0.4s;
+  z-index: 1;
 }
 
 .samba .background::before,
@@ -291,6 +300,7 @@ iframe {
   height: 100px;
   position: absolute;
   fill: #fff;
+  z-index: 1;
 }
 
 .is-content.deerupt .content-slide /deep/ .close circle {
@@ -304,6 +314,7 @@ iframe {
 
 .scroll {
   text-align: center;
+  z-index: 1;
 }
 
 .samba .scroll /deep/ .scrolltext {
