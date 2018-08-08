@@ -21,12 +21,13 @@ describe('Modal', () => {
     });
     expect(wrapper.isEmpty()).toBe(true);
   });
+
   it('should change background color of modal-container when provided via props', () => {
     const wrapper = factory({}, {
       background: '#f00',
     });
 
-    expect(wrapper.find('.modal-container').attributes().style).toBe('background-color: rgb(255, 0, 0);');
+    expect(wrapper.find('.modal-container').attributes().style).toContain('background: rgb(255, 0, 0);');
   });
 
   it('should set backgournd image instead of colour if provide via props', () => {
@@ -34,7 +35,7 @@ describe('Modal', () => {
       background: '/test.jpg',
     });
 
-    expect(wrapper.find('.modal-container').attributes().style).toBe('background-image: url(/test.jpg);');
+    expect(wrapper.find('.modal-container').attributes().style).toContain('background: url(/test.jpg);');
   });
 
   it('should accept array of objects and render content', () => {
@@ -61,6 +62,7 @@ describe('Modal', () => {
     expect(content.at(0).contains(Picture)).toBe(true);
     expect(content.at(1).contains(Titles)).toBe(true);
   });
+
   it('follow the order defined within content array', () => {
     const wrapper = factory({}, {
       content: [{
@@ -85,9 +87,21 @@ describe('Modal', () => {
     expect(content.at(0).contains(Titles)).toBe(true);
     expect(content.at(1).contains(Picture)).toBe(true);
   });
+
   it('close button should emit a close event on click', () => {
     const wrapper = factory();
-    expect(wrapper.find('.close').exists()).toBe(true);
-    wrapper.find('.close').trigger('click');
+    const closeBtn = wrapper.findAll('.close');
+    closeBtn.trigger('click');
+
+    expect(closeBtn.exists()).toBe(true);
+    expect(wrapper.emitted('close')).toBeTruthy();
+  });
+
+  it('should set text colour within modal', () => {
+    const wrapper = factory({}, {
+      textColor: '#f00',
+    });
+
+    expect(wrapper.find('.modal-container').attributes().style).toContain('color: rgb(255, 0, 0)');
   });
 });
