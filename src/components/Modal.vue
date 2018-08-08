@@ -104,8 +104,9 @@ export default {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
   color: #000;
   display: flex;
+  flex-direction: column;
   height: 100%;
-  justify-content: center;
+  justify-content: flex-start;
   margin: 0 auto;
   max-height: 580px;
   max-width: 830px;
