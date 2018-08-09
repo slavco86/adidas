@@ -81,7 +81,7 @@ export default {
   props: {
     franchises: {
       type: Array,
-      required: true,
+      default: () => [],
     },
   },
 

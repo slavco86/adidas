@@ -44,6 +44,16 @@ export default {
     pageTransitionEnd() {
       this.routeAnimating = false;
     },
+
+    home(route) {
+      return (route.path === '/men') ? { franchises: 'Men' } : { franchises: 'Women' };
+    },
+
+    franchise(route, content) {
+      const { gender, franchise } = route.params;
+
+      return { content: content[gender].filter(obj => obj.franchise === franchise).pop().content };
+    },
   },
 };
 </script>
