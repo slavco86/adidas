@@ -179,6 +179,8 @@ export default {
   position: absolute;
   width: 100%;
   padding: 0 0.5rem;
+  opacity: 0;
+  transition: opacity 1s;
 
   @media only screen and (min-width: 320px) and (max-width: 875px) {
     justify-content: flex-start;
@@ -251,6 +253,10 @@ export default {
       z-index: 2;
     }
   }
+}
+
+.grid--animate {
+  opacity: 1;
 }
 
 .grid--animate .grid-view__product {

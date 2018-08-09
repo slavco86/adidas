@@ -4,7 +4,8 @@
     :class="{'category--women' : isWomen, 'is-content' : isContentPage,
              'samba': this.$route.params.franchise === 'Samba Rose',
              'pod': this.$route.params.franchise === 'POD',
-             'deerupt': this.$route.params.franchise === 'Deerupt' }"
+             'deerupt': this.$route.params.franchise === 'Deerupt',
+             'falcon': this.$route.params.franchise === 'Falcon' }"
     class="category">
     <transition
       name="fade"

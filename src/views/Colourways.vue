@@ -480,13 +480,15 @@ export default {
   }
 }
 
-.modal-container--samba {
+.modal-container--samba,
+.modal-container--falcon {
   @media screen and (min-width: 1366px) {
     margin-top: 19%;
   }
 }
 
-.modal-container--samba /deep/ .title1 {
+.modal-container--samba /deep/ .title1,
+.modal-container--falcon /deep/ .title1 {
   font-size: 2.2em;
   font-weight: bold;
 
@@ -496,7 +498,13 @@ export default {
   }
 }
 
-.modal-container--samba /deep/ .title2 {
+.modal-container--falcon /deep/ .title1 {
+  bottom: -70px;
+  text-transform: uppercase;
+}
+
+.modal-container--samba /deep/ .title2,
+.modal-container--falcon /deep/ .title2 {
   font-size: 1em;
   margin-top: -4%;
 
@@ -506,7 +514,9 @@ export default {
 }
 
 .modal-container--samba /deep/ .title2,
-.modal-container--samba /deep/ .title2 p {
+.modal-container--falcon /deep/ .title2,
+.modal-container--samba /deep/ .title2 p,
+.modal-container--falcon /deep/ .title2 p {
   font-size: 1.5em;
   font-weight: normal;
   padding-top: 36%;
