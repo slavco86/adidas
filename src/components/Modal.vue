@@ -89,6 +89,7 @@ export default {
   height: 100%;
   justify-content: center;
   left: 0;
+  padding: 0 15%;
   position: absolute;
   top: 0;
   transition: opacity 0.3s ease;
@@ -97,8 +98,8 @@ export default {
 }
 
 .modal__wrapper {
-  max-height: 530px;
   max-width: 710px;
+  width: 100%;
 }
 
 .modal__content {
@@ -114,11 +115,12 @@ export default {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
+  max-height: 530px;
   overflow-y: auto;
-  padding: 3rem 1rem;
+  padding: 20% 1rem;
   text-align: center;
-  transition: transform 0.3s ease;
   transform: scale(1);
+  transition: transform 0.3s ease;
   width: 100%;
 }
 
@@ -139,10 +141,11 @@ export default {
 }
 
 .titles /deep/ {
-  max-width: 550px;
+  max-width: 450px;
   margin: 2rem 0;
 
   .title1 {
+    font-weight: 900;
     font-size: 2rem;
   }
 

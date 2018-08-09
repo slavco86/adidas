@@ -1,0 +1,48 @@
+.pod {
+  .modal__content {
+    .title1 {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+    }
+
+    .title2 {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      font-weight: 200;
+    }
+  }
+}
+
+.samba {
+  .modal__content {
+    picture:last-of-type {
+      img {
+        width: 70px;
+        height: 70px;
+      }
+    }
+
+    .title2 p {
+      font-weight: 400;
+    }
+  }
+}
+
+.deerupt {
+  .modal__content {
+    .title1 {
+      line-height: 0;
+      font-size: 1.75rem;
+      font-weight: 900;
+    }
+
+    .title2 p {
+      font-weight: 500;
+    }
+
+    .title2 p:first-child {
+      font-size: 1rem;
+      letter-spacing: 2px;
+    }
+  }
+}

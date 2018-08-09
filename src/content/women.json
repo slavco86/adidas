@@ -16,7 +16,7 @@
             {
               "component": "Picture",
               "content": {
-                "image": "//jdsports-client-resources.co.uk/jdsports-client-resources/page/adidas-hub/img/sambarosepinklogo.6ccc78ac.svg"
+                "image": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0809/sambarosepinklogo-11d36fa3a8a191f99b3d1e2d62458e83.svg"
               }
             },
             {
@@ -196,15 +196,15 @@
           ],
           "content": [
             {
-              "headline": "Boost Heel",
+              "headline": "BOOST HEEL",
               "subtext": "Leading comfort technology repurposed within a podular heel element, bringing the full BOOST sensation to every step."
             },
             {
-              "headline": "Point of Deflection Bridge",
+              "headline": "POINT OF DEFLECTION BRIDGE",
               "subtext": "Inspired by our Torsion System technology, the Point of Deflection Bridge brings stability and flex to the podular sole for a natural ride."
             },
             {
-              "headline": "High Rebound EVA Forefoot",
+              "headline": "HIGH REBOUND EVA FOREFOOT",
               "subtext": "High Rebound EVA finish brings soft + responsive cushioning to the front, means supreme comfort for your whole foot."
             }
           ]
