@@ -2,8 +2,8 @@
   {
     "franchise": "POD",
     "image": {
-      "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0809/19-27995-digi-art-750x750-creative-2-96e13b3e918da9e05ef8f8d192a946dd.jpg",
-      "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0809/19-27995-digi-art-750x750-creative-2-96e13b3e918da9e05ef8f8d192a946dd.jpg"
+      "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0726/750x750--0027-27707-art-adidas-jd-pod-facebook-instagram-1500x1500px13-bb468170b12e46e0c943f6aa8a0752b8.jpg",
+      "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0726/750x750--0027-27707-art-adidas-jd-pod-facebook-instagram-1500x1500px13-bb468170b12e46e0c943f6aa8a0752b8.jpg"
     },
     "content": {
       "sketch-fab-model": {
@@ -32,7 +32,7 @@
               "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/adi-hub-074450-afc931cfcc2eb3550b548da72fe4c036.png"
             },
             "brand": "adidas",
-            "price": "110",
+            "price": "100",
             "title": "POD",
             "url": "/product/blue-adidas-originals-pod/1188720"
           },
@@ -42,7 +42,7 @@
               "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/adi-hub-074451-243ff8a3fcd7bc8645781d946e4e3be8.png"
             },
             "brand": "adidas",
-            "price": "110",
+            "price": "100",
             "title": "POD",
             "url": "/product/brown-adidas-originals-pod-s31/1188721"
           },
@@ -52,7 +52,7 @@
               "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/adi-hub-066721-0125c3e3451588faad06f7f229e32010.png"
             },
             "brand": "adidas",
-            "price": "110",
+            "price": "100",
             "title": "POD",
             "url": "/product/grey-adidas-originals-pod-s31/1189079"
           },
@@ -62,7 +62,7 @@
               "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/adi-hub-066719-578b612f788b48778b65d55755e98acc.png"
             },
             "brand": "adidas",
-            "price": "110",
+            "price": "100",
             "title": "POD",
             "url": "product/black-adidas-originals-pod-womens/1189124"
           }
