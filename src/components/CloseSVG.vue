@@ -1,14 +1,15 @@
 <template>
   <svg
-    :class="{'close--alt' : invert}"
     viewBox="0 0 45 45"
     clas="close">
     <circle
+      :fill="hexFill"
       cx="22.5"
       cy="22.5"
       r="22"
       class="circle"/>
     <path
+      :stroke="stroke"
       d="M16.46 28.54l12.08-12.08m0 12.08L16.46 16.46"
       class="cross"/>
   </svg>
@@ -17,9 +18,20 @@
 <script>
 export default {
   props: {
-    invert: {
-      type: Boolean,
-      default: false,
+    fill: {
+      type: String,
+      default: '#fff',
+    },
+
+    stroke: {
+      type: String,
+      default: '#000',
+    },
+  },
+
+  computed: {
+    hexFill() {
+      return (this.fill[0] === '#') ? this.fill : '#fff';
     },
   },
 };
@@ -32,20 +44,5 @@ export default {
   stroke-miterlimit: 10;
 }
 
-.close .cross {
-  stroke: #000;
-}
-
-.close .circle {
-  fill: white;
-}
-
-.close--alt .cross {
-  stroke: #fff;
-}
-
-.close--alt .circle {
-  fill: #000;
-}
 </style>
 

@@ -5,7 +5,8 @@
     <div class="modal">
       <div class="modal__wrapper">
         <CloseBtn
-          :invert="true"
+          :fill="background"
+          :stroke="textColor"
           class="modal__wrapper__close"
           @click.native="closeModal"/>
         <div
@@ -135,8 +136,8 @@ export default {
   z-index: 2;
 
   @media screen and (min-width: 765px) {
-    right: -25px;
-    top: -25px;
+    right: -15px;
+    top: -15px;
   }
 }
 

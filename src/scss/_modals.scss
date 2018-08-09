@@ -46,3 +46,16 @@
     }
   }
 }
+
+@media screen and (max-width: 765px) {
+  .modal__wrapper__close {
+    .circle {
+      fill: #fff;
+    }
+
+    .cross {
+      stroke: #000;
+    }
+  }
+}
+
