@@ -185,6 +185,7 @@ iframe {
   position: absolute;
   bottom: 4rem;
   right: 4rem;
+  z-index: 1;
 }
 
 .transitional-page {
