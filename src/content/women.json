@@ -24,16 +24,36 @@
         }
       },
       "colourways": {
-        "hotspots": [
-          {
-            "title": "PLAYFUL BOLD SILHOUETTE",
-            "subtext": "The unapologetic ‘90s attitude is back. Introducing a playfully bold silhouette exclusive to her."
-          },
-          {
-            "title": "prime support and stability",
-            "subtext": "A unique midsole construction of EVA compression and Torsion Bar suspension offers prime support and stability. Aggressively styled, this women’s exclusive embodies an unapologetic attitude."
-          }
-        ],
+        "modal": {
+          "background": "#dab2b8",
+          "template": [
+            {
+              "component": "Picture",
+              "content": {
+                "image": "//jdsports-client-resources.co.uk/jdsports-client-resources/page/adidas-hub/img/falcon-logo.99ed1d68.png"
+              }
+            },
+              {
+                "component": "titles"
+              },
+              {
+                "component": "Picture",
+                "content": {
+                  "image": "https://jdsports-client-resources.co.uk/jdsports-client-resources/page/adidas-hub/img/adi-falcon-logo.3438df46.png"
+                }
+              }
+          ],
+          "content": [
+            {
+              "headline": "PLAYFUL BOLD SILHOUETTE",
+              "subtext": "The unapologetic ‘90s attitude is back. Introducing a playfully bold silhouette exclusive to her."
+            },
+            {
+              "headline": "prime support and stability",
+              "subtext": "A unique midsole construction of EVA compression and Torsion Bar suspension offers prime support and stability. Aggressively styled, this women’s exclusive embodies an unapologetic attitude."
+            }
+          ]
+        },
         "products": [
           {
             "image": {
@@ -349,7 +369,7 @@
               "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/adi-hub-068297-f4965ecbd9f0651a9304d38bf63f63b1.png"
             },
             "brand": "adidas",
-            "price": "110",
+            "price": "100",
             "title": "POD",
             "url": "/product/black-adidas-originals-pod-womens/1189078"
           },
@@ -359,7 +379,7 @@
               "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/adi-hub-068299-71bd7c6cbb1e1f2b398c35e80f7f9356.png"
             },
             "brand": "adidas",
-            "price": "110",
+            "price": "100",
             "title": "POD",
             "url": "/product/grey-adidas-originals-pod-womens/1189081"
           }
