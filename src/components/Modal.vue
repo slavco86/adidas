@@ -90,17 +90,25 @@ export default {
   height: 100%;
   justify-content: center;
   left: 0;
-  padding: 0 15%;
   position: absolute;
   top: 0;
   transition: opacity 0.3s ease;
   width: 100%;
   z-index: 9998;
+
+  @media screen and (min-width: 600px) {
+    padding: 0 15%;
+  }
 }
 
 .modal__wrapper {
   max-width: 710px;
   width: 100%;
+  height: 100%;
+
+  @media screen and (min-width: 600px) {
+    height: auto;
+  }
 }
 
 .modal__content {
@@ -114,15 +122,20 @@ export default {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
   color: #000;
   display: flex;
+  height: 100%;
   flex-direction: column;
+  justify-content: center;
   margin: 0 auto;
-  max-height: 530px;
   overflow-y: auto;
-  padding: 20% 1rem;
+  padding: 15% 1rem;
   text-align: center;
   transform: scale(1);
   transition: transform 0.3s ease;
   width: 100%;
+
+  @media screen and (min-width: 600px) {
+    max-height: 540px;
+  }
 }
 
 .modal__wrapper__close {

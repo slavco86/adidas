@@ -341,9 +341,15 @@
           "background": "//jdsports-client-resources.co.uk/jdsports-client-resources/page/adidas-hub/img/swdesktop.d74f091c.png",
           "textColor": "#000",
           "template": [
-              {
-                "component": "titles"
+            {
+              "component": "Picture",
+              "content": {
+                "image": "//jdsports-client-resources.co.uk/jdsports-client-resources/page/adidas-hub/img/adidas-logo.fe4abdae.svg"
               }
+            },
+            {
+              "component": "titles"
+            }
           ],
           "content": [
             {

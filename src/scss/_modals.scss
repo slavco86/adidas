@@ -30,6 +30,13 @@
 
 .deerupt {
   .modal__content {
+    picture:first-of-type {
+      img {
+        width: 70px;
+        height: 70px;
+      }
+    }
+
     .title1 {
       line-height: 0;
       font-size: 1.75rem;
