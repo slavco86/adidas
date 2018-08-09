@@ -30,7 +30,7 @@
             {
               "component": "Picture",
               "content": {
-                "image": "//jdsports-client-resources.co.uk/jdsports-client-resources/page/adidas-hub/img/falcon-logo.99ed1d68.png"
+                "image": "https://i1.adis.ws/i/jpl/falcon-logo?w=200"
               }
             },
               {
@@ -39,7 +39,7 @@
               {
                 "component": "Picture",
                 "content": {
-                  "image": "https://jdsports-client-resources.co.uk/jdsports-client-resources/page/adidas-hub/img/adi-falcon-logo.3438df46.png"
+                  "image": "https://i1.adis.ws/i/jpl/adidas-falcon-logo?w=150"
                 }
               }
           ],
@@ -49,7 +49,7 @@
               "subtext": "The unapologetic ‘90s attitude is back. Introducing a playfully bold silhouette exclusive to her."
             },
             {
-              "headline": "prime support and stability",
+              "headline": "PRIME SUPPORT AND STABILITY",
               "subtext": "A unique midsole construction of EVA compression and Torsion Bar suspension offers prime support and stability. Aggressively styled, this women’s exclusive embodies an unapologetic attitude."
             }
           ]
