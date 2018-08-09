@@ -2,8 +2,8 @@
   {
     "franchise": "POD",
     "image": {
-      "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0726/750x750--0027-27707-art-adidas-jd-pod-facebook-instagram-1500x1500px13-bb468170b12e46e0c943f6aa8a0752b8.jpg",
-      "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0726/750x750--0027-27707-art-adidas-jd-pod-facebook-instagram-1500x1500px13-bb468170b12e46e0c943f6aa8a0752b8.jpg"
+      "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0809/19-27995-digi-art-750x750-creative-2-96e13b3e918da9e05ef8f8d192a946dd.jpg",
+      "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0809/19-27995-digi-art-750x750-creative-2-96e13b3e918da9e05ef8f8d192a946dd.jpg"
     },
     "content": {
       "sketch-fab-model": {
@@ -44,7 +44,7 @@
             "brand": "adidas",
             "price": "110",
             "title": "POD",
-            "url": "/product/clay-adidas-originals-pod/1188721"
+            "url": "/product/brown-adidas-originals-pod-s31/1188721"
           },
           {
             "image": {
@@ -54,7 +54,7 @@
             "brand": "adidas",
             "price": "110",
             "title": "POD",
-            "url": "product/grey-adidas-originals-pod/1189079"
+            "url": "/product/grey-adidas-originals-pod-s31/1189079"
           },
           {
             "image": {
@@ -74,7 +74,7 @@
             {
               "handle": "@ryxn_dh",
               "quote": "Every day camo and POD",
-              "url": "/product/brown-adidas-originals-pod-s31/1188721",
+              "url": "/product/grey-adidas-originals-pod-s31/1189079",
               "image": {
                 "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0803/ryan-hildrew-568ee84599451a3d9c1d5d72e7ee6525.jpg",
                 "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0803/ryan-hildrew-568ee84599451a3d9c1d5d72e7ee6525.jpg"
