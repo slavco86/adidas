@@ -11,7 +11,9 @@
       name="fade"
       @enter="pageTransitionStart"
       @afterEnter="pageTransitionEnd">
-      <router-view :route-animating="routeAnimating" :content="servedContent" />
+      <router-view
+        :route-animating="routeAnimating"
+        :content="servedContent" />
     </transition>
   </div>
 </template>

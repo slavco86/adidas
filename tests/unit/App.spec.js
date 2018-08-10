@@ -33,30 +33,6 @@ describe('App', () => {
     });
   });
 
-  it('homeContent should return mens data for /men', () => {
-    const wrapper = factory();
-
-    const route = {
-      path: '/men',
-    };
-
-    expect(wrapper.vm.home(route)).toEqual({
-      franchises: 'Men',
-    });
-  });
-
-  it('homeContent should return womens data for /women', () => {
-    const wrapper = factory();
-
-    const route = {
-      path: '/women',
-    };
-
-    expect(wrapper.vm.home(route)).toEqual({
-      franchises: 'Women',
-    });
-  });
-
   it('franchiseContent should return correct data depending on route params', () => {
     const wrapper = factory();
 
