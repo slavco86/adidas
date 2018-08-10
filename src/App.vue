@@ -68,10 +68,6 @@ export default {
       this.routeAnimating = false;
     },
 
-    home(route) {
-      return (route.path === '/men') ? { franchises: 'Men' } : { franchises: 'Women' };
-    },
-
     franchise(route, data) {
       const { gender, franchise } = route.params;
 
