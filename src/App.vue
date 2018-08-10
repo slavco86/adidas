@@ -11,7 +11,7 @@
       name="fade"
       @enter="pageTransitionStart"
       @afterEnter="pageTransitionEnd">
-      <router-view :route-animating="routeAnimating"/>
+      <router-view :route-animating="routeAnimating" :content="servedContent" />
     </transition>
   </div>
 </template>
@@ -23,14 +23,22 @@ export default {
   data() {
     return {
       content: {
-        men: null,
-        women: null,
+        men: [],
+        women: [],
       },
       routeAnimating: false,
     };
   },
 
   computed: {
+    servedContent() {
+      if (this.$route.params.franchise) {
+        return this.franchise(this.$route, this.content);
+      }
+
+      return this.content[this.$route.params.gender];
+    },
+
     isWomen() {
       return (this.$route.params.gender === 'women') === true;
     },
@@ -64,10 +72,10 @@ export default {
       return (route.path === '/men') ? { franchises: 'Men' } : { franchises: 'Women' };
     },
 
-    franchise(route, content) {
+    franchise(route, data) {
       const { gender, franchise } = route.params;
 
-      return { content: content[gender].filter(obj => obj.franchise === franchise).pop().content };
+      return data[gender].filter(obj => obj.franchise === franchise).pop().content;
     },
 
     contentPath(gender = 'men') {

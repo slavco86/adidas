@@ -6,9 +6,6 @@ const localVue = createLocalVue();
 localVue.use(VueRouter);
 const router = new VueRouter();
 
-// fetch all data when mounted
-// data should react to route change
-
 const factory = (data = {}, props = {}) =>
   shallowMount(Component, {
     localVue,
@@ -102,9 +99,7 @@ describe('App', () => {
     };
 
     expect(wrapper.vm.franchise(route, content)).toEqual({
-      content: {
-        test: true,
-      },
+      test: true,
     });
   });
 
@@ -135,7 +130,7 @@ describe('App', () => {
     });
 
     expect(wrapper.vm.content).toEqual({
-      men: null,
+      men: [],
       women: {
         content: 'test',
       },
@@ -189,5 +184,40 @@ describe('App', () => {
     const wrapper = factory();
 
     expect(wrapper.vm.contentPath('women')).toBe('/content/women.json');
+  });
+
+  it('it should filter/serve content based on route params', () => {
+    const franchise = jest.fn();
+
+    const $route = {
+      params: {
+        gender: 'men',
+        franchise: null,
+      },
+    };
+
+    const wrapper = shallowMount(Component, {
+      mocks: {
+        $route,
+      },
+      methods: { franchise },
+      stubs: ['router-view'],
+      data: () => ({
+        content: {
+          men: {
+            content: 'test',
+          },
+          women: [],
+        },
+      }),
+    });
+
+    expect(wrapper.vm.servedContent).toEqual({
+      content: 'test',
+    });
+
+    wrapper.vm.$route.params.franchise = 'pod';
+
+    expect(franchise).toHaveBeenCalledTimes(1);
   });
 });

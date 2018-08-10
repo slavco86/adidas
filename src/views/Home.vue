@@ -26,7 +26,7 @@
       :class="{'grid--animate': grid}"
       class="grid-view">
       <FranchiseTile
-        v-for="slide in franchises"
+        v-for="slide in content"
         :key="slide.franchise"
         :tile="slide"
         class="grid-view__product"/>
@@ -34,7 +34,7 @@
 
     <Carousel
       ref="carousel"
-      :slides="franchises"
+      :slides="content"
       :options="swiperOptions"
       :class="{'main-carousel--hidden': grid}"
       class="main-carousel">
@@ -79,7 +79,7 @@ export default {
   },
 
   props: {
-    franchises: {
+    content: {
       type: Array,
       default: () => [],
     },
