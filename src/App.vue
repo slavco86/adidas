@@ -41,7 +41,7 @@ export default {
   },
 
   mounted() {
-    this.getJSON(this.contentPath(this.$route.params.gender));
+    this.getJSON(this.contentPath(this.$route.params.gender), this.$route.params.gender);
   },
 
   methods: {
@@ -68,11 +68,11 @@ export default {
       return { content: content[gender].filter(obj => obj.franchise === franchise).pop().content };
     },
 
-    getJSON(path) {
+    getJSON(path, gender = 'men') {
       return fetch(path)
         .then(data => data.json())
         .then((json) => {
-          this.content = json;
+          this.content[gender] = json;
           return json;
         });
     },

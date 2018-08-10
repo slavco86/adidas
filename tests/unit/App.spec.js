@@ -108,14 +108,25 @@ describe('App', () => {
     });
   });
 
-  it('getJSON should execute fetch request with json and apply it to vm.content', async () => {
-    const wrapper = factory();
+  it.only('getJSON should fetch content and apply to correct gender key in vm.content', async () => {
+    const $route = {
+      params: {
+        gender: 'women',
+      },
+    };
+
+    const wrapper = shallowMount(Component, {
+      mocks: {
+        $route,
+      },
+      stubs: ['router-view'],
+    });
 
     global.fetch = mockFetch({
       content: 'test',
     });
 
-    const result = await wrapper.vm.getJSON('test');
+    const result = await wrapper.vm.getJSON('foo', 'women');
 
     expect(fetch).toHaveBeenCalledTimes(1);
 
@@ -124,7 +135,10 @@ describe('App', () => {
     });
 
     expect(wrapper.vm.content).toEqual({
-      content: 'test',
+      men: null,
+      women: {
+        content: 'test',
+      },
     });
   });
 
