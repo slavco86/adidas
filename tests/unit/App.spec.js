@@ -20,6 +20,14 @@ const factory = (data = {}, props = {}) =>
     },
   });
 
+function mockFetch(data) {
+  return jest.fn().mockImplementation(() =>
+    Promise.resolve({
+      ok: true,
+      json: () => data,
+    }));
+}
+
 describe('App', () => {
   it('homeContent should return mens data for /men', () => {
     const wrapper = factory();
@@ -90,6 +98,26 @@ describe('App', () => {
       content: {
         test: true,
       },
+    });
+  });
+
+  it('getJSON should execute fetch request with json and apply it to vm.content', async () => {
+    const wrapper = factory();
+
+    global.fetch = mockFetch({
+      content: 'test',
+    });
+
+    const result = await wrapper.vm.getJSON('test');
+
+    expect(fetch).toHaveBeenCalledTimes(1);
+
+    expect(result).toEqual({
+      content: 'test',
+    });
+
+    expect(wrapper.vm.content).toEqual({
+      content: 'test',
     });
   });
 });

@@ -22,6 +22,7 @@ export default {
 
   data() {
     return {
+      content: null,
       routeAnimating: false,
     };
   },
@@ -53,6 +54,15 @@ export default {
       const { gender, franchise } = route.params;
 
       return { content: content[gender].filter(obj => obj.franchise === franchise).pop().content };
+    },
+
+    getJSON(path) {
+      return fetch(path)
+        .then(data => data.json())
+        .then((json) => {
+          this.content = json;
+          return json;
+        });
     },
   },
 };
