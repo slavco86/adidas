@@ -22,7 +22,10 @@ export default {
 
   data() {
     return {
-      content: null,
+      content: {
+        men: null,
+        women: null,
+      },
       routeAnimating: false,
     };
   },
@@ -37,7 +40,16 @@ export default {
     },
   },
 
+  mounted() {
+    this.getJSON(this.contentPath(this.$route.params.gender));
+  },
+
   methods: {
+    contentPath(gender = 'men') {
+      const location = '/content/';
+      return gender === 'men' ? `${location}men.json` : `${location}women.json`;
+    },
+
     pageTransitionStart() {
       this.routeAnimating = true;
     },

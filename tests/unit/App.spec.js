@@ -29,6 +29,13 @@ function mockFetch(data) {
 }
 
 describe('App', () => {
+
+  beforeEach(() => {
+    global.fetch = mockFetch({
+      content: 'test',
+    });
+  });
+
   it('homeContent should return mens data for /men', () => {
     const wrapper = factory();
 
@@ -119,5 +126,32 @@ describe('App', () => {
     expect(wrapper.vm.content).toEqual({
       content: 'test',
     });
+  });
+
+  it('should call getJson on mounted with correct path', () => {
+    const getJSON = jest.fn();
+
+    const $route = {
+      params: {
+        gender: 'men',
+      },
+    };
+
+    shallowMount(Component, {
+      mocks: {
+        $route,
+      },
+      stubs: ['router-view'],
+      methods: { getJSON },
+    });
+
+    expect(getJSON).toHaveBeenCalledTimes(1);
+    expect(getJSON).toHaveBeenCalledWith('/content/men.json');
+  });
+
+  it('return correct path based on route params', () => {
+    const wrapper = factory();
+
+    expect(wrapper.vm.contentPath('women')).toBe('/content/women.json');
   });
 });
