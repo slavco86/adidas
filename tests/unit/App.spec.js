@@ -6,6 +6,9 @@ const localVue = createLocalVue();
 localVue.use(VueRouter);
 const router = new VueRouter();
 
+// fetch all data when mounted
+// data should react to route change
+
 const factory = (data = {}, props = {}) =>
   shallowMount(Component, {
     localVue,
