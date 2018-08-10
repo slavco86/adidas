@@ -40,16 +40,18 @@ export default {
     },
   },
 
-  mounted() {
-    this.getJSON(this.contentPath(this.$route.params.gender), this.$route.params.gender);
+  watch: {
+    '$route.params.gender': function gender() {
+      this.getContent();
+    },
   },
 
-  methods: {
-    contentPath(gender = 'men') {
-      const location = '/content/';
-      return gender === 'men' ? `${location}men.json` : `${location}women.json`;
-    },
+  mounted() {
+    this.getContent();
+  },
 
+
+  methods: {
     pageTransitionStart() {
       this.routeAnimating = true;
     },
@@ -66,6 +68,15 @@ export default {
       const { gender, franchise } = route.params;
 
       return { content: content[gender].filter(obj => obj.franchise === franchise).pop().content };
+    },
+
+    contentPath(gender = 'men') {
+      const location = '/content/';
+      return gender === 'men' ? `${location}men.json` : `${location}women.json`;
+    },
+
+    getContent() {
+      this.getJSON(this.contentPath(this.$route.params.gender), this.$route.params.gender);
     },
 
     getJSON(path, gender = 'men') {

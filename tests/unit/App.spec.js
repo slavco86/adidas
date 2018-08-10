@@ -108,7 +108,7 @@ describe('App', () => {
     });
   });
 
-  it.only('getJSON should fetch content and apply to correct gender key in vm.content', async () => {
+  it('getJSON should fetch content and apply to correct gender key in vm.content', async () => {
     const $route = {
       params: {
         gender: 'women',
@@ -142,6 +142,28 @@ describe('App', () => {
     });
   });
 
+  it('should call getJSON on route change', () => {
+    const getJSON = jest.fn();
+
+    const $route = {
+      params: {
+        gender: 'men',
+      },
+    };
+
+    const wrapper = shallowMount(Component, {
+      mocks: {
+        $route,
+      },
+      methods: { getJSON },
+      stubs: ['router-view'],
+    });
+
+    wrapper.vm.$route.params.gender = 'women';
+
+    expect(getJSON).toHaveBeenCalledTimes(2);
+  });
+
   it('should call getJson on mounted with correct path', () => {
     const getJSON = jest.fn();
 
@@ -160,7 +182,7 @@ describe('App', () => {
     });
 
     expect(getJSON).toHaveBeenCalledTimes(1);
-    expect(getJSON).toHaveBeenCalledWith('/content/men.json');
+    expect(getJSON).toHaveBeenCalledWith('/content/men.json', 'men');
   });
 
   it('return correct path based on route params', () => {
