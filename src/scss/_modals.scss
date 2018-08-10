@@ -10,6 +10,13 @@
       line-height: 1.6;
       font-weight: 200;
     }
+
+    picture:last-of-type {
+      img {
+        width: 400px;
+        height: 82px;
+      }
+    }
   }
 }
 
