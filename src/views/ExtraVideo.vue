@@ -56,7 +56,6 @@ export default {
   text-align: center;
 }
 
-
 iframe {
   width: 100%;
   height: 90vh;
