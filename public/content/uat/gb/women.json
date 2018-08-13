@@ -1,0 +1,640 @@
+[
+  {
+    "franchise": "Falcon",
+    "launch": "11:00 PM 8 August 2018",
+    "image": {
+      "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0809/19-27995-digi-art-750x750-creative-2-96e13b3e918da9e05ef8f8d192a946dd.jpg",
+      "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0809/19-27995-digi-art-750x750-creative-2-96e13b3e918da9e05ef8f8d192a946dd.jpg"
+    },
+    "content": {
+      "sketch-fab-model": {
+        "id": "450afb82d38040c19ab68821962140c5",
+        "background": "#dab2b8"
+      },
+      "shoppable-video": {
+        "normal": {
+          "image": {
+            "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0808/1920x1080-falconjpg-1266b08550f54b880da4558b87027aa2.jpg",
+            "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0808/750x1334-falcon-da6f1fd6431c53e99a61cb36a7cec3d3.jpg"
+          },
+        "video": {
+          "desktop": "http://i1.adis.ws/v/jpl/Adidas_Falcon_wide",
+          "mobile": "http://i1.adis.ws/v/jpl/Adidas_Falcon_Story_1"
+          }
+        }
+      },
+      "colourways": {
+        "modal": {
+          "background": "#dab2b8",
+          "template": [
+            {
+              "component": "Picture",
+              "content": {
+                "image": "https://i1.adis.ws/i/jpl/falcon-logo?w=200"
+              }
+            },
+              {
+                "component": "titles"
+              },
+              {
+                "component": "Picture",
+                "content": {
+                  "image": "https://i1.adis.ws/i/jpl/adidas-falcon-logo?w=150"
+                }
+              }
+          ],
+          "content": [
+            {
+              "headline": "PLAYFUL BOLD SILHOUETTE",
+              "subtext": "The unapologetic ‘90s attitude is back. Introducing a playfully bold silhouette exclusive to her."
+            },
+            {
+              "headline": "PRIME SUPPORT AND STABILITY",
+              "subtext": "A unique midsole construction of EVA compression and Torsion Bar suspension offers prime support and stability. Aggressively styled, this women’s exclusive embodies an unapologetic attitude."
+            }
+          ]
+        },
+        "products": [
+          {
+            "image": {
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0808/adi-hub0319-5b89081675607328043072e64832c3b7.png",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0808/adi-hub0319-5b89081675607328043072e64832c3b7.png"
+            },
+            "brand": "Adidas",
+            "price": "85",
+            "title": "Falcon",
+            "url": "/product/black-adidas-falcon/1192807"
+          },
+          {
+            "image": {
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0808/adi-hub0317-d607d7fbfc4543103323dfb9a4e839dd.png",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0808/adi-hub0317-d607d7fbfc4543103323dfb9a4e839dd.png"
+            },
+            "brand": "Adidas",
+            "price": "85",
+            "title": "Falcon",
+            "url": "/product/grey-adidas-falcon/1192806"
+          }
+        ]
+      } ,
+      "influencer":
+        {
+          "products": [
+            {
+              "quote": "These shoes are comfy and stylish - my new faves!",
+              "handle": "@beckiehughesfit",
+              "name": "Beckie Hughes",
+              "url": "/product/grey-adidas-falcon/1192806",
+              "image": {
+                "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0808/750x750-1-58a0ffaa5f5800d75a78ab36ccec66da.jpg",
+                "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0808/750x750-1-58a0ffaa5f5800d75a78ab36ccec66da.jpg"
+              }
+            },
+            {
+              "quote": "These shoes are comfy and stylish - my new faves!",
+              "handle": "@beckiehughesfit",
+              "name": "Beckie Hughes",
+              "url": "/product/grey-adidas-falcon/1192806",
+              "image": {
+                "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0808/750x750-2-cd3c86742ee28e2e674dc2b149ef6390.jpg",
+                "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0808/750x750-2-cd3c86742ee28e2e674dc2b149ef6390.jpg"
+              }
+            },
+            {
+              "quote": "I love the bold colours. These shoes liven up any outfit.",
+              "handle": "@abbiholden_",
+              "name": "Abbi Holden",
+              "url": "/product/black-adidas-falcon/1192807",
+              "image": {
+                "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0808/750x750-3-348bb6411c73b9bc265d6f478e867787.jpg",
+                "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0808/750x750-3-348bb6411c73b9bc265d6f478e867787.jpg"
+              }
+            }
+          ]
+        },
+      "influencerVideo": "url",
+      "get-social": {
+        "url": "Follow Us",
+        "titles": {
+          "headline": "Get Social",
+          "subtext": "#Creator"
+        },
+        "products": [
+          {
+            "image": {
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0808/750x750-0000-142a1330-ig-c24bea3d4ef7bc3f36acd4ef2d48dcd6.jpg",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0808/750x750-0000-142a1330-ig-c24bea3d4ef7bc3f36acd4ef2d48dcd6.jpg"
+            },
+            "url": "/product/grey-adidas-falcon/1192806"
+          },
+          {
+            "image": {
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0808/750x750-0001-142a1358-ig-9a2f0546183610d002f91ddf521d2237.jpg",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0808/750x750-0001-142a1358-ig-9a2f0546183610d002f91ddf521d2237.jpg"
+            },
+            "url": "/product/grey-adidas-falcon/1192806"
+          },
+          {
+            "image": {
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0808/750x750-0004-142a1376-ig-9ddc6f2e3146d4e7925fd62d2f0dedc4.jpg",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0808/750x750-0004-142a1376-ig-9ddc6f2e3146d4e7925fd62d2f0dedc4.jpg"
+            },
+            "url": "/product/black-adidas-falcon/1192807"
+          },
+          {
+            "image": {
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0808/750x750-0002-142a1362-ig-c8eae9b9a201190941d0dc7476217f22.jpg",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0808/750x750-0002-142a1362-ig-c8eae9b9a201190941d0dc7476217f22.jpg"
+            },
+            "url": "/product/grey-adidas-falcon/1192806"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "franchise": "Samba Rose",
+    "image": {
+      "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0726/750x750--0033-final-l1-hailey-door-sambapinkrose-168-r1-v2-b8c788138067bbb657e4df475364ee07.jpg",
+      "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0726/750x750--0033-final-l1-hailey-door-sambapinkrose-168-r1-v2-b8c788138067bbb657e4df475364ee07.jpg"
+    },
+    "content": {
+      "sketch-fab-model": {
+        "id": "e8c99cd3250f402ea02d693f959b3535",
+        "background": "#f3d8c3"
+      },
+      "colourways": {
+        "modal": {
+          "template": [
+            {
+              "component": "Picture",
+              "content": {
+                "image": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0809/sambarosepinklogo-11d36fa3a8a191f99b3d1e2d62458e83.svg"
+              }
+            },
+            {
+              "component": "titles"
+            },
+            {
+              "component": "Picture",
+              "content": {
+                "image": "//jdsports-client-resources.co.uk/jdsports-client-resources/page/adidas-hub/img/adidas-logo.fe4abdae.svg"
+              }
+            }
+          ],
+          "content": [
+            {
+              "subtext": "\n\nTakes the defiant attitude of the original Samba and reimagines it in an all-new silhouette. Inspired by its terrace origin."
+            },
+            {
+              "subtext": "Reimagines adidas Originals D.N.A. with a new gum platform sole and intricate t-toe detailing."
+            }
+          ]
+        },
+        "products": [
+          {
+            "image": {
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0729/adi-hub-0433-c3d18d6ef285daf0a71e31e9b5f43865.png",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0729/adi-hub-0433-c3d18d6ef285daf0a71e31e9b5f43865.png"
+            },
+            "brand": "Adidas",
+            "price": "75",
+            "title": "Samba Rose",
+            "url": "/product/adidas-originals-samba-rose-womens/062032"
+          },
+          {
+            "image": {
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0729/adi-hub-0435-32e616ded2f81843af7407a03831beb8.png",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0729/adi-hub-0435-32e616ded2f81843af7407a03831beb8.png"
+            },
+            "brand": "Adidas",
+            "price": "75",
+            "title": "Samba Rose",
+            "url": "/product/adidas-originals-samba-rose-womens/1178158"
+          },
+          {
+            "image": {
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0729/adi-hub-0432-3241bcf3d987d4ab9bc0311ccc5b4164.png",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0729/adi-hub-0432-3241bcf3d987d4ab9bc0311ccc5b4164.png"
+            },
+            "brand": "Adidas",
+            "price": "75",
+            "title": "Samba Rose",
+            "url": "/product/adidas-originals-samba-rose-womens/062035"
+          }
+        ]
+      } ,
+      "influencer":
+        {
+          "products": [
+            {
+              "name": "Abbi Holden",
+              "handle": "@abbiholden_",
+              "quote": "Loving the Samba Rose for some old-school street style.",
+              "url": "/product/white-adidas-originals-samba-rose-womens/062032",
+              "image": {
+                "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0729/750x750--0037-2-abbiholden--32312ef8e40f19ad507a55f0d233b529.jpg",
+                "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0729/750x750--0037-2-abbiholden--32312ef8e40f19ad507a55f0d233b529.jpg"
+              }
+            },
+            {
+              "url": "/product/white-adidas-originals-samba-rose-womens/062032",
+              "name": "Abbi Holden",
+              "handle": "@abbiholden_",
+              "quote": "Comin' though with the freshest kicks for summer!",
+              "image": {
+                "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0729/750x750--0038-1-abbiholden--c5968e8fe179652681f9e2f9ba3b2578.jpg",
+                "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0729/750x750--0038-1-abbiholden--c5968e8fe179652681f9e2f9ba3b2578.jpg"
+              }
+            },
+            {
+              "url": "/product/white-adidas-originals-samba-rose-womens/062032",
+              "name": "Amy Fuchia",
+              "handle": "@amyfuchsia",
+              "quote": "In love with the adidas Samba Rose sneaks.",
+              "image": {
+                "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0729/750-0000-1-amyfuchsia--7f64d3f9c40ec84d34958fca93b4efa4.jpg",
+                "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0729/750-0000-1-amyfuchsia--7f64d3f9c40ec84d34958fca93b4efa4.jpg"
+              }
+            },
+            {
+              "url": "/product/white-adidas-originals-samba-rose-womens/062032",
+              "name": "Amy Fuchia",
+              "handle": "@amyfuchsia",
+              "quote": "Simple but with a chunky sole!",
+              "image": {
+                "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0729/750-0001-2-amyfuchsia--3cbb8b0245abbded5bf971ff717fa115.jpg",
+                "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0729/750-0001-2-amyfuchsia--3cbb8b0245abbded5bf971ff717fa115.jpg"
+              }
+            }
+          ]
+        },
+      "shoppable-video": {
+        "normal": {
+          "image": {
+            "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/video-placeholders1920x1080-samba-desktop-ea14c9993de822f3a8f021897b17904a.jpg",
+            "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/video-placeholders750x1334-samba-rose-mobile-59846e24f6cbc5e7a4dff37959f52be9.jpg"
+          },
+        "video": {
+          "desktop": "http://i1.adis.ws/v/jpl/SAMBA_MAIN",
+          "mobile": "http://i1.adis.ws/v/jpl/SAMBA_STORY"
+          }
+        }
+      },
+      "influencerVideo": "url",
+      "get-social": {
+        "url": "Follow Us",
+        "titles": {
+          "headline": "Get Social",
+          "subtext": "#Creator"
+        },
+        "products": [
+          {
+            "image": {
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0730/750x750--0036-142a6226-108-insta-e0c59568b23335aad5725ee9ade71c7f.jpg",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0730/750x750--0036-142a6226-108-insta-e0c59568b23335aad5725ee9ade71c7f.jpg"
+            },
+            "url": "/product/white-adidas-originals-samba-rose-womens/062032"
+          },
+          {
+            "image": {
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0730/750x750--0035-142a6236-110-insta-45a38d0d5e74659d5dfd5f0c09d431e2.jpg",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0730/750x750--0035-142a6236-110-insta-45a38d0d5e74659d5dfd5f0c09d431e2.jpg"
+            },
+            "url": "/product/white-adidas-originals-samba-rose-womens/062032"
+          },
+          {
+            "image": {
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0730/750x750--0040--a8a4804-1-ig-95024b65a22b8336cdb893f1e891ae7a.jpg",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0730/750x750--0040--a8a4804-1-ig-95024b65a22b8336cdb893f1e891ae7a.jpg"
+            },
+            "url": "/product/adidas-originals-samba-rose-womens/1178158"
+          },
+          {
+            "image": {
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0730/750x750--0031-final-l1-hailey-door-sambapinkrose-224-r1-v2-3defc4689229d80188b807bed12fe4b8.jpg",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0730/750x750--0031-final-l1-hailey-door-sambapinkrose-224-r1-v2-3defc4689229d80188b807bed12fe4b8.jpg"
+            },
+            "url": "/product/adidas-originals-samba-rose-womens/1178158"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "franchise": "POD",
+    "image": {
+      "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0726/750x750--0025-27707-art-adidas-jd-pod-facebook-instagram-1500x1500px17-3558d5b61abe92416250206089766e1c.jpg",
+      "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0726/750x750--0025-27707-art-adidas-jd-pod-facebook-instagram-1500x1500px17-3558d5b61abe92416250206089766e1c.jpg"
+    },
+    "content": {
+      "sketch-fab-model": {
+        "id": "658ef1b171d7414884da95465879389b",
+        "background": "#f5b2cf"
+      },
+      "colourways": {
+        "modal": {
+          "background": "#33f",
+          "textColor": "#ffc0cb",
+          "template": [
+              {
+                "component": "titles"
+              },
+              {
+                "component": "Picture",
+                "content": {
+                  "image": "//jdsports-client-resources.co.uk/jdsports-client-resources/page/adidas-hub/img/podpink.291af0aa.svg"
+                }
+              }
+          ],
+          "content": [
+            {
+              "headline": "BOOST HEEL",
+              "subtext": "Leading comfort technology repurposed within a podular heel element, bringing the full BOOST sensation to every step."
+            },
+            {
+              "headline": "POINT OF DEFLECTION BRIDGE",
+              "subtext": "Inspired by our Torsion System technology, the Point of Deflection Bridge brings stability and flex to the podular sole for a natural ride."
+            },
+            {
+              "headline": "HIGH REBOUND EVA FOREFOOT",
+              "subtext": "High Rebound EVA finish brings soft + responsive cushioning to the front, means supreme comfort for your whole foot."
+            }
+          ]
+        },
+        "products": [
+          {
+            "image": {
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/adi-hub-068297-f4965ecbd9f0651a9304d38bf63f63b1.png",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/adi-hub-068297-f4965ecbd9f0651a9304d38bf63f63b1.png"
+            },
+            "brand": "adidas",
+            "price": "100",
+            "title": "POD",
+            "url": "/product/black-adidas-originals-pod-womens/1189078"
+          },
+          {
+            "image": {
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/adi-hub-068299-71bd7c6cbb1e1f2b398c35e80f7f9356.png",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/adi-hub-068299-71bd7c6cbb1e1f2b398c35e80f7f9356.png"
+            },
+            "brand": "adidas",
+            "price": "100",
+            "title": "POD",
+            "url": "/product/grey-adidas-originals-pod-womens/1189081"
+          }
+        ]
+      },
+      "influencer":
+        {
+          "products": [
+            {
+              "handle": "@beckihughesfit",
+              "quote": "Great alone, better together – that’s what makes the JD family",
+              "url": "/product/black-adidas-originals-pod-s31-womens/1189078",
+              "image": {
+                "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0803/beckie-hughes-feadf290744a61c160063d15bb87f3ba.jpg",
+                "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0803/beckie-hughes-feadf290744a61c160063d15bb87f3ba.jpg"
+              }
+            },
+            {
+              "handle": "@jessylaw",
+              "url": "/product/black-adidas-originals-pod-s31-womens/1189078",
+              "quote": "Be part of the POD hype – cause I am",
+              "image": {
+                "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0803/jessy-law-51d458ff5b4a03c48b4f526d31473787.jpg",
+                "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0803/jessy-law-51d458ff5b4a03c48b4f526d31473787.jpg"
+              }
+            },
+            {
+              "handle": "@kittycowell",
+              "url": "/product/black-adidas-originals-pod-s31-womens/1189078",
+              "quote": "Stay cosy and flossy with kicks that feel like you’re walking on clouds",
+              "image": {
+                "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0803/kitty-cowell-70cc78a865e5452fdf8c7b01a2ab4838.jpg",
+                "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0803/kitty-cowell-70cc78a865e5452fdf8c7b01a2ab4838.jpg"
+              }
+            },
+            {
+              "handle": "@nikiposch",
+              "url": "/product/black-adidas-originals-pod-s31-womens/1189078",
+              "quote": "Get kicks that are wavy AND comfy",
+              "image": {
+                "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0803/niki-posch-13adb349ab6176ad0466ab95855e03a0.jpg",
+                "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0803/niki-posch-13adb349ab6176ad0466ab95855e03a0.jpg"
+              }
+            }
+          ]
+        },
+        "shoppable-video": {
+          "normal": {
+            "image": {
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/video-placeholders1920x1080-pod-women-7b97171dd841faef3268ffda5bebc9ef.jpg",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/video-placeholders750x1334-pod-women-820169550b076fc9e7abcffecf5a90d6.jpg"
+            },
+            "video": {
+              "desktop": "http://i1.adis.ws/v/jpl/JD_LOOK_03_6S_CUT_DB3766_FEMALE_16X9",
+              "mobile": "http://i1.adis.ws/v/jpl/JD_LOOK_03_6S_CUT_DB3766_FEMALE_9X16"
+            }
+          }
+        },
+      "influencerVideo": "url",
+      "get-social": {
+        "titles": {
+          "headline": "Get Social",
+          "subtext": "#Creator"
+        },
+        "url": "Follow Us",
+        "products": [
+          {
+            "image": {
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0809/750x750-1-1-40963e8e2cd7512f11e96e2b87eab695.jpg",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0809/750x750-1-1-40963e8e2cd7512f11e96e2b87eab695.jpg"
+            },
+            "url": "/product/black-adidas-originals-pod-s31-womens/1189078"
+          },
+          {
+            "image": {
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0809/750x750-2-1-ae40cd19dbdc2d6bcb821913c7470c26.jpg",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0809/750x750-2-1-ae40cd19dbdc2d6bcb821913c7470c26.jpg"
+            },
+            "url": "/product/black-adidas-originals-pod-s31-womens/1189078"
+          },
+          {
+            "image": {
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0809/750x750-5-5bb4ccbbeb227f9fa3bd4b0758b8f78d.jpg",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0809/750x750-5-5bb4ccbbeb227f9fa3bd4b0758b8f78d.jpg"
+            },
+            "url": "/product/black-adidas-originals-pod-s31-womens/1189078"
+          },
+          {
+            "image": {
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0730/750x750--0015-27707-art-adidas-jd-pod-facebook-instagram-1500x1500px54-15be61e27853bacc36d7c43b15c41c9d.jpg",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0730/750x750--0015-27707-art-adidas-jd-pod-facebook-instagram-1500x1500px54-15be61e27853bacc36d7c43b15c41c9d.jpg"
+            },
+            "url": "/product/black-adidas-originals-pod-s31-womens/1189078"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "franchise": "Deerupt",
+    "image": {
+      "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/750x750-4-69d08197443799dcbe7f5fe5bae4d157.jpg",
+      "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/750x750-4-69d08197443799dcbe7f5fe5bae4d157.jpg"
+    },
+    "content": {
+      "sketch-fab-model": {
+        "id": "1a32199ae7d741c19403baee4216e15c",
+        "background": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0726/deerupt-3d-scan-bg-02-a9d7e2070cac95c2eff022357f53728d.png"
+      },
+      "colourways": {
+        "modal": {
+          "background": "//jdsports-client-resources.co.uk/jdsports-client-resources/page/adidas-hub/img/swdesktop.d74f091c.png",
+          "textColor": "#000",
+          "template": [
+            {
+              "component": "Picture",
+              "content": {
+                "image": "//jdsports-client-resources.co.uk/jdsports-client-resources/page/adidas-hub/img/adidas-logo.fe4abdae.svg"
+              }
+            },
+            {
+              "component": "titles"
+            }
+          ],
+          "content": [
+            {
+              "headline": "DEERUPT",
+              "subtext": "DISRUPTIVELY SIMPLE\n\nA singular design philosophy from the adidas archives becomes wearable art."
+            },
+            {
+              "headline": "DEERUPT",
+              "subtext": "DISRUPTIVELY SIMPLE\n\nA silhouette becomes the unexpected. Comfort becomes the unprecedented. Fit becomes an experience.A silhouette becomes the unexpected. Comfort becomes the unprecedented. Fit becomes an experience."
+            }
+          ]
+        },
+        "products": [
+          {
+            "image": {
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0730/shoe-desktop-4-white-adidas-originals-deerupt-womens-045994-0ea11a1bd092bb5eacdc608aac48d64c.png",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0730/shoe-desktop-4-white-adidas-originals-deerupt-womens-045994-0ea11a1bd092bb5eacdc608aac48d64c.png"
+            },
+            "brand": "Adidas",
+            "was": "80",
+            "price": "60",
+            "title": "Deerupt",
+            "url": "/product/white-adidas-originals-deerupt-womens/045994"
+          },
+          {
+            "image": {
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/adi-hub-011739-0de9a935bdef04eb837d097e394034c7.png",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/adi-hub-011739-0de9a935bdef04eb837d097e394034c7.png"
+            },
+            "brand": "Adidas",
+            "was": "80",
+            "price": "55",
+            "title": "Deerupt",
+            "url": "/product/pink-adidas-originals-deerupt-womens/011739"
+          }
+        ]
+      } ,
+      "influencer":
+        {
+          "products": [
+            {
+              "quote": "These are trainers you can’t live without!",
+              "handle": "@hauteonlife",
+              "name": "Haute On Life",
+              "url": "/product/pink-adidas-originals-deerupt-womens/011739",
+              "image": {
+                "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0730/1-hauteonlife-532fb9aabe5244fe1a9d71da06b3dd06.jpg",
+                "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0730/1-hauteonlife-532fb9aabe5244fe1a9d71da06b3dd06.jpg"
+              }
+            },
+            {
+              "url": "/product/pink-adidas-originals-deerupt-womens/011739",
+              "quote": "Summer vibes! A hint of pink I can’t live without. Feels like I’m staring into the future, these kicks give me the vacation feels.",
+              "handle": "@natwinter_",
+              "name": "Nat Winters",
+              "image": {
+                "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0730/750-0005-natwinter--8f064e36bef4b0b582d83bd5e46d1a28.jpg",
+                "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0730/750-0005-natwinter--8f064e36bef4b0b582d83bd5e46d1a28.jpg"
+              }
+            },
+            {
+              "url": "/product/pink-adidas-originals-deerupt-womens/011739",
+              "quote": "On-trend design and perf’ for summer. I love my mint and white Deerupts!",
+              "handle": "@i.am.rachel",
+              "name": "Rachel",
+              "image": {
+                "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0730/750-0003-i-am-rachel--1015ab4ab74be1ec32d42f3960eb61e6.jpg",
+                "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0730/750-0003-i-am-rachel--1015ab4ab74be1ec32d42f3960eb61e6.jpg"
+              }
+            },
+            {
+              "url": "/product/pink-adidas-originals-deerupt-womens/011739",
+              "quote": "The details matter. These trainers are perfect for lounging around as well as going out! My ultimate faves...",
+              "name": "Kerreal Shakira",
+              "handle": "@kerrealshaki",
+              "image": {
+                "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0730/1-kerrealshakira-358c982211a7da4a9100ff431cb5df0c.jpg",
+                "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0730/1-kerrealshakira-358c982211a7da4a9100ff431cb5df0c.jpg"
+              }
+            }
+          ]
+        },
+        "shoppable-video": {
+          "normal": {
+            "image": {
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/video-placeholders1920x1080-deerupt-women-desktop-b03aace67de10c19a117a3d64ae5956d.jpg",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/video-placeholders750x1334-deerupt-women-mobile-d0a9542b7377f118061a19bd674f2832.jpg"
+            },
+          "video": {
+            "desktop": "http://i1.adis.ws/v/jpl/JD_Deerupt_Super_1080",
+            "mobile": "http://i1.adis.ws/v/jpl/JD_Deerupt_Igtv/webm_720p"
+          }
+        }
+        },
+      "influencerVideo": "url",
+      "get-social": {
+        "url": "Follow Us",
+        "titles": {
+          "headline": "Get Social",
+          "subtext": "#Creator"
+        },
+        "products": [
+          {
+            "image": {
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0723/deerupt-women-f84a55e56a4fed9c05fac23e903cb6a5.jpg",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0723/deerupt-women-f84a55e56a4fed9c05fac23e903cb6a5.jpg"
+            },
+            "url": "/product/red-adidas-originals-deerupt-womens/011744"
+          },
+          {
+            "image": {
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0723/deerupt-women-4-b3106b464efc0308b1bdee3bd34cbda6.jpg",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0723/deerupt-women-4-b3106b464efc0308b1bdee3bd34cbda6.jpg"
+            },
+            "url": "/product/red-adidas-originals-deerupt-womens/011744"
+          },
+          {
+            "image": {
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0723/deerupt-women-2-de6be66e4b954ce8dd67ec0948c0d18f.jpg",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0723/deerupt-women-2-de6be66e4b954ce8dd67ec0948c0d18f.jpg"
+            },
+            "url": "/product/pink-adidas-originals-deerupt-womens/011739"
+          },
+          {
+            "image": {
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0723/deerupt-women-3-d16b48f01c427c798ee8c913e2e979bf.jpg",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0723/deerupt-women-3-d16b48f01c427c798ee8c913e2e979bf.jpg"
+            },
+            "url": "/product/white-adidas-originals-deerupt-womens/045994"
+          }
+        ]
+      }
+    }
+  }
+]

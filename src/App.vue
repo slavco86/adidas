@@ -91,7 +91,11 @@ export default {
     },
 
     contentPath(gender = 'men') {
-      const location = `${config.baseUrl}content/`;
+      const environment = (window.environment || 'Live').toLowerCase();
+      const country = (window.country || 'GB').toLowerCase();
+
+      const location = `${config.baseUrl}content/${environment}/${country}/`;
+
       return gender === 'men' ? `${location}men.json` : `${location}women.json`;
     },
 

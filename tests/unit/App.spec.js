@@ -28,6 +28,9 @@ function mockFetch(data) {
 describe('App', () => {
 
   beforeEach(() => {
+    delete global.environment;
+    delete global.country;
+
     global.fetch = mockFetch({
       content: 'test',
     });
@@ -36,7 +39,10 @@ describe('App', () => {
   it('request content based on route.gender', () => {
     const wrapper = factory();
 
-    expect(wrapper.vm.contentPath('women')).toBe('/content/women.json');
+    global.environment = 'whatever';
+    global.country = 'countryCode';
+
+    expect(wrapper.vm.contentPath('women')).toBe('/content/whatever/countrycode/women.json');
   });
 
   it('request a content file when component has mounted', () => {
@@ -57,7 +63,7 @@ describe('App', () => {
     });
 
     expect(getJSON).toHaveBeenCalledTimes(1);
-    expect(getJSON).toHaveBeenCalledWith('/content/men.json', 'men');
+    expect(getJSON).toHaveBeenCalledWith('/content/live/gb/men.json', 'men');
   });
 
   it('request content on route change', () => {

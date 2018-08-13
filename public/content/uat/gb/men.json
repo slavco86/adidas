@@ -1,0 +1,364 @@
+[
+  {
+    "franchise": "POD",
+    "image": {
+      "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0726/750x750--0027-27707-art-adidas-jd-pod-facebook-instagram-1500x1500px13-bb468170b12e46e0c943f6aa8a0752b8.jpg",
+      "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0726/750x750--0027-27707-art-adidas-jd-pod-facebook-instagram-1500x1500px13-bb468170b12e46e0c943f6aa8a0752b8.jpg"
+    },
+    "content": {
+      "sketch-fab-model": {
+        "id": "658ef1b171d7414884da95465879389b",
+        "background": "#273583"
+      },
+      "colourways": {
+        "modal": {
+          "background": "#33f",
+          "textColor": "#ffc0cb",
+          "template": [
+              {
+                "component": "titles"
+              },
+              {
+                "component": "Picture",
+                "content": {
+                  "image": "//jdsports-client-resources.co.uk/jdsports-client-resources/page/adidas-hub/img/podpink.291af0aa.svg"
+                }
+              }
+          ],
+          "content": [
+            {
+              "headline": "BOOST HEEL",
+              "subtext": "Leading comfort technology repurposed within a podular heel element, bringing the full BOOST sensation to every step."
+            },
+            {
+              "headline": "POINT OF DEFLECTION BRIDGE",
+              "subtext": "Inspired by our Torsion System technology, the Point of Deflection Bridge brings stability and flex to the podular sole for a natural ride."
+            },
+            {
+              "headline": "HIGH REBOUND EVA FOREFOOT",
+              "subtext": "High Rebound EVA finish brings soft + responsive cushioning to the front, means supreme comfort for your whole foot."
+            }
+          ]
+        },
+        "products": [
+          {
+            "image": {
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/adi-hub-074451-243ff8a3fcd7bc8645781d946e4e3be8.png",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/adi-hub-074451-243ff8a3fcd7bc8645781d946e4e3be8.png"
+            },
+            "brand": "adidas",
+            "price": "100",
+            "title": "POD",
+            "url": "/product/brown-adidas-originals-pod-s31/1188721"
+          },
+          {
+            "image": {
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/adi-hub-074450-afc931cfcc2eb3550b548da72fe4c036.png",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/adi-hub-074450-afc931cfcc2eb3550b548da72fe4c036.png"
+            },
+            "brand": "adidas",
+            "price": "100",
+            "title": "POD",
+            "url": "/product/brown-adidas-originals-pod-s31/1188721"
+          },
+          {
+            "image": {
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/adi-hub-066721-0125c3e3451588faad06f7f229e32010.png",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/adi-hub-066721-0125c3e3451588faad06f7f229e32010.png"
+            },
+            "brand": "adidas",
+            "price": "100",
+            "title": "POD",
+            "url": "/product/grey-adidas-originals-pod-s31/1189079"
+          },
+          {
+            "image": {
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/adi-hub-066719-578b612f788b48778b65d55755e98acc.png",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/adi-hub-066719-578b612f788b48778b65d55755e98acc.png"
+            },
+            "brand": "adidas",
+            "price": "100",
+            "title": "POD",
+            "url": "product/black-adidas-originals-pod-womens/1189124"
+          }
+        ]
+      } ,
+      "influencer":
+        {
+          "products": [
+            {
+              "handle": "@ryxn_dh",
+              "quote": "Every day camo and POD",
+              "url": "/product/grey-adidas-originals-pod-s31/1189079",
+              "image": {
+                "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0803/ryan-hildrew-568ee84599451a3d9c1d5d72e7ee6525.jpg",
+                "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0803/ryan-hildrew-568ee84599451a3d9c1d5d72e7ee6525.jpg"
+              }
+            },
+            {
+              "handle": "@cedric_castex",
+              "quote": "All the vibes",
+              "url": "/product/brown-adidas-originals-pod-s31/1188721",
+              "image": {
+                "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0803/cedric-castex-1543d47117da3fc7fce3bc5e1ddb99f1.jpg",
+                "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0803/cedric-castex-1543d47117da3fc7fce3bc5e1ddb99f1.jpg"
+              }
+            },
+            {
+              "handle": "@lixmheeley",
+              "quote": "The comfiest shoes I own",
+              "url": "/product/brown-adidas-originals-pod-s31/1188721",
+              "image": {
+                "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0803/750x750-0001-screen-shot-2018-08-03-at-11-03-23-1-96432ed092201b17e5c359509aaa3dbb.png",
+                "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0803/750x750-0001-screen-shot-2018-08-03-at-11-03-23-1-96432ed092201b17e5c359509aaa3dbb.png"
+              }
+            },
+            {
+              "handle": "@kidkaram123",
+              "quote": "Great alone, better together",
+              "url": "/product/brown-adidas-originals-pod-s31/1188721",
+              "image": {
+                "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0803/kid-karam-6cd5bbb2a7bcad034917040ad426accd.jpg",
+                "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0803/kid-karam-6cd5bbb2a7bcad034917040ad426accd.jpg"
+              }
+            }
+          ]
+        },
+      "shoppable-video": {
+        "shoppable": {
+          "mobile": "https://ssl-dot-player-dot-smartzer-editor.appspot.com/video?video=CfUOIahc3aCEvZwtrPp8DIjx&companyId=58331cf19f43139bd4702949",
+          "desktop": "https://ssl-dot-player-dot-smartzer-editor.appspot.com/video?video=F1wi2ZfyiB1DSO7ZTtGxcG4i&companyId=58331cf19f43139bd4702949"
+        }
+      },
+      "extra-video": {
+        "normal": {
+          "video": {
+            "desktop": "http://i1.adis.ws/v/jpl/ADIDAS_HUB_POD_CREATIVE_1920x1080_02",
+            "mobile": "http://i1.adis.ws/v/jpl/ADIDAS_HUB_POD_CREATIVE_1080x1920"
+          },
+          "image": {
+            "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/video-placeholders1920x1080-pod-extra-0888f682cfc8ac793d1f7c7c0e37c886.jpg",
+            "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/video-placeholders750x1334-pod-extra-4838d82995123a11c8514c3e4637e175.jpg"
+          }
+        }
+      },
+      "influencerVideo": "url",
+      "get-social": {
+        "url": "Follow Us",
+        "titles": {
+          "headline": "Get Social",
+          "subtext": "#Creator"
+        },
+        "products": [
+          {
+            "image": {
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0809/750x750-6-f21f569b31ddb4ddf3a6114e8ea638eb.jpg",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0809/750x750-6-f21f569b31ddb4ddf3a6114e8ea638eb.jpg"
+            },
+            "url": "/product/brown-adidas-originals-pod-s31/1188721"
+
+          },
+          {
+            "image": {
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0809/750x750-3-1-1f00a9f6de5d41519120904ad38916c4.jpg",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0809/750x750-3-1-1f00a9f6de5d41519120904ad38916c4.jpg"
+            },
+            "url": "/product/black-adidas-originals-pod-s31/1189124"
+
+          },
+          {
+            "image": {
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0809/750x750-4-43236f7f9fa41823949a39c4bfe473ea.jpg",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0809/750x750-4-43236f7f9fa41823949a39c4bfe473ea.jpg"
+            },
+            "url": "/product/blue-adidas-originals-pod-s31/1188720"
+
+          },
+          {
+            "image": {
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0726/750x750--0016-27707-art-adidas-jd-pod-facebook-instagram-1500x1500px52-9b0199748520a6ef0ee80d5a37dd3948.jpg",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0726/750x750--0016-27707-art-adidas-jd-pod-facebook-instagram-1500x1500px52-9b0199748520a6ef0ee80d5a37dd3948.jpg"
+            },
+            "url": "/product/black-adidas-originals-pod-s31/1189124"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "franchise": "Deerupt",
+    "image": {
+      "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0726/750x750--0011-142a4684-tw-6ab484ea8f9ef4eac28c5a62de805437.jpg",
+      "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0726/750x750--0011-142a4684-tw-6ab484ea8f9ef4eac28c5a62de805437.jpg"
+    },
+    "content": {
+      "sketch-fab-model": {
+        "id": "1a32199ae7d741c19403baee4216e15c",
+        "background": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0726/deerupt-3d-scan-bg-02-a9d7e2070cac95c2eff022357f53728d.png"
+      },
+      "colourways": {
+        "modal": {
+          "background": "//jdsports-client-resources.co.uk/jdsports-client-resources/page/adidas-hub/img/swdesktop.d74f091c.png",
+          "textColor": "#000",
+          "template": [
+            {
+              "component": "Picture",
+              "content": {
+                "image": "//jdsports-client-resources.co.uk/jdsports-client-resources/page/adidas-hub/img/adidas-logo.fe4abdae.svg"
+              }
+            },
+            {
+              "component": "titles"
+            }
+          ],
+          "content": [
+            {
+              "headline": "DEERUPT",
+              "subtext": "DISRUPTIVELY SIMPLE\n\nA singular design philosophy from the adidas archives becomes wearable art."
+            },
+            {
+              "headline": "DEERUPT",
+              "subtext": "DISRUPTIVELY SIMPLE\n\nA silhouette becomes the unexpected. Comfort becomes the unprecedented. Fit becomes an experience.A silhouette becomes the unexpected. Comfort becomes the unprecedented. Fit becomes an experience."
+            }
+          ]
+        },
+        "products": [
+          {
+            "image": {
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/adi-hub-052225-be38aa62c0ff33a8a0779621bd7633ba.png",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/adi-hub-052225-be38aa62c0ff33a8a0779621bd7633ba.png"
+            },
+            "brand": "Adidas",
+            "price": "80.00",
+            "title": "Deerupt",
+            "url": "/product/blue-adidas-originals-deerupt/052225"
+          },
+          {
+            "image": {
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/adi-hub-066634-4facff479ac9c3c6f9ab5fab0ad9fad4.png",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/adi-hub-066634-4facff479ac9c3c6f9ab5fab0ad9fad4.png"
+            },
+            "brand": "Adidas",
+            "price": "80.00",
+            "title": "Deerupt",
+            "url": "/product/white-adidas-originals-deerupt/011238"
+          },
+          {
+            "image": {
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0727/adi-hub0426-adidas-originals-deerupt-1181786-15d2ba1efc0e47c3566c26002797cec6.png",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0727/adi-hub0426-adidas-originals-deerupt-1181786-15d2ba1efc0e47c3566c26002797cec6.png"
+            },
+            "brand": "Adidas",
+            "price": "80.00",
+            "title": "Deerupt",
+            "url": "/product/black-adidas-originals-deerupt/1181786"
+          },
+          {
+            "image": {
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/adi-hub-073028-f5a55dd3f4ecc6b24c5b62e7c0973826.png",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/adi-hub-073028-f5a55dd3f4ecc6b24c5b62e7c0973826.png"
+            },
+            "brand": "Adidas",
+            "price": "80.00",
+            "title": "Deerupt",
+            "url": "/product/green-adidas-originals-deerupt/1179341"
+          }
+        ]
+      } ,
+      "influencer": {
+          "products": [
+            {
+              "name": "Nathan Hopkinson",
+              "handle": "@curlyfrysfeed",
+              "quote": "Combining 90’s fashion with modern kicks - this pairing is crazy!",
+              "url": "/product/white-adidas-originals-deerupt/011238",
+              "image": {
+                "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0727/750-0002-curlyfrysfeed--913c35abaff60cd4786bef68b60798c0.jpg",
+                "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0727/750-0002-curlyfrysfeed--913c35abaff60cd4786bef68b60798c0.jpg"
+              }
+            },
+            {
+              "name": "Sam Fenton",
+              "handle": "@samfenton_",
+              "url": "/product/green-adidas-originals-deerupt/1179341",
+              "quote": "Lovin’ the Deerupt at the minute! I’ve copped 3 pairs and they go with all of my looks.",
+              "image": {
+                "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0727/750x750--0001-samfenton-191b7f6bdda8a54a7796d252291c0eb7.jpg",
+                "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0727/750x750--0001-samfenton-191b7f6bdda8a54a7796d252291c0eb7.jpg"
+              }
+            },
+            {
+              "name": "Sam Fenton",
+              "handle": "@samfenton_",
+              "url": "/product/green-adidas-originals-deerupt/1179341",
+              "quote": "Lovin’ the Deerupt at the minute! I’ve copped 3 pairs and they go with all of my looks.",
+              "image": {
+                "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0727/750x750--0000-samfenton4-cc522e1a0066719039cea24eccb8465a.jpg",
+                "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0727/750x750--0000-samfenton4-cc522e1a0066719039cea24eccb8465a.jpg"
+              }
+            },
+            {
+              "name": "Carl Kho",
+              "handle": "@carlkho_",
+              "url": "/product/blue-adidas-originals-deerupt/052225/",
+              "quote": "Cozy vibes with these crazy sneakers! It feels like I’m walking into the future!",
+              "image": {
+                "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0727/750x750--0003-carl-kho-6bcd6317a1fc63dc73c6ee15a1389dbf.jpg",
+                "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0727/750x750--0003-carl-kho-6bcd6317a1fc63dc73c6ee15a1389dbf.jpg"
+              }
+            }
+          ]
+        },
+        "shoppable-video": {
+          "normal": {
+            "image": {
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/video-placeholders1920x1080-deerupt-men-desktop-84a656a60f4f009e7d7b5a8e92a2dbb8.jpg",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/video-placeholders750x1334-deerupt-men-mobile-80b7d4320813fb55179946f453edc8aa.jpg"
+            },
+          "video": {
+            "desktop": "http://i1.adis.ws/v/jpl/ADI_MAIN/mp4_720p",
+            "mobile": "http://i1.adis.ws/v/jpl/ADI_STORY_1/webm_720p"
+          }
+        }
+        },
+        "influencerVideo": "url",
+      "get-social": {
+        "url": "Follow Us",
+        "titles": {
+          "headline": "Get Social",
+          "subtext": "#Creator"
+        },
+        "products": [
+          {
+            "image": {
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0726/750x750--0011-142a4684-tw-6ab484ea8f9ef4eac28c5a62de805437.jpg",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0726/750x750--0011-142a4684-tw-6ab484ea8f9ef4eac28c5a62de805437.jpg"
+            },
+            "url": "/product/adidas-originals-deerupt/1181786"
+          },
+          {
+            "image": {
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0723/deerupt-3-1d35b0074ee64ace4b6b37351d1ab50d.jpg",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0723/deerupt-3-1d35b0074ee64ace4b6b37351d1ab50d.jpg"
+            },
+            "url": "/product/red-adidas-originals-deerupt/011273"
+          },
+          {
+            "image": {
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0723/deerupt-2-966e8024660de59cf8d429744d80d11f.jpg",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0723/deerupt-2-966e8024660de59cf8d429744d80d11f.jpg"
+            },
+            "url": "/product/adidas-originals-deerupt/1181785"
+          },
+          {
+            "image": {
+              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0723/deerupt-4-9f17f072b0d99bf8dfea2cd59454e2fd.jpg",
+              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0723/deerupt-4-9f17f072b0d99bf8dfea2cd59454e2fd.jpg"
+            },
+            "url": "/product/blue-adidas-originals-deerupt/052225"
+          }
+        ]
+      }
+    }
+  }
+]
