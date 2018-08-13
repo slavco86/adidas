@@ -19,6 +19,8 @@
 </template>
 
 <script>
+import config from '@/config';
+
 export default {
   name: 'App',
 
@@ -77,7 +79,7 @@ export default {
     },
 
     contentPath(gender = 'men') {
-      const location = '/content/';
+      const location = `${config.baseUrl}content/`;
       return gender === 'men' ? `${location}men.json` : `${location}women.json`;
     },
 

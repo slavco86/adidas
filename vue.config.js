@@ -1,9 +1,8 @@
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+const config = require('./src/config');
 
 module.exports = {
-  baseUrl: process.env.NODE_ENV === 'production'
-    ? '//jdsports-client-resources.co.uk/jdsports-client-resources/page/adidas-hub/'
-    : '/',
+  baseUrl: config.baseUrl,
   configureWebpack: {
     plugins: [
       new BundleAnalyzerPlugin({
