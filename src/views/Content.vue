@@ -73,7 +73,11 @@ export default {
   },
 
   mounted() {
-    this.$watch('routeAnimating', (newVal) => {
+    if (Object.keys(this.content).length === 0 && this.content.constructor === Object) {
+      return this.$router.push('/');
+    }
+
+    return this.$watch('routeAnimating', (newVal) => {
       if (newVal === false) {
         // TODO: sort this shit out.
         setTimeout(() => {
@@ -94,18 +98,19 @@ export default {
   methods: {
     enableFullpage() {
       const anchors = this.fullpageAnchors;
+      if (anchors.length) {
+        this.fullpage = new Fullpage('#content', {
+          licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
+          anchors,
+          lockAnchors: true,
+          scrollBar: true,
+          onLeave: (origin, destination) => {
+            this.section = destination.anchor;
 
-      this.fullpage = new Fullpage('#content', {
-        licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
-        anchors,
-        lockAnchors: true,
-        scrollBar: true,
-        onLeave: (origin, destination) => {
-          this.section = destination.anchor;
-
-          return destination;
-        },
-      });
+            return destination;
+          },
+        });
+      }
     },
   },
 };
