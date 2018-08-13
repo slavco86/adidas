@@ -7,6 +7,11 @@
              'deerupt': this.$route.params.franchise === 'Deerupt',
              'falcon': this.$route.params.franchise === 'Falcon' }"
     class="category">
+    <div
+      v-if="error"
+      class="error">
+      Cannot find content file, please check path
+    </div>
     <transition
       name="fade"
       @enter="pageTransitionStart"
@@ -26,6 +31,7 @@ export default {
 
   data() {
     return {
+      error: null,
       content: {
         men: [],
         women: [],
@@ -100,6 +106,9 @@ export default {
           .then((json) => {
             this.content[gender] = json;
             return json;
+          })
+          .catch((err) => {
+            this.error = err.toString();
           });
       }
 
@@ -161,5 +170,12 @@ $mobile-header-height: 50px;
   @media only screen and (min-width: 765px) {
     top: 0;
   }
+}
+
+.error {
+  padding: 1rem;
+  font-size: 1rem;
+  background-color: #e05f5f;
+  text-align: center;
 }
 </style>
