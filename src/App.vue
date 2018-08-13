@@ -86,12 +86,16 @@ export default {
     },
 
     getJSON(path, gender = 'men') {
-      return fetch(path)
-        .then(data => data.json())
-        .then((json) => {
-          this.content[gender] = json;
-          return json;
-        });
+      if (this.content[gender].length === 0) {
+        return fetch(path)
+          .then(data => data.json())
+          .then((json) => {
+            this.content[gender] = json;
+            return json;
+          });
+      }
+
+      return false;
     },
   },
 };

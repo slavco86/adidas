@@ -196,4 +196,31 @@ describe('App', () => {
 
     expect(franchise).toHaveBeenCalledTimes(1);
   });
+
+  it('should not make a network request once a gender key is not an empty array', () => {
+    const $route = {
+      params: {
+        gender: 'men',
+        franchise: null,
+      },
+    };
+
+    shallowMount(Component, {
+      mocks: {
+        $route,
+      },
+      stubs: ['router-view'],
+      data: () => ({
+        content: {
+          men: {
+            content: 'test',
+          },
+          women: [],
+        },
+      }),
+    });
+
+    expect(fetch).toHaveBeenCalledTimes(0);
+  });
+
 });
