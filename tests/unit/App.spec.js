@@ -154,18 +154,6 @@ describe('App', () => {
 
     const content = {
       men: [
-        {
-          franchise: 'pod',
-          content: {
-            test: true,
-          },
-        },
-        {
-          franchise: 'incorrect',
-          content: {
-            test: false,
-          },
-        },
       ],
       women: [
         {
@@ -186,6 +174,10 @@ describe('App', () => {
     expect(wrapper.vm.franchise(route, content)).toEqual({
       test: true,
     });
+
+    route.params.gender = 'men';
+
+    expect(wrapper.vm.franchise(route, content)).toEqual({});
   });
 
   it('filter content based on url change in route.franchise', () => {

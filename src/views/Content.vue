@@ -1,7 +1,9 @@
 <template>
   <div class="content-page">
     <CloseButton :to="`/${$route.params.gender}`" />
-    <div id="content">
+    <div
+      v-if="content"
+      id="content">
       <div
         v-for="component in fullpageAnchors"
         :key="component"

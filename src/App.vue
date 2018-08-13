@@ -75,7 +75,13 @@ export default {
     franchise(route, data) {
       const { gender, franchise } = route.params;
 
-      return data[gender].filter(obj => obj.franchise === franchise).pop().content;
+      const franchiseContent = data[gender].filter(obj => obj.franchise === franchise).pop();
+
+      if (typeof franchiseContent === 'undefined') {
+        return {};
+      }
+
+      return franchiseContent.content;
     },
 
     contentPath(gender = 'men') {
