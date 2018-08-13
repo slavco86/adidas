@@ -26,7 +26,6 @@ function mockFetch(data) {
 }
 
 describe('App', () => {
-
   beforeEach(() => {
     delete global.environment;
     delete global.country;
@@ -219,5 +218,24 @@ describe('App', () => {
     wrapper.vm.$route.params.franchise = 'pod';
 
     expect(franchise).toHaveBeenCalledTimes(1);
+  });
+
+  it('each franchise should have its own style hook', () => {
+    const wrapper = shallowMount(Component, {
+      mocks: {
+        $route: {
+          params: {
+            gender: 'men',
+            franchise: 'Test Name',
+          },
+        },
+      },
+      methods: {
+        franchise: jest.fn(),
+      },
+      stubs: ['router-view'],
+    });
+
+    expect(wrapper.vm.franchiseStyleHooks).toBe('test');
   });
 });

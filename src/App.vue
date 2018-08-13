@@ -1,11 +1,11 @@
 <template>
   <div
     id="app"
-    :class="{'category--women' : isWomen, 'is-content' : isContentPage,
-             'samba': this.$route.params.franchise === 'Samba Rose',
-             'pod': this.$route.params.franchise === 'POD',
-             'deerupt': this.$route.params.franchise === 'Deerupt',
-             'falcon': this.$route.params.franchise === 'Falcon' }"
+    :class="[
+      {'category--women' : isWomen },
+      {'is-content' : isContentPage },
+      franchiseStyleHooks
+    ]"
     class="category">
     <div
       v-if="error"
@@ -55,6 +55,13 @@ export default {
 
     isContentPage() {
       return this.$route.name === 'content' || this.$route.name === '3d-view';
+    },
+
+    franchiseStyleHooks() {
+      if (this.$route.params.franchise) {
+        return this.$route.params.franchise.split(' ')[0].toLowerCase();
+      }
+      return false;
     },
   },
 
