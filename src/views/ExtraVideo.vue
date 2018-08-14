@@ -9,15 +9,14 @@
       <Video
         v-else
         v-bind="data.normal"/>
-        <MouseDown
-        class="scroll"
-        :height=50
-        :width=35
+      <MouseDown
+        :height="50"
+        :width="35"
         :fill="'transparent'"
         :stroke="'white'"
-        :fillButton="'white'"
-        :strokeButton="'white'">
-      </MouseDown>
+        :fill-button="'white'"
+        :stroke-button="'white'"
+        class="scroll"/>
     </div>
   </div>
 </template>

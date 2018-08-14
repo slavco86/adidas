@@ -142,7 +142,6 @@ export default {
 
   methods: {
     displayModal(contentIndex) {
-
       const modal = {
         background: this.data.modal.background,
         textColor: this.data.modal.textColor,

@@ -2,12 +2,24 @@
   <div class="vSpotVideo">
     <slot/>
     <div class="video">
-      <Picture v-if="imageShouldDisplay" :image="image" class="video__picture"
-               @click.native="showVideo(videoRef)"/>
-      <video ref="videoRef" :autoplay="autoplay" :class="{ 'video__video--displayed ' : videoShow || !image }"
-             class="video__video" controls @click="playPauseVideo(videoRef)">
-        <source :src="`${videoUrl}/mp4_720p`" type="video/mp4">
-        <source :src="`${videoUrl}/webm_720p`" type="video/webm">
+      <Picture
+        v-if="imageShouldDisplay"
+        :image="image"
+        class="video__picture"
+        @click.native="showVideo(videoRef)"/>
+      <video
+        ref="videoRef"
+        :autoplay="autoplay"
+        :class="{ 'video__video--displayed ' : videoShow || !image }"
+        class="video__video"
+        controls
+        @click="playPauseVideo(videoRef)">
+        <source
+          :src="`${videoUrl}/mp4_720p`"
+          type="video/mp4">
+        <source
+          :src="`${videoUrl}/webm_720p`"
+          type="video/webm">
       </video>
     </div>
   </div>

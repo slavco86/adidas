@@ -73,8 +73,8 @@
         :width="35"
         :fill="'transparent'"
         :stroke="'white'"
-        :fillButton="'white'"
-        :strokeButton="'white'"
+        :fill-button="'white'"
+        :stroke-button="'white'"
         class="scroll"/>
     </div>
   </div>
