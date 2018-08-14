@@ -1,18 +1,18 @@
-import { shallowMount, createLocalVue } from '@vue/test-utils';
+import { shallowMount } from '@vue/test-utils';
 import Component from '@/App.vue';
-import VueRouter from 'vue-router';
-
-const localVue = createLocalVue();
-localVue.use(VueRouter);
-const router = new VueRouter();
 
 const factory = (data = {}, props = {}) =>
   shallowMount(Component, {
-    localVue,
-    router,
+    mocks: {
+      $route: {
+        params: {
+          gender: 'men',
+        },
+      },
+    },
+    stubs: ['router-view'],
     data: () => ({ ...data }),
     propsData: {
-      display: true,
       ...props,
     },
   });
