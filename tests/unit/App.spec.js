@@ -119,12 +119,6 @@ describe('App', () => {
             test: true,
           },
         },
-        {
-          franchise: 'incorrect',
-          content: {
-            test: false,
-          },
-        },
       ],
     };
 
