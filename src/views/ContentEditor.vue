@@ -3,16 +3,18 @@
     <form
       class="form">
       <InputGenerator
-        v-for="(influencer, key) in json.influencer.products"
+        v-for="(influencer, key) in products"
         :key="key"
+        :index="key"
         :data="influencer"
-        @input="influencer[$event.key] = $event.value"/>
+        @input="influencer[$event.key] = $event.value"
+        @remove="remove($event, products)"/>
       <button
         type="submit"
         @click="save">
         Download
       </button>
-      <button @click="add(json.influencer.products[0], json.influencer.products)">
+      <button @click="add(products[0], products)">
         Add
       </button>
     </form>
@@ -42,6 +44,11 @@ export default {
       json: JSON.parse(JSON.stringify(this.content)),
     };
   },
+  computed: {
+    products() {
+      return this.json.influencer.products;
+    },
+  },
 
   methods: {
     save() {
@@ -65,6 +72,9 @@ export default {
         }
       });
       array.push(newObject);
+    },
+    remove(index, array) {
+      this.json.influencer.products.splice(index, 1);
     },
   },
 };

@@ -19,6 +19,7 @@
           @input="objectUpdate($event, field, value, field2)"/>
       </fieldset>
     </div>
+    <button @click="remove(index)">delete</button>
   </fieldset>
 </template>
 
@@ -35,6 +36,10 @@ export default {
       type: Object,
       default: () => {},
     },
+    index: {
+      type: Number,
+      default: 0,
+    },
   },
 
   methods: {
@@ -47,6 +52,9 @@ export default {
       payload.value[name] = input;
 
       this.$emit('input', payload);
+    },
+    remove() {
+      this.$emit('remove', this.index);
     },
   },
 };

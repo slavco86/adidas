@@ -3,7 +3,7 @@
     <label :for="label">{{ label }}</label>
     <input
       :id="label"
-      v-model="inputValue"
+      v-model="computedValue"
       type="text"
       required
       @input="$emit('input', $event.target.value)">
@@ -25,8 +25,19 @@ export default {
 
   data() {
     return {
-      inputValue: this.value,
+      inputValue: this.computedValue,
     };
+  },
+
+  computed: {
+    computedValue: {
+      get() {
+        return this.value;
+      },
+      set(newVal) {
+        this.inputValue = newVal;
+      },
+    },
   },
 };
 </script>
