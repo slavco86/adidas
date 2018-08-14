@@ -47,15 +47,13 @@ describe('App', () => {
   it('request a content file when component has mounted', () => {
     const getJSON = jest.fn();
 
-    const $route = {
-      params: {
-        gender: 'men',
-      },
-    };
-
     shallowMount(Component, {
       mocks: {
-        $route,
+        $route: {
+          params: {
+            gender: 'men',
+          },
+        },
       },
       stubs: ['router-view'],
       methods: { getJSON },
@@ -68,15 +66,13 @@ describe('App', () => {
   it('request content on route change', () => {
     const getJSON = jest.fn();
 
-    const $route = {
-      params: {
-        gender: 'men',
-      },
-    };
-
     const wrapper = shallowMount(Component, {
       mocks: {
-        $route,
+        $route: {
+          params: {
+            gender: 'men',
+          },
+        },
       },
       methods: { getJSON },
       stubs: ['router-view'],
@@ -88,16 +84,14 @@ describe('App', () => {
   });
 
   it('prevent making a network request once a gender key has content', () => {
-    const $route = {
-      params: {
-        gender: 'men',
-        franchise: null,
-      },
-    };
-
     shallowMount(Component, {
       mocks: {
-        $route,
+        $route: {
+          params: {
+            gender: 'men',
+            franchise: null,
+          },
+        },
       },
       stubs: ['router-view'],
       data: () => ({
@@ -114,15 +108,14 @@ describe('App', () => {
   });
 
   it('data will be fetched from server and assigned to a gender key in content', async () => {
-    const $route = {
-      params: {
-        gender: 'women',
-      },
-    };
 
     const wrapper = shallowMount(Component, {
       mocks: {
-        $route,
+        $route: {
+          params: {
+            gender: 'women',
+          },
+        },
       },
       stubs: ['router-view'],
     });
@@ -158,8 +151,7 @@ describe('App', () => {
     };
 
     const content = {
-      men: [
-      ],
+      men: [],
       women: [
         {
           franchise: 'pod',
@@ -188,16 +180,14 @@ describe('App', () => {
   it('filter content based on url change in route.franchise', () => {
     const franchise = jest.fn();
 
-    const $route = {
-      params: {
-        gender: 'men',
-        franchise: null,
-      },
-    };
-
     const wrapper = shallowMount(Component, {
       mocks: {
-        $route,
+        $route: {
+          params: {
+            gender: 'men',
+            franchise: null,
+          },
+        },
       },
       methods: { franchise },
       stubs: ['router-view'],
