@@ -114,7 +114,7 @@ describe('App', () => {
       men: [],
       women: [
         {
-          franchise: 'pod',
+          franchise: 'Pod',
           content: {
             test: true,
           },
