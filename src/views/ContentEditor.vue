@@ -1,21 +1,15 @@
 <template>
-  <div>
+  <div v-if="json.influencer">
     <form
-      v-if="json.influencer"
       class="form">
-      <div
-        v-for="(value, field) in json.influencer.products[0]"
-        :key="field"
-        class="input-container">
-        <label :for="field">{{ field }}</label>
-        <input
-          :id="field"
-          v-model="json.influencer.products[0][field]"
-          type="text">
-      </div>
+      <InputGenerator
+        v-for="influencer in json.influencer.products"
+        :key="influencer"
+        :data="influencer"
+        @input="influencer[$event.key] = $event.value"/>
     </form>
     <pre>
-      {{ json }}
+      {{ json.influencer }}
     </pre>
     <button @click="save">
       Save
@@ -24,7 +18,13 @@
 </template>
 
 <script>
+import InputGenerator from '@/components/InputGenerator.vue';
+
 export default {
+  components: {
+    InputGenerator,
+  },
+
   props: {
     content: {
       type: Object,
@@ -57,12 +57,12 @@ export default {
     max-width: 500px;
     margin: 0 auto;
 
-    input {
+    /deep/ input {
       width: 100%;
       margin-bottom: 1rem;
     }
 
-    label {
+    /deep/ label {
       font-size: 18px;
       display: block;
     }
