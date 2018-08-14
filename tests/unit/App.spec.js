@@ -1,16 +1,22 @@
 import { shallowMount } from '@vue/test-utils';
 import Component from '@/App.vue';
 
-const factory = (data = {}, params = { gender: 'men' }) =>
-  shallowMount(Component, {
+const factory = (data = {}, params = { gender: 'men' }, methods = {}) => {
+  const options = {
     mocks: {
       $route: {
-        params,
+        params: {
+          ...params,
+        },
       },
     },
+    methods,
     stubs: ['router-view'],
     data: () => ({ ...data }),
-  });
+  };
+
+  return shallowMount(Component, options);
+};
 
 function mockFetch(data) {
   return jest.fn().mockImplementation(() =>
@@ -42,17 +48,7 @@ describe('App', () => {
   it('request a content file when component has mounted', () => {
     const getJSON = jest.fn();
 
-    shallowMount(Component, {
-      mocks: {
-        $route: {
-          params: {
-            gender: 'men',
-          },
-        },
-      },
-      stubs: ['router-view'],
-      methods: { getJSON },
-    });
+    factory(null, undefined, { getJSON });
 
     expect(getJSON).toHaveBeenCalledTimes(1);
     expect(getJSON).toHaveBeenCalledWith('/content/live/gb/men.json', 'men');
@@ -61,17 +57,7 @@ describe('App', () => {
   it('request content on route change', () => {
     const getJSON = jest.fn();
 
-    const wrapper = shallowMount(Component, {
-      mocks: {
-        $route: {
-          params: {
-            gender: 'men',
-          },
-        },
-      },
-      methods: { getJSON },
-      stubs: ['router-view'],
-    });
+    const wrapper = factory(null, undefined, { getJSON });
 
     wrapper.vm.$route.params.gender = 'women';
 
@@ -153,27 +139,20 @@ describe('App', () => {
 
   it('filter content based on url change in route.franchise', () => {
     const franchise = jest.fn();
-
-    const wrapper = shallowMount(Component, {
-      mocks: {
-        $route: {
-          params: {
-            gender: 'men',
-            franchise: null,
-          },
+    const data = {
+      content: {
+        men: {
+          content: 'test',
         },
+        women: [],
       },
-      methods: { franchise },
-      stubs: ['router-view'],
-      data: () => ({
-        content: {
-          men: {
-            content: 'test',
-          },
-          women: [],
-        },
-      }),
-    });
+    };
+    const route = {
+      gender: 'men',
+      franchise: null,
+    };
+
+    const wrapper = factory(data, route, { franchise });
 
     expect(wrapper.vm.servedContent).toEqual({
       content: 'test',
