@@ -83,7 +83,7 @@ export default {
     swiperOptions() {
       const desktop = this.width > 765;
       const slidesPerView = desktop ? 1.8 : 1.2;
-      const spaceBetween = this.spaceBetween;
+      const { spaceBetween } = this;
       return {
         parallax: true,
         centeredSlides: true,

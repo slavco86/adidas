@@ -149,8 +149,9 @@ export default {
       };
 
       modal.content.forEach((content) => {
-        if (content.component === 'titles') {
-          content.content = this.data.modal.content[contentIndex];
+        const contentCopy = content;
+        if (contentCopy.component === 'titles') {
+          contentCopy.content = this.data.modal.content[contentIndex];
         }
       });
 
