@@ -74,7 +74,7 @@ export default {
       array.push(newObject);
     },
     remove(index, array) {
-      this.json.influencer.products.splice(index, 1);
+      array.splice(index, 1);
     },
   },
 };
