@@ -1,7 +1,12 @@
 <template>
   <picture v-lazy-container>
-    <source v-if="responsiveImg" :srcset="image.desktop" media="(min-width: 765px)">
-    <img :data-src="sourceImage" class="lazy">
+    <source
+      v-if="responsiveImg"
+      :srcset="image.desktop"
+      media="(min-width: 765px)">
+    <img
+      :data-src="sourceImage"
+      class="lazy">
   </picture>
 </template>
 <script>

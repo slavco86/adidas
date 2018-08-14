@@ -180,9 +180,6 @@ export default {
   padding-top: 2rem;
   padding-bottom: 1rem;
   overflow: visible;
-
-  @media only screen and (min-width: 765px) {
-  }
 }
 
 .influencer-carousel /deep/ .spot {
