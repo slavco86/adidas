@@ -30,9 +30,9 @@ describe('App', () => {
     delete global.environment;
     delete global.countryISO;
 
-    global.fetch = mockFetch({
+    global.fetch = mockFetch([{
       content: 'test',
-    });
+    }]);
   });
 
   it('request content based on route.gender', () => {
@@ -225,13 +225,9 @@ describe('App', () => {
       mocks: {
         $route: {
           params: {
-            gender: 'men',
             franchise: 'Test Name',
           },
         },
-      },
-      methods: {
-        franchise: jest.fn(),
       },
       stubs: ['router-view'],
     });

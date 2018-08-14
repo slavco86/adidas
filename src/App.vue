@@ -86,7 +86,7 @@ export default {
     },
 
     franchise(route, data) {
-      const { gender, franchise } = route.params;
+      const { gender = 'men', franchise } = route.params;
 
       const franchiseContent = data[gender].filter(obj => obj.franchise === franchise).pop();
 
