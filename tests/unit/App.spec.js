@@ -1,20 +1,15 @@
 import { shallowMount } from '@vue/test-utils';
 import Component from '@/App.vue';
 
-const factory = (data = {}, props = {}) =>
+const factory = (data = {}, params = { gender: 'men' }) =>
   shallowMount(Component, {
     mocks: {
       $route: {
-        params: {
-          gender: 'men',
-        },
+        params,
       },
     },
     stubs: ['router-view'],
     data: () => ({ ...data }),
-    propsData: {
-      ...props,
-    },
   });
 
 function mockFetch(data) {
@@ -84,41 +79,20 @@ describe('App', () => {
   });
 
   it('prevent making a network request once a gender key has content', () => {
-    shallowMount(Component, {
-      mocks: {
-        $route: {
-          params: {
-            gender: 'men',
-            franchise: null,
-          },
+    factory({
+      content: {
+        men: {
+          content: 'test',
         },
+        women: [],
       },
-      stubs: ['router-view'],
-      data: () => ({
-        content: {
-          men: {
-            content: 'test',
-          },
-          women: [],
-        },
-      }),
     });
 
     expect(fetch).toHaveBeenCalledTimes(0);
   });
 
   it('data will be fetched from server and assigned to a gender key in content', async () => {
-
-    const wrapper = shallowMount(Component, {
-      mocks: {
-        $route: {
-          params: {
-            gender: 'women',
-          },
-        },
-      },
-      stubs: ['router-view'],
-    });
+    const wrapper = factory(null, { gender: 'women' });
 
     global.fetch = mockFetch({
       content: 'test',
@@ -211,16 +185,7 @@ describe('App', () => {
   });
 
   it('each franchise should have its own style hook', () => {
-    const wrapper = shallowMount(Component, {
-      mocks: {
-        $route: {
-          params: {
-            franchise: 'Test Name',
-          },
-        },
-      },
-      stubs: ['router-view'],
-    });
+    const wrapper = factory(null, { franchise: 'Test Name' });
 
     expect(wrapper.vm.franchiseStyleHooks).toBe('test');
   });
