@@ -28,7 +28,7 @@ function mockFetch(data) {
 describe('App', () => {
   beforeEach(() => {
     delete global.environment;
-    delete global.country;
+    delete global.countryISO;
 
     global.fetch = mockFetch({
       content: 'test',
@@ -39,7 +39,7 @@ describe('App', () => {
     const wrapper = factory();
 
     global.environment = 'whatever';
-    global.country = 'countryCode';
+    global.countryISO = 'countryCode';
 
     expect(wrapper.vm.contentPath('women')).toBe('/content/whatever/countrycode/women.json');
   });

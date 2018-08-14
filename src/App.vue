@@ -99,7 +99,7 @@ export default {
 
     contentPath(gender = 'men') {
       const environment = (window.environment || 'Live').toLowerCase();
-      const country = (window.country || 'GB').toLowerCase();
+      const country = (window.countryISO || 'GB').toLowerCase();
 
       const location = `${config.baseUrl}content/${environment}/${country}/`;
 
