@@ -3,17 +3,22 @@
     <form
       class="form">
       <InputGenerator
-        v-for="influencer in json.influencer.products"
-        :key="influencer"
+        v-for="(influencer, key) in json.influencer.products"
+        :key="key"
         :data="influencer"
         @input="influencer[$event.key] = $event.value"/>
+      <button
+        type="submit"
+        @click="save">
+        Download
+      </button>
+      <button @click="add(json.influencer.products[0], json.influencer.products)">
+        Add
+      </button>
     </form>
     <pre>
       {{ json.influencer }}
     </pre>
-    <button @click="save">
-      Save
-    </button>
   </div>
 </template>
 
@@ -47,6 +52,19 @@ export default {
       a.href = URL.createObjectURL(file);
       a.download = `${this.$route.params.gender}.${this.$route.params.franchise}.json`;
       a.click();
+    },
+    add(object, array) {
+      const newObject = JSON.parse(JSON.stringify(object));
+      Object.keys(newObject).forEach((key) => {
+        if (typeof newObject[key] === 'string') {
+          newObject[key] = '';
+        } else {
+          Object.keys(newObject[key]).forEach((key2) => {
+            newObject[key][key2] = '';
+          });
+        }
+      });
+      array.push(newObject);
     },
   },
 };

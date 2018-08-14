@@ -5,6 +5,7 @@
       :id="label"
       v-model="inputValue"
       type="text"
+      required
       @input="$emit('input', $event.target.value)">
   </div>
 </template>

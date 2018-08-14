@@ -9,13 +9,15 @@
         :label="field"
         :value="value"
         @input="$emit('input', {key: field, value: $event})"/>
-      <JDInput
-        v-for="(value2, field2) in value"
-        v-else
-        :key="field2"
-        :label="field2"
-        :value="value2"
-        @input="objectUpdate($event, field, value, field2)"/>
+      <fieldset v-else>
+        {{ field }}
+        <JDInput
+          v-for="(value2, field2) in value"
+          :key="field2"
+          :label="field2"
+          :value="value2"
+          @input="objectUpdate($event, field, value, field2)"/>
+      </fieldset>
     </div>
   </fieldset>
 </template>
