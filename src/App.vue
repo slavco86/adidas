@@ -24,7 +24,9 @@
 </template>
 
 <script>
-import config from '@/config';
+const baseUrl = process.env.NODE_ENV === 'production'
+  ? '//jdsports-client-resources.co.uk/jdsports-client-resources/page/adidas-hub/'
+  : '/';
 
 export default {
   name: 'App',
@@ -110,7 +112,7 @@ export default {
       const environment = (window.environment || 'Live').toLowerCase();
       const country = (window.countryISO || 'GB').toLowerCase();
 
-      const location = `${config.baseUrl}content/${environment}/${country}/`;
+      const location = `${baseUrl}content/${environment}/${country}/`;
 
       return gender === 'men' ? `${location}men.json` : `${location}women.json`;
     },
