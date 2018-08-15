@@ -12,143 +12,127 @@
         "background": "#dab2b8"
       },
       "shoppable-video": {
+        "shoppable": {
+          "mobile": "https://ssl-dot-player-dot-smartzer-editor.appspot.com/video?video=CfUOIahc3aCEvZwtrPp8DIjx&companyId=58331cf19f43139bd4702949",
+          "desktop": "https://ssl-dot-player-dot-smartzer-editor.appspot.com/video?video=F1wi2ZfyiB1DSO7ZTtGxcG4i&companyId=58331cf19f43139bd4702949"
+        },
         "normal": {
           "image": {
             "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0808/1920x1080-falconjpg-1266b08550f54b880da4558b87027aa2.jpg",
             "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0808/750x1334-falcon-da6f1fd6431c53e99a61cb36a7cec3d3.jpg"
           },
-        "video": {
-          "desktop": "http://i1.adis.ws/v/jpl/Adidas_Falcon_wide",
-          "mobile": "http://i1.adis.ws/v/jpl/Adidas_Falcon_Story_1"
+          "video": {
+            "desktop": "http://i1.adis.ws/v/jpl/Adidas_Falcon_wide",
+            "mobile": "http://i1.adis.ws/v/jpl/Adidas_Falcon_Story_1"
           }
         }
       },
       "colourways": {
         "modal": {
           "background": "#dab2b8",
-          "template": [
-            {
-              "component": "Picture",
-              "content": {
-                "image": "https://i1.adis.ws/i/jpl/falcon-logo?w=200"
-              }
-            },
-              {
-                "component": "titles"
-              },
-              {
-                "component": "Picture",
-                "content": {
-                  "image": "https://i1.adis.ws/i/jpl/adidas-falcon-logo?w=150"
-                }
-              }
-          ],
-          "content": [
-            {
-              "headline": "PLAYFUL BOLD SILHOUETTE",
-              "subtext": "The unapologetic ‘90s attitude is back. Introducing a playfully bold silhouette exclusive to her."
-            },
-            {
-              "headline": "PRIME SUPPORT AND STABILITY",
-              "subtext": "A unique midsole construction of EVA compression and Torsion Bar suspension offers prime support and stability. Aggressively styled, this women’s exclusive embodies an unapologetic attitude."
+          "template": [{
+            "component": "Picture",
+            "content": {
+              "image": "https://i1.adis.ws/i/jpl/falcon-logo?w=200"
             }
-          ]
+          }, {
+            "component": "titles"
+          }, {
+            "component": "Picture",
+            "content": {
+              "image": "https://i1.adis.ws/i/jpl/adidas-falcon-logo?w=150"
+            }
+          }],
+          "content": [{
+            "headline": "PLAYFUL BOLD SILHOUETTE",
+            "subtext": "The unapologetic ‘90s attitude is back. Introducing a playfully bold silhouette exclusive to her."
+          }, {
+            "headline": "PRIME SUPPORT AND STABILITY",
+            "subtext": "A unique midsole construction of EVA compression and Torsion Bar suspension offers prime support and stability. Aggressively styled, this women’s exclusive embodies an unapologetic attitude."
+          }]
         },
-        "products": [
-          {
-            "image": {
-              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0808/adi-hub0319-5b89081675607328043072e64832c3b7.png",
-              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0808/adi-hub0319-5b89081675607328043072e64832c3b7.png"
-            },
-            "brand": "Adidas",
-            "price": "85",
-            "title": "Falcon",
-            "url": "/product/black-adidas-falcon/1192807"
+        "products": [{
+          "image": {
+            "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0810/adi-hub0762-80912fbbff5dea5464bb6d0a1d3f190c.png",
+            "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0810/adi-hub0762-80912fbbff5dea5464bb6d0a1d3f190c.png"
           },
-          {
-            "image": {
-              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0808/adi-hub0317-d607d7fbfc4543103323dfb9a4e839dd.png",
-              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0808/adi-hub0317-d607d7fbfc4543103323dfb9a4e839dd.png"
-            },
-            "brand": "Adidas",
-            "price": "85",
-            "title": "Falcon",
-            "url": "/product/grey-adidas-falcon/1192806"
+          "brand": "Adidas",
+          "price": "85",
+          "title": "Falcon",
+          "url": "/product/black-adidas-falcon/1192807"
+        }, {
+          "image": {
+            "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0810/adi-hub0760-dcfe03d7e62ede5e6c2f90c5e21373e8.png",
+            "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0810/adi-hub0760-dcfe03d7e62ede5e6c2f90c5e21373e8.png"
+          },
+          "brand": "Adidas",
+          "price": "85",
+          "title": "Falcon",
+          "url": "/product/grey-adidas-falcon/1192806"
+        }]
+      },
+      "influencer": {
+        "products": [{
+          "quote": "These shoes are comfy and stylish - my new faves!",
+          "handle": "@beckiehughesfit",
+          "name": "Beckie Hughes",
+          "url": "/product/grey-adidas-falcon/1192806",
+          "image": {
+            "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0808/750x750-1-58a0ffaa5f5800d75a78ab36ccec66da.jpg",
+            "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0808/750x750-1-58a0ffaa5f5800d75a78ab36ccec66da.jpg"
           }
-        ]
-      } ,
-      "influencer":
-        {
-          "products": [
-            {
-              "quote": "These shoes are comfy and stylish - my new faves!",
-              "handle": "@beckiehughesfit",
-              "name": "Beckie Hughes",
-              "url": "/product/grey-adidas-falcon/1192806",
-              "image": {
-                "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0808/750x750-1-58a0ffaa5f5800d75a78ab36ccec66da.jpg",
-                "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0808/750x750-1-58a0ffaa5f5800d75a78ab36ccec66da.jpg"
-              }
-            },
-            {
-              "quote": "These shoes are comfy and stylish - my new faves!",
-              "handle": "@beckiehughesfit",
-              "name": "Beckie Hughes",
-              "url": "/product/grey-adidas-falcon/1192806",
-              "image": {
-                "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0808/750x750-2-cd3c86742ee28e2e674dc2b149ef6390.jpg",
-                "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0808/750x750-2-cd3c86742ee28e2e674dc2b149ef6390.jpg"
-              }
-            },
-            {
-              "quote": "I love the bold colours. These shoes liven up any outfit.",
-              "handle": "@abbiholden_",
-              "name": "Abbi Holden",
-              "url": "/product/black-adidas-falcon/1192807",
-              "image": {
-                "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0808/750x750-3-348bb6411c73b9bc265d6f478e867787.jpg",
-                "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0808/750x750-3-348bb6411c73b9bc265d6f478e867787.jpg"
-              }
-            }
-          ]
-        },
+        }, {
+          "quote": "These shoes are comfy and stylish - my new faves!",
+          "handle": "@beckiehughesfit",
+          "name": "Beckie Hughes",
+          "url": "/product/grey-adidas-falcon/1192806",
+          "image": {
+            "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0808/750x750-2-cd3c86742ee28e2e674dc2b149ef6390.jpg",
+            "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0808/750x750-2-cd3c86742ee28e2e674dc2b149ef6390.jpg"
+          }
+        }, {
+          "quote": "I love the bold colours. These shoes liven up any outfit.",
+          "handle": "@abbiholden_",
+          "name": "Abbi Holden",
+          "url": "/product/black-adidas-falcon/1192807",
+          "image": {
+            "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0808/750x750-3-348bb6411c73b9bc265d6f478e867787.jpg",
+            "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0808/750x750-3-348bb6411c73b9bc265d6f478e867787.jpg"
+          }
+        }]
+      },
       "influencerVideo": "url",
       "get-social": {
         "url": "Follow Us",
         "titles": {
           "headline": "Get Social",
-          "subtext": "#Creator"
+          "subtext": "#CREATORSERIES"
         },
-        "products": [
-          {
-            "image": {
-              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0808/750x750-0000-142a1330-ig-c24bea3d4ef7bc3f36acd4ef2d48dcd6.jpg",
-              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0808/750x750-0000-142a1330-ig-c24bea3d4ef7bc3f36acd4ef2d48dcd6.jpg"
-            },
-            "url": "/product/grey-adidas-falcon/1192806"
+        "products": [{
+          "image": {
+            "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0808/750x750-0000-142a1330-ig-c24bea3d4ef7bc3f36acd4ef2d48dcd6.jpg",
+            "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0808/750x750-0000-142a1330-ig-c24bea3d4ef7bc3f36acd4ef2d48dcd6.jpg"
           },
-          {
-            "image": {
-              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0808/750x750-0001-142a1358-ig-9a2f0546183610d002f91ddf521d2237.jpg",
-              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0808/750x750-0001-142a1358-ig-9a2f0546183610d002f91ddf521d2237.jpg"
-            },
-            "url": "/product/grey-adidas-falcon/1192806"
+          "url": "/product/grey-adidas-falcon/1192806"
+        }, {
+          "image": {
+            "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0808/750x750-0001-142a1358-ig-9a2f0546183610d002f91ddf521d2237.jpg",
+            "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0808/750x750-0001-142a1358-ig-9a2f0546183610d002f91ddf521d2237.jpg"
           },
-          {
-            "image": {
-              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0808/750x750-0004-142a1376-ig-9ddc6f2e3146d4e7925fd62d2f0dedc4.jpg",
-              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0808/750x750-0004-142a1376-ig-9ddc6f2e3146d4e7925fd62d2f0dedc4.jpg"
-            },
-            "url": "/product/black-adidas-falcon/1192807"
+          "url": "/product/grey-adidas-falcon/1192806"
+        }, {
+          "image": {
+            "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0808/750x750-0004-142a1376-ig-9ddc6f2e3146d4e7925fd62d2f0dedc4.jpg",
+            "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0808/750x750-0004-142a1376-ig-9ddc6f2e3146d4e7925fd62d2f0dedc4.jpg"
           },
-          {
-            "image": {
-              "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0808/750x750-0002-142a1362-ig-c8eae9b9a201190941d0dc7476217f22.jpg",
-              "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0808/750x750-0002-142a1362-ig-c8eae9b9a201190941d0dc7476217f22.jpg"
-            },
-            "url": "/product/grey-adidas-falcon/1192806"
-          }
-        ]
+          "url": "/product/black-adidas-falcon/1192807"
+        }, {
+          "image": {
+            "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0808/750x750-0002-142a1362-ig-c8eae9b9a201190941d0dc7476217f22.jpg",
+            "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0808/750x750-0002-142a1362-ig-c8eae9b9a201190941d0dc7476217f22.jpg"
+          },
+          "url": "/product/grey-adidas-falcon/1192806"
+        }]
       }
     }
   },
@@ -286,7 +270,7 @@
         "url": "Follow Us",
         "titles": {
           "headline": "Get Social",
-          "subtext": "#Creator"
+          "subtext": "#CREATORSERIES"
         },
         "products": [
           {
@@ -442,7 +426,7 @@
       "get-social": {
         "titles": {
           "headline": "Get Social",
-          "subtext": "#Creator"
+          "subtext": "#CREATORSERIES"
         },
         "url": "Follow Us",
         "products": [
@@ -602,7 +586,7 @@
         "url": "Follow Us",
         "titles": {
           "headline": "Get Social",
-          "subtext": "#Creator"
+          "subtext": "#CREATORSERIES"
         },
         "products": [
           {

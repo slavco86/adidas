@@ -12,6 +12,10 @@
         "background": "#dab2b8"
       },
       "shoppable-video": {
+        "shoppable": {
+          "mobile": "https://ssl-dot-player-dot-smartzer-editor.appspot.com/video?video=SgGbXfhLeAjG5PBAlcLQB1zY&companyId=58331cf19f43139bd4702949",
+          "desktop": "https://ssl-dot-player-dot-smartzer-editor.appspot.com/video?video=Ht3fG1fcJFZxfzBrZvfTVJS4&companyId=58331cf19f43139bd4702949"
+        },
         "normal": {
           "image": {
             "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0808/1920x1080-falconjpg-1266b08550f54b880da4558b87027aa2.jpg",
