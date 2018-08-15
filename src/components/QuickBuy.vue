@@ -74,6 +74,14 @@ export default {
   }
 }
 
+.category--women .quickView {
+  circle {
+    fill: #fff;
+    stroke: #fff;
+    transition: fill 0.35s ease-in-out, stroke 0.35s ease-in-out;
+  }
+}
+
 .influencer-carousel /deep/ .quickView {
   circle {
     fill: white;
@@ -87,81 +95,48 @@ export default {
     stroke: #222;
     transition: fill 0.35s ease-in-out, stroke 0.35s ease-in-out;
   }
-
-  &:hover {
-    polygon,
-    polyline {
-      fill: #222;
-      stroke: #fff;
-    }
-
-    circle {
-      fill: #222;
-      stroke: #222;
-    }
-  }
 }
 
-.category--women .quickView {
-  circle {
-    fill: #fff;
-    stroke: #fff;
-    transition: fill 0.35s ease-in-out, stroke 0.35s ease-in-out;
-  }
-
-  &:hover {
+// Women Influencer
+.category--women {
+  /deep/ .quickView:hover {
     circle {
-      fill: #222;
       stroke: #222;
+      fill: #222;
     }
 
-    & /deep/ polygon,
-    & /deep/ polyline {
+    polygon,
+    polyline {
       fill: #fff;
       stroke: #222;
     }
   }
-}
 
-.category--women .section-colourways /deep/ .quickView {
-  circle {
-    fill: transparent;
-    stroke: #222;
-  }
-
-  &:hover {
+  .section-colourways /deep/ .quickView {
     circle {
       stroke: #222;
-      fill: #222;
     }
+  }
 
-    polygon,
-    polyline {
-      fill: white;
-      stroke: #222;
+  .influencer-carousel /deep/ .quickView {
+    circle {
+      fill: #fff;
+      stroke: #fff;
     }
   }
 }
 
-
-// Women Influencer
-.category--women .influencer-carousel /deep/ .quickView {
-  circle {
-    fill: #fff;
+.influencer-carousel /deep/ .quickView:hover {
+  polygon,
+  polyline {
+    fill: #222;
     stroke: #fff;
   }
 
-  &:hover {
-    circle {
-      fill: #222;
-      stroke: #222;
-
-      polygon,
-      polyline {
-        fill: #fff;
-        stroke: #222;
-      }
-    }
+  circle {
+    fill: #222;
+    stroke: #222;
   }
 }
+
 </style>

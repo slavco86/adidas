@@ -133,8 +133,8 @@
       "extra-video": {
         "normal": {
           "video": {
-            "desktop": "http://i1.adis.ws/v/jpl/ADIDAS_HUB_POD_CREATIVE_1920x1080_02",
-            "mobile": "http://i1.adis.ws/v/jpl/ADIDAS_HUB_POD_CREATIVE_1080x1920"
+            "desktop": "https://i1.adis.ws/v/jpl/ADIDAS_HUB_POD_CREATIVE_1920x1080_02",
+            "mobile": "https://i1.adis.ws/v/jpl/ADIDAS_HUB_POD_CREATIVE_1080x1920"
           },
           "image": {
             "desktop": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/video-placeholders1920x1080-pod-extra-0888f682cfc8ac793d1f7c7c0e37c886.jpg",
@@ -316,8 +316,8 @@
               "mobile": "https://jdsports-client-resources.co.uk/jdsports-client-resources/img/2018/0801/video-placeholders750x1334-deerupt-men-mobile-80b7d4320813fb55179946f453edc8aa.jpg"
             },
           "video": {
-            "desktop": "http://i1.adis.ws/v/jpl/ADI_MAIN/mp4_720p",
-            "mobile": "http://i1.adis.ws/v/jpl/ADI_STORY_1/webm_720p"
+            "desktop": "https://i1.adis.ws/v/jpl/ADI_MAIN/mp4_720p",
+            "mobile": "https://i1.adis.ws/v/jpl/ADI_STORY_1/webm_720p"
           }
         }
         },

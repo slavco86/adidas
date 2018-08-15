@@ -282,6 +282,11 @@ iframe {
   background-color: transparent;
 }
 
+.is-content.deerupt .content-slide /deep/ .close circle {
+  fill: black;
+  stroke: black;
+}
+
 .is-content.deerupt .content-slide /deep/ .product-info {
   color: black;
 }
@@ -303,11 +308,6 @@ iframe {
   position: absolute;
   fill: #fff;
   z-index: 1;
-}
-
-.is-content.deerupt .content-slide /deep/ .close circle {
-  fill: black;
-  stroke: black;
 }
 
 .is-content.deerupt .content-slide /deep/ .close path {

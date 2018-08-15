@@ -51,14 +51,6 @@
   border-color: rgba(#222, 0.6);
 }
 
-.category--women .chevron-arrow-wrap--left:hover .chevron-arrow--left {
-  border-color: #222;
-}
-
-.category--women .chevron-arrow-wrap--right:hover .chevron-arrow--right {
-  border-color: #222;
-}
-
 .chevron-arrow-wrap--left,
 .chevron-arrow-wrap--right {
   width: 78px;
@@ -75,5 +67,13 @@
   &:hover .chevron-arrow--right {
     border-color: #fff;
   }
+}
+
+.category--women .chevron-arrow-wrap--left:hover .chevron-arrow--left {
+  border-color: #222;
+}
+
+.category--women .chevron-arrow-wrap--right:hover .chevron-arrow--right {
+  border-color: #222;
 }
 </style>
