@@ -2,22 +2,11 @@
   <div v-if="json.influencer">
     <form
       class="form">
-      <div class="section">
-        <Draggable
-          v-model="json.influencer.products">
-          <InputGenerator
-            v-for="(influencer, key) in products"
-            :key="key"
-            :index="key"
-            :data="influencer"
-            :name="Object.keys(json.influencer)[0]"
-            @input="influencer[$event.key] = $event.value"
-            @remove="remove($event, products)"/>
-        </Draggable>
-        <button @click="add(products[0], products)">
-          Add
-        </button>
-      </div>
+      <InputSection
+        v-for="(value, name) in json"
+        :key="name"
+        :data="value"
+        :name="name"/>
       <button
         type="submit"
         @click="save">
@@ -31,13 +20,12 @@
 </template>
 
 <script>
-import InputGenerator from '@/components/InputGenerator.vue';
-import Draggable from 'vuedraggable';
+
+import InputSection from '@/components/InputSection.vue';
 
 export default {
   components: {
-    InputGenerator,
-    Draggable,
+    InputSection,
   },
 
   props: {
@@ -50,6 +38,7 @@ export default {
   data() {
     return {
       json: JSON.parse(JSON.stringify(this.content)),
+      show: false,
     };
   },
   computed: {
@@ -67,22 +56,6 @@ export default {
       a.href = URL.createObjectURL(file);
       a.download = `${this.$route.params.gender}.${this.$route.params.franchise}.json`;
       a.click();
-    },
-    add(object, array) {
-      const newObject = JSON.parse(JSON.stringify(object));
-      Object.keys(newObject).forEach((key) => {
-        if (typeof newObject[key] === 'string') {
-          newObject[key] = '';
-        } else {
-          Object.keys(newObject[key]).forEach((key2) => {
-            newObject[key][key2] = '';
-          });
-        }
-      });
-      array.push(newObject);
-    },
-    remove(index, array) {
-      array.splice(index, 1);
     },
   },
 };
@@ -102,12 +75,6 @@ export default {
       font-size: 18px;
       display: block;
     }
-  }
-
-  .section {
-    border: 2px solid white;
-    margin-bottom: 1rem;
-    padding: 1rem;
   }
 </style>
 
