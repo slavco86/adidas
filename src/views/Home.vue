@@ -195,12 +195,6 @@ export default {
     transform: translate3d(100%, 100%, 0);
     transition: transform 1s ease-in-out;
 
-    &:hover {
-      /deep/ .overlay {
-        background-color: transparent;
-      }
-    }
-
     /deep/ .overlay {
       background-color: rgba(34, 34, 34, 0.2);
       transition: background-color 0.5s ease-in-out;
@@ -210,6 +204,12 @@ export default {
       left: 0;
       width: 100%;
       height: 100%;
+    }
+
+    &:hover {
+      /deep/ .overlay {
+        background-color: transparent;
+      }
     }
 
     /deep/ .spot {
