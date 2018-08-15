@@ -89,7 +89,15 @@ export default {
       const { gender = 'men', franchise = '' } = route.params;
 
       const franchiseContent = data[gender]
-        .filter(obj => franchise.localeCompare(obj.franchise)).pop();
+        .filter((obj) => {
+          let jsonFranchise = obj.franchise;
+
+          if (jsonFranchise) {
+            jsonFranchise = jsonFranchise.toLowerCase();
+          }
+
+          return franchise.toLowerCase() === jsonFranchise;
+        }).pop();
 
       if (typeof franchiseContent === 'undefined') {
         return {};
