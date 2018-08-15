@@ -1,5 +1,8 @@
 <template>
   <fieldset>
+    <legend class="field-title">
+      {{ `${name} ${(index+1)}` }}
+    </legend>
     <div
       v-for="(value, field) in data"
       :key="field"
@@ -39,6 +42,10 @@ export default {
     index: {
       type: Number,
       default: 0,
+    },
+    name: {
+      type: String,
+      default: '',
     },
   },
 

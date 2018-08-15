@@ -2,13 +2,17 @@
   <div v-if="json.influencer">
     <form
       class="form">
-      <InputGenerator
-        v-for="(influencer, key) in products"
-        :key="key"
-        :index="key"
-        :data="influencer"
-        @input="influencer[$event.key] = $event.value"
-        @remove="remove($event, products)"/>
+      <Draggable
+        v-model="json.influencer.products">
+        <InputGenerator
+          v-for="(influencer, key) in products"
+          :key="key"
+          :index="key"
+          :data="influencer"
+          :name="Object.keys(json.influencer)[0]"
+          @input="influencer[$event.key] = $event.value"
+          @remove="remove($event, products)"/>
+      </Draggable>
       <button
         type="submit"
         @click="save">
@@ -26,10 +30,12 @@
 
 <script>
 import InputGenerator from '@/components/InputGenerator.vue';
+import Draggable from 'vuedraggable';
 
 export default {
   components: {
     InputGenerator,
+    Draggable,
   },
 
   props: {
