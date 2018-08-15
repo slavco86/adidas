@@ -1,12 +1,21 @@
 <template>
-  <div v-if="json.influencer">
+  <div v-if="json">
     <form
       class="form">
-      <InputSection
-        v-for="(value, name) in json"
+      <fieldset
+        v-for="(section, name) in json"
         :key="name"
-        :data="value"
-        :name="name"/>
+        class="main-section">
+        <legend>
+          {{ name }}
+        </legend>
+        <InputSection
+          v-for="(value, name2) in section"
+          :key="name2"
+          :data="value"
+          :name="name2"
+          :parent-name="name"/>
+      </fieldset>
       <button
         type="submit"
         @click="save">
@@ -14,13 +23,13 @@
       </button>
     </form>
     <pre>
-      {{ json.influencer }}
+      {{ json }}
     </pre>
   </div>
 </template>
 
 <script>
-
+import { mapState } from 'vuex';
 import InputSection from '@/components/InputSection.vue';
 
 export default {
@@ -37,7 +46,6 @@ export default {
 
   data() {
     return {
-      json: JSON.parse(JSON.stringify(this.content)),
       show: false,
     };
   },
@@ -45,6 +53,13 @@ export default {
     products() {
       return this.json.influencer.products;
     },
+    ...mapState([
+      'json',
+    ]),
+  },
+
+  mounted() {
+    this.$store.commit('json', this.content);
   },
 
   methods: {
@@ -75,6 +90,12 @@ export default {
       font-size: 18px;
       display: block;
     }
+  }
+
+  .main-section {
+    border: 2px solid red;
+    padding: 1rem;
+    margin: 1rem;
   }
 </style>
 

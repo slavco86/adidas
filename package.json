@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "test:unit": "vue-cli-service test:unit --coverage",
-    "test:watch": "vue-cli-service test:unit --watch",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint && npm run lint:css",
+    "test:unit": "vue-cli-service test:unit --coverage",
+    "test:watch": "vue-cli-service test:unit --watch",
     "lint:css": "stylelint \"**/*.vue\" --fix",
     "publish:uat": "npm run lint && npm run test:unit && release uat",
     "publish:live": "npm run lint && npm run test:unit && release live",
@@ -24,6 +24,7 @@
     "vue-lazyload": "^1.2.6",
     "vue-router": "^3.0.1",
     "vuedraggable": "2.16.0",
+    "vuex": "^3.0.1",
     "webpack-bundle-analyzer": "2.13.1"
   },
   "devDependencies": {
@@ -63,14 +64,6 @@
       "autoprefixer": {}
     }
   },
-  "stylelint": {
-    "extends": "stylelint-config-standard",
-    "rules": {
-      "no-empty-source": null,
-      "property-no-vendor-prefix": true,
-      "value-no-vendor-prefix": true
-    }
-  },
   "browserslist": [
     "> 1%",
     "last 2 versions",
@@ -97,5 +90,13 @@
     "testMatch": [
       "<rootDir>/(tests/unit/**/*.spec.(js|jsx|ts|tsx)|**/__tests__/*.(js|jsx|ts|tsx))"
     ]
+  },
+  "stylelint": {
+    "extends": "stylelint-config-standard",
+    "rules": {
+      "no-empty-source": null,
+      "property-no-vendor-prefix": true,
+      "value-no-vendor-prefix": true
+    }
   }
 }

@@ -1,44 +1,67 @@
 <template>
-  <fieldset
-    class="section">
-    <legend @click="show = !show">
-      {{ name }}
-    </legend>
-    <div v-show="show">
-      <Draggable
-        v-model="data.products">
-        <InputGenerator
-          v-for="(product, key) in data.products"
-          :key="key"
-          :index="key"
-          :data="product"
-          :name="name"
-          @input="product[$event.key] = $event.value"
-          @remove="remove($event, data.products)"/>
-      </Draggable>
-      <button @click="add(data.products[0], data.products)">
-        Add
-      </button>
-    </div>
-  </fieldset>
+  <div>
+    <fieldset
+      v-if="typeof data === 'string'"
+      class="section">
+      <legend @click="show = !show">
+        {{ name }}
+      </legend>
+      <div v-show="show">
+        <JDInput
+          :value="data"
+          :label="name"
+          @input="data = $event.value"
+          @remove="remove($event, data)"/>
+      </div>
+    </fieldset>
+    <fieldset
+      v-if="dataIsArray"
+      class="section">
+      <legend @click="show = !show">
+        {{ name }}
+      </legend>
+      <div v-show="show">
+        <Draggable
+          v-model="data">
+          <InputGenerator
+            v-for="(product, key) in data"
+            :key="key"
+            :index="key"
+            :data="product"
+            :name="name"
+            @input="product[$event.key] = $event.value"
+            @remove="remove($event, data)"/>
+        </Draggable>
+        <button @click="add(data[0], data)">
+          Add
+        </button>
+      </div>
+    </fieldset>
+</div>
 </template>
 
 <script>
 import Draggable from 'vuedraggable';
 import InputGenerator from '@/components/InputGenerator.vue';
+import JDInput from '@/components/JDInput.vue';
 
 export default {
   components: {
     Draggable,
     InputGenerator,
+    JDInput,
   },
 
   props: {
     data: {
-      type: [Object, String],
+      type: [Object, String, Array],
       default: () => {},
     },
     name: {
+      type: [String, Number],
+      default: '',
+    },
+    parentName: {
       type: String,
       default: '',
     },
@@ -48,6 +71,12 @@ export default {
     return {
       show: false,
     };
+  },
+
+  computed: {
+    dataIsArray() {
+      return Array.isArray(this.data);
+    },
   },
 
   methods: {

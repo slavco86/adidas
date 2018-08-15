@@ -3,10 +3,10 @@
     <label :for="label">{{ label }}</label>
     <input
       :id="label"
-      v-model="computedValue"
+      v-model="inputValue"
       type="text"
       required
-      @input="$emit('input', $event.target.value)">
+      @input="changeData">
   </div>
 </template>
 
@@ -21,22 +21,32 @@ export default {
       type: String,
       default: '',
     },
+    parentName: {
+      type: String,
+      default: '',
+    },
   },
 
   data() {
     return {
-      inputValue: this.computedValue,
+      inputValue: this.value,
     };
   },
 
-  computed: {
-    computedValue: {
-      get() {
-        return this.value;
-      },
-      set(newVal) {
-        this.inputValue = newVal;
-      },
+  // computed: {
+  //   computedValue: {
+  //     get() {
+  //       return this.value;
+  //     },
+  //     set(newVal) {
+  //       this.inputValue = newVal;
+  //     },
+  //   },
+  // },
+
+  methods: {
+    changeData() {
+      console.info(this.inputValue);
     },
   },
 };

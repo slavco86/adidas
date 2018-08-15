@@ -51,6 +51,10 @@ export default {
       type: String,
       default: '',
     },
+    parentName: {
+      type: String,
+      default: '',
+    },
   },
   data() {
     return {
