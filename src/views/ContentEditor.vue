@@ -2,24 +2,26 @@
   <div v-if="json.influencer">
     <form
       class="form">
-      <Draggable
-        v-model="json.influencer.products">
-        <InputGenerator
-          v-for="(influencer, key) in products"
-          :key="key"
-          :index="key"
-          :data="influencer"
-          :name="Object.keys(json.influencer)[0]"
-          @input="influencer[$event.key] = $event.value"
-          @remove="remove($event, products)"/>
-      </Draggable>
+      <div class="section">
+        <Draggable
+          v-model="json.influencer.products">
+          <InputGenerator
+            v-for="(influencer, key) in products"
+            :key="key"
+            :index="key"
+            :data="influencer"
+            :name="Object.keys(json.influencer)[0]"
+            @input="influencer[$event.key] = $event.value"
+            @remove="remove($event, products)"/>
+        </Draggable>
+        <button @click="add(products[0], products)">
+          Add
+        </button>
+      </div>
       <button
         type="submit"
         @click="save">
         Download
-      </button>
-      <button @click="add(products[0], products)">
-        Add
       </button>
     </form>
     <pre>
@@ -100,6 +102,12 @@ export default {
       font-size: 18px;
       display: block;
     }
+  }
+
+  .section {
+    border: 2px solid white;
+    margin-bottom: 1rem;
+    padding: 1rem;
   }
 </style>
 

@@ -1,28 +1,32 @@
 <template>
   <fieldset>
-    <legend class="field-title">
+    <legend
+      class="field-title"
+      @click="show = !show">
       {{ `${name} ${(index+1)}` }}
     </legend>
-    <div
-      v-for="(value, field) in data"
-      :key="field"
-      class="input-container">
-      <JDInput
-        v-if="typeof value === 'string'"
-        :label="field"
-        :value="value"
-        @input="$emit('input', {key: field, value: $event})"/>
-      <fieldset v-else>
-        {{ field }}
+    <div v-show="show">
+      <div
+        v-for="(value, field) in data"
+        :key="field"
+        class="input-container">
         <JDInput
-          v-for="(value2, field2) in value"
-          :key="field2"
-          :label="field2"
-          :value="value2"
-          @input="objectUpdate($event, field, value, field2)"/>
-      </fieldset>
+          v-if="typeof value === 'string'"
+          :label="field"
+          :value="value"
+          @input="$emit('input', {key: field, value: $event})"/>
+        <fieldset v-else>
+          {{ field }}
+          <JDInput
+            v-for="(value2, field2) in value"
+            :key="field2"
+            :label="field2"
+            :value="value2"
+            @input="objectUpdate($event, field, value, field2)"/>
+        </fieldset>
+      </div>
+      <button @click="remove(index)">delete</button>
     </div>
-    <button @click="remove(index)">delete</button>
   </fieldset>
 </template>
 
@@ -47,6 +51,11 @@ export default {
       type: String,
       default: '',
     },
+  },
+  data() {
+    return {
+      show: false,
+    };
   },
 
   methods: {
