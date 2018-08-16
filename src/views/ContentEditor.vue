@@ -39,11 +39,8 @@
       </ul>
     </li>
   </ul> -->
-  <ul>
-    <RecursiveComponent
-      :label="tree.label"
-      :nodes="tree.nodes"/>
-  </ul>
+  <RecursiveComponent
+    :data="tree"/>
 
 </template>
 
@@ -69,27 +66,42 @@ export default {
     return {
       show: false,
       tree: {
-        label: 'root',
-        nodes: [
+        url: 'Follow Us',
+        titles: {
+          headline: 'Get Social',
+          subtext: '#Creator',
+        },
+        products: [
           {
-            label: 'products',
-            products: [
-              {
-                label: 'product.1',
-              },
-              {
-                label: 'product.2',
-                title: 'tit',
-                sub: [
-                  {
-                    label: 'item1.2.1',
-                  },
-                ],
-              },
-            ],
+            image: {
+              desktop: 'https://',
+              mobile: 'https://',
+            },
+            url: '/product/brown-adidas-originals-pod-s31/1188721',
+
           },
           {
-            label: 'item2',
+            image: {
+              desktop: 'https://',
+              mobile: 'https://',
+            },
+            url: '/product/black-adidas-originals-pod-s31/1189124',
+
+          },
+          {
+            image: {
+              desktop: 'https://',
+              mobile: 'https://',
+            },
+            url: '/product/blue-adidas-originals-pod-s31/1188720'
+
+          },
+          {
+            image: {
+              desktop: 'https://',
+              mobile: 'https://',
+            },
+            url: '/product/black-adidas-originals-pod-s31/1189124',
           },
         ],
       },

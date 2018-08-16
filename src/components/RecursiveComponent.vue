@@ -1,45 +1,41 @@
 <template>
-  <li>
-    <span>
-      {{ label }}
-    </span>
-    <ul v-if="nodes.length">
+  <ul>
+    <li
+      v-for="item in topLevel"
+      :key="item">
+      {{ item }}
+    </li>
+    <li v-if="hasNestedChildren">
       <RecursiveComponent
-        v-for="(node, key) in nodes"
+        v-for="(nestedChild, key) in nestedChildren"
         :key="key"
-        :nodes="nextLevel(node)"
-        :label="node.label"/>
-    </ul>
-  </li>
+        :data="nestedChild"/>
+    </li>
+  </ul>
+
 </template>
 
 <script>
 export default {
   name: 'RecursiveComponent',
   props: {
-    nodes: {
-      type: Array,
+    data: {
+      type: [Array, Object],
       default: () => [],
-    },
-    label: {
-      type: String,
-      default: '',
     },
   },
 
-  methods: {
-    nextLevel(node) {
-      let whatever;
-
-      const objKeys = Object.keys(node);
-
-      objKeys.forEach((key) => {
-        if (typeof node[key] !== 'string') {
-          whatever = node[key];
-        }
-      });
-
-      return whatever;
+  computed: {
+    topLevel() {
+      const keys = Object.keys(this.data);
+      return keys.filter(key => typeof this.data[key] === 'string');
+    },
+    hasNestedChildren() {
+      return (Object.keys(this.data).length > this.topLevel.length);
+    },
+    nestedChildren() {
+      const children = Object.keys(this.data);
+      return children.filter(key => typeof this.data[key] !== 'string').map(key => this.data[key]);
     },
   },
 };
