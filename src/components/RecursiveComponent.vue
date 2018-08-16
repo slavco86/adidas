@@ -5,10 +5,11 @@
       :key="item">
       {{ item }}
     </li>
-    <li v-if="hasNestedChildren">
-      {{'test'}}
+    <li
+        v-if="hasNestedChildren"
+        v-for="(nestedChild, key) in nestedChildren">
+      <div class="label">{{ 'label' }}</div>
       <RecursiveComponent
-        v-for="(nestedChild, key) in nestedChildren"
         :key="key"
         :data="nestedChild"/>
     </li>
@@ -42,3 +43,8 @@ export default {
 };
 </script>
 
+<style lang="scss" scoped>
+.label {
+  color: yellow;
+}
+</style>
