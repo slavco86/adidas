@@ -1,19 +1,18 @@
 <template>
-  <ul>
+  <component :is="topLevel.length ? 'ul' : 'li'">
     <li
       v-for="item in topLevel"
       :key="item">
       {{ item }}
     </li>
-    <li
-        v-if="hasNestedChildren"
-        v-for="(nestedChild, key) in nestedChildren">
+    <li v-if="hasNestedChildren">
       <div class="label">{{ 'label' }}</div>
       <RecursiveComponent
+        v-for="(nestedChild, key) in nestedChildren"
         :key="key"
         :data="nestedChild"/>
     </li>
-  </ul>
+  </component>
 
 </template>
 
