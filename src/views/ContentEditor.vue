@@ -1,5 +1,5 @@
 <template>
-  <div v-if="json">
+  <!-- <div v-if="json">
     <form
       class="form">
       <fieldset
@@ -25,16 +25,37 @@
     <pre>
       {{ json }}
     </pre>
-  </div>
+  </div> -->
+  <!-- <ul>
+    <li>root</li>
+    <li>
+      <ul>
+        <li>item1</li>
+        <li>
+          <ul>
+            <li>item1.1</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul> -->
+  <ul>
+    <RecursiveComponent
+      :label="tree.label"
+      :nodes="tree.nodes"/>
+  </ul>
+
 </template>
 
 <script>
 import { mapState } from 'vuex';
 import InputSection from '@/components/InputSection.vue';
+import RecursiveComponent from '@/components/RecursiveComponent.vue';
 
 export default {
   components: {
     InputSection,
+    RecursiveComponent,
   },
 
   props: {
@@ -47,6 +68,31 @@ export default {
   data() {
     return {
       show: false,
+      tree: {
+        label: 'root',
+        nodes: [
+          {
+            label: 'products',
+            products: [
+              {
+                label: 'product.1',
+              },
+              {
+                label: 'product.2',
+                title: 'tit',
+                sub: [
+                  {
+                    label: 'item1.2.1',
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            label: 'item2',
+          },
+        ],
+      },
     };
   },
   computed: {
