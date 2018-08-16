@@ -6,6 +6,7 @@
       {{ item }}
     </li>
     <li v-if="hasNestedChildren">
+      {{'test'}}
       <RecursiveComponent
         v-for="(nestedChild, key) in nestedChildren"
         :key="key"
